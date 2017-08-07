@@ -26,7 +26,7 @@
 
 package com.chrisrm.idea.themes;
 
-public final class MTLighterTheme implements LafTheme {
+public final class MTLighterTheme {
   public static final String BACKGROUND = "FAFAFA"; // 250, 250, 250
   public static final String FOREGROUND = "A7ADB0"; // 167, 173, 176
   public static final String CARET = "FFCC00"; // 255, 204, 0
@@ -48,8 +48,7 @@ public final class MTLighterTheme implements LafTheme {
 
   public static final String ACCENT_COLOR = "80CBC4"; // 128, 203, 196
 
-  @Override
-  public String getDisabled() {
+  public static String getDisabled() {
     return DISABLED;
   }
 }
