@@ -48,8 +48,8 @@
 
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.chrisrm.idea.MTConfig" serviceInterface="com.chrisrm.idea.MTConfigInterface"/>
-        <projectService serviceImplementation="com.chrisrm.idea.MTProjectConfig" serviceInterface="com.chrisrm.idea.MTConfigInterface"/>
+        <applicationService serviceImplementation="com.chrisrm.idea.MTConfig"/>
+        <projectService serviceImplementation="com.chrisrm.idea.MTProjectConfig"/>
 
         <applicationService serviceImplementation="com.chrisrm.idea.MTThemeManager"/>
         <applicationService serviceImplementation="com.chrisrm.idea.icons.tinted.TintedIconsService"/>
@@ -59,7 +59,7 @@
 
         <projectViewNodeDecorator implementation="com.chrisrm.idea.tree.MTProjectViewNodeDecorator"/>
         <editorTabColorProvider implementation="com.chrisrm.idea.tabs.MTEditorTabColor"/>
-        <editorTabTitleProvider implementation="com.chrisrm.idea.tabs.MTEditorTabTitle"/>
+        <!--<editorTabTitleProvider implementation="com.chrisrm.idea.tabs.MTEditorTabTitle"/>-->
         <iconProvider implementation="com.chrisrm.idea.icons.MTHiddenIconProvider" order="first"/>
         <iconProvider implementation="com.chrisrm.idea.icons.MTFileIconProvider" order="first"/>
         <bundledColorScheme path="/colors/Material Theme - Lighter"/>

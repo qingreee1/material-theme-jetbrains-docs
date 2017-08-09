@@ -344,5 +344,20 @@ public class MTProjectConfig implements PersistentStateComponent<MTConfigInterfa
   public boolean isCustomTreeIndentChanged(final boolean customTreeIndentEnabled) {
     return this.isCustomTreeIndentEnabled != customTreeIndentEnabled;
   }
+
+  @Override
+  public boolean needsRestart(MTForm form) {
+    return false;
+  }
+
+  @Override
+  public boolean isStatusBarThemeChanged(boolean statusEnabled) {
+    return false;
+  }
+
+  @Override
+  public boolean isStatusBarTheme() {
+    return false;
+  }
   //endregion
 }

@@ -169,7 +169,6 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
       });
       darculaClass.toClass();
     } catch (Exception e) {
-      ;
     }
   }
 
@@ -262,7 +261,7 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
    * @param mtConfig
    * @param form
    */
-  private void onBeforeSettingsChanged(final MTConfig mtConfig, final MTForm form) {
+  private void onBeforeSettingsChanged(final MTConfigInterface mtConfig, final MTForm form) {
     // Force restart if material design is switched
     restartIdeIfNecessary(mtConfig, form);
   }
@@ -272,7 +271,7 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
    *
    * @param mtConfig
    */
-  private void onSettingsChanged(final MTConfig mtConfig) {
+  private void onSettingsChanged(final MTConfigInterface mtConfig) {
     // Trigger file icons and statuses update
     MTThemeManager.getInstance().updateFileIcons();
 
@@ -287,7 +286,7 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
    * @param mtConfig
    * @param form
    */
-  private void restartIdeIfNecessary(final MTConfig mtConfig, final MTForm form) {
+  private void restartIdeIfNecessary(final MTConfigInterface mtConfig, final MTForm form) {
     // Restart the IDE if changed
     if (mtConfig.needsRestart(form)) {
       final String title = MaterialThemeBundle.message("mt.restartDialog.title");

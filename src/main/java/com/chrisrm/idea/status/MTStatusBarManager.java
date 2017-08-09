@@ -27,6 +27,7 @@
 package com.chrisrm.idea.status;
 
 import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTConfigInterface;
 import com.chrisrm.idea.config.ConfigNotifier;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.application.ApplicationManager;
@@ -57,7 +58,7 @@ public final class MTStatusBarManager implements Disposable, DumbAware {
     return new MTStatusBarManager(project);
   }
 
-  private void refreshWidget(final MTConfig mtConfig) {
+  private void refreshWidget(final MTConfigInterface mtConfig) {
     if (mtConfig.isStatusBarThemeChanged(this.statusEnabled)) {
       statusEnabled = mtConfig.isStatusBarTheme();
 
