@@ -40,25 +40,21 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Objects;
-import java.util.Properties;
+
+import static com.chrisrm.idea.MTConfig.DEFAULT_BG;
 
 @State(
-    name = "MaterialThemeConfig",
-    storages = @Storage("material_theme.xml")
+    name = "MaterialThemeProjectConfig",
+    storages = @Storage("material_theme_project.xml")
 )
-public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MTConfigInterface {
-  public static final String DEFAULT_BG = "https://raw.githubusercontent" +
-                                          ".com/mallowigi/material-theme-jetbrains-eap/master/src/main/resources/themes/wall.jpg,60";
+public class MTProjectConfig implements PersistentStateComponent<MTConfigInterface>, MTConfigInterface {
   // They are public so they can be serialized
   public MTTheme selectedTheme = MTTheme.DEFAULT;
   public String highlightColor;
   public boolean highlightColorEnabled = false;
   public Integer highlightThickness;
   public boolean isContrastMode = false;
-  public boolean isMaterialDesign = true;
   public boolean isBoldTabs = false;
   public boolean isCustomTreeIndentEnabled = false;
   public Integer customTreeIndent = 6;
@@ -67,38 +63,11 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
   public String wallpaper = DEFAULT_BG;
 
   public boolean wallpaperSet = true;
-  public boolean useMaterialIcons = true;
-  public boolean useProjectViewDecorators = true;
-  public boolean hideFileIcons = false;
-  public boolean compactSidebar = false;
-  public boolean statusBarTheme = true;
 
   public Integer tabsHeight = 42;
   public boolean isMaterialTheme = true;
-  public boolean themedScrollbars = true;
-  public boolean isCompactStatusBar;
 
-  public String defaultBackground;
-
-  public MTConfig() {
-    final MTTheme theme = this.selectedTheme;
-
-    try {
-      final InputStream stream = getClass().getResourceAsStream(theme.getId() + ".properties");
-      final Properties properties = new Properties();
-      properties.load(stream);
-      stream.close();
-
-      if (this.highlightColor == null) {
-        highlightColor = properties.getProperty("material.tab.borderColor");
-        highlightColorEnabled = false;
-      }
-
-      if (this.highlightThickness == null) {
-        highlightThickness = Integer.parseInt(properties.getProperty("material.tab.borderThickness"));
-      }
-    } catch (final IOException ignored) {
-    }
+  public MTProjectConfig() {
   }
 
   /**
@@ -106,15 +75,8 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
    *
    * @return the MTConfig instance
    */
-  public static MTConfig getInstance() {
-    return ServiceManager.getService(MTConfig.class);
-  }
-
-  public boolean needsRestart(final MTForm form) {
-    boolean modified = this.isMaterialDesignChanged(form.getIsMaterialDesign());
-    modified = modified || this.isThemedScrollbarsChanged(form.isThemedScrollbars());
-
-    return modified;
+  public static MTProjectConfig getInstance() {
+    return ServiceManager.getService(MTProjectConfig.class);
   }
 
   public MTTheme getSelectedTheme() {
@@ -130,7 +92,7 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
    */
   @Nullable
   @Override
-  public MTConfigInterface getState() {
+  public MTProjectConfig getState() {
     return this;
   }
 
@@ -280,22 +242,6 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
   }
   //endregion
 
-  //region Material Design Components
-  public boolean getIsMaterialDesign() {
-    return isMaterialDesign;
-  }
-
-  public void setIsMaterialDesign(final boolean materialDesign) {
-    isMaterialDesign = materialDesign;
-  }
-
-
-  public boolean isMaterialDesignChanged(final boolean isMaterialDesign) {
-    return this.isMaterialDesign != isMaterialDesign;
-  }
-  //endregion
-
-
   //region Bold Tabs
   public boolean getIsBoldTabs() {
     return isBoldTabs;
@@ -343,77 +289,6 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
 
   public boolean isWallpaperSetChanged(final boolean isWallpaperSet) {
     return this.wallpaperSet != isWallpaperSet;
-  }
-  //endregion
-
-
-  //region Material Icons
-  public boolean isUseMaterialIcons() {
-    return useMaterialIcons;
-  }
-
-  public void setUseMaterialIcons(final boolean useMaterialIcons) {
-    this.useMaterialIcons = useMaterialIcons;
-  }
-
-  public boolean isMaterialIconsChanged(final boolean useMaterialIcons) {
-    return this.useMaterialIcons != useMaterialIcons;
-  }
-  //endregion
-
-  //region Project View Decorators
-  public boolean isUseProjectViewDecorators() {
-    return useProjectViewDecorators;
-  }
-
-  public void setUseProjectViewDecorators(final boolean useProjectViewDecorators) {
-    this.useProjectViewDecorators = useProjectViewDecorators;
-  }
-
-  public boolean isUseProjectViewDecoratorsChanged(final boolean useProjectViewDecorators) {
-    return this.useProjectViewDecorators != useProjectViewDecorators;
-  }
-  //endregion
-
-  //region Hide File Icons
-  public boolean getHideFileIcons() {
-    return hideFileIcons;
-  }
-
-  public void setHideFileIcons(final boolean hideFileIcons) {
-    this.hideFileIcons = hideFileIcons;
-  }
-
-  public boolean isHideFileIconsChanged(final boolean hideFileIcons) {
-    return this.hideFileIcons != hideFileIcons;
-  }
-  //endregion
-
-  //region Compact Sidebar
-  public boolean isCompactSidebar() {
-    return compactSidebar;
-  }
-
-  public void setCompactSidebar(final boolean compactSidebar) {
-    this.compactSidebar = compactSidebar;
-  }
-
-  public boolean isCompactSidebarChanged(final boolean compactSidebar) {
-    return this.compactSidebar != compactSidebar;
-  }
-  //endregion
-
-  //region Statusbar indicator
-  public boolean isStatusBarTheme() {
-    return statusBarTheme;
-  }
-
-  public void setIsStatusBarTheme(final boolean isStatusBarTheme) {
-    this.statusBarTheme = isStatusBarTheme;
-  }
-
-  public boolean isStatusBarThemeChanged(final boolean statusBarTheme) {
-    return this.statusBarTheme != statusBarTheme;
   }
   //endregion
 
@@ -470,41 +345,4 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
     return this.isCustomTreeIndentEnabled != customTreeIndentEnabled;
   }
   //endregion
-
-
-  //region Themed Scrollbars
-  public boolean isThemedScrollbars() {
-    return themedScrollbars;
-  }
-
-  public void setThemedScrollbars(final boolean themedScrollbars) {
-    this.themedScrollbars = themedScrollbars;
-  }
-
-  public boolean isThemedScrollbarsChanged(final boolean themedScrollbars) {
-    return this.themedScrollbars != themedScrollbars;
-  }
-  //endregion
-
-  //region Compact Status Bar
-  public boolean isCompactStatusBar() {
-    return isCompactStatusBar;
-  }
-
-  public void setIsCompactStatusBar(final boolean isCompactStatusBar) {
-    this.isCompactStatusBar = isCompactStatusBar;
-  }
-
-  public boolean isCompactStatusBarChanged(final boolean compactStatusBar) {
-    return this.isCompactStatusBar != compactStatusBar;
-  }
-  //endregion
-
-  public String getDefaultBackground() {
-    return defaultBackground;
-  }
-
-  public void setDefaultBackground(String defaultBackground) {
-    this.defaultBackground = defaultBackground;
-  }
 }

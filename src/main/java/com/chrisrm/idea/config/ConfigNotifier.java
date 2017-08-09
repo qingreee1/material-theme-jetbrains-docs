@@ -26,7 +26,7 @@
 
 package com.chrisrm.idea.config;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTConfigInterface;
 import com.intellij.util.messages.Topic;
 
 /**
@@ -43,12 +43,12 @@ public interface ConfigNotifier {
    *
    * @param mtConfig
    */
-  void configChanged(MTConfig mtConfig);
+  void configChanged(MTConfigInterface mtConfig);
 
   class Adapter implements ConfigNotifier {
 
     @Override
-    public void configChanged(final MTConfig mtConfig) {
+    public void configChanged(final MTConfigInterface mtConfig) {
 
     }
   }

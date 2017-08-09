@@ -26,7 +26,7 @@
 
 package com.chrisrm.idea.config;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTConfigInterface;
 import com.chrisrm.idea.config.ui.MTForm;
 import com.intellij.util.messages.Topic;
 
@@ -45,12 +45,12 @@ public interface BeforeConfigNotifier {
    * @param mtConfig
    * @param form
    */
-  void beforeConfigChanged(MTConfig mtConfig, MTForm form);
+  void beforeConfigChanged(MTConfigInterface mtConfig, MTForm form);
 
   class Adapter implements BeforeConfigNotifier {
 
     @Override
-    public void beforeConfigChanged(final MTConfig mtConfig, final MTForm form) {
+    public void beforeConfigChanged(final MTConfigInterface mtConfig, final MTForm form) {
 
     }
   }
