@@ -27,6 +27,7 @@
 package com.chrisrm.idea.tabs;
 
 import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.MTTheme;
 import com.chrisrm.idea.MTThemeManager;
 import com.chrisrm.idea.config.ConfigNotifier;
@@ -36,6 +37,7 @@ import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.fileEditor.FileEditor;
 import com.intellij.openapi.fileEditor.FileEditorManagerEvent;
 import com.intellij.openapi.fileEditor.FileEditorManagerListener;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.impl.ToolWindowImpl;
 import com.intellij.ui.tabs.JBTabsPosition;
 import com.intellij.ui.tabs.TabInfo;
@@ -171,7 +173,17 @@ public final class MTTabsPainterPatcherComponent implements ApplicationComponent
 
     // Listen to option save to set tab height
     setTabsHeight();
-    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, mtConfig -> setTabsHeight());
+    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
+      @Override
+      public void configChanged(final MTConfig mtConfig) {
+        setTabsHeight();
+      }
+
+      @Override
+      public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
+        setTabsHeight();
+      }
+    });
 
     try {
       hackTabsGetHeight();

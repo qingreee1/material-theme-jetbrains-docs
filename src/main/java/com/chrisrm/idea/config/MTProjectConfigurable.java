@@ -67,12 +67,12 @@ public final class MTProjectConfigurable extends MTConfigurableBase<MTProjectFor
 
   @Override
   protected MTProjectConfig getConfig() {
-    return MTProjectConfig.getInstance();
+    return MTProjectConfig.getInstance(this.project);
   }
 
   @Override
   protected MTProjectForm createForm() {
-    return new MTProjectForm();
+    return new MTProjectForm(this.project);
   }
 
   @Override

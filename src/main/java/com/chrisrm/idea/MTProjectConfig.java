@@ -51,9 +51,9 @@ import static com.chrisrm.idea.MTConfig.DEFAULT_BG;
 public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig> {
   // They are public so they can be serialized
   public MTTheme selectedTheme = MTTheme.DEFAULT;
-  public String highlightColor;
+  public String highlightColor = "80CBC4";
   public boolean highlightColorEnabled = false;
-  public Integer highlightThickness;
+  public Integer highlightThickness = 2;
   public boolean isContrastMode = false;
   public boolean isBoldTabs = false;
   public boolean isCustomTreeIndentEnabled = false;
@@ -64,8 +64,9 @@ public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig
 
   public boolean wallpaperSet = true;
 
-  public Integer tabsHeight = 42;
-  public boolean isMaterialTheme = true;
+  public Integer tabsHeight = 50;
+  public boolean statusBarTheme = true;
+
   // Whether project settings are enbaled
   private boolean enabled = false;
 
@@ -77,8 +78,8 @@ public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig
    *
    * @return the MTConfig instance
    */
-  public static MTProjectConfig getInstance() {
-    return ServiceManager.getService(MTProjectConfig.class);
+  public static MTProjectConfig getInstance(@NotNull final Project project) {
+    return ServiceManager.getService(project, MTProjectConfig.class);
   }
 
   public MTTheme getSelectedTheme() {
@@ -308,20 +309,6 @@ public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig
   }
   //endregion
 
-  //region Material Theme
-  public boolean isMaterialTheme() {
-    return isMaterialTheme;
-  }
-
-  public void setIsMaterialTheme(final boolean isMaterialTheme) {
-    this.isMaterialTheme = isMaterialTheme;
-  }
-
-  public boolean isMaterialThemeChanged(final boolean isMaterialTheme) {
-    return this.isMaterialTheme != isMaterialTheme;
-  }
-  //endregion
-
   //region Custom Tree Indents
   public int getCustomTreeIndent() {
     return customTreeIndent;
@@ -346,6 +333,21 @@ public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig
   public boolean isCustomTreeIndentChanged(final boolean customTreeIndentEnabled) {
     return this.isCustomTreeIndentEnabled != customTreeIndentEnabled;
   }
+  //endregion
+
+  //region Statusbar indicator
+  public boolean isStatusBarTheme() {
+    return statusBarTheme;
+  }
+
+  public void setIsStatusBarTheme(final boolean isStatusBarTheme) {
+    this.statusBarTheme = isStatusBarTheme;
+  }
+
+  public boolean isStatusBarThemeChanged(final boolean statusBarTheme) {
+    return this.statusBarTheme != statusBarTheme;
+  }
+  //endregion
 
   public boolean isEnabled() {
     return enabled;
@@ -354,5 +356,4 @@ public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig
   public void setEnabled(boolean enabled) {
     this.enabled = enabled;
   }
-  //endregion
 }

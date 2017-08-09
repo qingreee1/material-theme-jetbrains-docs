@@ -27,11 +27,13 @@
 package com.chrisrm.idea.wallpaper;
 
 import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.config.ConfigNotifier;
 import com.intellij.ide.AppLifecycleListener;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.impl.IdeBackgroundUtil;
 import com.intellij.util.messages.MessageBusConnection;
 import org.jetbrains.annotations.NotNull;
@@ -57,7 +59,18 @@ public final class MTWallpaperComponent implements ApplicationComponent {
     this.reloadWallpaper();
 
     final MessageBusConnection connect = ApplicationManager.getApplication().getMessageBus().connect();
-    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, mtConfig -> this.reloadWallpaper());
+    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
+      @Override
+      public void configChanged(final MTConfig mtConfig) {
+        reloadWallpaper();
+      }
+
+      @Override
+      public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
+        reloadWallpaper();
+      }
+    });
+
     connect.subscribe(AppLifecycleListener.TOPIC, new AppLifecycleListener() {
       /**
        * Restore original background at evey close

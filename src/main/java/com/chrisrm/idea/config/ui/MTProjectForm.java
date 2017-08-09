@@ -31,6 +31,7 @@ import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.MTTheme;
 import com.chrisrm.idea.messages.MaterialThemeBundle;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.TextComponentAccessor;
 import com.intellij.openapi.ui.TextFieldWithBrowseButton;
 import com.intellij.ui.ColorPanel;
@@ -48,6 +49,7 @@ import java.awt.event.ActionEvent;
 import java.util.ResourceBundle;
 
 public final class MTProjectForm implements MTFormUI {
+  private final Project project;
   private SpinnerModel highlightSpinnerModel;
   private SpinnerModel tabsHeightSpinnerModel;
   private SpinnerModel customTreeIndentModel;
@@ -101,7 +103,7 @@ public final class MTProjectForm implements MTFormUI {
 
   @Override
   public void init() {
-    MTConfig config = MTConfig.getInstance();
+    final MTProjectConfig config = MTProjectConfig.getInstance(project);
     highlightSpinnerModel = new SpinnerNumberModel(config.getHighlightThickness(), 1, 5, 1);
     highlightSpinner.setModel(highlightSpinnerModel);
     tabsHeightSpinnerModel = new SpinnerNumberModel(config.getTabsHeight(), 25, 60, 1);
@@ -180,12 +182,13 @@ public final class MTProjectForm implements MTFormUI {
   private JCheckBox isThemeInStatusCheckbox;
   // GEN-END:variables
 
-  public MTProjectForm() {
+  public MTProjectForm(@NotNull final Project project) {
+    this.project = project;
     initComponents();
 
     // Reset tab defaults
     resetTabDefaultsBtn.addActionListener(e -> {
-      final MTTheme mtTheme = MTProjectConfig.getInstance().getSelectedTheme();
+      final MTTheme mtTheme = MTProjectConfig.getInstance(project).getSelectedTheme();
       Color borderColor = mtTheme.getBorderColor();
       int thickness = mtTheme.getBorderThickness();
 
