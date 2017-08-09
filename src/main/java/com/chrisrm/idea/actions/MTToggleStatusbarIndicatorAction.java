@@ -27,7 +27,7 @@
 package com.chrisrm.idea.actions;
 
 import com.chrisrm.idea.MTConfig;
-import com.chrisrm.idea.MTThemeManager;
+import com.chrisrm.idea.MTProjectThemeManager;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.ToggleAction;
 
@@ -41,7 +41,7 @@ public final class MTToggleStatusbarIndicatorAction extends ToggleAction {
 
   @Override
   public void setSelected(final AnActionEvent e, final boolean state) {
-    MTThemeManager.getInstance().toggleStatusBarIndicator();
+    MTProjectThemeManager.getInstance(e.getProject()).toggleStatusBarIndicator();
 
   }
 }

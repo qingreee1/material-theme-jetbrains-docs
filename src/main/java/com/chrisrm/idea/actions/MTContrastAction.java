@@ -27,7 +27,8 @@
 package com.chrisrm.idea.actions;
 
 import com.chrisrm.idea.MTConfig;
-import com.chrisrm.idea.MTThemeManager;
+import com.chrisrm.idea.MTConfigManager;
+import com.chrisrm.idea.MTProjectThemeManager;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.ToggleAction;
 
@@ -35,12 +36,12 @@ public final class MTContrastAction extends ToggleAction {
 
   @Override
   public boolean isSelected(final AnActionEvent e) {
-    return MTConfig.getInstance().getIsContrastMode();
+    return MTConfigManager.getInstance(e.getProject()).getIsContrastMode();
   }
 
   @Override
   public void setSelected(final AnActionEvent e, final boolean state) {
-    MTThemeManager.getInstance().toggleContrast();
+    MTProjectThemeManager.getInstance(e.getProject()).toggleContrast();
   }
 
   /**

@@ -32,7 +32,10 @@ import org.jetbrains.annotations.NotNull;
 
 public final class MTConfigManager {
 
-  private MTConfigManager() {
+  private final Project project;
+
+  private MTConfigManager(@NotNull final Project project) {
+    this.project = project;
   }
 
   public static MTConfigManager getInstance(@NotNull final Project project) {
@@ -40,6 +43,6 @@ public final class MTConfigManager {
   }
 
   public boolean getIsContrastMode() {
-    return false;
+    return MTProjectConfig.getInstance(project).getIsContrastMode();
   }
 }

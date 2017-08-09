@@ -53,6 +53,8 @@
         <projectService serviceImplementation="com.chrisrm.idea.MTConfigManager"/>
 
         <applicationService serviceImplementation="com.chrisrm.idea.MTThemeManager"/>
+        <projectService serviceImplementation="com.chrisrm.idea.MTProjectThemeManager"/>
+
         <applicationService serviceImplementation="com.chrisrm.idea.icons.tinted.TintedIconsService"/>
         <applicationConfigurable instance="com.chrisrm.idea.config.MTConfigurable"
                                  groupId="appearance"
@@ -108,6 +110,10 @@
         </component>
         <component>
             <implementation-class>com.chrisrm.idea.config.scope.MTScopeComponent</implementation-class>
+            <loadForDefaultProject>true</loadForDefaultProject>
+        </component>
+        <component>
+            <implementation-class>com.chrisrm.idea.schemes.MTProjectThemesComponent</implementation-class>
             <loadForDefaultProject>true</loadForDefaultProject>
         </component>
     </project-components>
