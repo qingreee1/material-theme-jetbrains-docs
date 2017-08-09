@@ -27,9 +27,10 @@
 package com.chrisrm.idea.config;
 
 import com.chrisrm.idea.MTProjectConfig;
-import com.chrisrm.idea.config.ui.MTForm;
+import com.chrisrm.idea.config.ui.MTProjectForm;
 import com.chrisrm.idea.messages.MaterialThemeBundle;
 import com.intellij.openapi.options.SearchableConfigurable;
+import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -37,9 +38,14 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Service used to load and save settings from MTConfig
  */
-public final class MTProjectConfigurable extends MTConfigurableBase<MTForm, MTProjectConfig> implements SearchableConfigurable {
+public final class MTProjectConfigurable extends MTConfigurableBase<MTProjectForm, MTProjectConfig> implements SearchableConfigurable {
 
   public static final String ID = "com.chrisrm.idea.config.project";
+  private final Project project;
+
+  public MTProjectConfigurable(@NotNull final Project project) {
+    this.project = project;
+  }
 
   @Nls
   @Override
@@ -65,12 +71,12 @@ public final class MTProjectConfigurable extends MTConfigurableBase<MTForm, MTPr
   }
 
   @Override
-  protected MTForm createForm() {
-    return new MTForm();
+  protected MTProjectForm createForm() {
+    return new MTProjectForm();
   }
 
   @Override
-  protected void setFormState(final MTForm mtForm, final MTProjectConfig mtConfig) {
+  protected void setFormState(final MTProjectForm mtForm, final MTProjectConfig mtConfig) {
     getForm().setHighlightColor(mtConfig.getHighlightColor());
     getForm().setHighlightColorEnabled(mtConfig.isHighlightColorEnabled());
     getForm().setHighlightThickness(mtConfig.getHighlightThickness());
@@ -82,14 +88,12 @@ public final class MTProjectConfigurable extends MTConfigurableBase<MTForm, MTPr
     getForm().setIsCustomTreeIndent(mtConfig.isCustomTreeIndent());
     getForm().setCustomTreeIndent(mtConfig.getCustomTreeIndent());
 
-    getForm().setIsMaterialTheme(mtConfig.isMaterialTheme());
-
     getForm().afterStateSet();
   }
 
   @Override
-  protected void doApply(final MTForm mtForm, final MTProjectConfig mtConfig) {
-    mtConfig.fireBeforeChanged(getForm());
+  protected void doApply(final MTProjectForm mtForm, final MTProjectConfig mtConfig) {
+    mtConfig.fireBeforeChanged(this.project, getForm());
 
     mtConfig.setHighlightColor(getForm().getHighlightColor());
     mtConfig.setHighlightColorEnabled(getForm().getHighlightColorEnabled());
@@ -102,13 +106,11 @@ public final class MTProjectConfigurable extends MTConfigurableBase<MTForm, MTPr
     mtConfig.setIsCustomTreeIndent(getForm().isCustomTreeIndent());
     mtConfig.setCustomTreeIndent(getForm().getCustomTreeIndent());
 
-    mtConfig.setIsMaterialTheme(getForm().getIsMaterialTheme());
-
-    mtConfig.fireChanged();
+    mtConfig.fireChanged(this.project);
   }
 
   @Override
-  protected boolean checkModified(final MTForm mtForm, final MTProjectConfig mtConfig) {
+  protected boolean checkModified(final MTProjectForm mtForm, final MTProjectConfig mtConfig) {
     boolean modified = mtConfig.isHighlightColorChanged(getForm().getHighlightColor());
     modified = modified || mtConfig.isHighlightColorEnabledChanged(getForm().getHighlightColorEnabled());
     modified = modified || mtConfig.isHighlightThicknessChanged(getForm().getHighlightThickness());
@@ -120,8 +122,6 @@ public final class MTProjectConfigurable extends MTConfigurableBase<MTForm, MTPr
 
     modified = modified || mtConfig.isCustomTreeIndentChanged(getForm().isCustomTreeIndent());
     modified = modified || mtConfig.customTreeIndentChanged(getForm().getCustomTreeIndent());
-
-    modified = modified || mtConfig.isMaterialThemeChanged(getForm().getIsMaterialTheme());
 
     return modified;
   }

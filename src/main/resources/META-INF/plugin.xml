@@ -56,6 +56,8 @@
         <applicationConfigurable instance="com.chrisrm.idea.config.MTConfigurable"
                                  groupId="appearance"
                                  id="com.chrisrm.idea.config"/>
+        <projectConfigurable instance="com.chrisrm.idea.config.MTProjectConfigurable" groupId="appearance"
+                             id="com.chrisrm.idea.config.project"/>
 
         <projectViewNodeDecorator implementation="com.chrisrm.idea.tree.MTProjectViewNodeDecorator"/>
         <editorTabColorProvider implementation="com.chrisrm.idea.tabs.MTEditorTabColor"/>

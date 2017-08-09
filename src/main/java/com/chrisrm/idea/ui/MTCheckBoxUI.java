@@ -35,9 +35,9 @@ import com.intellij.util.ui.UIUtil;
 import sun.swing.SwingUtilities2;
 
 import javax.swing.*;
-import javax.swing.plaf.*;
-import javax.swing.plaf.basic.*;
-import javax.swing.text.*;
+import javax.swing.plaf.ComponentUI;
+import javax.swing.plaf.basic.BasicHTML;
+import javax.swing.text.View;
 import java.awt.*;
 
 /**
@@ -163,7 +163,7 @@ public final class MTCheckBoxUI extends DarculaCheckBoxUI {
     }
   }
 
-  private void paintOvalRing(Graphics2D g, int w, int h) {
+  private void paintOvalRing(final Graphics2D g, final int w, final int h) {
     g.setColor(UIManager.getColor("Focus.color"));
     g.fillOval(-5, -5, w + 10, h + 10);
   }

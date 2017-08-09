@@ -7,5 +7,7 @@
 <suppressions>
     <suppress files="src[\\/]test[\\/]" checks="."/>
     <suppress files="MTForm.java" checks="."/>
+    <suppress files="MTProjectForm.java" checks="."/>
     <suppress files="MTConfig.java" checks="."/>
+    <suppress files="MTProjectConfig.java" checks="."/>
 </suppressions>

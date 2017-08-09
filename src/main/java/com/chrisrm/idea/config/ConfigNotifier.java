@@ -26,7 +26,9 @@
 
 package com.chrisrm.idea.config;
 
-import com.chrisrm.idea.MTConfigInterface;
+import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
+import com.intellij.openapi.project.Project;
 import com.intellij.util.messages.Topic;
 
 /**
@@ -43,12 +45,25 @@ public interface ConfigNotifier {
    *
    * @param mtConfig
    */
-  void configChanged(MTConfigInterface mtConfig);
+  void configChanged(MTConfig mtConfig);
+
+  /**
+   * Called when project config changed
+   *
+   * @param project
+   * @param mtProjectConfig
+   */
+  void configChanged(Project project, MTProjectConfig mtProjectConfig);
 
   class Adapter implements ConfigNotifier {
 
     @Override
-    public void configChanged(final MTConfigInterface mtConfig) {
+    public void configChanged(final MTConfig mtConfig) {
+
+    }
+
+    @Override
+    public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
 
     }
   }

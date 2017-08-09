@@ -29,6 +29,7 @@ package com.chrisrm.idea;
 import com.chrisrm.idea.config.BeforeConfigNotifier;
 import com.chrisrm.idea.config.ConfigNotifier;
 import com.chrisrm.idea.config.ui.MTForm;
+import com.chrisrm.idea.config.ui.MTProjectForm;
 import com.chrisrm.idea.messages.MaterialThemeBundle;
 import com.chrisrm.idea.ui.*;
 import com.chrisrm.idea.utils.MTUiUtils;
@@ -83,8 +84,29 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
 
     // Listen for changes on the settings
     connect = ApplicationManager.getApplication().getMessageBus().connect();
-    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, this::onSettingsChanged);
-    connect.subscribe(BeforeConfigNotifier.BEFORE_CONFIG_TOPIC, (this::onBeforeSettingsChanged));
+    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
+      @Override
+      public void configChanged(final MTConfig mtConfig) {
+        onSettingsChanged(mtConfig);
+      }
+
+      @Override
+      public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
+        onProjectSettingsChanged(mtProjectConfig);
+      }
+    });
+
+    connect.subscribe(BeforeConfigNotifier.BEFORE_CONFIG_TOPIC, new BeforeConfigNotifier() {
+      @Override
+      public void beforeConfigChanged(final MTConfig mtConfig, final MTForm form) {
+        onBeforeSettingsChanged(mtConfig, form);
+      }
+
+      @Override
+      public void beforeConfigChanged(final Project project, final MTProjectConfig mtProjectConfig, final MTProjectForm form) {
+        onBeforeProjectSettingsChanged(mtProjectConfig, form);
+      }
+    });
   }
 
   public static void patchUIUtil() {
@@ -160,7 +182,7 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
       final CtMethod createUI = darculaClass.getDeclaredMethod("createUI", new CtClass[]{componentClass});
       createUI.instrument(new ExprEditor() {
         @Override
-        public void edit(NewExpr e) throws CannotCompileException {
+        public void edit(final NewExpr e) throws CannotCompileException {
           if (e.getClassName().equals("com.intellij.ide.ui.laf.darcula.ui.DarculaTextFieldUI")) {
             e.replace("{ $_ = (javax.swing.plaf.ComponentUI)javax.swing.SwingUtilities.loadSystemClass(\"com.chrisrm.idea.ui" +
                 ".MTTextFieldUI\").newInstance(); }");
@@ -261,17 +283,22 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
    * @param mtConfig
    * @param form
    */
-  private void onBeforeSettingsChanged(final MTConfigInterface mtConfig, final MTForm form) {
+  private void onBeforeSettingsChanged(final MTConfig mtConfig, final MTForm form) {
     // Force restart if material design is switched
     restartIdeIfNecessary(mtConfig, form);
   }
+
+  private void onBeforeProjectSettingsChanged(final MTProjectConfig mtProjectConfig, final MTProjectForm form) {
+
+  }
+
 
   /**
    * Called when MT Config settings are changeds
    *
    * @param mtConfig
    */
-  private void onSettingsChanged(final MTConfigInterface mtConfig) {
+  private void onSettingsChanged(final MTConfig mtConfig) {
     // Trigger file icons and statuses update
     MTThemeManager.getInstance().updateFileIcons();
 
@@ -281,12 +308,22 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
   }
 
   /**
+   * Called when project settings changed
+   *
+   * @param mtProjectConfig
+   */
+  private void onProjectSettingsChanged(final MTProjectConfig mtProjectConfig) {
+
+  }
+
+
+  /**
    * Restart IDE if necessary (ex: material design components)
    *
    * @param mtConfig
    * @param form
    */
-  private void restartIdeIfNecessary(final MTConfigInterface mtConfig, final MTForm form) {
+  private void restartIdeIfNecessary(final MTConfig mtConfig, final MTForm form) {
     // Restart the IDE if changed
     if (mtConfig.needsRestart(form)) {
       final String title = MaterialThemeBundle.message("mt.restartDialog.title");
@@ -297,6 +334,9 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
         this.willRestartIde = true;
       }
     }
+  }
+
+  private void restartIdeIfNecessary(final MTProjectConfig mtProjectConfig, final MTProjectForm form) {
   }
 
   /**
@@ -404,7 +444,17 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
     });
 
     // And also on config change
-    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, mtConfig -> MTThemeManager.getInstance().setStatusBarBorders());
+    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
+      @Override
+      public void configChanged(final MTConfig mtConfig) {
+        MTThemeManager.getInstance().setStatusBarBorders();
+      }
+
+      @Override
+      public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
+        MTThemeManager.getInstance().setStatusBarBorders();
+      }
+    });
   }
 
   /**

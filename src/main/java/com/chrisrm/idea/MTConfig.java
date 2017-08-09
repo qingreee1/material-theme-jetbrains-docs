@@ -49,9 +49,9 @@ import java.util.Properties;
     name = "MaterialThemeConfig",
     storages = @Storage("material_theme.xml")
 )
-public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MTConfigInterface {
+public class MTConfig implements PersistentStateComponent<MTConfig> {
   public static final String DEFAULT_BG = "https://raw.githubusercontent" +
-                                          ".com/mallowigi/material-theme-jetbrains-eap/master/src/main/resources/themes/wall.jpg,60";
+      ".com/mallowigi/material-theme-jetbrains-eap/master/src/main/resources/themes/wall.jpg,60";
   // They are public so they can be serialized
   public MTTheme selectedTheme = MTTheme.DEFAULT;
   public String highlightColor;
@@ -73,7 +73,7 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
   public boolean compactSidebar = false;
   public boolean statusBarTheme = true;
 
-  public Integer tabsHeight = 42;
+  public Integer tabsHeight = 50;
   public boolean isMaterialTheme = true;
   public boolean themedScrollbars = true;
   public boolean isCompactStatusBar;
@@ -130,7 +130,7 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
    */
   @Nullable
   @Override
-  public MTConfigInterface getState() {
+  public MTConfig getState() {
     return this;
   }
 
@@ -140,7 +140,7 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
    * @param state the MTConfig instance
    */
   @Override
-  public void loadState(final MTConfigInterface state) {
+  public void loadState(final MTConfig state) {
     XmlSerializerUtil.copyBean(state, this);
   }
 
@@ -151,8 +151,8 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
    */
   public void fireBeforeChanged(final MTForm form) {
     ApplicationManager.getApplication().getMessageBus()
-        .syncPublisher(BeforeConfigNotifier.BEFORE_CONFIG_TOPIC)
-        .beforeConfigChanged(this, form);
+                      .syncPublisher(BeforeConfigNotifier.BEFORE_CONFIG_TOPIC)
+                      .beforeConfigChanged(this, form);
   }
 
   /**
@@ -160,8 +160,8 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
    */
   public void fireChanged() {
     ApplicationManager.getApplication().getMessageBus()
-        .syncPublisher(ConfigNotifier.CONFIG_TOPIC)
-        .configChanged(this);
+                      .syncPublisher(ConfigNotifier.CONFIG_TOPIC)
+                      .configChanged(this);
   }
 
   //region Tabs Highlight
@@ -504,7 +504,7 @@ public class MTConfig implements PersistentStateComponent<MTConfigInterface>, MT
     return defaultBackground;
   }
 
-  public void setDefaultBackground(String defaultBackground) {
+  public void setDefaultBackground(final String defaultBackground) {
     this.defaultBackground = defaultBackground;
   }
 }

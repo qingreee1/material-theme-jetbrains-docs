@@ -27,7 +27,7 @@
 package com.chrisrm.idea.status;
 
 import com.chrisrm.idea.MTConfig;
-import com.chrisrm.idea.MTConfigInterface;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.config.ConfigNotifier;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.application.ApplicationManager;
@@ -51,16 +51,42 @@ public final class MTStatusBarManager implements Disposable, DumbAware {
     this.statusEnabled = MTConfig.getInstance().isStatusBarTheme();
 
     connect = project.getMessageBus().connect();
-    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, this::refreshWidget);
+    connect.subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
+      @Override
+      public void configChanged(final MTConfig mtConfig) {
+        refreshWidget(mtConfig);
+      }
+
+      @Override
+      public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
+        refreshProjectWidget(mtProjectConfig);
+      }
+    });
   }
+
+
 
   public static MTStatusBarManager create(@NotNull final Project project) {
     return new MTStatusBarManager(project);
   }
 
-  private void refreshWidget(final MTConfigInterface mtConfig) {
+  private void refreshWidget(final MTConfig mtConfig) {
     if (mtConfig.isStatusBarThemeChanged(this.statusEnabled)) {
       statusEnabled = mtConfig.isStatusBarTheme();
+
+      if (statusEnabled) {
+        this.install();
+      } else {
+        this.uninstall();
+      }
+    }
+
+    mtStatusWidget.refresh();
+  }
+
+  private void refreshProjectWidget(final MTProjectConfig mtProjectConfig) {
+    if (mtProjectConfig.isStatusBarThemeChanged(this.statusEnabled)) {
+      statusEnabled = mtProjectConfig.isStatusBarTheme();
 
       if (statusEnabled) {
         this.install();

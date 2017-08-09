@@ -28,12 +28,12 @@ package com.chrisrm.idea;
 
 import com.chrisrm.idea.config.BeforeConfigNotifier;
 import com.chrisrm.idea.config.ConfigNotifier;
-import com.chrisrm.idea.config.ui.MTForm;
-import com.intellij.openapi.application.ApplicationManager;
+import com.chrisrm.idea.config.ui.MTProjectForm;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
+import com.intellij.openapi.project.Project;
 import com.intellij.ui.ColorUtil;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 import org.jetbrains.annotations.NotNull;
@@ -48,7 +48,7 @@ import static com.chrisrm.idea.MTConfig.DEFAULT_BG;
     name = "MaterialThemeProjectConfig",
     storages = @Storage("material_theme_project.xml")
 )
-public class MTProjectConfig implements PersistentStateComponent<MTConfigInterface>, MTConfigInterface {
+public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig> {
   // They are public so they can be serialized
   public MTTheme selectedTheme = MTTheme.DEFAULT;
   public String highlightColor;
@@ -66,6 +66,8 @@ public class MTProjectConfig implements PersistentStateComponent<MTConfigInterfa
 
   public Integer tabsHeight = 42;
   public boolean isMaterialTheme = true;
+  // Whether project settings are enbaled
+  private boolean enabled = false;
 
   public MTProjectConfig() {
   }
@@ -102,7 +104,7 @@ public class MTProjectConfig implements PersistentStateComponent<MTConfigInterfa
    * @param state the MTConfig instance
    */
   @Override
-  public void loadState(final MTConfigInterface state) {
+  public void loadState(final MTProjectConfig state) {
     XmlSerializerUtil.copyBean(state, this);
   }
 
@@ -111,19 +113,19 @@ public class MTProjectConfig implements PersistentStateComponent<MTConfigInterfa
    *
    * @param form
    */
-  public void fireBeforeChanged(final MTForm form) {
-    ApplicationManager.getApplication().getMessageBus()
-        .syncPublisher(BeforeConfigNotifier.BEFORE_CONFIG_TOPIC)
-        .beforeConfigChanged(this, form);
+  public void fireBeforeChanged(@NotNull final Project project, final MTProjectForm form) {
+    project.getMessageBus()
+           .syncPublisher(BeforeConfigNotifier.BEFORE_CONFIG_TOPIC)
+           .beforeConfigChanged(project, this, form);
   }
 
   /**
    * Fire an event to the application bus that the settings have changed
    */
-  public void fireChanged() {
-    ApplicationManager.getApplication().getMessageBus()
-        .syncPublisher(ConfigNotifier.CONFIG_TOPIC)
-        .configChanged(this);
+  public void fireChanged(@NotNull final Project project) {
+    project.getMessageBus()
+           .syncPublisher(ConfigNotifier.CONFIG_TOPIC)
+           .configChanged(project, this);
   }
 
   //region Tabs Highlight
@@ -345,19 +347,12 @@ public class MTProjectConfig implements PersistentStateComponent<MTConfigInterfa
     return this.isCustomTreeIndentEnabled != customTreeIndentEnabled;
   }
 
-  @Override
-  public boolean needsRestart(MTForm form) {
-    return false;
+  public boolean isEnabled() {
+    return enabled;
   }
 
-  @Override
-  public boolean isStatusBarThemeChanged(boolean statusEnabled) {
-    return false;
-  }
-
-  @Override
-  public boolean isStatusBarTheme() {
-    return false;
+  public void setEnabled(boolean enabled) {
+    this.enabled = enabled;
   }
   //endregion
 }
