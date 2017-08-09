@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0.X
+- BROKEN VERSION: PLEASE DO NOT UPDATE
+- BROKEN VERSION: PLEASE DO NOT UPDATE
+- BROKEN VERSION: PLEASE DO NOT UPDATE
+- Please reinstall version 0.8.2
+
+
 ## 0.8.0.2
 - Fix issue with custom file statuses not being colorable
 - Themed Material Combobox Action button 

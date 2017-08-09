@@ -27,7 +27,7 @@
 <idea-plugin>
     <id>com.chrisrm.idea.MaterialThemeUIFork</id>
     <name>Material Theme UI EAP</name>
-    <version>0.8.0.4</version>
+    <version>0.8.0.6</version>
     <vendor email="heliosaian@gmail.com" url="https://github.com/mallowigi">Mallowigi</vendor>
 
     <description><![CDATA[
@@ -312,6 +312,15 @@
 
     <change-notes><![CDATA[
     <html>
+    <b>0.8.0.X</b>
+    <ul>
+    <li>BROKEN VERSION: PLEASE DO NOT UPDATE</li>
+        <li>BROKEN VERSION: PLEASE DO NOT UPDATE</li>
+    <li>BROKEN VERSION: PLEASE DO NOT UPDATE</li>
+<li>I've entered a loop of bad releases so please refrain from updating until further notice</li>
+<li>Latest "almost" stable version was 0.8.2</li>
+    </ul>
+
     <b>0.8.0</b>
     <ul>
     <li>Allow customization of file status colors</li>
