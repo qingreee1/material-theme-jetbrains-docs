@@ -50,6 +50,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.chrisrm.idea.MTConfig"/>
         <projectService serviceImplementation="com.chrisrm.idea.MTProjectConfig"/>
+        <projectService serviceImplementation="com.chrisrm.idea.MTConfigManager"/>
 
         <applicationService serviceImplementation="com.chrisrm.idea.MTThemeManager"/>
         <applicationService serviceImplementation="com.chrisrm.idea.icons.tinted.TintedIconsService"/>
