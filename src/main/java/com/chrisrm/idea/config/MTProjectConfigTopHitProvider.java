@@ -26,7 +26,7 @@
 
 package com.chrisrm.idea.config;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.messages.MaterialThemeBundle;
 import com.intellij.ide.ui.OptionsTopHitProvider;
 import com.intellij.ide.ui.PublicMethodBasedOptionDescription;
@@ -44,35 +44,22 @@ import java.util.Collections;
 /**
  * Provide commands for Search Everything Top Hit commmands
  */
-public final class MTConfigTopHitProvider extends OptionsTopHitProvider {
-
-  private static final Collection<OptionDescription> OPTION_DESCRIPTIONS = Collections.unmodifiableCollection(Arrays.asList(
-      option(messageIde("mt.contrast"), "getIsContrastMode", "setIsContrastMode"),
-      option(messageIde("mt.materialdesign"), "getIsMaterialDesign", "setIsMaterialDesign"),
-      option(messageIde("MTForm.isMaterialIconsCheckbox.text"), "isUseMaterialIcons", "setUseMaterialIcons"),
-      option(messageIde("MTForm.projectViewDecorators"), "isUseProjectViewDecorators", "setUseProjectViewDecorators"),
-      option(messageIde("MTForm.hideFileIcons"), "getHideFileIcons", "setHideFileIcons"),
-      option(messageIde("MTForm.isCompactSidebarCheckbox.text"), "isCompactSidebar", "setCompactSidebar"),
-      option(messageIde("MTForm.isCompactStatusbarCheckbox.text"), "isCompactStatusBar", "setIsCompactStatusBar"),
-      option(messageIde("MTForm.materialThemeCheckbox.text"), "isMaterialTheme", "setIsMaterialTheme"),
-      option(messageIde("MTForm.themedScrollbarsCheckbox.text"), "isThemedScrollbars", "setThemedScrollbars")
-
-  ));
+public final class MTProjectConfigTopHitProvider extends OptionsTopHitProvider {
 
   static String messageIde(final String property) {
     return StringUtil.stripHtml(MaterialThemeBundle.message(property), false);
   }
 
-  static BooleanOptionDescription option(final String option, final String getter, final String setter) {
-    return new PublicMethodBasedOptionDescription("Material Theme:" + option, "com.chrisrm.idea.config", getter, setter) {
+  static BooleanOptionDescription option(final Project project, final String option, final String getter, final String setter) {
+    return new PublicMethodBasedOptionDescription("Material Theme:" + option, "com.chrisrm.idea.config.project", getter, setter) {
       @Override
       public Object getInstance() {
-        return MTConfig.getInstance();
+        return MTProjectConfig.getInstance(project);
       }
 
       @Override
       protected void fireUpdated() {
-        MTConfig.getInstance().fireChanged();
+        MTProjectConfig.getInstance(project).fireChanged(project);
       }
     };
   }
@@ -80,11 +67,20 @@ public final class MTConfigTopHitProvider extends OptionsTopHitProvider {
   @NotNull
   @Override
   public Collection<OptionDescription> getOptions(@Nullable final Project project) {
-    return OPTION_DESCRIPTIONS;
+    if (project != null) {
+      return Collections.unmodifiableCollection(Arrays.asList(
+          option(project, messageIde("mt.contrast"), "getIsContrastMode", "setIsContrastMode"),
+          option(project, messageIde("mt.boldtabs"), "getIsBoldTabs", "setIsBoldTabs"),
+          option(project, messageIde("mt.iswallpaperset"), "isWallpaperSet", "setIsWallpaperSet"),
+          option(project, messageIde("MTForm.customTreeIndentCheckbox.text"), "isCustomTreeIndent", "setIsCustomTreeIndent"),
+          option(project, messageIde("MTForm.themeStatus"), "isStatusBarTheme", "setIsStatusBarTheme"))
+      );
+    }
+    return Collections.emptyList();
   }
 
   @Override
   public String getId() {
-    return "mtconfig";
+    return "mtProjectConfig";
   }
 }
