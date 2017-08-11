@@ -271,6 +271,13 @@ public final class MTProjectThemeManager {
     // Documentation styles
     patchStyledEditorKit();
 
+    try {
+      DarculaInstaller.uninstall();
+      DarculaInstaller.install();
+
+    } catch (Exception e) {
+      ;
+    }
     UIReplacer.patchUI(project);
   }
 
