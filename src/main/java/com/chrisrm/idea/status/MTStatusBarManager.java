@@ -47,14 +47,14 @@ public final class MTStatusBarManager implements Disposable, DumbAware {
 
   private MTStatusBarManager(@NotNull final Project project) {
     this.project = project;
-    this.mtStatusWidget = new MTStatusWidget();
-    this.statusEnabled = MTConfig.getInstance().isStatusBarTheme();
+    this.mtStatusWidget = new MTStatusWidget(project);
+    this.statusEnabled = MTProjectConfig.getInstance(project).isStatusBarTheme();
 
     connect = project.getMessageBus().connect();
     connect.subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
       @Override
       public void configChanged(final MTConfig mtConfig) {
-        refreshWidget(mtConfig);
+        //        refreshWidget(mtConfig);
       }
 
       @Override
@@ -68,20 +68,6 @@ public final class MTStatusBarManager implements Disposable, DumbAware {
 
   public static MTStatusBarManager create(@NotNull final Project project) {
     return new MTStatusBarManager(project);
-  }
-
-  private void refreshWidget(final MTConfig mtConfig) {
-    if (mtConfig.isStatusBarThemeChanged(this.statusEnabled)) {
-      statusEnabled = mtConfig.isStatusBarTheme();
-
-      if (statusEnabled) {
-        this.install();
-      } else {
-        this.uninstall();
-      }
-    }
-
-    mtStatusWidget.refresh();
   }
 
   private void refreshProjectWidget(final MTProjectConfig mtProjectConfig) {

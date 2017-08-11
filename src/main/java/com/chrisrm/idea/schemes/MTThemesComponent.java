@@ -26,13 +26,8 @@
 
 package com.chrisrm.idea.schemes;
 
-import com.chrisrm.idea.MTConfig;
-import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.MTThemeManager;
-import com.chrisrm.idea.config.ConfigNotifier;
-import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
-import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -42,20 +37,20 @@ public final class MTThemesComponent implements ApplicationComponent {
 
   @Override
   public void initComponent() {
-    activateTheme();
+    //    activateTheme();
 
-    ApplicationManager.getApplication().getMessageBus().connect()
-                      .subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
-                        @Override
-                        public void configChanged(final MTConfig mtConfig) {
-                          activateTheme();
-                        }
-
-                        @Override
-                        public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
-                          activateTheme();
-                        }
-                      });
+    //    ApplicationManager.getApplication().getMessageBus().connect()
+    //                      .subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
+    //                        @Override
+    //                        public void configChanged(final MTConfig mtConfig) {
+    //                          activateTheme();
+    //                        }
+    //
+    //                        @Override
+    //                        public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
+    //                          activateTheme();
+    //                        }
+    //                      });
   }
 
   public void activateTheme() {

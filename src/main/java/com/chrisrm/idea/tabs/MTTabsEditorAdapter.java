@@ -26,7 +26,7 @@
 
 package com.chrisrm.idea.tabs;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.MTTheme;
 import com.intellij.openapi.fileEditor.FileEditorManagerEvent;
 import com.intellij.openapi.fileEditor.FileEditorManagerListener;
@@ -62,16 +62,17 @@ public final class MTTabsEditorAdapter implements FileEditorManagerListener {
       }
 
       if (newFile != null) {
-        processActiveTab(fileStatusManager, newFile, editorWindow);
+        processActiveTab(project, fileStatusManager, newFile, editorWindow);
       }
     }
   }
 
-  private void processActiveTab(@NotNull final FileStatusManager fileStatusManager,
+  private void processActiveTab(final Project project,
+                                @NotNull final FileStatusManager fileStatusManager,
                                 @NotNull final VirtualFile file,
                                 @NotNull final EditorWindow editorWindow) {
-    final MTTheme mtTheme = MTConfig.getInstance().getSelectedTheme();
-    final MTConfig mtConfig = MTConfig.getInstance();
+    final MTTheme mtTheme = MTProjectConfig.getInstance(project).getSelectedTheme();
+    final MTProjectConfig mtConfig = MTProjectConfig.getInstance(project);
 
     final Color backgroundColor = mtTheme.getBackgroundColor();
     FileStatus status = fileStatusManager.getStatus(file);
@@ -81,14 +82,15 @@ public final class MTTabsEditorAdapter implements FileEditorManagerListener {
 
     // bold tabs
     if (mtConfig.getIsBoldTabs()) {
-      setBoldTabs(file, editorWindow);
+      setBoldTabs(project, file, editorWindow);
     }
   }
 
-  private void setBoldTabs(@NotNull final VirtualFile file,
+  private void setBoldTabs(final Project project,
+                           @NotNull final VirtualFile file,
                            @NotNull final EditorWindow editorWindow) {
     final EditorWithProviderComposite fileComposite = editorWindow.findFileComposite(file);
-    final boolean isBoldTabs = MTConfig.getInstance().getIsBoldTabs();
+    final boolean isBoldTabs = MTProjectConfig.getInstance(project).getIsBoldTabs();
 
     // Find the tab of the selected file
     final int editorIndex = getEditorIndex(editorWindow, fileComposite);
@@ -98,10 +100,9 @@ public final class MTTabsEditorAdapter implements FileEditorManagerListener {
       if (tabbedPane != null) {
         try {
           tabbedPane.getTabs()
-              .getTabAt(editorIndex)
-              .setDefaultStyle(isBoldTabs ? SimpleTextAttributes.STYLE_BOLD : SimpleTextAttributes.STYLE_PLAIN);
-        }
-        catch (IndexOutOfBoundsException ignored) {
+                    .getTabAt(editorIndex)
+                    .setDefaultStyle(isBoldTabs ? SimpleTextAttributes.STYLE_BOLD : SimpleTextAttributes.STYLE_PLAIN);
+        } catch (IndexOutOfBoundsException ignored) {
         }
       }
     }
@@ -119,7 +120,7 @@ public final class MTTabsEditorAdapter implements FileEditorManagerListener {
   private void setTabColor(final Color fileColor,
                            @NotNull final VirtualFile file,
                            @NotNull final EditorWindow editorWindow,
-                           FileStatus status) {
+                           final FileStatus status) {
     final EditorWithProviderComposite fileComposite = editorWindow.findFileComposite(file);
 
     // Find the tab of the selected file
@@ -130,8 +131,8 @@ public final class MTTabsEditorAdapter implements FileEditorManagerListener {
 
       if (tabbedPane != null) {
         tabbedPane.getTabs()
-            .getPresentation()
-            .setActiveTabFillIn(fileColor);
+                  .getPresentation()
+                  .setActiveTabFillIn(fileColor);
 
         //        try {
         //          if (statusColor != null) {

@@ -26,7 +26,7 @@
 
 package com.chrisrm.idea.tabs;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.MTTheme;
 import com.intellij.openapi.fileEditor.impl.EditorTabColorProvider;
 import com.intellij.openapi.project.Project;
@@ -39,6 +39,7 @@ import java.awt.*;
 
 public final class MTEditorTabColor implements EditorTabColorProvider {
 
+  // todo this is deprecated
   private static final Color COLOR_DARKER = new JBColor(new Color(33, 33, 33, 255), new Color(33, 33, 33, 255));
   private static final Color COLOR_DEFAULT = new JBColor(new Color(38, 50, 56, 255), new Color(38, 50, 56, 255));
   private static final Color COLOR_PALENIGHT = new JBColor(new Color(41, 45, 62, 255), new Color(41, 45, 62, 255));
@@ -47,7 +48,7 @@ public final class MTEditorTabColor implements EditorTabColorProvider {
   @Nullable
   @Override
   public Color getEditorTabColor(@NotNull final Project project, @NotNull final VirtualFile virtualFile) {
-    final MTTheme mtTheme = MTConfig.getInstance().getSelectedTheme();
+    final MTTheme mtTheme = MTProjectConfig.getInstance(project).getSelectedTheme();
 
     switch (mtTheme) {
       case DARKER:

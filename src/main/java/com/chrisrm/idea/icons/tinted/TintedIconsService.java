@@ -26,8 +26,10 @@
 
 package com.chrisrm.idea.icons.tinted;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.intellij.openapi.components.ServiceManager;
+import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.ui.ColorUtil;
 import org.jetbrains.annotations.NotNull;
@@ -76,8 +78,8 @@ public final class TintedIconsService {
   };
   private static final List<String> MY_TINTED_ICONS = Arrays.asList(TintedIconsService.TINTED_ICONS);
 
-  public static TintedIconsService getInstance() {
-    return ServiceManager.getService(TintedIconsService.class);
+  public static TintedIconsService getInstance(@NotNull final Project project) {
+    return ServiceManager.getService(project, TintedIconsService.class);
   }
 
   private TintedIconsService() {
@@ -85,7 +87,9 @@ public final class TintedIconsService {
 
   @NotNull
   public static Icon getIcon(final String newPath) {
-    return getIcon(newPath, MTConfig.getInstance().getAccentColor());
+    // todo find a way to get current project
+    final Project defaultProject = ProjectManager.getInstance().getDefaultProject();
+    return getIcon(newPath, MTProjectConfig.getInstance(defaultProject).getAccentColor());
   }
 
   @NotNull

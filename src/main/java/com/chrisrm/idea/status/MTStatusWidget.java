@@ -26,8 +26,9 @@
 
 package com.chrisrm.idea.status;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.utils.MTUiUtils;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.CustomStatusBarWidget;
 import com.intellij.openapi.wm.StatusBar;
 import com.intellij.util.ui.JBUI;
@@ -43,11 +44,11 @@ import java.text.AttributedString;
 
 public final class MTStatusWidget extends JComponent implements CustomStatusBarWidget {
   public static final int DEFAULT_FONT_SIZE = JBUI.scale(11);
-  private final MTConfig mtConfig;
+  private final MTProjectConfig mtConfig;
   private Image myBufferedImage;
 
-  MTStatusWidget() {
-    mtConfig = MTConfig.getInstance();
+  MTStatusWidget(final Project project) {
+    mtConfig = MTProjectConfig.getInstance(project);
 
     setOpaque(false);
     setFocusable(false);

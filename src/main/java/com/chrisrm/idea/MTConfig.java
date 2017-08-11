@@ -403,20 +403,6 @@ public class MTConfig implements PersistentStateComponent<MTConfig> {
   }
   //endregion
 
-  //region Statusbar indicator
-  public boolean isStatusBarTheme() {
-    return statusBarTheme;
-  }
-
-  public void setIsStatusBarTheme(final boolean isStatusBarTheme) {
-    this.statusBarTheme = isStatusBarTheme;
-  }
-
-  public boolean isStatusBarThemeChanged(final boolean statusBarTheme) {
-    return this.statusBarTheme != statusBarTheme;
-  }
-  //endregion
-
   //region Tabs Height
   public int getTabsHeight() {
     return tabsHeight;
