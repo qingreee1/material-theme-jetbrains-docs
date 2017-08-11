@@ -31,8 +31,9 @@ import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.application.impl.ApplicationImpl;
 import com.intellij.util.ui.JBUI;
 
+import javax.swing.*;
 import java.awt.*;
-import java.awt.font.*;
+import java.awt.font.TextAttribute;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -100,11 +101,23 @@ public final class MTUiUtils {
     }
   }
 
+  public static Color getAccentColor() {
+    return UIManager.getColor("material.accentColor");
+  }
+
   public static RenderingHints getHints() {
     return hints;
   }
 
   public static void setHints(final RenderingHints hints) {
     MTUiUtils.hints = hints;
+  }
+
+  public static Color getHalfAccentColor() {
+    return UIManager.getColor("material.halfAccentColor");
+  }
+
+  public static int getThickness() {
+    return UIManager.getInt("material.tab.borderThickness");
   }
 }

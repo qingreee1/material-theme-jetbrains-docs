@@ -25,10 +25,9 @@
  */
 package com.chrisrm.idea.ui;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.utils.MTUiUtils;
 import com.intellij.ide.ui.laf.darcula.ui.DarculaProgressBarUI;
 import com.intellij.openapi.ui.GraphicsConfig;
-import com.intellij.ui.ColorUtil;
 import com.intellij.ui.JBColor;
 import com.intellij.util.ui.GraphicsUtil;
 import com.intellij.util.ui.JBUI;
@@ -46,7 +45,8 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
 
   private volatile int offset = 0;
 
-  @SuppressWarnings({"MethodOverridesStaticMethodOfSuperclass", "UnusedDeclaration"})
+  @SuppressWarnings({"MethodOverridesStaticMethodOfSuperclass",
+      "UnusedDeclaration"})
   public static ComponentUI createUI(final JComponent c) {
     c.setBorder(JBUI.Borders.empty().asUIResource());
     return new MTProgressBarUI();
@@ -61,25 +61,22 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
     if (!(g2d instanceof Graphics2D)) {
       return;
     }
-    Graphics2D g = (Graphics2D) g2d;
+    final Graphics2D g = (Graphics2D) g2d;
 
-    Insets b = progressBar.getInsets(); // area for border
-    int barRectWidth = progressBar.getWidth() - (b.right + b.left);
-    int barRectHeight = progressBar.getHeight() - (b.top + b.bottom);
+    final Insets b = progressBar.getInsets(); // area for border
+    final int barRectWidth = progressBar.getWidth() - (b.right + b.left);
+    final int barRectHeight = progressBar.getHeight() - (b.top + b.bottom);
 
     if (barRectWidth <= 0 || barRectHeight <= 0) {
       return;
     }
     //boxRect = getBox(boxRect);
 
-    Color accentColor = ColorUtil.fromHex(MTConfig.getInstance().getAccentColor());
+    final Color accentColor = MTUiUtils.getAccentColor();
+    final Color progressBarHalfColor = MTUiUtils.getHalfAccentColor();
 
-    Color progressBarColor = accentColor;
-    Color progressBarHalfColor = ColorUtil.darker(accentColor, 8);
-    Color progressBarHalfColorLight = ColorUtil.brighter(accentColor, 8);
-
-    g.setColor(new JBColor(progressBarColor, progressBarColor));
-    int w = c.getWidth();
+    g.setColor(new JBColor(accentColor, accentColor));
+    final int w = c.getWidth();
     int h = c.getPreferredSize().height;
     if (!isEven(c.getHeight() - h)) {
       h++;
@@ -89,12 +86,8 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
       g.fillRect(0, (c.getHeight() - h) / 2, w, h);
     }
 
-    JBColor jbcolor;
-    if (MTConfig.getInstance().getSelectedTheme().isDark()) {
-      jbcolor = new JBColor(progressBarHalfColor, progressBarHalfColor);
-    } else {
-      jbcolor = new JBColor(progressBarHalfColorLight, progressBarHalfColorLight);
-    }
+    final JBColor jbcolor;
+    jbcolor = new JBColor(progressBarHalfColor, progressBarHalfColor);
     g.setColor(jbcolor);
 
     final GraphicsConfig config = GraphicsUtil.setupAAPainting(g);
@@ -108,8 +101,8 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
     final Area containingRoundRect = new Area(new RoundRectangle2D.Float(2f * off, 2f * off, w - 4f * off, h - 4f * off, rad, rad));
 
     while (x < Math.max(c.getWidth(), c.getHeight())) {
-      Path2D.Double path = new Path2D.Double();
-      float ww = getPeriodLength() / 2f;
+      final Path2D.Double path = new Path2D.Double();
+      final float ww = getPeriodLength() / 2f;
       path.moveTo(x, 0);
       path.lineTo(x + ww, 0);
       path.lineTo(x + ww - h / 2, h);
@@ -123,9 +116,9 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
       x += getPeriodLength();
     }
     offset = (offset + 1) % getPeriodLength();
-    Area area = new Area(new Rectangle2D.Float(0, 0, w, h));
+    final Area area = new Area(new Rectangle2D.Float(0, 0, w, h));
     area.subtract(innerBorderRoundRect);
-    g.setColor(progressBarColor);
+    g.setColor(accentColor);
     if (c.isOpaque()) {
       g.fill(area);
     }
@@ -135,7 +128,7 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
       g.fill(area);
     }
 
-    Area insetArea = new Area(innerBorderRoundRect);
+    final Area insetArea = new Area(innerBorderRoundRect);
     insetArea.subtract(containingRoundRect);
     g.fill(insetArea);
 
@@ -163,24 +156,24 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
       return;
     }
     final GraphicsConfig config = GraphicsUtil.setupAAPainting(g);
-    Insets b = progressBar.getInsets(); // area for border
-    int w = progressBar.getWidth();
+    final Insets b = progressBar.getInsets(); // area for border
+    final int w = progressBar.getWidth();
     int h = progressBar.getPreferredSize().height;
     if (!isEven(c.getHeight() - h)) {
       h++;
     }
 
-    int barRectWidth = w - (b.right + b.left);
-    int barRectHeight = h - (b.top + b.bottom);
+    final int barRectWidth = w - (b.right + b.left);
+    final int barRectHeight = h - (b.top + b.bottom);
 
     if (barRectWidth <= 0 || barRectHeight <= 0) {
       return;
     }
 
-    int amountFull = getAmountFull(b, barRectWidth, barRectHeight);
+    final int amountFull = getAmountFull(b, barRectWidth, barRectHeight);
 
     g.setColor(c.getParent().getBackground());
-    Graphics2D g2 = (Graphics2D) g;
+    final Graphics2D g2 = (Graphics2D) g;
     if (c.isOpaque()) {
       g.fillRect(0, 0, w, h);
     }
@@ -223,12 +216,12 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
       return;
     }
 
-    Graphics2D g2 = (Graphics2D) g;
-    String progressString = progressBar.getString();
+    final Graphics2D g2 = (Graphics2D) g;
+    final String progressString = progressBar.getString();
     g2.setFont(progressBar.getFont());
     Point renderLocation = getStringPlacement(g2, progressString,
         x, y, w, h);
-    Rectangle oldClip = g2.getClipBounds();
+    final Rectangle oldClip = g2.getClipBounds();
 
     if (progressBar.getOrientation() == SwingConstants.HORIZONTAL) {
       g2.setColor(getSelectionBackground());
@@ -240,7 +233,7 @@ public final class MTProgressBarUI extends DarculaProgressBarUI {
           renderLocation.x, renderLocation.y);
     } else { // VERTICAL
       g2.setColor(getSelectionBackground());
-      AffineTransform rotate =
+      final AffineTransform rotate =
           AffineTransform.getRotateInstance(Math.PI / 2);
       g2.setFont(progressBar.getFont().deriveFont(rotate));
       renderLocation = getStringPlacement(g2, progressString,

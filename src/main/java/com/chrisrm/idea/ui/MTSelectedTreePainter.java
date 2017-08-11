@@ -26,12 +26,11 @@
 
 package com.chrisrm.idea.ui;
 
-import com.chrisrm.idea.MTConfig;
-import com.intellij.ui.ColorUtil;
+import com.chrisrm.idea.utils.MTUiUtils;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.UIUtil;
 
-import javax.swing.border.*;
+import javax.swing.border.Border;
 import java.awt.*;
 
 public final class MTSelectedTreePainter implements Border {
@@ -49,11 +48,11 @@ public final class MTSelectedTreePainter implements Border {
   }
 
   private Color getHighlightColor() {
-    return ColorUtil.fromHex(MTConfig.getInstance().getAccentColor());
+    return MTUiUtils.getAccentColor();
   }
 
   private int getThickness() {
-    return MTConfig.getInstance().getHighlightThickness();
+    return MTUiUtils.getThickness();
   }
 
   @Override

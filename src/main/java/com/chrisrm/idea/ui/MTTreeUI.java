@@ -25,8 +25,8 @@
  */
 package com.chrisrm.idea.ui;
 
-import com.chrisrm.idea.MTConfig;
 import com.chrisrm.idea.icons.tinted.TintedIconsService;
+import com.chrisrm.idea.utils.MTUiUtils;
 import com.intellij.openapi.util.Conditions;
 import com.intellij.util.ui.CenteredIcon;
 import com.intellij.util.ui.UIUtil;
@@ -35,9 +35,9 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
-import javax.swing.border.*;
-import javax.swing.plaf.*;
-import javax.swing.tree.*;
+import javax.swing.border.Border;
+import javax.swing.plaf.ComponentUI;
+import javax.swing.tree.TreePath;
 import java.awt.*;
 
 public final class MTTreeUI extends WideSelectionTreeUI {
@@ -82,7 +82,7 @@ public final class MTTreeUI extends WideSelectionTreeUI {
         }
 
         final Color bg = MTTreeUI.getSelectionBackgroundColor(tree, true);
-        final int thickness = MTConfig.getInstance().getHighlightThickness();
+        final int thickness = UIManager.getInt("material.tab.borderThickness");
 
         rowGraphics.setColor(bg);
         rowGraphics.fillRect(xOffset + thickness, bounds.y, containerWidth, bounds.height);
@@ -192,8 +192,8 @@ public final class MTTreeUI extends WideSelectionTreeUI {
         width, height, false);
   }
 
-  private String getAccentColor() {
-    return MTConfig.getInstance().getAccentColor();
+  private Color getAccentColor() {
+    return MTUiUtils.getAccentColor();
   }
 
   private Icon getTreeCollapsedIcon() {

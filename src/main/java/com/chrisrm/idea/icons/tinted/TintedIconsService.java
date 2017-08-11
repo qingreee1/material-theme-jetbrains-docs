@@ -35,6 +35,7 @@ import com.intellij.ui.ColorUtil;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -89,13 +90,14 @@ public final class TintedIconsService {
   public static Icon getIcon(final String newPath) {
     // todo find a way to get current project
     final Project defaultProject = ProjectManager.getInstance().getDefaultProject();
-    return getIcon(newPath, MTProjectConfig.getInstance(defaultProject).getAccentColor());
+    final String accentColor = MTProjectConfig.getInstance(defaultProject).getAccentColor();
+    return getIcon(newPath, ColorUtil.fromHex(accentColor));
   }
 
   @NotNull
-  public static Icon getIcon(final String newPath, final String accentColor) {
+  public static Icon getIcon(final String newPath, final Color accentColor) {
     if (MY_TINTED_ICONS.contains(newPath)) {
-      return new TintedIcon(IconLoader.getIcon(newPath), ColorUtil.fromHex(accentColor), newPath);
+      return new TintedIcon(IconLoader.getIcon(newPath), accentColor, newPath);
     }
     return IconLoader.getIcon(newPath);
   }

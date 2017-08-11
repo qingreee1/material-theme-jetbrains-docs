@@ -162,16 +162,16 @@ public final class MTProjectThemeManager {
       "CheckBox.darcula.focused.backgroundColor2.selected",
       "Hyperlink.linkColor",
       "Focus.color",
-      "material.tab.borderColor"
+      "material.tab.borderColor",
+      "material.accentColor",
+      "material.halfAccentColor"
   };
 
   private final List<String> editorColorsSchemes;
   private final Project project;
-  private final MTThemeManager mtThemeManager;
 
   public MTProjectThemeManager(@NotNull final Project project) {
     this.project = project;
-    this.mtThemeManager = MTThemeManager.getInstance();
 
     final Collection<String> schemes = new ArrayList<>();
     for (final MTTheme theme : MTTheme.values()) {
@@ -273,21 +273,6 @@ public final class MTProjectThemeManager {
 
     UIReplacer.patchUI(project);
   }
-
-  public void applyAccents(final boolean reloadUI) {
-    final String accentColor = MTProjectConfig.getInstance(project).getAccentColor();
-    final Color accentColorColor = ColorUtil.fromHex(accentColor);
-    for (final String resource : ACCENT_RESOURCES) {
-      UIManager.put(resource, accentColorColor);
-    }
-    // override for transparency
-    UIManager.put("Focus.color", ColorUtil.toAlpha(accentColorColor, 70));
-
-    if (reloadUI) {
-      reloadUI();
-    }
-  }
-
 
   /**
    * Completely remove theme
@@ -405,6 +390,27 @@ public final class MTProjectThemeManager {
 
   //region Accents supports
 
+  public void applyAccents(final boolean reloadUI) {
+    final MTProjectConfig mtProjectConfig = MTProjectConfig.getInstance(project);
+
+    final String accentColor = mtProjectConfig.getAccentColor();
+    final Color accentColorColor = ColorUtil.fromHex(accentColor);
+
+    final boolean dark = mtProjectConfig.getSelectedTheme().isDark();
+
+    for (final String resource : ACCENT_RESOURCES) {
+      UIManager.put(resource, accentColorColor);
+    }
+    // override for transparency
+    UIManager.put("Focus.color", ColorUtil.toAlpha(accentColorColor, 70));
+
+    // Half Color
+    UIManager.put("material.halfAccentColor", dark ? ColorUtil.darker(accentColorColor, 8) : ColorUtil.brighter(accentColorColor, 8));
+
+    if (reloadUI) {
+      reloadUI();
+    }
+  }
 
   /**
    * Override patch style editor kit for custom accent support
