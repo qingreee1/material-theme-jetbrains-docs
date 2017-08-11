@@ -47,24 +47,16 @@ import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.wm.WindowManager;
 import com.intellij.openapi.wm.impl.status.IdeStatusBarImpl;
-import com.intellij.ui.ColorUtil;
 import com.intellij.ui.JBColor;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.UIUtil;
-import sun.awt.AppContext;
 
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
-import javax.swing.text.html.HTMLEditorKit;
-import javax.swing.text.html.StyleSheet;
 import java.awt.*;
-import java.lang.reflect.Field;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
-import static com.chrisrm.idea.tabs.MTTabsPainterPatcherComponent.TABS_HEIGHT;
 
 public final class MTThemeManager {
 
@@ -150,26 +142,6 @@ public final class MTThemeManager {
   };
 
 
-  public static final String[] ACCENT_RESOURCES = new String[]{
-      "link.foreground",
-      "ProgressBar.foreground",
-      "RadioButton.darcula.selectionEnabledColor",
-      "RadioButton.darcula.selectionEnabledShadowColor",
-      "RadioButton.darcula.selectionDisabledShadowColor",
-      "TextField.selectedSeparatorColor",
-      "CheckBox.darcula.borderColor1",
-      "CheckBox.darcula.borderColor2",
-      "CheckBox.darcula.backgroundColor1.selected",
-      "CheckBox.darcula.backgroundColor2.selected",
-      "CheckBox.darcula.focusedArmed.backgroundColor1.selected",
-      "CheckBox.darcula.focusedArmed.backgroundColor2.selected",
-      "CheckBox.darcula.focused.backgroundColor1.selected",
-      "CheckBox.darcula.focused.backgroundColor2.selected",
-      "Hyperlink.linkColor",
-      "Focus.color",
-      "material.tab.borderColor"
-  };
-
   private final List<String> editorColorsSchemes;
 
   public MTThemeManager() {
@@ -209,16 +181,6 @@ public final class MTThemeManager {
     getInstance().activate();
   }
 
-  /**
-   * Set contrast and reactivate theme
-   */
-  public void toggleContrast() {
-    final MTConfig mtConfig = MTConfig.getInstance();
-    mtConfig.setIsContrastMode(!mtConfig.getIsContrastMode());
-
-    this.applyContrast(true);
-  }
-
   public void toggleCompactStatusBar() {
     final boolean compactStatusBar = MTConfig.getInstance().isCompactStatusBar();
     MTConfig.getInstance().setIsCompactStatusBar(!compactStatusBar);
@@ -247,11 +209,6 @@ public final class MTThemeManager {
     this.updateFileIcons();
   }
 
-  public void toggleStatusBarIndicator() {
-    final MTConfig mtConfig = MTConfig.getInstance();
-    mtConfig.setIsStatusBarTheme(!mtConfig.isStatusBarTheme());
-    mtConfig.fireChanged();
-  }
   //endregion
 
   //region File Icons support
@@ -290,7 +247,7 @@ public final class MTThemeManager {
    * Activate selected theme or deactivate current
    */
   public void activate() {
-    final MTTheme mtTheme = MTConfig.getInstance().getSelectedTheme();
+    final MTTheme mtTheme = MTTheme.DEFAULT;
     if (!MTConfig.getInstance().isMaterialTheme()) {
       removeTheme(mtTheme);
       return;
@@ -310,21 +267,14 @@ public final class MTThemeManager {
       newTheme = MTTheme.DEFAULT;
     }
 
-    MTConfig.getInstance().setSelectedTheme(newTheme);
-
     try {
       UIManager.setLookAndFeel(new MTLaf(newTheme));
       JBColor.setDark(newTheme.isDark());
       IconLoader.setUseDarkIcons(newTheme.isDark());
 
       PropertiesComponent.getInstance().setValue(getSettingsPrefix() + ".theme", newTheme.name());
-      applyContrast(false);
       applyCompactSidebar(false);
-      applyCustomTreeIndent();
-      applyAccents(false);
-      setBoldTabs();
-    }
-    catch (final UnsupportedLookAndFeelException e) {
+    } catch (final UnsupportedLookAndFeelException e) {
       e.printStackTrace();
     }
 
@@ -347,26 +297,8 @@ public final class MTThemeManager {
 
     applyFonts();
 
-    // Documentation styles
-    patchStyledEditorKit();
-
-    UIReplacer.patchUI(project);
+    UIReplacer.patchUI();
   }
-
-  public void applyAccents(final boolean reloadUI) {
-    final String accentColor = MTConfig.getInstance().getAccentColor();
-    final Color accentColorColor = ColorUtil.fromHex(accentColor);
-    for (final String resource : ACCENT_RESOURCES) {
-      UIManager.put(resource, accentColorColor);
-    }
-    // override for transparency
-    UIManager.put("Focus.color", ColorUtil.toAlpha(accentColorColor, 70));
-
-    if (reloadUI) {
-      reloadUI();
-    }
-  }
-
 
   private void askForRestart() {
     final String title = MaterialThemeBundle.message("mt.restartDialog.title");
@@ -449,46 +381,11 @@ public final class MTThemeManager {
   //region Contrast support
 
   /**
-   * Apply contrast
-   *
-   * @param reloadUI
-   */
-  private void applyContrast(final boolean reloadUI) {
-    final boolean apply = MTConfig.getInstance().getIsContrastMode();
-    final MTTheme mtTheme = MTConfig.getInstance().getSelectedTheme();
-    for (final String resource : CONTRASTED_RESOURCES) {
-      final Color contrastedColor = apply ? mtTheme.getContrastColor() : mtTheme.getBackgroundColor();
-      UIManager.put(resource, contrastedColor);
-    }
-
-    if (reloadUI) {
-      reloadUI();
-    }
-  }
-
-  /**
    * Reset contrast
    */
   private void resetContrast() {
     for (final String resource : CONTRASTED_RESOURCES) {
       UIManager.put(resource, null);
-    }
-  }
-  //endregion
-
-  //region Custom tree indents support
-
-  /**
-   * Apply custom tree indent
-   */
-  private void applyCustomTreeIndent() {
-    final MTConfig mtConfig = MTConfig.getInstance();
-    final int defaultIndent = 6;
-
-    if (mtConfig.isCustomTreeIndentEnabled) {
-      UIManager.put("Tree.rightChildIndent", mtConfig.customTreeIndent);
-    } else {
-      UIManager.put("Tree.rightChildIndent", defaultIndent);
     }
   }
   //endregion
@@ -509,74 +406,13 @@ public final class MTThemeManager {
   }
   //endregion
 
-  //region Accents supports
-
-
-  /**
-   * Override patch style editor kit for custom accent support
-   */
-  private void patchStyledEditorKit() {
-    final UIDefaults defaults = UIManager.getLookAndFeelDefaults();
-    final MTConfig mtConfig = MTConfig.getInstance();
-    final MTTheme selectedTheme = mtConfig.getSelectedTheme();
-
-    // Load css
-    final URL url = selectedTheme.getClass().getResource(selectedTheme.getId() + (JBUI.isUsrHiDPI() ? "@2x.css" : ".css"));
-    final StyleSheet styleSheet = UIUtil.loadStyleSheet(url);
-
-    // Add custom accent color
-    assert styleSheet != null;
-    styleSheet.addRule("a, address, b { color: " + mtConfig.getAccentColor() + "; }");
-    defaults.put("StyledEditorKit.JBDefaultStyle", styleSheet);
-
-    try {
-      final Field keyField = HTMLEditorKit.class.getDeclaredField("DEFAULT_STYLES_KEY");
-      keyField.setAccessible(true);
-      AppContext.getAppContext().put(keyField.get(null), styleSheet);
-    } catch (final Exception ignored) {
-    }
-  }
-  //endregion
-
-  //region Tabs Height support
-  public void setTabsHeight() {
-    PropertiesComponent.getInstance().setValue(TABS_HEIGHT, MTConfig.getInstance().getTabsHeight(), 24);
-  }
-
-  public void setTabsHeight(final int newTabsHeight) {
-    MTConfig.getInstance().setTabsHeight(newTabsHeight);
-    this.setTabsHeight();
-  }
-
-  public void setBoldTabs() {
-    //    Project[] openProjects = ProjectManager.getInstance().getOpenProjects();
-    //    boolean isBoldTabs = MTConfig.getInstance().getIsBoldTabs();
-    //
-    //    for (Project openProject : openProjects) {
-    //      final FileEditorManagerEx manager = FileEditorManagerEx.getInstanceEx(openProject);
-    //      for (final EditorWindow editorWindow : manager.getWindows()) {
-    //        EditorTabbedContainer tabbedPane = editorWindow.getTabbedPane();
-    //        if (tabbedPane != null) {
-    //          JBTabs tabs = tabbedPane.getTabs();
-    //          for (int i = 0; i < tabs.getTabCount(); i++) {
-    //            TabInfo tabAt = tabs.getTabAt(i);
-    //            tabAt.setDefaultStyle(isBoldTabs ? SimpleTextAttributes.STYLE_BOLD : SimpleTextAttributes.STYLE_PLAIN);
-    //          }
-    //        }
-    //      }
-    //    }
-  }
-  //endregion
 
   /**
    * Trigger a reloadUI event
    */
   private void reloadUI() {
-    try {
-      UIManager.setLookAndFeel(new MTLaf(MTConfig.getInstance().getSelectedTheme()));
-      applyFonts();
-    } catch (final UnsupportedLookAndFeelException e) {
-      e.printStackTrace();
-    }
+    applyFonts();
+    DarculaInstaller.uninstall();
+    DarculaInstaller.install();
   }
 }

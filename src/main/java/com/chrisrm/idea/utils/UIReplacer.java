@@ -32,7 +32,6 @@ import com.google.common.collect.ImmutableMap;
 import com.intellij.codeInsight.hint.ParameterInfoComponent;
 import com.intellij.codeInsight.lookup.impl.LookupCellRenderer;
 import com.intellij.icons.AllIcons;
-import com.intellij.ide.ui.laf.darcula.DarculaUIUtil;
 import com.intellij.lang.parameterInfo.ParameterInfoUIContextEx;
 import com.intellij.notification.impl.NotificationsManagerImpl;
 import com.intellij.openapi.options.newEditor.SettingsTreeView;
@@ -59,6 +58,23 @@ import java.util.Map;
 public final class UIReplacer {
 
   private UIReplacer() {
+  }
+
+  public static void patchUI() {
+    try {
+      Patcher.patchTables(null);
+      Patcher.patchStatusBar(null);
+      Patcher.patchPanels(null);
+      Patcher.patchMemoryIndicator(null);
+      Patcher.patchQuickInfo(null);
+      Patcher.patchAutocomplete(null);
+      Patcher.patchNotifications(null);
+      Patcher.patchScrollbars(null);
+      Patcher.patchDialogs(null);
+      Patcher.patchVCS(null);
+    } catch (final Exception e) {
+      e.printStackTrace();
+    }
   }
 
   public static void patchUI(final Project project) {
@@ -97,8 +113,12 @@ public final class UIReplacer {
       StaticPatcher.setFinalStatic(Gray.class, "_90", gray.withAlpha(25));
 
       // tool window color
-      final boolean dark = MTProjectConfig.getInstance(project).getSelectedTheme().isDark();
+      boolean dark = true;
+      if (project != null) {
+        dark = MTProjectConfig.getInstance(project).getSelectedTheme().isDark();
+      }
       StaticPatcher.setFinalStatic(Gray.class, "_15", dark ? Gray._15.withAlpha(255) : Gray._200.withAlpha(15));
+
       // This thing doesnt work on compiled jars...
       final Class<?> clazz = Class.forName("com.intellij.openapi.wm.impl.status.StatusBarUI$BackgroundPainter");
 
@@ -115,9 +135,9 @@ public final class UIReplacer {
       StaticPatcher.setFinalStatic(UIUtil.class, "BORDER_COLOR", color);
       StaticPatcher.setFinalStatic(UIUtil.class, "AQUA_SEPARATOR_FOREGROUND_COLOR", color);
 
-      final Color accentColor = ColorUtil.fromHex(MTProjectConfig.getInstance(project).getAccentColor());
-      StaticPatcher.setFinalStatic(DarculaUIUtil.class, "g", accentColor);
-      StaticPatcher.setFinalStatic(DarculaUIUtil.class, "h", accentColor);
+      //      final Color accentColor = getAccentColor(project);
+      //      StaticPatcher.setFinalStatic(DarculaUIUtil.class, "g", accentColor);
+      //      StaticPatcher.setFinalStatic(DarculaUIUtil.class, "h", accentColor);
     }
 
     static void patchMemoryIndicator(final Project project) throws Exception {
@@ -139,7 +159,8 @@ public final class UIReplacer {
     }
 
     static void patchQuickInfo(final Project project) throws Exception {
-      final String accentColor = MTProjectConfig.getInstance(project).getAccentColor();
+      final Color accentColor = getAccentColor(project);
+
 
       final Field[] fields = ParameterInfoComponent.class.getDeclaredFields();
       final Object[] objects = Arrays.stream(fields)
@@ -153,8 +174,9 @@ public final class UIReplacer {
     }
 
     static void patchAutocomplete(final Project project) throws Exception {
-      final String accentColor = MTProjectConfig.getInstance(project).getAccentColor();
-      final JBColor jbAccentColor = new JBColor(ColorUtil.fromHex(accentColor), ColorUtil.fromHex(accentColor));
+      final Color accentColor = getAccentColor(project);
+
+      final JBColor jbAccentColor = new JBColor(accentColor, accentColor);
 
       final Color backgroundSelectedColor = UIManager.getColor("Autocomplete.selectionbackground");
 
@@ -264,11 +286,20 @@ public final class UIReplacer {
                                       .filter(f -> f.getType().equals(JBColor.class))
                                       .toArray();
 
-      final Color accentColor = ColorUtil.fromHex(MTProjectConfig.getInstance(project).getAccentColor());
+      final Color accentColor = getAccentColor(project);
+
       final Color mergeCommitsColor = new JBColor(accentColor, accentColor);
       StaticPatcher.setFinalStatic((Field) objects2[0], mergeCommitsColor);
 
     }
+  }
+
+  private static Color getAccentColor(final Project project) {
+    Color accentColor = MTUiUtils.getAccentColor();
+    if (project != null) {
+      accentColor = ColorUtil.fromHex(MTProjectConfig.getInstance(project).getAccentColor());
+    }
+    return accentColor;
   }
 
 }

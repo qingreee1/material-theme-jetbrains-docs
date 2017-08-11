@@ -29,9 +29,11 @@ package com.chrisrm.idea.utils;
 import com.intellij.openapi.application.Application;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.application.impl.ApplicationImpl;
+import com.intellij.util.ObjectUtils;
 import com.intellij.util.ui.JBUI;
 
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.font.TextAttribute;
 import java.util.HashMap;
@@ -102,7 +104,7 @@ public final class MTUiUtils {
   }
 
   public static Color getAccentColor() {
-    return UIManager.getColor("material.accentColor");
+    return ObjectUtils.notNull(UIManager.getColor("material.accentColor"), new ColorUIResource(0x80cbcf));
   }
 
   public static RenderingHints getHints() {
@@ -114,10 +116,10 @@ public final class MTUiUtils {
   }
 
   public static Color getHalfAccentColor() {
-    return UIManager.getColor("material.halfAccentColor");
+    return ObjectUtils.notNull(UIManager.getColor("material.halfAccentColor"), getAccentColor());
   }
 
   public static int getThickness() {
-    return UIManager.getInt("material.tab.borderThickness");
+    return ObjectUtils.notNull(UIManager.getInt("material.tab.borderThickness"), 2);
   }
 }

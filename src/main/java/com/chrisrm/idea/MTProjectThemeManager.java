@@ -349,8 +349,9 @@ public final class MTProjectThemeManager {
    * @param reloadUI
    */
   private void applyContrast(final boolean reloadUI) {
-    final boolean apply = MTConfigManager.getInstance(project).getIsContrastMode();
-    final MTTheme mtTheme = MTProjectConfig.getInstance(project).getSelectedTheme();
+    final MTProjectConfig mtProjectConfig = MTProjectConfig.getInstance(project);
+    final boolean apply = mtProjectConfig.getIsContrastMode();
+    final MTTheme mtTheme = mtProjectConfig.getSelectedTheme();
     for (final String resource : CONTRASTED_RESOURCES) {
       final Color contrastedColor = apply ? mtTheme.getContrastColor() : mtTheme.getBackgroundColor();
       UIManager.put(resource, contrastedColor);
@@ -440,7 +441,7 @@ public final class MTProjectThemeManager {
 
   //region Tabs Height support
   public void setTabsHeight() {
-    PropertiesComponent.getInstance().setValue(TABS_HEIGHT, MTConfig.getInstance().getTabsHeight(), 24);
+    PropertiesComponent.getInstance().setValue(TABS_HEIGHT, MTProjectConfig.getInstance(project).getTabsHeight(), 24);
   }
 
   public void setTabsHeight(final int newTabsHeight) {
@@ -455,7 +456,7 @@ public final class MTProjectThemeManager {
    */
   private void reloadUI() {
     try {
-      UIManager.setLookAndFeel(new MTLaf(MTConfig.getInstance().getSelectedTheme()));
+      UIManager.setLookAndFeel(new MTLaf(MTProjectConfig.getInstance(project).getSelectedTheme()));
       applyFonts();
       DarculaInstaller.uninstall();
       DarculaInstaller.install();
