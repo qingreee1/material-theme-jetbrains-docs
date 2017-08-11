@@ -106,6 +106,10 @@
 
     <project-components>
         <component>
+            <implementation-class>com.chrisrm.idea.tabs.MTProjectTabsPainterPatcherComponent</implementation-class>
+            <loadForDefaultProject>true</loadForDefaultProject>
+        </component>
+        <component>
             <implementation-class>com.chrisrm.idea.status.MTStatusBarComponent</implementation-class>
             <loadForDefaultProject>true</loadForDefaultProject>
         </component>
