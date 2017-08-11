@@ -26,7 +26,7 @@
 
 package com.chrisrm.idea.actions;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.MTProjectThemeManager;
 import com.chrisrm.idea.MTTheme;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -34,7 +34,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 public final class MTDarkerThemeAction extends MTAbstractThemeAction {
   @Override
   public boolean isSelected(final AnActionEvent e) {
-    return MTConfig.getInstance().getSelectedTheme() == MTTheme.DARKER;
+    return MTProjectConfig.getInstance(e.getProject()).getSelectedTheme() == MTTheme.DARKER;
   }
 
   @Override

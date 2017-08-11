@@ -26,7 +26,7 @@
 
 package com.chrisrm.idea.actions.accents;
 
-import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.MTProjectThemeManager;
 import com.chrisrm.idea.utils.IconReplacer;
 import com.intellij.icons.AllIcons;
@@ -38,7 +38,7 @@ public abstract class MTAbstractAccentAction extends AnAction {
 
   @Override
   public final void actionPerformed(final AnActionEvent e) {
-    MTConfig.getInstance().setAccentColor(this.getAccentColor());
+    MTProjectConfig.getInstance(e.getProject()).setAccentColor(this.getAccentColor());
     MTProjectThemeManager.getInstance(e.getProject()).applyAccents(true);
     IconReplacer.replaceIcons(AllIcons.class, "/icons");
     ActionToolbarImpl.updateAllToolbarsImmediately();

@@ -9,21 +9,13 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
 			"$columnCount": 1
-			"$rowCount": 6
+			"$rowCount": 5
 		} ) {
 			name: "content"
 			"autoscrolls": true
 			"requestFocusEnabled": false
 			"verifyInputWhenFocusTarget": false
 			"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
-			add( new FormComponent( "javax.swing.JCheckBox" ) {
-				name: "enabledCheckbox"
-				"text": "Project Settings Enabled"
-				"toolTipText": "Enable settings on a per project basis"
-			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
-				"anchor": 8
-				"indent": 0
-			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
 				"$columnCount": 2
 				"$rowCount": 5
@@ -117,7 +109,6 @@ new FormModel {
 				} )
 			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
 				"fill": 3
-				"row": 1
 			} )
 			add( new FormComponent( "com.jformdesigner.designer.wrapper.VSpacer" ) {
 				name: "vSpacer2"
@@ -125,7 +116,7 @@ new FormModel {
 					"JavaCodeGenerator.variableLocal": true
 				}
 			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
-				"row": 4
+				"row": 3
 				"fill": 2
 				"hSizePolicy": 1
 				"vSizePolicy": 6
@@ -178,7 +169,7 @@ new FormModel {
 					"column": 1
 				} )
 			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
-				"row": 2
+				"row": 1
 				"fill": 3
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
@@ -238,7 +229,7 @@ new FormModel {
 					"anchor": 8
 				} )
 			}, new FormLayoutConstraints( class com.intellij.uiDesigner.core.GridConstraints ) {
-				"row": 3
+				"row": 2
 				"fill": 3
 			} )
 		}, new FormLayoutConstraints( null ) {

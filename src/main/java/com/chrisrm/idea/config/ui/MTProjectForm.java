@@ -165,7 +165,6 @@ public final class MTProjectForm implements MTFormUI {
   // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
   // Generated using JFormDesigner Evaluation license - Mario Smilax
   private JPanel content;
-  private JCheckBox enabledCheckbox;
   private JCheckBox activeTabHighlightCheckbox;
   private ColorPanel activeTabHighlightColor;
   private JSpinner highlightSpinner;
@@ -253,9 +252,6 @@ public final class MTProjectForm implements MTFormUI {
     enableDisableActiveTabColor(this.activeTabHighlightCheckbox.isSelected());
   }
 
-  private void isMaterialIconsCheckboxActionPerformed(ActionEvent e) {
-    // TODO add your code here
-  }
   //endregion
 
   private void initComponents() {
@@ -263,7 +259,6 @@ public final class MTProjectForm implements MTFormUI {
     // Generated using JFormDesigner Evaluation license - Mario Smilax
     ResourceBundle bundle = ResourceBundle.getBundle("messages.MaterialThemeBundle");
     content = new JPanel();
-    enabledCheckbox = new JCheckBox();
     JPanel panel1 = new JPanel();
     activeTabHighlightCheckbox = new JCheckBox();
     activeTabHighlightColor = new ColorPanel();
@@ -300,16 +295,7 @@ public final class MTProjectForm implements MTFormUI {
               javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
               java.awt.Color.red), content.getBorder()));
 
-      content.setLayout(new GridLayoutManager(6, 1, new Insets(0, 0, 0, 0), -1, -1));
-
-      //---- enabledCheckbox ----
-      enabledCheckbox.setText("Project Settings Enabled");
-      enabledCheckbox.setToolTipText("Enable settings on a per project basis");
-      content.add(enabledCheckbox, new GridConstraints(0, 0, 1, 1,
-          GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE,
-          GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-          GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
-          null, null, null));
+      content.setLayout(new GridLayoutManager(5, 1, new Insets(0, 0, 0, 0), -1, -1));
 
       //======== panel1 ========
       {
@@ -381,12 +367,12 @@ public final class MTProjectForm implements MTFormUI {
             GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
             null, new Dimension(89, 29), null));
       }
-      content.add(panel1, new GridConstraints(1, 0, 1, 1,
+      content.add(panel1, new GridConstraints(0, 0, 1, 1,
           GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
           GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
           GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
           null, null, null));
-      content.add(vSpacer2, new GridConstraints(4, 0, 1, 1,
+      content.add(vSpacer2, new GridConstraints(3, 0, 1, 1,
           GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL,
           GridConstraints.SIZEPOLICY_CAN_SHRINK,
           GridConstraints.SIZEPOLICY_CAN_GROW | GridConstraints.SIZEPOLICY_WANT_GROW,
@@ -430,7 +416,7 @@ public final class MTProjectForm implements MTFormUI {
             GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
             null, new Dimension(89, 29), null));
       }
-      content.add(panel2, new GridConstraints(2, 0, 1, 1,
+      content.add(panel2, new GridConstraints(1, 0, 1, 1,
           GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
           GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
           GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
@@ -487,7 +473,7 @@ public final class MTProjectForm implements MTFormUI {
             GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
             null, null, null));
       }
-      content.add(panel3, new GridConstraints(3, 0, 1, 1,
+      content.add(panel3, new GridConstraints(2, 0, 1, 1,
           GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
           GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
           GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,

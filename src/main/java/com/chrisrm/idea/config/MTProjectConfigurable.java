@@ -77,51 +77,55 @@ public final class MTProjectConfigurable extends MTConfigurableBase<MTProjectFor
 
   @Override
   protected void setFormState(final MTProjectForm mtForm, final MTProjectConfig mtConfig) {
-    getForm().setHighlightColor(mtConfig.getHighlightColor());
-    getForm().setHighlightColorEnabled(mtConfig.isHighlightColorEnabled());
-    getForm().setHighlightThickness(mtConfig.getHighlightThickness());
-    getForm().setIsContrastMode(mtConfig.getIsContrastMode());
-    getForm().setIsBoldTabs(mtConfig.getIsBoldTabs());
-    getForm().setTabsHeight(mtConfig.getTabsHeight());
-    getForm().setIsWallpaperSet(mtConfig.isWallpaperSet());
-    getForm().setCustomWallpaper(mtConfig.getWallpaper());
-    getForm().setIsCustomTreeIndent(mtConfig.isCustomTreeIndent());
-    getForm().setCustomTreeIndent(mtConfig.getCustomTreeIndent());
+    mtForm.setHighlightColor(mtConfig.getHighlightColor());
+    mtForm.setHighlightColorEnabled(mtConfig.isHighlightColorEnabled());
+    mtForm.setHighlightThickness(mtConfig.getHighlightThickness());
+    mtForm.setIsContrastMode(mtConfig.getIsContrastMode());
+    mtForm.setIsBoldTabs(mtConfig.getIsBoldTabs());
+    mtForm.setTabsHeight(mtConfig.getTabsHeight());
+    mtForm.setIsWallpaperSet(mtConfig.isWallpaperSet());
+    mtForm.setCustomWallpaper(mtConfig.getWallpaper());
+    mtForm.setIsCustomTreeIndent(mtConfig.isCustomTreeIndent());
+    mtForm.setCustomTreeIndent(mtConfig.getCustomTreeIndent());
+    mtForm.setIsStatusBarTheme(mtConfig.isStatusBarTheme());
 
-    getForm().afterStateSet();
+    mtForm.afterStateSet();
   }
 
   @Override
   protected void doApply(final MTProjectForm mtForm, final MTProjectConfig mtConfig) {
-    mtConfig.fireBeforeChanged(this.project, getForm());
+    mtConfig.fireBeforeChanged(this.project, mtForm);
 
-    mtConfig.setHighlightColor(getForm().getHighlightColor());
-    mtConfig.setHighlightColorEnabled(getForm().getHighlightColorEnabled());
-    mtConfig.setHighlightThickness(getForm().getHighlightThickness());
-    mtConfig.setIsContrastMode(getForm().getIsContrastMode());
-    mtConfig.setIsBoldTabs(getForm().getIsBoldTabs());
-    mtConfig.setTabsHeight(getForm().getTabsHeight());
-    mtConfig.setIsWallpaperSet(getForm().getIsWallpaperSet());
-    mtConfig.setWallpaper(getForm().getWallpaper());
-    mtConfig.setIsCustomTreeIndent(getForm().isCustomTreeIndent());
-    mtConfig.setCustomTreeIndent(getForm().getCustomTreeIndent());
+    mtConfig.setHighlightColor(mtForm.getHighlightColor());
+    mtConfig.setHighlightColorEnabled(mtForm.getHighlightColorEnabled());
+    mtConfig.setHighlightThickness(mtForm.getHighlightThickness());
+    mtConfig.setIsContrastMode(mtForm.getIsContrastMode());
+    mtConfig.setIsBoldTabs(mtForm.getIsBoldTabs());
+    mtConfig.setTabsHeight(mtForm.getTabsHeight());
+    mtConfig.setIsWallpaperSet(mtForm.getIsWallpaperSet());
+    mtConfig.setWallpaper(mtForm.getWallpaper());
+    mtConfig.setIsCustomTreeIndent(mtForm.isCustomTreeIndent());
+    mtConfig.setCustomTreeIndent(mtForm.getCustomTreeIndent());
+    mtConfig.setIsStatusBarTheme(mtForm.isStatusBarTheme());
 
     mtConfig.fireChanged(this.project);
   }
 
   @Override
   protected boolean checkModified(final MTProjectForm mtForm, final MTProjectConfig mtConfig) {
-    boolean modified = mtConfig.isHighlightColorChanged(getForm().getHighlightColor());
-    modified = modified || mtConfig.isHighlightColorEnabledChanged(getForm().getHighlightColorEnabled());
-    modified = modified || mtConfig.isHighlightThicknessChanged(getForm().getHighlightThickness());
-    modified = modified || mtConfig.isContrastModeChanged(getForm().getIsContrastMode());
-    modified = modified || mtConfig.isBoldTabsChanged(getForm().getIsBoldTabs());
-    modified = modified || mtConfig.isTabsHeightChanged(getForm().getTabsHeight());
-    modified = modified || mtConfig.isWallpaperSetChanged(getForm().getIsWallpaperSet());
-    modified = modified || mtConfig.isWallpaperChanged(getForm().getWallpaper());
+    boolean modified = mtConfig.isHighlightColorChanged(mtForm.getHighlightColor());
+    modified = modified || mtConfig.isHighlightColorEnabledChanged(mtForm.getHighlightColorEnabled());
+    modified = modified || mtConfig.isHighlightThicknessChanged(mtForm.getHighlightThickness());
+    modified = modified || mtConfig.isContrastModeChanged(mtForm.getIsContrastMode());
+    modified = modified || mtConfig.isBoldTabsChanged(mtForm.getIsBoldTabs());
+    modified = modified || mtConfig.isTabsHeightChanged(mtForm.getTabsHeight());
+    modified = modified || mtConfig.isWallpaperSetChanged(mtForm.getIsWallpaperSet());
+    modified = modified || mtConfig.isWallpaperChanged(mtForm.getWallpaper());
 
-    modified = modified || mtConfig.isCustomTreeIndentChanged(getForm().isCustomTreeIndent());
-    modified = modified || mtConfig.customTreeIndentChanged(getForm().getCustomTreeIndent());
+    modified = modified || mtConfig.isCustomTreeIndentChanged(mtForm.isCustomTreeIndent());
+    modified = modified || mtConfig.customTreeIndentChanged(mtForm.getCustomTreeIndent());
+
+    modified = modified || mtConfig.isStatusBarThemeChanged(mtForm.isStatusBarTheme());
 
     return modified;
   }

@@ -78,7 +78,7 @@ public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig
    *
    * @return the MTConfig instance
    */
-  public static MTProjectConfig getInstance(@NotNull final Project project) {
+  public static MTProjectConfig getInstance(final Project project) {
     return ServiceManager.getService(project, MTProjectConfig.class);
   }
 

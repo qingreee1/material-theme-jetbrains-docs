@@ -26,7 +26,6 @@
 
 package com.chrisrm.idea;
 
-import com.chrisrm.idea.messages.MaterialThemeBundle;
 import com.chrisrm.idea.utils.MTUiUtils;
 import com.chrisrm.idea.utils.UIReplacer;
 import com.google.common.collect.ImmutableList;
@@ -36,18 +35,12 @@ import com.intellij.ide.ui.laf.IntelliJLaf;
 import com.intellij.ide.ui.laf.darcula.DarculaInstaller;
 import com.intellij.ide.ui.laf.darcula.DarculaLaf;
 import com.intellij.ide.util.PropertiesComponent;
-import com.intellij.openapi.actionSystem.impl.ActionToolbarImpl;
-import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.editor.colors.EditorColorsManager;
 import com.intellij.openapi.editor.colors.EditorColorsScheme;
 import com.intellij.openapi.extensions.PluginId;
-import com.intellij.openapi.fileTypes.ex.FileTypeManagerEx;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.util.IconLoader;
-import com.intellij.openapi.wm.WindowManager;
-import com.intellij.openapi.wm.impl.status.IdeStatusBarImpl;
 import com.intellij.ui.ColorUtil;
 import com.intellij.ui.JBColor;
 import com.intellij.util.ui.JBUI;
@@ -174,9 +167,12 @@ public final class MTProjectThemeManager {
 
   private final List<String> editorColorsSchemes;
   private final Project project;
+  private final MTThemeManager mtThemeManager;
 
   public MTProjectThemeManager(@NotNull final Project project) {
     this.project = project;
+    this.mtThemeManager = MTThemeManager.getInstance();
+
     final Collection<String> schemes = new ArrayList<>();
     for (final MTTheme theme : MTTheme.values()) {
       schemes.add(theme.getEditorColorsScheme());
@@ -195,96 +191,21 @@ public final class MTProjectThemeManager {
 
 
   //region Action Toggles
-  public void toggleMaterialDesign() {
-    final MTConfig mtConfig = MTConfig.getInstance();
-    mtConfig.setIsMaterialDesign(!mtConfig.getIsMaterialDesign());
-
-    askForRestart();
-  }
-
-  public void toggleProjectViewDecorators() {
-    final MTConfig mtConfig = MTConfig.getInstance();
-    mtConfig.setUseProjectViewDecorators(!mtConfig.isUseProjectViewDecorators());
-    this.updateFileIcons();
-  }
-
-  public void toggleMaterialTheme() {
-    MTConfig.getInstance().setIsMaterialTheme(!MTConfig.getInstance().isMaterialTheme());
-    this.activate();
-  }
 
   /**
    * Set contrast and reactivate theme
    */
   public void toggleContrast() {
-    final MTConfig mtConfig = MTConfig.getInstance();
+    final MTProjectConfig mtConfig = MTProjectConfig.getInstance(project);
     mtConfig.setIsContrastMode(!mtConfig.getIsContrastMode());
 
     this.applyContrast(true);
   }
 
-  public void toggleCompactStatusBar() {
-    final boolean compactStatusBar = MTConfig.getInstance().isCompactStatusBar();
-    MTConfig.getInstance().setIsCompactStatusBar(!compactStatusBar);
-
-    this.setStatusBarBorders();
-  }
-
-  public void toggleHideFileIcons() {
-    final boolean hideFileIcons = MTConfig.getInstance().getHideFileIcons();
-    MTConfig.getInstance().setHideFileIcons(!hideFileIcons);
-
-    this.updateFileIcons();
-  }
-
-  public void toggleCompactSidebar() {
-    final boolean isCompactSidebar = MTConfig.getInstance().isCompactSidebar();
-    MTConfig.getInstance().setCompactSidebar(!isCompactSidebar);
-
-    this.applyCompactSidebar(true);
-  }
-
-  public void toggleMaterialIcons() {
-    final boolean useMaterialIcons = MTConfig.getInstance().isUseMaterialIcons();
-    MTConfig.getInstance().setUseMaterialIcons(!useMaterialIcons);
-
-    this.updateFileIcons();
-  }
-
   public void toggleStatusBarIndicator() {
-    final MTConfig mtConfig = MTConfig.getInstance();
+    final MTProjectConfig mtConfig = MTProjectConfig.getInstance(project);
     mtConfig.setIsStatusBarTheme(!mtConfig.isStatusBarTheme());
-    mtConfig.fireChanged();
-  }
-  //endregion
-
-  //region File Icons support
-  public void updateFileIcons() {
-    ApplicationManager.getApplication().runWriteAction(() -> {
-      final FileTypeManagerEx instanceEx = FileTypeManagerEx.getInstanceEx();
-      instanceEx.fireFileTypesChanged();
-      ActionToolbarImpl.updateAllToolbarsImmediately();
-    });
-  }
-  //endregion
-
-  //region Status bar support
-
-  /**
-   * Change status bar borders
-   */
-  public void setStatusBarBorders() {
-    final boolean compactSidebar = MTConfig.getInstance().isCompactStatusBar();
-
-    ApplicationManager.getApplication().invokeLater(() -> {
-      final JComponent component = WindowManager.getInstance().findVisibleFrame().getRootPane();
-      if (component != null) {
-        final IdeStatusBarImpl ideStatusBar = UIUtil.findComponentOfType(component, IdeStatusBarImpl.class);
-        if (ideStatusBar != null) {
-          ideStatusBar.setBorder(compactSidebar ? JBUI.Borders.empty() : JBUI.Borders.empty(8, 0));
-        }
-      }
-    });
+    mtConfig.fireChanged(project);
   }
   //endregion
 
@@ -294,7 +215,7 @@ public final class MTProjectThemeManager {
    * Activate selected theme or deactivate current
    */
   public void activate() {
-    final MTTheme mtTheme = MTConfig.getInstance().getSelectedTheme();
+    final MTTheme mtTheme = MTProjectConfig.getInstance(project).getSelectedTheme();
     if (!MTConfig.getInstance().isMaterialTheme()) {
       removeTheme(mtTheme);
       return;
@@ -314,7 +235,7 @@ public final class MTProjectThemeManager {
       newTheme = MTTheme.DEFAULT;
     }
 
-    MTConfig.getInstance().setSelectedTheme(newTheme);
+    MTProjectConfig.getInstance(project).setSelectedTheme(newTheme);
 
     try {
       UIManager.setLookAndFeel(new MTLaf(newTheme));
@@ -323,10 +244,9 @@ public final class MTProjectThemeManager {
 
       PropertiesComponent.getInstance().setValue(getSettingsPrefix() + ".theme", newTheme.name());
       applyContrast(false);
-      applyCompactSidebar(false);
+      //      mtThemeManager.applyCompactSidebar(false);
       applyCustomTreeIndent();
       applyAccents(false);
-      setBoldTabs();
     } catch (final UnsupportedLookAndFeelException e) {
       e.printStackTrace();
     }
@@ -340,9 +260,7 @@ public final class MTProjectThemeManager {
 
     // We need this to update parts of the UI that do not change
     DarculaInstaller.uninstall();
-    if (newTheme.isDark()) {
-      DarculaInstaller.install();
-    }
+    DarculaInstaller.install();
 
     if (scheme != null) {
       EditorColorsManager.getInstance().setGlobalScheme(scheme);
@@ -353,11 +271,11 @@ public final class MTProjectThemeManager {
     // Documentation styles
     patchStyledEditorKit();
 
-    UIReplacer.patchUI();
+    UIReplacer.patchUI(project);
   }
 
   public void applyAccents(final boolean reloadUI) {
-    final String accentColor = MTConfig.getInstance().getAccentColor();
+    final String accentColor = MTProjectConfig.getInstance(project).getAccentColor();
     final Color accentColorColor = ColorUtil.fromHex(accentColor);
     for (final String resource : ACCENT_RESOURCES) {
       UIManager.put(resource, accentColorColor);
@@ -367,17 +285,6 @@ public final class MTProjectThemeManager {
 
     if (reloadUI) {
       reloadUI();
-    }
-  }
-
-
-  private void askForRestart() {
-    final String title = MaterialThemeBundle.message("mt.restartDialog.title");
-    final String message = MaterialThemeBundle.message("mt.restartDialog.content");
-
-    final int answer = Messages.showYesNoDialog(message, title, Messages.getQuestionIcon());
-    if (answer == Messages.YES) {
-      MTUiUtils.restartIde();
     }
   }
 
@@ -458,7 +365,7 @@ public final class MTProjectThemeManager {
    */
   private void applyContrast(final boolean reloadUI) {
     final boolean apply = MTConfigManager.getInstance(project).getIsContrastMode();
-    final MTTheme mtTheme = MTConfig.getInstance().getSelectedTheme();
+    final MTTheme mtTheme = MTProjectConfig.getInstance(project).getSelectedTheme();
     for (final String resource : CONTRASTED_RESOURCES) {
       final Color contrastedColor = apply ? mtTheme.getContrastColor() : mtTheme.getBackgroundColor();
       UIManager.put(resource, contrastedColor);
@@ -485,29 +392,13 @@ public final class MTProjectThemeManager {
    * Apply custom tree indent
    */
   private void applyCustomTreeIndent() {
-    final MTConfig mtConfig = MTConfig.getInstance();
+    final MTProjectConfig mtConfig = MTProjectConfig.getInstance(project);
     final int defaultIndent = 6;
 
     if (mtConfig.isCustomTreeIndentEnabled) {
       UIManager.put("Tree.rightChildIndent", mtConfig.customTreeIndent);
     } else {
       UIManager.put("Tree.rightChildIndent", defaultIndent);
-    }
-  }
-  //endregion
-
-  //region Compact Sidebar support
-
-  /**
-   * Use compact sidebar option
-   */
-  private void applyCompactSidebar(final boolean reloadUI) {
-    final boolean compactSidebar = MTConfig.getInstance().isCompactSidebar();
-    final int rowHeight = compactSidebar ? JBUI.scale(18) : JBUI.scale(28);
-    UIManager.put("Tree.rowHeight", rowHeight);
-
-    if (reloadUI) {
-      reloadUI();
     }
   }
   //endregion
@@ -520,7 +411,7 @@ public final class MTProjectThemeManager {
    */
   private void patchStyledEditorKit() {
     final UIDefaults defaults = UIManager.getLookAndFeelDefaults();
-    final MTConfig mtConfig = MTConfig.getInstance();
+    final MTProjectConfig mtConfig = MTProjectConfig.getInstance(project);
     final MTTheme selectedTheme = mtConfig.getSelectedTheme();
 
     // Load css
@@ -547,28 +438,10 @@ public final class MTProjectThemeManager {
   }
 
   public void setTabsHeight(final int newTabsHeight) {
-    MTConfig.getInstance().setTabsHeight(newTabsHeight);
+    MTProjectConfig.getInstance(project).setTabsHeight(newTabsHeight);
     this.setTabsHeight();
   }
 
-  public void setBoldTabs() {
-    //    Project[] openProjects = ProjectManager.getInstance().getOpenProjects();
-    //    boolean isBoldTabs = MTConfig.getInstance().getIsBoldTabs();
-    //
-    //    for (Project openProject : openProjects) {
-    //      final FileEditorManagerEx manager = FileEditorManagerEx.getInstanceEx(openProject);
-    //      for (final EditorWindow editorWindow : manager.getWindows()) {
-    //        EditorTabbedContainer tabbedPane = editorWindow.getTabbedPane();
-    //        if (tabbedPane != null) {
-    //          JBTabs tabs = tabbedPane.getTabs();
-    //          for (int i = 0; i < tabs.getTabCount(); i++) {
-    //            TabInfo tabAt = tabs.getTabAt(i);
-    //            tabAt.setDefaultStyle(isBoldTabs ? SimpleTextAttributes.STYLE_BOLD : SimpleTextAttributes.STYLE_PLAIN);
-    //          }
-    //        }
-    //      }
-    //    }
-  }
   //endregion
 
   /**
@@ -578,6 +451,8 @@ public final class MTProjectThemeManager {
     try {
       UIManager.setLookAndFeel(new MTLaf(MTConfig.getInstance().getSelectedTheme()));
       applyFonts();
+      DarculaInstaller.uninstall();
+      DarculaInstaller.install();
     } catch (final UnsupportedLookAndFeelException e) {
       e.printStackTrace();
     }

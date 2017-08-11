@@ -80,7 +80,7 @@ public final class MTLafComponent extends JBPanel implements ApplicationComponen
     installMaterialComponents();
 
     // Patch UI components
-    UIReplacer.patchUI();
+    UIReplacer.patchUI(project);
 
     // Listen for changes on the settings
     connect = ApplicationManager.getApplication().getMessageBus().connect();
