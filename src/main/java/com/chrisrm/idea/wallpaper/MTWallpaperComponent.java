@@ -32,20 +32,24 @@ import com.chrisrm.idea.config.ConfigNotifier;
 import com.intellij.ide.AppLifecycleListener;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.components.ApplicationComponent;
+import com.intellij.openapi.components.AbstractProjectComponent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.impl.IdeBackgroundUtil;
 import com.intellij.util.messages.MessageBusConnection;
 import org.jetbrains.annotations.NotNull;
 
-public final class MTWallpaperComponent implements ApplicationComponent {
+public final class MTWallpaperComponent extends AbstractProjectComponent {
 
   private final PropertiesComponent propertiesComponent = PropertiesComponent.getInstance();
-  private MTConfig mtConfig;
+  private MTProjectConfig mtConfig;
+
+  protected MTWallpaperComponent(final Project project) {
+    super(project);
+  }
 
   @Override
   public void initComponent() {
-    mtConfig = MTConfig.getInstance();
+    mtConfig = MTProjectConfig.getInstance(myProject);
 
     /*
      We need to handle the case where the user set a custom background prior to installing the plugin.
@@ -56,18 +60,18 @@ public final class MTWallpaperComponent implements ApplicationComponent {
       mtConfig.setDefaultBackground(propertiesComponent.getValue(IdeBackgroundUtil.FRAME_PROP));
     }
 
-    this.reloadWallpaper();
+    this.reloadWallpaper(myProject);
 
     final MessageBusConnection connect = ApplicationManager.getApplication().getMessageBus().connect();
     connect.subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {
       @Override
       public void configChanged(final MTConfig mtConfig) {
-        reloadWallpaper();
+        //        reloadWallpaper();
       }
 
       @Override
       public void configChanged(final Project project, final MTProjectConfig mtProjectConfig) {
-        reloadWallpaper();
+        reloadWallpaper(project);
       }
     });
 
@@ -90,7 +94,7 @@ public final class MTWallpaperComponent implements ApplicationComponent {
     });
   }
 
-  private void reloadWallpaper() {
+  private void reloadWallpaper(final Project project) {
     final String wallpaper = mtConfig.getWallpaper();
     final String defaultBackground = mtConfig.getDefaultBackground();
 

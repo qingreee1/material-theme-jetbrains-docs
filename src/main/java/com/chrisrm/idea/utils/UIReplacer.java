@@ -264,7 +264,7 @@ public final class UIReplacer {
                                       .filter(f -> f.getType().equals(JBColor.class))
                                       .toArray();
 
-      final Color accentColor = ColorUtil.fromHex(MTConfig.getInstance().getAccentColor());
+      final Color accentColor = ColorUtil.fromHex(MTProjectConfig.getInstance(project).getAccentColor());
       final Color mergeCommitsColor = new JBColor(accentColor, accentColor);
       StaticPatcher.setFinalStatic((Field) objects2[0], mergeCommitsColor);
 

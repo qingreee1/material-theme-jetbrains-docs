@@ -26,11 +26,11 @@
 
 package com.chrisrm.idea.utils;
 
-import com.chrisrm.idea.MTConfig;
 import com.chrisrm.idea.icons.tinted.TintedIcon;
 import com.chrisrm.idea.icons.tinted.TintedIconsService;
 
 import javax.swing.*;
+import java.awt.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.net.URL;
@@ -41,7 +41,7 @@ public final class IconReplacer {
   }
 
   public static void replaceIcons(final Class iconsClass, final String iconsRootPath) {
-    final String accentColor = MTConfig.getInstance().getAccentColor();
+    final Color accentColor = MTUiUtils.getAccentColor();
     // Iterate all fields (which hold icon locations) and patch them if necessary
     for (final Field field : iconsClass.getDeclaredFields()) {
       if (Modifier.isStatic(field.getModifiers())) {

@@ -67,8 +67,7 @@ public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig
   public Integer tabsHeight = 50;
   public boolean statusBarTheme = true;
 
-  // Whether project settings are enbaled
-  private boolean enabled = false;
+  public String defaultBackground;
 
   public MTProjectConfig() {
   }
@@ -349,11 +348,11 @@ public class MTProjectConfig implements PersistentStateComponent<MTProjectConfig
   }
   //endregion
 
-  public boolean isEnabled() {
-    return enabled;
+  public String getDefaultBackground() {
+    return defaultBackground;
   }
 
-  public void setEnabled(boolean enabled) {
-    this.enabled = enabled;
+  public void setDefaultBackground(final String defaultBackground) {
+    this.defaultBackground = defaultBackground;
   }
 }
