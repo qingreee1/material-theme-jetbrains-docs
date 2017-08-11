@@ -37,6 +37,7 @@ import com.intellij.openapi.fileEditor.FileEditor;
 import com.intellij.openapi.fileEditor.FileEditorManagerEvent;
 import com.intellij.openapi.fileEditor.FileEditorManagerListener;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectManager;
 import com.intellij.ui.tabs.JBTabsPosition;
 import com.intellij.ui.tabs.impl.DefaultEditorTabsPainter;
 import com.intellij.ui.tabs.impl.JBEditorTabs;
@@ -212,16 +213,23 @@ public final class MTProjectTabsPainterPatcherComponent extends AbstractProjectC
   }
 
   public static class MTTabsPainter extends DefaultEditorTabsPainter {
-    private Project myProject;
+    private MTProjectConfig mtProjectConfig;
+
+    public MTTabsPainter() {
+      this(null, null);
+    }
 
     public MTTabsPainter(final Project myProject) {
-      super(null);
-      this.myProject = myProject;
+      this(null, myProject);
     }
 
     public MTTabsPainter(final JBEditorTabs tabs, final Project myProject) {
       super(tabs);
-      this.myProject = myProject;
+      if (myProject == null) {
+        mtProjectConfig = MTProjectConfig.getInstance(ProjectManager.getInstance().getDefaultProject());
+      } else {
+        mtProjectConfig = MTProjectConfig.getInstance(myProject);
+      }
     }
 
     public final void fillSelectionAndBorder(final Graphics2D g,
@@ -235,13 +243,13 @@ public final class MTProjectTabsPainterPatcherComponent extends AbstractProjectC
     }
 
     public final Color getBackgroundColor() {
-      final MTProjectConfig config = MTProjectConfig.getInstance(myProject);
+      final MTProjectConfig config = mtProjectConfig;
       final MTTheme mtTheme = config.getSelectedTheme();
       return mtTheme.getBackgroundColor();
     }
 
     public final Color getContrastColor() {
-      final MTProjectConfig config = MTProjectConfig.getInstance(myProject);
+      final MTProjectConfig config = mtProjectConfig;
       final MTTheme mtTheme = config.getSelectedTheme();
       return config.getIsContrastMode() ? mtTheme.getContrastColor() : mtTheme.getBackgroundColor();
     }

@@ -63,6 +63,10 @@ import static com.chrisrm.idea.tabs.MTTabsPainterPatcherComponent.TABS_HEIGHT;
 
 public final class MTProjectThemeManager {
 
+  private static final String DARCULA_EDITOR_THEME_KEY = "Darcula.savedEditorTheme";
+  private static final String DEFAULT_EDITOR_THEME_KEY = "Default.savedEditorTheme";
+
+
   private static final String[] FONT_RESOURCES = new String[]{
       "Button.font",
       "ToggleButton.font",
@@ -141,6 +145,7 @@ public final class MTProjectThemeManager {
       "TabbedPane.borderColor",
       "StatusBar.background",
       "SplitPane.highlight",
+      "Panel.background",
       "ActionToolbar.background"
   };
 
@@ -244,7 +249,6 @@ public final class MTProjectThemeManager {
 
       PropertiesComponent.getInstance().setValue(getSettingsPrefix() + ".theme", newTheme.name());
       applyContrast(false);
-      //      mtThemeManager.applyCompactSidebar(false);
       applyCustomTreeIndent();
       applyAccents(false);
     } catch (final UnsupportedLookAndFeelException e) {
@@ -257,10 +261,6 @@ public final class MTProjectThemeManager {
                                     currentScheme : newTheme.getEditorColorsScheme();
 
     final EditorColorsScheme scheme = EditorColorsManager.getInstance().getScheme(makeActiveScheme);
-
-    // We need this to update parts of the UI that do not change
-    DarculaInstaller.uninstall();
-    DarculaInstaller.install();
 
     if (scheme != null) {
       EditorColorsManager.getInstance().setGlobalScheme(scheme);

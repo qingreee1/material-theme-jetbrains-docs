@@ -122,4 +122,12 @@ public final class MTUiUtils {
   public static int getThickness() {
     return ObjectUtils.notNull(UIManager.getInt("material.tab.borderThickness"), 2);
   }
+
+  public static Color getPanelBackground() {
+    return ObjectUtils.notNull(UIManager.getColor("Panel.background"), new ColorUIResource(0x263238));
+  }
+
+  public static Color getListBackground() {
+    return ObjectUtils.notNull(UIManager.getColor("List.background"), new ColorUIResource(0x32424A));
+  }
 }

@@ -37,7 +37,7 @@ public final class MTThemesComponent implements ApplicationComponent {
 
   @Override
   public void initComponent() {
-    //    activateTheme();
+    activateTheme();
 
     //    ApplicationManager.getApplication().getMessageBus().connect()
     //                      .subscribe(ConfigNotifier.CONFIG_TOPIC, new ConfigNotifier() {

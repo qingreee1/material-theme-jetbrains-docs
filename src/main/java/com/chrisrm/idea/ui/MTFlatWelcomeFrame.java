@@ -26,6 +26,7 @@
 
 package com.chrisrm.idea.ui;
 
+import com.chrisrm.idea.utils.MTUiUtils;
 import com.intellij.openapi.wm.IdeFrame;
 import com.intellij.openapi.wm.WelcomeScreen;
 import com.intellij.openapi.wm.impl.welcomeScreen.FlatWelcomeFrame;
@@ -44,8 +45,8 @@ public final class MTFlatWelcomeFrame extends FlatWelcomeFrame implements IdeFra
 
   MTFlatWelcomeFrame() {
     super();
-    final Color color = UIManager.getColor("Panel.background");
-    final Color listColor = UIManager.getColor("List.background");
+    final Color color = MTUiUtils.getPanelBackground();
+    final Color listColor = MTUiUtils.getListBackground();
 
     // Set welcome frame bg
     WelcomeScreen myScreen = ReflectionUtil.getField(FlatWelcomeFrame.class, this, WelcomeScreen.class, "myScreen");
