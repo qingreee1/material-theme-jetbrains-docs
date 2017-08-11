@@ -27,6 +27,7 @@
 package com.chrisrm.idea.tree;
 
 import com.chrisrm.idea.MTConfig;
+import com.chrisrm.idea.MTProjectConfig;
 import com.chrisrm.idea.schemes.MTFileColors;
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.projectView.PresentationData;
@@ -91,14 +92,14 @@ public final class MTProjectViewNodeDecorator implements ProjectViewNodeDecorato
       for (final VirtualFile leaf : files) {
         if (leaf.getPath().contains(file.getPath())) {
           setDirectoryIcon(data, file, project);
-          colorOpenDirectories(data);
+          colorOpenDirectories(data, project);
         }
       }
     }
   }
 
-  private void colorOpenDirectories(final PresentationData data) {
-    final String accentColor = MTConfig.getInstance().getAccentColor();
+  private void colorOpenDirectories(final PresentationData data, final Project project) {
+    final String accentColor = MTProjectConfig.getInstance(project).getAccentColor();
     data.setForcedTextForeground(ColorUtil.fromHex(accentColor));
   }
 
@@ -119,7 +120,7 @@ public final class MTProjectViewNodeDecorator implements ProjectViewNodeDecorato
   private void colorFileStatus(final PresentationData data, final VirtualFile file, final Project project) {
     final FileStatus status = FileStatusManager.getInstance(project).getStatus(file);
     final Color colorFromStatus = getColorFromStatus(status);
-    final boolean isBoldTabs = MTConfig.getInstance().getIsBoldTabs();
+    final boolean isBoldTabs = MTProjectConfig.getInstance(project).getIsBoldTabs();
     if (file.isDirectory()) {
       //      data.setForcedTextForeground(ColorUtil.fromHex(MTConfig.getInstance().getAccentColor()));
       if (isBoldTabs) {
