@@ -145,7 +145,6 @@ public final class MTProjectThemeManager {
       "TabbedPane.borderColor",
       "StatusBar.background",
       "SplitPane.highlight",
-      "Panel.background",
       "ActionToolbar.background"
   };
 
@@ -271,13 +270,6 @@ public final class MTProjectThemeManager {
     // Documentation styles
     patchStyledEditorKit();
 
-    try {
-      DarculaInstaller.uninstall();
-      DarculaInstaller.install();
-
-    } catch (Exception e) {
-      ;
-    }
     UIReplacer.patchUI(project);
   }
 
@@ -388,8 +380,8 @@ public final class MTProjectThemeManager {
     final MTProjectConfig mtConfig = MTProjectConfig.getInstance(project);
     final int defaultIndent = 6;
 
-    if (mtConfig.isCustomTreeIndentEnabled) {
-      UIManager.put("Tree.rightChildIndent", mtConfig.customTreeIndent);
+    if (mtConfig.isCustomTreeIndent()) {
+      UIManager.put("Tree.rightChildIndent", mtConfig.getCustomTreeIndent());
     } else {
       UIManager.put("Tree.rightChildIndent", defaultIndent);
     }

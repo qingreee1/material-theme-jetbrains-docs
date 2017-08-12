@@ -94,7 +94,7 @@ public final class MTProjectTabsPainterPatcherComponent extends AbstractProjectC
           Component component = editor.getComponent();
           while (component != null) {
             if (component instanceof JBEditorTabs) {
-              patchPainter((JBEditorTabs) component);
+              patchPainter((JBEditorTabs) component, event.getManager().getProject());
               return;
             }
             component = component.getParent();
@@ -122,8 +122,9 @@ public final class MTProjectTabsPainterPatcherComponent extends AbstractProjectC
    * Patch tabsPainter
    *
    * @param component
+   * @param project
    */
-  private void patchPainter(final JBEditorTabs component) {
+  private void patchPainter(final JBEditorTabs component, final Project project) {
     final JBEditorTabsPainter painter = ReflectionUtil.getField(JBEditorTabs.class, component,
         JBEditorTabsPainter.class, "myDarkPainter");
 
@@ -131,17 +132,16 @@ public final class MTProjectTabsPainterPatcherComponent extends AbstractProjectC
       return;
     }
 
-    final MTTabsPainter tabsPainter = new MTTabsPainter(component, myProject);
+    final MTTabsPainter tabsPainter = new MTTabsPainter(component, project);
     final JBEditorTabsPainter proxy = (MTTabsPainter) Enhancer.create(MTTabsPainter.class, (MethodInterceptor) (o, method, objects,
                                                                                                                 methodProxy) -> {
-      final Object result = method.invoke(tabsPainter, objects);
-      final Color defaultColor = theme.getBorderColor();
-
       // Custom props
-      final boolean isColorEnabled = config.isHighlightColorEnabled();
-      final Color borderColor = isColorEnabled ? config.getHighlightColor() : defaultColor;
-      final int borderThickness = config.getHighlightThickness();
+      final Color defaultColor = theme.getBorderColor();
+      final boolean isColorEnabled = MTProjectConfig.getInstance(project).isHighlightColorEnabled();
+      final Color borderColor = isColorEnabled ? MTProjectConfig.getInstance(project).getHighlightColor() : defaultColor;
+      final int borderThickness = MTProjectConfig.getInstance(project).getHighlightThickness();
 
+      final Object result = method.invoke(tabsPainter, objects);
       if ("paintSelectionAndBorder".equals(method.getName())) {
         paintSelectionAndBorder(objects, borderColor, borderThickness, tabsPainter);
       }
