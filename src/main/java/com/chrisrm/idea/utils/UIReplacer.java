@@ -32,6 +32,7 @@ import com.google.common.collect.ImmutableMap;
 import com.intellij.codeInsight.hint.ParameterInfoComponent;
 import com.intellij.codeInsight.lookup.impl.LookupCellRenderer;
 import com.intellij.icons.AllIcons;
+import com.intellij.ide.ui.laf.darcula.DarculaUIUtil;
 import com.intellij.lang.parameterInfo.ParameterInfoUIContextEx;
 import com.intellij.notification.impl.NotificationsManagerImpl;
 import com.intellij.openapi.options.newEditor.SettingsTreeView;
@@ -135,9 +136,14 @@ public final class UIReplacer {
       StaticPatcher.setFinalStatic(UIUtil.class, "BORDER_COLOR", color);
       StaticPatcher.setFinalStatic(UIUtil.class, "AQUA_SEPARATOR_FOREGROUND_COLOR", color);
 
-      //      final Color accentColor = getAccentColor(project);
-      //      StaticPatcher.setFinalStatic(DarculaUIUtil.class, "g", accentColor);
-      //      StaticPatcher.setFinalStatic(DarculaUIUtil.class, "h", accentColor);
+      final Field[] fields = DarculaUIUtil.class.getDeclaredFields();
+      final Object[] objects = Arrays.stream(fields)
+                                     .filter(f -> f.getType().equals(JBColor.class))
+                                     .toArray();
+      final Color accentColor = getAccentColor(project);
+      final JBColor accentJBColor = new JBColor(accentColor, accentColor);
+      StaticPatcher.setFinalStatic((Field) objects[0], accentJBColor);
+      StaticPatcher.setFinalStatic((Field) objects[1], accentJBColor);
     }
 
     static void patchMemoryIndicator(final Project project) throws Exception {
