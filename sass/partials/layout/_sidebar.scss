@@ -21,12 +21,12 @@
   }
   .sidebar-toggle {
     display: none;
-    transition: .5s all ease;
+    transition: .5s all ease-out;
   }
 
   .link-section {
     list-style-type: none;
-    line-height: 1.8;
+    line-height: 1.5;
 
     &.active {
       a {
@@ -41,7 +41,6 @@
       transition-delay: .5s;
       transform: translateX(0);
       .sidebar-toggle {
-        transition-delay: .3s;
         height: $margin-width;
         background: rgba($material-sidebar-responsive-border-bg, 0);
         i {
@@ -54,6 +53,7 @@
       display: block;
       position: fixed;
       top: 0;
+      z-index: 99;
       left: $sidebar-width - $margin-width;
       width: $margin-width;
       height: 100%;

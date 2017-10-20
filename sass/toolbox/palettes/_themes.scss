@@ -97,7 +97,8 @@ $themes: (
       background: map-get($theme, "ct");
       color: map-get($theme, "fg");
 
-      .sidebar-link-group.active {
+      .sidebar-link-group.active,
+      .sidebar-link-group .nav-link:hover {
         background-color: map-get($theme, "bg");
       }
 

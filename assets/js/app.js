@@ -17,6 +17,9 @@ $.when($.ready).then(function () {
     scrollSpyOn: function scrollSpyOn(wrapper, opt) {
       new window.ScrollSpy(wrapper, opt).init();
     },
+    toggleSidebar: function toggleSidebar() {
+      $('.sidebar').toggleClass('open');
+    },
     init: function init() {
       // todo load from local storage
       this.setBodyClass('palenight');
@@ -36,11 +39,6 @@ $.when($.ready).then(function () {
 
   window.jekyllApp = jekyllApp;
 
-  //
-  //   // sidebar toggling responsive
-  //   $('.sidebar-toggle').click(function () {
-  //     $('.sidebar').toggleClass('open');
-  //   });
   //
   //   // Back to top link
   //   $('.backtotop').click(function () {
@@ -69,73 +67,6 @@ $.when($.ready).then(function () {
   //     }
   //   });
   //
-  //   var cookieLayout = getCookie('switch-style');
-  //   if (cookieLayout != '') {
-  //     $('#switch-style').attr('href', '/css/' + cookieLayout + '.css');
-  //   }
-  //
-  //   // Style Switch index layout
-  //   $('.switch div').click(function () {
-  //     var id = $(this).attr('id');
-  //
-  //     // adjust link here
-  //     $('#switch-style').attr('href', 'css/' + id + '.css');
-  //     setCookie('switch-style', id, 365);
-  //   });
-  //
-  //   var cookieColor = getCookie('color-change');
-  //   if (cookieColor != '') {
-  //     $('#color-change').attr('href', 'css/main_' + cookieColor + '.css');
-  //   }
-  //
-  //   // Style Switch color scheme
-  //   $('.color-change img').click(function () {
-  //     var id = $(this).attr('id');
-  //
-  //     // adjust link here
-  //     $('#color-change').attr('href', 'css/main_' + id + '.css');
-  //     setCookie('color-change', id, 365);
-  //   });
-  //
-  //   if ($('.articles').find('div.wrapper').length != 0) {
-  //     $('.switch').hide();
-  //   } else {
-  //     $('.switch').show();
-  //   }
-  // });
-  //
-  // $(window).scroll(function () {
-  //   // scroll stuff
-  // });
-  //
-  // function setCookie(cname, cvalue, exdays) {
-  //   var d = new Date();
-  //   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  //   var expires = 'expires=' + d.toUTCString();
-  //   document.cookie = cname + '=' + cvalue + '; ' + expires;
-  // }
-  //
-  // function getCookie(cname) {
-  //   var name = cname + '=';
-  //   var ca = document.cookie.split(';');
-  //   for (var i = 0; i < ca.length; i++) {
-  //     var c = ca[i];
-  //     while (c.charAt(0) == ' ') c = c.substring(1);
-  //     if (c.indexOf(name) == 0) {
-  //       return c.substring(name.length, c.length);
-  //     }
-  //   }
-  //   return '';
-  // }
-  //
-  // function checkCookie(cname) {
-  //   var cookie = getCookie(cname);
-  //   if (cookie != '') {
-  //     alert('cookie is' + cookie);
-  //   } else {
-  //     alert('cookie unset');
-  //   }
-  // }
   //
   // // lightbox stuff
   // $(function () {
