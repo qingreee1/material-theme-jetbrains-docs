@@ -1,0 +1,36 @@
+material:
+- oceanic:
+  name: Default
+  className: oceanic
+  desc: An oceanic blue flat theme
+
+- darker:
+  name: Darker
+  className: darker
+  desc: A pitch-black flat theme
+
+- lighter:
+  name: Lighter
+  className: lighter
+  desc: A bright light flat theme
+
+- palenight:
+  name: Palenight
+  className: palenight
+  desc: A purplish flat theme
+
+other:
+- monokai:
+  name: Monokai
+  className: monokai
+  desc: Theme based on the Sublime Theme of the same name
+
+- arcdark:
+  name: Arc Dark
+  className: arcdark
+  desc: A Dark Slate gray theme
+
+- onedark:
+  name: One Dark
+  className: onedark
+  desc: Theme based on the Atom One Dark theme

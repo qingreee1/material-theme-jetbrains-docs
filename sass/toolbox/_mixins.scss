@@ -289,3 +289,23 @@
     transition: .3s all linear;
   }
 }
+
+
+@mixin grid-cards($perRow: 3) {
+  @include rowMachine($perRow, 1%, 25px);
+
+  @media screen and (max-width: $card-max-width * ($perRow - 0)) {
+    @include rowMachine($perRow - 1, 1%, 25px);
+  }
+
+  @media screen and (max-width: $card-max-width * ($perRow - 1)) and (min-width: $card-max-width * ($perRow - 2)) {
+    @include rowMachine($perRow - 2, 3%, 25px);
+  }
+
+  @media screen and (max-width: $card-max-width * ($perRow - 2)) {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+}
+

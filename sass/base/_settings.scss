@@ -145,3 +145,19 @@ $material-sidebar-responsive-border-bg: $accent-color;
 
 // modals
 $modal-width-change: 900px;
+
+$card-max-width: 300px;
+
+// 13. Grid
+// ==========================================================================
+
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
+
+// cards
+$card-padding: 24px !default;
+$card-bg-color: #fff !default;
+$card-link-color: $accent-color !default;
+$card-link-color-light: lighten($card-link-color, 20%) !default;

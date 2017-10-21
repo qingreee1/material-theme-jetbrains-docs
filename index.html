@@ -9,11 +9,11 @@ layout: index
       <div class="theme-chooser">
         <h3 class="theme-chooser-title section-title">Select a theme</h3>
         <div class="theme-chooser-options">
-          {% for theme in page.themes %}
+          {% for theme in site.data.themes.material %}
             <a href="void:javascript(0)"
-               class="theme {{ theme }}"
-               title="{{ theme }}"
-               onclick="jekyllApp.setBodyClass('{{ theme }}')"></a>
+               class="theme {{ theme.className }}"
+               title="{{ theme.name }}"
+               onclick="jekyllApp.setBodyClass('{{ theme.className }}')"></a>
           {% endfor %}
         </div>
       </div>

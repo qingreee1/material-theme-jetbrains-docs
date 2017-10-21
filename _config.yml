@@ -22,7 +22,7 @@ category_dir: /category
 author_dir: /author
 author_title_prefix: 'Posted by '
 media_folder: /assets/media/compressed
-img_folder: /assets/media/compressed
+img_folder: /img
 author_default_avatar: /profile-pic.jpeg
 github: https://github.com/mallowigi/material-theme-jetbrains-eap
 version: 1.0.3
@@ -48,16 +48,6 @@ defaults:
     values:
       layout: "material-sidebar-left"
       author: "mallowigi"
-
-  -
-    scope:
-      path: ""
-    values:
-      themes:
-      - oceanic
-      - darker
-      - palenight
-      - lighter
 
 markdown: kramdown
 kramdown:

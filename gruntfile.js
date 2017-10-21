@@ -119,7 +119,7 @@ module.exports = function (grunt) {
       site: {
         files: ['{,*/}{,*/}{,*/}*.html',
           '{,*/}{,*/}{,*/}*.md',
-          '{,*/}*.yml',
+          '**/*.yml',
           '!jekyllbuild/{,*/}{,*/}*.*',
           '!node_modules/{,*/}*.*'],
         tasks: ['shell:jekyllBuild', 'copy'],
