@@ -31,6 +31,17 @@ $.when($.ready).then(function () {
 
       // custom scroll spy (is that necessary?)
       this.scrollSpyOn('.doc', { nav: '.toc a' });
+    },
+    showSearch: function showSearch() {
+      $('#search').addClass('open');
+      $('#search input').focus();
+      $('body').addClass('overflow');
+    },
+    closeSearch: function closeSearch(event, elt) {
+      if (event.target === elt || event.target.className === 'close' || event.keyCode === 27) {
+        $('#search').removeClass('open');
+        $('body').removeClass('overflow');
+      }
     }
   };
 
@@ -53,19 +64,7 @@ $.when($.ready).then(function () {
   //     $('.menu').toggleClass('active');
   //   });
   //
-  //   // Search
-  //   $('a[href="#search"]').click(function () {
-  //     $('#search').addClass('open');
-  //     $('#search input').focus();
-  //     $('body').addClass('overflow');
-  //   });
-  //
-  //   $('#search, #search button.close').on('click keyup', function (event) {
-  //     if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-  //       $(this).removeClass('open');
-  //       $('body').removeClass('overflow');
-  //     }
-  //   });
+
   //
   //
   // // lightbox stuff

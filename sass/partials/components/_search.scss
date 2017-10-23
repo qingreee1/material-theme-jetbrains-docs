@@ -31,9 +31,9 @@ body.overflow {
 }
 
 #search.open {
-  transition: 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   transform: translate(0px, 0px) scale(1, 1);
   opacity: 1;
-  z-index: 106;
+  z-index: 112;
   display: block;
 }
