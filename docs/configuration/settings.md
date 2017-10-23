@@ -14,8 +14,8 @@ allow each and everyone to customize to their hearts content.
 
 ### Theme Switcher
 
-The plugin comes prebundled with a set of themes interchangeables through the 
-![Theme Switcher]({{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/icons/switcher.png) *Theme Switcher*. 
+The plugin comes prebundled with a set of themes interchangeables through the
+![Theme Switcher]({{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/icons/switcher.png) *Theme Switcher*.
 
 There are many ways to invoke the *Theme Switcher*:
 - From the IDE menu `Tools -> Material Theme -> Material Theme Chooser`
@@ -50,13 +50,20 @@ Besides the Material Themes, there are also other prebundled themes made by the 
 #### Custom Theme
 
 And finally there is a **Custom Theme** option, which is the placeholder for the Custom Theme Settings, allowing you
-to change the theme's colors to your convenience. 
+to change the theme's colors to your convenience.
 
-{%comment%}
+See [Custom Themes](/docs/custom-themes) for more information.
+
+----------
 ## Material Theme Settings
 
+You can configure many parts of the plugin features from the **plugin settings**. They are accessible within `Settings
+-> Appearance -> Material Theme`.
+
+![Material Theme Settings]({{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/installation/settings.png)
 
 
+{%comment%}
 ## Material Custom Theme Settings
 
 ## Troubleshooting

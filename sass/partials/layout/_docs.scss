@@ -50,7 +50,7 @@
     }
 
     .theme-cards {
-      @include flexbox(row, wrap, space-between, flex-start);
+      @include flexbox(row, wrap, start, flex-start);
       list-style-type: none;
       padding: 0;
     }
