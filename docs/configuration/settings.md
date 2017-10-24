@@ -15,7 +15,7 @@ allow each and everyone to customize to their hearts content.
 ### Theme Switcher
 
 The plugin comes prebundled with a set of themes interchangeables through the
-![Theme Switcher]({{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/icons/switcher.png) *Theme Switcher*.
+![Theme Switcher]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/icons/switcher.png) *Theme Switcher*.
 
 There are many ways to invoke the *Theme Switcher*:
 - From the IDE menu `Tools -> Material Theme -> Material Theme Chooser`
@@ -23,7 +23,7 @@ There are many ways to invoke the *Theme Switcher*:
 - From the `Search Everything` dialog, type `Material Theme`
 - From the `Quick Switch` panel <kbd>(Ctrl + \`)</kbd> (Windows: <kbd>Ctrl + ~</kbd>)`
 
-![Theme Switcher]({{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/installation/quickswitch.png)
+![Theme Switcher]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/quickswitch.png)
 
 The plugin comes prebundled with {{ site.data.themes.material.size | plus: site.data.themes.other.size }} themes:
 
@@ -60,7 +60,7 @@ See [Custom Themes](/docs/custom-themes) for more information.
 You can configure many parts of the plugin features from the **plugin settings**. They are accessible within `Settings
 -> Appearance -> Material Theme`.
 
-![Material Theme Settings]({{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/installation/settings.png)
+![Material Theme Settings]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/settings.png)
 
 
 {%comment%}

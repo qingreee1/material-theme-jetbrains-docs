@@ -12,7 +12,7 @@ The easiest way to install the Material Theme plugin is through IntelliJ's **plu
 usually contains stable releases that made it through testing and feedback.
 {:class='title'}
 
-<img src="{{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/installation/plugins.png">
+<img src="{{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/plugins.png">
 
 Steps:
 1. Open Settings/Preferences (Windows/Linux: `Ctrl-S`, Mac: `Cmd-,`)
@@ -22,7 +22,7 @@ Steps:
 5. Double click on `Material Theme UI` to install it.
 6. Click the `OK` button and restart the IDE.
 
-<img src="{{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/installation/listplugin.png">
+<img src="{{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/listplugin.png">
 
 **Note**:
 You can also install the [`Material Theme UI EAP`](https://github.com/mallowigi/material-theme-jetbrains-eap) instead.
