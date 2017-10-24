@@ -3,7 +3,6 @@ _site
 .jekyll-metadata
 /npm-debug.log
 /media/
-Gemfile.lock
 archive/
 img/galleries/
 jekyllbuild/
