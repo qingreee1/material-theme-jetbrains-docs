@@ -14,3 +14,4 @@ install:
 branches:
   only:
     - docs
+    - gh-pages
