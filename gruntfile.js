@@ -179,8 +179,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'babel',
     'uglify',
-    'copy',
-    'shell:jekyllBuild']);
+    'copy']);
   grunt.registerTask('deploy', [
     'buildcontrol:pages',
   ]);
