@@ -22,7 +22,7 @@ $.when($.ready).then(() => {
 
     init() {
       // todo load from local storage
-      this.setBodyClass('lighter');
+      this.setBodyClass('oceanic');
 
       $('.toc').pushpin({
         top: 284,
@@ -31,7 +31,6 @@ $.when($.ready).then(() => {
 
       // custom scroll spy (is that necessary?)
       this.scrollSpyOn('.doc', {nav: '.toc a'});
-      console.log('y u no work');
     },
 
     showSearch() {
