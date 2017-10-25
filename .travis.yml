@@ -5,7 +5,7 @@ node_js:
   - "7"
 deploy:
   provider: pages
-  skip_cleanup: false
+  skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: gh-pages
@@ -14,4 +14,3 @@ install:
 branches:
   only:
     - docs
-    - gh-pages
