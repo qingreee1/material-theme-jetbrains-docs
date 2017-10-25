@@ -31,6 +31,7 @@ $.when($.ready).then(() => {
 
       // custom scroll spy (is that necessary?)
       this.scrollSpyOn('.doc', {nav: '.toc a'});
+      console.log('y u no work');
     },
 
     showSearch() {
