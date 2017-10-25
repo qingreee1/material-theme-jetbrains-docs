@@ -44,7 +44,7 @@ module.exports = function (grunt) {
             cwd: 'img',
             src: ['**/*.{png,jpg,svg}'],
             // Could also match cwd line above. i.e. project-directory/img/
-            dest: 'assets/media/compressed/',
+            dest: '/media/compressed/',
           },
         ],
       },
