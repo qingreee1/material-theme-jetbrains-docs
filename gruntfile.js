@@ -109,6 +109,15 @@ module.exports = function (grunt) {
           },
         ],
       },
+      img: {
+        files: [
+          {
+            expand: true,
+            src: ['assets/media/**'],
+            dest: 'jekyllbuild/',
+          },
+        ],
+      },
     },
 
     watch: {
