@@ -34,6 +34,7 @@ module.exports = function (grunt) {
       main: {
         options: {
           optimizationLevel: 3,
+          progressive: true,
           svgoPlugins: [{removeViewBox: false}],
         },
         files: [
@@ -41,10 +42,10 @@ module.exports = function (grunt) {
             // Set to true to enable the following options…
             expand: true,
             // cwd is 'current working directory'
-            cwd: 'img',
-            src: ['**/*.{png,jpg,svg}'],
+            cwd: '',
+            src: ['img/**/*.{png,jpg,svg}'],
             // Could also match cwd line above. i.e. project-directory/img/
-            dest: 'img/media/compressed/',
+            dest: 'media/compressed/',
           },
         ],
       },
@@ -105,15 +106,6 @@ module.exports = function (grunt) {
           {
             expand: true,
             src: ['assets/js/**'],
-            dest: 'jekyllbuild/',
-          },
-        ],
-      },
-      img: {
-        files: [
-          {
-            expand: true,
-            src: ['assets/media/**'],
             dest: 'jekyllbuild/',
           },
         ],
