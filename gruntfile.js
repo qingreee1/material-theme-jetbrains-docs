@@ -188,7 +188,4 @@ module.exports = function (grunt) {
     'babel',
     'uglify',
     'copy']);
-  grunt.registerTask('deploy', [
-    'buildcontrol:pages',
-  ]);
 };
