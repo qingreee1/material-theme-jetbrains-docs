@@ -186,6 +186,5 @@ module.exports = function (grunt) {
     'sass',
     'autoprefixer',
     'babel',
-    'uglify',
-    'copy']);
+    'uglify']);
 };
