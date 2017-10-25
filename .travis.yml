@@ -10,7 +10,6 @@ deploy:
   on:
     branch: master
 install:
-  - bundle install
   - npm install
 branches:
   only:

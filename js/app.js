@@ -22,7 +22,7 @@ $.when($.ready).then(() => {
 
     init() {
       // todo load from local storage
-      this.setBodyClass('palenight');
+      this.setBodyClass('darker');
 
       $('.toc').pushpin({
         top: 284,
