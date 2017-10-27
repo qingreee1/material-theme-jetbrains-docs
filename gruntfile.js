@@ -122,7 +122,7 @@ module.exports = function (grunt) {
           '**/*.yml',
           '!jekyllbuild/{,*/}{,*/}*.*',
           '!node_modules/{,*/}*.*'],
-        tasks: ['shell:jekyllBuild', 'copy'],
+        tasks: ['exec:jekyllBuild', 'copy'],
       },
       js: {
         files: ['js/{,*/}{,*/}*.js'],
@@ -134,7 +134,7 @@ module.exports = function (grunt) {
       },
       images: {
         files: ['assets/img/{,*/}{,*/}*.{png,jpg,svg}'],
-        tasks: ['newer:imagemin', 'shell:jekyllBuild', 'copy'],
+        tasks: ['newer:imagemin', 'exec:jekyllBuild', 'copy'],
       },
     },
 

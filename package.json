@@ -80,7 +80,6 @@
     "grunt-open": "^0.2.3",
     "grunt-responsive-images": "^1.10.1",
     "grunt-sass": "^2.0.0",
-    "grunt-shell": "^2.1.0",
     "vue": "^2.4.2",
     "vue-router": "^2.7.0"
   },

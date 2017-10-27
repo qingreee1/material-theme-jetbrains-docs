@@ -1,14 +1,13 @@
 ---
 layout: docs
 title: Settings
-description: Learn how to configure the plugin to suit your style
+description: Learn how to configure the plugin to your tastes
 group: configuration
 toc: true
 ---
 
-The Material Theme plugin comes with a bunch of features tailored for an optimal experience. However, it is also highly configurable to
-allow each and everyone to customize to their hearts content.
-{:class='title'}
+The Material Theme plugin comes with a bunch of features tailored for an optimal experience. However, it is also highly
+configurable to allow each and everyone to customize it to their hearts content. {:class='title'}
 
 ## Themes and Color Schemes
 
@@ -17,7 +16,7 @@ allow each and everyone to customize to their hearts content.
 The plugin comes prebundled with a set of themes interchangeables through the
 ![Theme Switcher]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/icons/switcher.png) *Theme Switcher*.
 
-![switcher]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/switcher.png)
+{% include figure.html content="/screens/switcher.png" caption="Theme Switcher" %}
 
 There are many ways to invoke the *Theme Switcher*:
 - From the IDE menu `Tools -> Material Theme -> Material Theme Chooser`
@@ -25,7 +24,7 @@ There are many ways to invoke the *Theme Switcher*:
 - From the `Search Everything` dialog, type `Material Theme`
 - From the `Quick Switch` panel <kbd>(Ctrl + \`)</kbd> (Windows: <kbd>Ctrl + ~</kbd>)`
 
-![Theme Switcher]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/quickswitch.png)
+{% include figure.html content="/screens/quickswitch.png" caption="Quick Switch" %}
 
 The plugin comes prebundled with {{ site.data.themes.material.size | plus: site.data.themes.other.size }} themes:
 
@@ -62,8 +61,7 @@ See [Custom Themes](/docs/custom-themes) for more information.
 You can configure many parts of the plugin features from the **plugin settings**. They are accessible within `Settings
 -> Appearance -> Material Theme`.
 
-![Material Theme Settings]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/settings.png)
-
+{% include figure.html content="/screens/settings.png" caption="Material Theme Settings" %}
 
 {%comment%}
 ## Material Custom Theme Settings

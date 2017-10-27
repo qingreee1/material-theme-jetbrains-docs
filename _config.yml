@@ -21,7 +21,7 @@ tag_dir: /tag
 category_dir: /category
 author_dir: /author
 author_title_prefix: 'Posted by '
-media_folder: /assets/media/compressed
+media_folder: /img
 img_folder: /img
 author_default_avatar: /profile-pic.jpeg
 github: https://github.com/mallowigi/material-theme-jetbrains-eap

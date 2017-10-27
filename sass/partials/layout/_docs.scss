@@ -54,9 +54,26 @@
       list-style-type: none;
       padding: 0;
     }
-    .card {
+    .theme-cards .card {
       @include grid-cards(4);
       @include inject-themes
+    }
+
+    .figure {
+      display: block;
+      width: fit-content;
+      margin: 2em auto;
+
+      .card-content {
+        padding: 1em;
+      }
+
+      .card-title {
+        font-size: 1em;
+        line-height: 1em;
+        margin: 0;
+        font-weight: normal;
+      }
     }
   }
 }
