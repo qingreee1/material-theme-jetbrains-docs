@@ -26,9 +26,9 @@ img_folder: /img
 author_default_avatar: /profile-pic.jpeg
 github: https://github.com/mallowigi/material-theme-jetbrains-eap
 version: 1.0.3
-year: 2015-2017
-social_image_path:  /media/compressed/brand/material-logo.png
-social_logo_path:   /media/compressed/brand/material-social-logo.png
+year: 2015-2018
+social_image_path:  /assets/media/compressed/brand/material-logo.png
+social_logo_path:   /assets/media/compressed/brand/material-social-logo.png
 
 encoding: utf-8
 defaults:
