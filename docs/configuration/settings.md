@@ -63,6 +63,29 @@ You can configure many parts of the plugin features from the **plugin settings**
 
 {% include figure.html content="/screens/settings.png" caption="Material Theme Settings" %}
 
+**Active Tab Settings**:
+- *Active Tab Highlight*: Customize active tab indicator color and thickness (works also for the Project View selected row)
+- *Tabs Height*: Set a custom height for tabs (between 25 and 60 pixels)
+- *Uppercase Bold Tabs*: Set the Editor Tabs in Bold Upper Case
+
+**Panel Settings**:
+- *Contrast Mode*: Add contrast to some of the IDE's components (currently only the Tabs and Tree)
+- *Hide Icons*: Hide file icons (you must have Material Icons options on)
+- *Custom Sidebar Height*: Set custom line height in Project View (min: 18, max: 30)
+- *Custom Tree Indent*: Increase or reduce indentation in the sidebar (min: 2, max: 8)
+- *Bold directories*: Set bold font weight for directories in the Project View
+- *Compact Status Bar*: Reduce the height of the status bar (this is the default height)
+- *Custom Accent Color*: Set a custom color for accent color
+
+**Component Settings**:
+- *Custom Wallpaper*: Set a custom wallpaper for the "no files opened" page
+- *Material Design components*: Enable/Disable Material Design components (Buttons, Progress Bars...)
+- *Material Icons*: Enable/Disable the Material Theme icons to the original ones
+- *Material Theme*: Enable/Disable the material theme styles
+- *Project View Decorators*: Enable/Disable the Project View Decorators. See the above section about separators.
+- *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
+
+
 {%comment%}
 ## Material Custom Theme Settings
 
