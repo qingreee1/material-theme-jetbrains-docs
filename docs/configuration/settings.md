@@ -63,27 +63,40 @@ You can configure many parts of the plugin features from the **plugin settings**
 
 {% include figure.html content="/screens/settings.png" caption="Material Theme Settings" %}
 
+#### Explanation
+
 **Active Tab Settings**:
 - *Active Tab Highlight*: Customize active tab indicator color and thickness (works also for the Project View selected row)
 - *Tabs Height*: Set a custom height for tabs (between 25 and 60 pixels)
 - *Uppercase Bold Tabs*: Set the Editor Tabs in Bold Upper Case
 
 **Panel Settings**:
-- *Contrast Mode*: Add contrast to some of the IDE's components (currently only the Tabs and Tree)
+* *Contrast Mode*: Add contrast to some of the IDE's components
 - *Hide Icons*: Hide file icons (you must have Material Icons options on)
-- *Custom Sidebar Height*: Set custom line height in Project View (min: 18, max: 30)
+- *Custom Sidebar Height*: Set a custom line height in Project View (min: 18, max: 30)
 - *Custom Tree Indent*: Increase or reduce indentation in the sidebar (min: 2, max: 8)
 - *Bold directories*: Set bold font weight for directories in the Project View
 - *Compact Status Bar*: Reduce the height of the status bar (this is the default height)
 - *Custom Accent Color*: Set a custom color for accent color
 
 **Component Settings**:
-- *Custom Wallpaper*: Set a custom wallpaper for the "no files opened" page
+* *Custom Wallpaper*: Set a custom wallpaper for the IDE frame
 - *Material Design components*: Enable/Disable Material Design components (Buttons, Progress Bars...)
 - *Material Icons*: Enable/Disable the Material Theme icons to the original ones
 - *Material Theme*: Enable/Disable the material theme styles
 - *Project View Decorators*: Enable/Disable the Project View Decorators. See the above section about separators.
+* *Theme in Statusbar*: Add an indicator for the currently selected theme in the statusbar.
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
+
+#### Settings File
+
+Your current configuration is stored inside the IDE settings' directory under the filename `material_theme.xml`. If for some
+reason there are issues with the plugin or you don't manage to reset to a stable state, just delete this file and
+restart the IDE.
+
+See
+[IDE Settings](https://intellij-support.jetbrains.com/hc/en-us/articles/206544519-Directories-used-by-the-IDE-to-store-settings-caches-plugins-and-logs)
+for more information.
 
 
 {%comment%}
