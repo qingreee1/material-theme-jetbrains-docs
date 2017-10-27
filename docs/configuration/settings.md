@@ -17,6 +17,8 @@ allow each and everyone to customize to their hearts content.
 The plugin comes prebundled with a set of themes interchangeables through the
 ![Theme Switcher]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/icons/switcher.png) *Theme Switcher*.
 
+![switcher]({{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/switcher.png)
+
 There are many ways to invoke the *Theme Switcher*:
 - From the IDE menu `Tools -> Material Theme -> Material Theme Chooser`
 - From the _Main Toolbar_
