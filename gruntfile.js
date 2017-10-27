@@ -153,7 +153,7 @@ module.exports = function (grunt) {
       },
     },
 
-    shell: {
+    exec: {
       jekyllServe: {
         command: 'jekyll serve  --no-watch',
       },
@@ -170,7 +170,7 @@ module.exports = function (grunt) {
     'sass',
     'autoprefixer',
     'newer:babel',
-    'shell:jekyllBuild',
+    'exec:jekyllBuild',
     'copy',
     'watch']);
   grunt.registerTask('build', [
