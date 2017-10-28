@@ -7,7 +7,8 @@ toc: true
 ---
 
 The Material Theme plugin comes with a bunch of features tailored for an optimal experience. However, it is also highly
-configurable to allow each and everyone to customize it to their hearts content. {:class='title'}
+configurable to allow each and everyone to customize it to their hearts content.
+{:class='title'}
 
 ## Themes and Color Schemes
 
@@ -50,10 +51,10 @@ Besides the Material Themes, there are also other prebundled themes made by the 
 
 #### Custom Theme
 
-And finally there is a **Custom Theme** option, which is the placeholder for the Custom Theme Settings, allowing you
-to change the theme's colors to your convenience.
+Finally there is a **Custom Theme** option, which is the placeholder for the Custom Theme Settings, allowing you set
+your own theme colors.
 
-See [Custom Themes](/docs/custom-themes) for more information.
+See [Custom Themes](custom-themes.md) for more information.
 
 ----------
 ## Material Theme Settings
@@ -88,6 +89,17 @@ You can configure many parts of the plugin features from the **plugin settings**
 * *Theme in Statusbar*: Add an indicator for the currently selected theme in the statusbar.
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
 
+#### Settings shortcuts
+
+You can also quickly toggle some settings by using the `Search Everywhere` or the functionality of the IDE. Simply press
+`Shift-Shift` and type `Material Theme` to get the list of avialable toggles.
+
+Same goes for the `Command Panel` (<kbd>Ctrl-Shift-A/Cmd-Shift-A</kbd>).
+
+{% include figure.html content="/screens/cmdpanel.png" caption="Command Panel" %}
+
+You can also use the `Keymap Editor` to assign your own custom shortcuts to these toggles.
+
 #### Settings File
 
 Your current configuration is stored inside the IDE settings' directory under the filename `material_theme.xml`. If for some
@@ -99,8 +111,46 @@ See
 for more information.
 
 
-{%comment%}
 ## Material Custom Theme Settings
 
-## Troubleshooting
-{%endcomment%}
+Aside from the bundled themes, you also have the ability to set up your own Material Theme. You can do so by selecting
+`Custom Theme` in the theme list, then customize the theme colors in the settings page at `Settings -> Appearance ->
+Material Custom Theme Settings`.
+
+{% include figure.html content="/screens/customsettings.png" caption="Material Custom Theme Settings" %}
+
+Once you set these colors, simply select the `Custom Theme` in the _Material Theme Chooser_ and see your colors take effect.
+
+Note: Due to how themes are implemented in the SDK, this feature does not work completely well. Therefore, in order to
+see your custom theme take effect, you will probably need to restart the IDE to see the changes.
+
+See [Custom Theme](custom-themes.md) for more details.
+
+
+## Frequently Asked Questions
+
+**Q**: I've installed the Material Theme, but the editor still shows me the `Darcula` theme?
+
+**A**: The Theme Switcher is only replacing the theme of the whole IDE, not the editor itself. You can therefore have a
+separate theme for the IDE and the Editor, for instance _Palenight_ and _Darker_ or even a custom Color Scheme.
+
+**Q**: I've installed the plugin, yet the _Look and Feel_ section still shows me only `IntelliJ` and `Darcula`?
+
+**A**: That's because the plugin DIDN'T install a new Look And Feel, instead it is **using** the original IntelliJ/Darcula
+LaF and overwrites its colors/fonts/components. If you switch to another LaF, you will need to reselect back a Material
+Theme using the _Theme Switcher_ in order to apply its colors.
+
+**Q**: I've updated the IDE/plugin to a new version and now I get an error about the plugin failing to initialize?
+
+**A**: It could come from multiple issues, but it could simply be a problem with the settings not being compatible to the
+new version. In that case, simply make a copy of the settings file, then delete the original file, and restart the IDE.
+
+If the issue is gone, simply go back to the settings and go back to your previous configuration manually. If the issue
+persists, please report it in the Issues Section.
+
+**Q**: I've removed the plugin, and still the background image persists!
+
+**A**: This is an issue hard to resolve, because the *Custom Wallpaper* function is using the `Set Background image`
+function from the IDE behind the curtains. Therefore, removing the plugin might not remove the set image completely. If
+that occurs, you can remove the image by opening the Command Panel (Cmd-Shift-A/Ctrl-Shift-A) and type `Set Background
+image` and then manually remove the image.
