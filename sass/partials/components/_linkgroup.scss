@@ -13,7 +13,9 @@
     display: block;
   }
 
-  &.active {
+  &.active > li > .nav-link,
+  .link-section.active > .nav-link {
+    position: relative;
     color: $accent-color;
     @include list-indicator($second-accent-color);
   }

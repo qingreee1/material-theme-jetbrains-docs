@@ -97,9 +97,17 @@ $themes: (
       background: map-get($theme, "ct");
       color: map-get($theme, "fg");
 
-      .sidebar-link-group.active,
-      .sidebar-link-group .nav-link:hover {
+      .sidebar-link-group a:hover {
         background-color: map-get($theme, "bg");
+      }
+
+      .sidebar-link-group.active > li > a,
+      .link-section.active > a {
+        background-color: map-get($theme, "bg");
+      }
+
+      .link-section.active > a {
+        color: $second-accent-color;
       }
 
       a {
