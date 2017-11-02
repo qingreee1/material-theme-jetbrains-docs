@@ -48,6 +48,14 @@ body {
   }
 }
 
+code {
+  border: solid 1px $code-border;
+  background: $code-bg;
+  border-radius: 4px;
+  font-size: smaller;
+  padding: 2px 4px;
+}
+
 // responsive video (Format 16:9)
 .video-container {
   @include paddinghack(100%, 16, 9, "iframe");
@@ -95,109 +103,107 @@ body {
 
 // tables and modals are both taken pretty much entirely from http://materializecss.com
 // Tables
-@if $include-table-style == yes {
 
-  table,
-  th,
-  td {
-    border: none;
+table,
+th,
+td {
+  border: none;
+}
+
+table {
+  width: 100%;
+  display: table;
+  tbody tr:nth-child(odd) {
+    background-color: $table-striped-color;
   }
+  tbody tr {
+    transition: background-color .25s ease;
+  }
+}
 
+thead {
+  font-weight: bold;
+  border-bottom: 1px solid $table-border-color;
+}
+
+td,
+th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+// Responsive Table
+@media screen and (max-width: $table-collapse) {
   table {
     width: 100%;
-    display: table;
-    tbody tr:nth-child(odd) {
-      background-color: $table-striped-color;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    position: relative;
+    th, td {
+      margin: 0;
+      vertical-align: top;
     }
-    tbody tr {
-      transition: background-color .25s ease;
+    th {
+      text-align: left;
     }
-  }
-
-  thead {
-    font-weight: bold;
-    border-bottom: 1px solid $table-border-color;
-  }
-
-  td,
-  th {
-    padding: 15px 5px;
-    display: table-cell;
-    text-align: left;
-    vertical-align: middle;
-    border-radius: 2px;
-  }
-
-  // Responsive Table
-  @media screen and (max-width: $table-collapse) {
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      border-spacing: 0;
+    thead {
       display: block;
+      float: left;
+      tr {
+        display: block;
+        padding: 0 10px 0 0;
+        th::before {
+          content: "\00a0";
+        }
+      }
+    }
+    tbody {
+      display: block;
+      width: auto;
       position: relative;
-      th, td {
-        margin: 0;
+      overflow-x: auto;
+      white-space: nowrap;
+      tr {
+        display: inline-block;
         vertical-align: top;
       }
-      th {
-        text-align: left;
-      }
-      thead {
-        display: block;
-        float: left;
-        tr {
-          display: block;
-          padding: 0 10px 0 0;
-          th::before {
-            content: "\00a0";
-          }
-        }
-      }
-      tbody {
-        display: block;
-        width: auto;
-        position: relative;
-        overflow-x: auto;
-        white-space: nowrap;
-        tr {
-          display: inline-block;
-          vertical-align: top;
-        }
-      }
-      th {
-        display: block;
-        text-align: right;
-      }
-      td {
-        display: block;
-        min-height: 1.25em;
-        text-align: left;
-      }
-      tr {
-        padding: 0 10px;
-      }
-      /* sort out borders */
+    }
+    th {
+      display: block;
+      text-align: right;
+    }
+    td {
+      display: block;
+      min-height: 1.25em;
+      text-align: left;
+    }
+    tr {
+      padding: 0 10px;
+    }
+    /* sort out borders */
 
-      thead {
-        border: 0;
-        border-right: 1px solid $table-border-color;
-      }
-      th {
-        border-bottom: 0;
-        border-left: 0;
-      }
-      td {
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 0;
-      }
-      tr {
-        border: 0;
-      }
-      tbody tr {
-        border-right: 1px solid $table-border-color;
-      }
+    thead {
+      border: 0;
+      border-right: 1px solid $table-border-color;
+    }
+    th {
+      border-bottom: 0;
+      border-left: 0;
+    }
+    td {
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+    tr {
+      border: 0;
+    }
+    tbody tr {
+      border-right: 1px solid $table-border-color;
     }
   }
 }

@@ -53,7 +53,7 @@ $.when($.ready).then(function () {
         templates: {
           item: '{{{_highlightResult.title.value}}}',
           empty: 'We didn\'t find any results for the search <em>"{{query}}"</em>',
-        },
+        }
       }));
 
       search.addWidget(instantsearch.widgets.pagination({
