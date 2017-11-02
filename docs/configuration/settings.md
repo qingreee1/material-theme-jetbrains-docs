@@ -64,7 +64,7 @@ You can configure many parts of the plugin features from the **plugin settings**
 
 {% include figure.html content="/screens/settings.png" caption="Material Theme Settings" %}
 
-#### Explanation
+#### Summary
 
 **Active Tab Settings**:
 - *Active Tab Highlight*: Customize active tab indicator color and thickness (works also for the Project View selected row)
@@ -126,6 +126,67 @@ see your custom theme take effect, you will probably need to restart the IDE to 
 
 See [Custom Theme](custom-themes.md) for more details.
 
+-----
+## Advanced Configuration
+
+Here's a list of the keys used in the configuration file (`material_theme.xml`) with their default values. If a key isn't in
+your file, it means that it uses the default value.
+
+```xml
+<component>
+  <!-- Tab highlight color -->
+  <option name="highlightColor" value="80cbc4" />
+  <!-- Tab highlight color enabled -->
+  <option name="highlightColorEnabled" value="false" />
+  <!-- Tab highlight thickness -->
+  <option name="highlightThickness" value="2" />
+  
+  <!-- Tab height -->
+  <option name="tabsHeight" value="50" />
+  <!-- Bold and uppercase tabs enabled -->
+  <option name="upperCaseTabs" value="true" />
+  
+  <!-- Contrast mode enabled -->
+  <option name="isContrastMode" value="false" />
+  <!-- File icons hidden -->
+  <option name="hideFileIcons" value="false" />
+  <!-- Custom tree indent enabled -->
+  <option name="isCustomTreeIndentEnabled" value="false" />
+  <!-- Custom tree indent value -->
+  <option name="customTreeIndent" value="4" />
+  
+  <!-- Custom sidebar line height enabled -->
+  <option name="compactSidebar" value="false" />
+  <!-- Sidebar line height if enabled -->
+  <option name="customSidebarHeight" value="28" />
+  
+  <!-- Bold folders (not tabs) enabled -->
+  <option name="isBoldTabs" value="true" />
+  <!-- Compact status bar enabled -->
+  <option name="isCompactStatusBar" value="false" />
+  
+  <!-- Accent color -->
+  <option name="accentColor" value="80cbc4" />
+  
+  <!-- Custom background -->
+  <option name="defaultBackground" value="https://raw.githubusercontent.com/mallowigi/material-theme-jetbrains-eap/master/src/main/resources/themes/wall.jpg,60" />
+  
+  <!-- Material components enabled -->
+  <option name="isMaterialDesign" value="true" />
+  <!-- Material and File icons enabled -->
+  <option name="useMaterialIcons" value="true" />
+  <!-- Project view decorators enabled-->
+  <option name="useProjectViewDecorators" value="true" />
+  <!-- Material Theme styles enabled -->
+  <option name="isMaterialTheme" value="true" />
+  
+  <!-- Status bar indicator -->
+   <option name="statusBarTheme" value="true" />
+   <!-- Transparent scrollbars -->
+    <option name="themedScrollbars" value="false" />
+</component>
+
+```
 
 ## Frequently Asked Questions
 
