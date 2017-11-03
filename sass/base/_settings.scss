@@ -144,6 +144,7 @@ $line: 1px solid rgba(160, 160, 160, .2);
 $sidebar-width: 320px;
 $margin-width: 30px;
 $material-sidebar-responsive-border-bg: $accent-color;
+$sidenav-line-height: 24px;
 
 // modals
 $modal-width-change: 900px;
@@ -163,3 +164,9 @@ $card-padding: 24px !default;
 $card-bg-color: #fff !default;
 $card-link-color: $accent-color !default;
 $card-link-color-light: lighten($card-link-color, 20%) !default;
+
+// badges
+$badge-height: 22px !default;
+$badge-bg-color: $accent-color !default;
+
+$collection-line-height: .75rem !default;

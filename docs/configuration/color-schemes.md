@@ -77,3 +77,11 @@ however, as that means that __all the changes you've made will be lost__. Theref
 |  | Ini          | EJS         | Rust      |
 |  | Regex        | Rdoc        |           |
 
+## Color Palette
+
+<span style="float:none">Dark variant</span>
+<span style="float:right">Light variant</span>
+
+{% for color in site.data.colors %}
+{% include color.html color=color %}
+{% endfor %}
