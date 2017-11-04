@@ -1,3 +1,4 @@
+{% if color.dark %}
 <div class="collection-item color"
      title="{{ color.dark }} - {{ color.light }}"
      style="
@@ -8,3 +9,10 @@
   <p class="color-tags">Tags: {{ color.tags | join: ', ' }}
   </p>
 </div>
+{% else %}
+<div class="collection-item color"
+     title="{{ color.color }}"
+     style="background: {{ color.color }};{% unless color.light %}color: white;{% endunless %}">
+  <span class="color-name">{{ color.name | capitalize }}</span>
+</div>
+{% endif %}
