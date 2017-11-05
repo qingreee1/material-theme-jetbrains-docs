@@ -4,6 +4,10 @@ title: Getting Started
 description: Installing and configuring the plugin
 group: getting-started
 toc: true
+
+next:
+  url: '/docs/configuration/settings'
+  title: Configuration
 ---
 
 ### Plugin Manager

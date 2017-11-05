@@ -4,6 +4,13 @@ title: Color Schemes
 description: Installation and Configuration
 group: configuration
 toc: true
+
+previous:
+  url: '/docs/configuration/settings'
+  title: Settings
+next:
+  url: '/docs/configuration/tab-settings'
+  title: Tab Settings
 ---
 
 The plugin comes prebundled with a bunch of color schemes adapted for the Material Themes, resulting in a flat,

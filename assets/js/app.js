@@ -24,8 +24,12 @@ $.when($.ready).then(function () {
       // todo load from local storage
       this.setBodyClass('oceanic');
 
-      $('.toc').pushpin({
+      var $target = $('.doc');
+      var $toc = $('.toc');
+
+      $toc.pushpin({
         top: 284,
+        bottom: $target.offset().top + $target.outerHeight() - $toc.height(),
         offset: 64
       });
 
@@ -34,6 +38,7 @@ $.when($.ready).then(function () {
 
       // this.initSearch();
     },
+
 
     // initSearch() {
     //   const search = instantsearch({

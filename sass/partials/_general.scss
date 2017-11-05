@@ -54,6 +54,12 @@ code {
   border-radius: 4px;
   font-size: smaller;
   padding: 2px 4px;
+
+  .highlight & {
+    border: none;
+    background: none;
+    border-radius: 0;
+  }
 }
 
 // responsive video (Format 16:9)

@@ -24,8 +24,12 @@ $.when($.ready).then(() => {
       // todo load from local storage
       this.setBodyClass('oceanic');
 
-      $('.toc').pushpin({
+      const $target = $('.doc');
+      const $toc = $('.toc');
+      
+      $toc.pushpin({
         top: 284,
+        bottom: $target.offset().top + $target.outerHeight() - $toc.height(),
         offset: 64,
       });
 

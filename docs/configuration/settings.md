@@ -4,6 +4,12 @@ title: Settings
 description: Learn how to configure the plugin
 group: configuration
 toc: true
+previous:
+  url: '/docs/getting-started'
+  title: Getting Started
+next:
+  url: '/docs/configuration/color-schemes'
+  title: Color Schemes
 ---
 
 The Material Theme plugin comes with a bunch of features tailored for an optimal experience. However, it is also highly
