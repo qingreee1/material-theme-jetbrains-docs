@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Settings
-description: Learn how to configure the plugin to your tastes
+description: Learn how to configure the plugin
 group: configuration
 toc: true
 ---
