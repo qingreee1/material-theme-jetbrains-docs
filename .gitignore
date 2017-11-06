@@ -26,3 +26,4 @@ yarn-error.log*
 assets/js/app.js
 assets/js/app.js.map
 vue/bundle.js
+assets/media
