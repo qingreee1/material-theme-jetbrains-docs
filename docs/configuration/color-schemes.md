@@ -60,11 +60,11 @@ In order to revert the copies to their original state, in the previous menu sele
 however, as that means that __all the changes you've made will be lost__. Therefore I would suggest you to make a copy
 (of the copy) using the `Duplicate` function, this way you can go back to your changes one by one.
 
+----------
 ## Supported languages
 
 |  |              |             |           |
 |--|--------------|-------------|-----------|
-|  |              |             |           |
 |  | Java         | Properties  | Erlang    |
 |  | Gradle       | Yaml        | Elm       |
 |  | Groovy       | JSON        | Matlab    |
@@ -84,6 +84,7 @@ however, as that means that __all the changes you've made will be lost__. Theref
 |  | Ini          | EJS         | Rust      |
 |  | Regex        | Rdoc        |           |
 
+----------
 ## Color Palette
 
 <span style="float:none">Dark variant</span>

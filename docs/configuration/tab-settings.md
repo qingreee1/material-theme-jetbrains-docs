@@ -14,7 +14,7 @@ next:
 ---
 
 This page displays the features and settings that the plugin provides to customize the Look and Feel of the IDE's editor tabs.
-{:class = 'title'}
+{:class='title'}
 
 ## Active Tab Options
 
@@ -54,7 +54,10 @@ In that case, the active tab indicator will be placed accordingly to the tab pos
 
 {% include figure.html content="/screens/leftSideHeight.png" caption="Left Placement" %}
 
-#### Uppercase Bold Tabs
+-----
+## Other Tab Options
+
+### Uppercase Bold Tabs
 
 This feature allows you to set the tabs to look even more like usual [Material Design Tabs](https://material.io/guidelines/components/tabs.html#tabs-usage), e.g. in _Uppercase_ and _bold_.
 
@@ -64,7 +67,7 @@ This settings gets rid of special characters such as hyphens or underscores and 
 
 Note: Because of the highly experimental status of this feature, it contains some bugs. For instance, the upper casing is not set until the tab is selected.
 
-#### Tab Height
+### Tab Height
 
 This setting will allow you to customize the height of the different tabs of the IDE (e.g. not only the editor tabs but also _debugger tabs_, _code style tabs_, etc.). This will allow you to have the ultimate Material Design Tabs experience.
 
@@ -74,6 +77,7 @@ The allowed values are between `18` to `60` pixels, where the default recommende
 
 There is no reset button, but there is an action in the [Material Toolbar](actions.md) that resets the value to its default value, `50`.
 
+----
 ## Other Tweaks
 
 #### Edited files icon
@@ -92,6 +96,7 @@ Same as the edited file icon, pinned tabs will display a little pin on the icon,
 
 The close icon didn't change, but it will be colored to the accent color on hover.
 
+-----
 ## FAQ
 
 **Q**: Is there a way to completely remove the Active Tab Indicator?

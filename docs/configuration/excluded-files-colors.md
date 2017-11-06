@@ -68,6 +68,7 @@ To do so, one must create a **Scope**. There you can define your pattern rules, 
 
 See more at [File Colors](https://www.jetbrains.com/help/idea/2017.3/file-colors.html?utm_medium=help_link&utm_source=from_product&utm_campaign=IU&utm_content=2017.3)
 
+-----
 ## Material File Colors
 
 This is pretty neat, but the actual prebundled File Colors are adapted for the _Darcula/IntelliJ_ look and feels, not for the Material Themes.
@@ -80,6 +81,7 @@ However, because the _File Colors_ are user settings, and because the user could
 
 As a consequence, switching the theme will **NOT** set its own _Excluded Files Color_ to the top, which may lead to a UI hard to read. Simply put the color related to your selected theme at the top and everything will be alright.
 
+-----
 ## FAQ
 
 **Q**: I've switched to Darker Theme and now my Project Tree is very hard to read!
@@ -94,6 +96,7 @@ As a consequence, switching the theme will **NOT** set its own _Excluded Files C
 
 **A**: The color of the text is controlled by another setting. See [File Status Colors](file-status-colors.md) for more info.
 
+-----
 ## Color Reference
 
 {% for color in page.colors %}

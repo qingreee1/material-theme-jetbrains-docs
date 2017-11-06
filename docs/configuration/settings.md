@@ -117,7 +117,8 @@ See
 for more information.
 
 
-## Material Custom Theme Settings
+----------
+## Material Custom Theme
 
 Aside from the bundled themes, you also have the ability to set up your own Material Theme. You can do so by selecting
 `Custom Theme` in the theme list, then customize the theme colors in the settings page at `Settings -> Appearance ->
@@ -146,12 +147,12 @@ your file, it means that it uses the default value.
   <option name="highlightColorEnabled" value="false" />
   <!-- Tab highlight thickness -->
   <option name="highlightThickness" value="2" />
-  
+
   <!-- Tab height -->
   <option name="tabsHeight" value="50" />
   <!-- Bold and uppercase tabs enabled -->
   <option name="upperCaseTabs" value="true" />
-  
+
   <!-- Contrast mode enabled -->
   <option name="isContrastMode" value="false" />
   <!-- File icons hidden -->
@@ -160,23 +161,22 @@ your file, it means that it uses the default value.
   <option name="isCustomTreeIndentEnabled" value="false" />
   <!-- Custom tree indent value -->
   <option name="customTreeIndent" value="4" />
-  
+
   <!-- Custom sidebar line height enabled -->
   <option name="compactSidebar" value="false" />
   <!-- Sidebar line height if enabled -->
   <option name="customSidebarHeight" value="28" />
-  
+
   <!-- Bold folders (not tabs) enabled -->
   <option name="isBoldTabs" value="true" />
   <!-- Compact status bar enabled -->
   <option name="isCompactStatusBar" value="false" />
-  
+
   <!-- Accent color -->
   <option name="accentColor" value="80cbc4" />
-  
+
   <!-- Custom background -->
-  <option name="defaultBackground" value="https://raw.githubusercontent.com/mallowigi/material-theme-jetbrains-eap/master/src/main/resources/themes/wall.jpg,60" />
-  
+  <option name="defaultBackground" value="https://raw.githubusercontent.com/mallowigi/material-theme-jetbrains-eap/master/src/main/resources/themes/wall.jpg,60" /> 
   <!-- Material components enabled -->
   <option name="isMaterialDesign" value="true" />
   <!-- Material and File icons enabled -->
@@ -185,7 +185,7 @@ your file, it means that it uses the default value.
   <option name="useProjectViewDecorators" value="true" />
   <!-- Material Theme styles enabled -->
   <option name="isMaterialTheme" value="true" />
-  
+
   <!-- Status bar indicator -->
    <option name="statusBarTheme" value="true" />
    <!-- Transparent scrollbars -->
