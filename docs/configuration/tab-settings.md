@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tab Settings
-description: Customize the IDE Tabs' Look and Feel
+description: Settings for the Tabs appearance
 group: configuration
 toc: true
 
@@ -9,11 +9,11 @@ previous:
   url: '/docs/configuration/color-schemes'
   title: Color Schemes
 next:
-  url: '/docs/configuration/excluded-files-colors'
-  title: Excluded File Colors
+  url: '/docs/configuration/panel-settings'
+  title: Panel Settings
 ---
 
-This page displays the features and settings that the plugin provides to customize the Look and Feel of the IDE's editor tabs.
+This page displays the features and settings that customize the appearance of the Editor Tabs.
 {:class='title'}
 
 ## Active Tab Options
