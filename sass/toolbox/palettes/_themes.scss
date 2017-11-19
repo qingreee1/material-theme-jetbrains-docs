@@ -70,11 +70,11 @@ $themes: (
     }
 
     .theme-img {
-      background-image: url(../../assets/media/compressed/#{$name}.png);
+      background-image: url(../../img/#{$name}.png);
     }
 
     .logo-img {
-      background-image: url(../../assets/media/compressed/material-#{$name}.svg);
+      background-image: url(../../img/material-#{$name}.svg);
       margin: 1em auto;
 
       &.-error {
