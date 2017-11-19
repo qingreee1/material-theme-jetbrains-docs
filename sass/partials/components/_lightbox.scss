@@ -3,7 +3,7 @@
   @include flexbox(row, wrap, flex-start, flex-start);
   width: 100%;
   box-sizing: border-box;
-  background: $lightbox-container-background;
+  //background: $lightbox-container-background;
 
   a {
     width: calc((100% / 3) - 20px);

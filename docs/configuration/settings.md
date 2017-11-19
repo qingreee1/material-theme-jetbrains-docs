@@ -94,6 +94,7 @@ You can configure many parts of the plugin features from the **plugin settings**
 - *Project View Decorators*: Enable/Disable the Project View Decorators. See the above section about separators.
 * *Theme in Statusbar*: Add an indicator for the currently selected theme in the statusbar.
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
+- *Accent Scrollbars*: Set the color of the scrollbars to the accent color
 
 #### Settings shortcuts
 
@@ -190,6 +191,8 @@ your file, it means that it uses the default value.
    <option name="statusBarTheme" value="true" />
    <!-- Transparent scrollbars -->
     <option name="themedScrollbars" value="false" />
+    <!-- Accent scrollbars -->
+    <option name="accentScrollbars" value="true" />
 </component>
 
 ```

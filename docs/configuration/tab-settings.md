@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tab Settings
-description: Settings for the Tabs appearance
+description: Control the appearance of the Editor Tabs
 group: configuration
 toc: true
 
