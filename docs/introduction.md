@@ -4,6 +4,10 @@ title: Introduction
 description: What is this plugin?
 group: introduction
 toc: true
+
+next:
+  url: '/docs/configuration/settings'
+  title: Settings
 ---
 
 #### Material Theme
@@ -78,8 +82,8 @@ is the best course of action. Themes, Colors, Icons... each of these are pretty 
 
 <img class="avatar-img" src="https://avatars1.githubusercontent.com/u/10454741?v=4&s=460">
 
-The original theme creator. Web developer and designer based in Italy, he is the one that submitted the idea of the Material Theme to spruce up development 
-with the Sublime Text editor. The project quickly gained traction and got featured in the GitHub showcase very quickly, and other people caught interest of 
+The original theme creator. Web developer and designer based in Italy, he is the one that submitted the idea of the Material Theme to spruce up development
+with the Sublime Text editor. The project quickly gained traction and got featured in the GitHub showcase very quickly, and other people caught interest of
 porting the theme to other editors and applications as well, such as Atom, iTerm, Slack or Vim. He is currently developing the [Visual Studio Code](https://github.com/equinusocio/vsc-material-theme)
 version of the theme.
 
@@ -87,9 +91,9 @@ version of the theme.
 
 <img class="avatar-img" src="https://avatars3.githubusercontent.com/u/309292?v=4&s=460">
 
-Web developer and designer based in Norway, he is the original creator of the Jetbrains plugin. Having discovered the way to customize the look and feel of 
-the Jetbrains IDEs, he experimented on porting the already successful Material Theme on it, gaining immediately fame even across Jetbrains employees, who 
-contributed to the project in its beginning. The project got famous very quickly, being referenced on Laracasts, blogs and tutorial videos. 
+Web developer and designer based in Norway, he is the original creator of the Jetbrains plugin. Having discovered the way to customize the look and feel of
+the Jetbrains IDEs, he experimented on porting the already successful Material Theme on it, gaining immediately fame even across Jetbrains employees, who
+contributed to the project in its beginning. The project got famous very quickly, being referenced on Laracasts, blogs and tutorial videos.
 
 ##### Elior Boukhobza ([@mallowigi](https://github.com/mallowigi))
 

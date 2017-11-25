@@ -2,6 +2,7 @@
   position: absolute;
   top: 0;
   right: -5%;
+  max-width: 280px;
 
   @media all and (max-width: $from-full-to-noslogan) {
     display: none;

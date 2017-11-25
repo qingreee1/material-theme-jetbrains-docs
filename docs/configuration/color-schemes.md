@@ -63,26 +63,25 @@ however, as that means that __all the changes you've made will be lost__. Theref
 ----------
 ## Supported languages
 
-|  |              |             |           |
-|--|--------------|-------------|-----------|
-|  | Java         | Properties  | Erlang    |
-|  | Gradle       | Yaml        | Elm       |
-|  | Groovy       | JSON        | Matlab    |
-|  | Scala        | Ruby        | Haskell   |
-|  | Kotlin       | Python      | Elixir    |
-|  | CSS          | PHP         | Hibernate |
-|  | Sass         | Twig        | SQL       |
-|  | LESS         | Blade       | Markdown  |
-|  | Stylus       | C           | Bash      |
-|  | HTML         | C++         | HOCON     |
-|  | Haml         | C#          | Apache    |
-|  | XML          | ASP         | Gitignore |
-|  | Jade/Pug     | Objective C | Lua       |
-|  | JavaScript   | Swift       | Perl      |
-|  | TypeScript   | Go          | Slim      |
-|  | CoffeeScript | ERB         | Velocity  |
-|  | Ini          | EJS         | Rust      |
-|  | Regex        | Rdoc        |           |
+|--------------|-------------|-----------|
+| Java         | Properties  | Erlang    |
+| Gradle       | Yaml        | Elm       |
+| Groovy       | JSON        | Matlab    |
+| Scala        | Ruby        | Haskell   |
+| Kotlin       | Python      | Elixir    |
+| CSS          | PHP         | Hibernate |
+| Sass         | Twig        | SQL       |
+| LESS         | Blade       | Markdown  |
+| Stylus       | C           | Bash      |
+| HTML         | C++         | HOCON     |
+| Haml         | C#          | Apache    |
+| XML          | ASP         | Gitignore |
+| Jade/Pug     | Objective C | Lua       |
+| JavaScript   | Swift       | Perl      |
+| TypeScript   | Go          | Slim      |
+| CoffeeScript | ERB         | Velocity  |
+| Ini          | EJS         | Rust      |
+| Regex        | Rdoc        |           |
 
 ----------
 ## Color Palette

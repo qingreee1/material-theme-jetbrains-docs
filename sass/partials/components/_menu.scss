@@ -10,6 +10,10 @@
     @include flexbox(row, nowrap, start, center);
     margin: 0;
     padding: 0;
+
+    @media all and (max-width: $mainnav-collapse) {
+      @include flexbox(column, nowrap, start, center);
+    }
   }
   li {
     display: inline-block;
@@ -26,7 +30,7 @@
   // Responsive Version (Off-Canvas)
   @media screen and (max-width: $mainnav-collapse) {
     padding: 0;
-    width: 320px;
+    width: 200px;
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;

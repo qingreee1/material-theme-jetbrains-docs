@@ -8,9 +8,6 @@ toc: true
 previous:
   url: '/docs/configuration/panel-settings'
   title: Panel Settings
-next:
-  url: '/docs/configuration/status-file-colors
-  title: Status File Colors
 
 ---
 
@@ -27,7 +24,7 @@ To invoke it, open the command panel (`Cmd-Shift-A`/`Ctrl-Shift-A`) and type *Se
 
 This option makes it more accessible from inside the Material Theme Settings and sets up a default background image related to Material Design.
 
-{% include figure.html content="/screens/customWallpaper.png" caption="Custom Wallpaper" %}
+{% include figure.html content="screens/customWallpaper.png" caption="Custom Wallpaper" %}
 
 ### Custom Wallpaper Settings
 
