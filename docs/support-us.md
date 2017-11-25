@@ -11,11 +11,11 @@ Material Theme for Jetbrains is a open-source plugin free to use. It is made wit
 
 The simplest way to donate is through PayPal with a one-time donation.
 
-<button class="btn -large" href="paypal.me/heliosaian">Donate with PayPal</button>
+<a class="btn -large" href="https://paypal.me/mallowigi">Donate with PayPal</a>
 
 ## Patreon
 
 Back us on patreon and get access to reward tiers including things like having your name on the acknowledgements, have your theme featured on the plugin or even be part of the development of future releases.
 
-<button class="btn -large" href="https://www.patreon.com/mallowigi">Become a Patron</button>
+<a class="btn -large" href="https://www.patreon.com/mallowigi">Become a Patron</a>
 
