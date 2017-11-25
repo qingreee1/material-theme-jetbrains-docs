@@ -26,7 +26,9 @@ $.when($.ready).then(() => {
 
       const $target = $('.doc');
       const $toc = $('.toc');
-      
+
+      if (!$toc.length) { return; }
+
       $toc.pushpin({
         top: 284,
         bottom: $target.offset().top + $target.outerHeight() - $toc.height(),
@@ -93,7 +95,6 @@ $.when($.ready).then(() => {
   jekyllApp.init();
 
   window.jekyllApp = jekyllApp;
-
   //
   //   // Back to top link
   //   $('.backtotop').click(function () {

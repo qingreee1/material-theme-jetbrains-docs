@@ -92,8 +92,9 @@ code {
 }
 
 .theme-img {
-  min-height: 600px;
-  background-size: cover;
+  padding-top: 60%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .section-title {

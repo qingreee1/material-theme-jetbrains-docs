@@ -71,6 +71,11 @@ $themes: (
 
     .theme-img {
       background-image: url(../../img/#{$name}.png);
+      display: none;
+
+      &.#{$name} {
+        display: block;
+      }
     }
 
     .logo-img {

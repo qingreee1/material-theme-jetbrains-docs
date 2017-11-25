@@ -19,7 +19,11 @@ layout: index
       </div>
       
       <!-- Screen -->
-      <div class="featimg theme-img"></div>
+      {% for theme in site.data.themes.material %}
+        <a href="/img/{{ theme.className }}.png" target="_blank"
+           class="featimg theme-img {{ theme.className }}"></a>
+      {% endfor %}
+    
     </section>
     
     <!-- Features -->
@@ -30,7 +34,7 @@ layout: index
           {% include feature.html %}
         {% endfor %}
       </div>
-      <a href="{{ site.github }}" class="call-to-action"̃>
+      <a href="{{ site.github }}" class="call-to-action" ̃>
         <button class="btn -large">
           See more
         </button>
