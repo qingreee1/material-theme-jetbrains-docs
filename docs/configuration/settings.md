@@ -4,6 +4,8 @@ title: Settings
 description: Learn how to configure the plugin
 group: configuration
 toc: true
+comments: true
+
 previous:
   url: '/docs/getting-started'
   title: Getting Started

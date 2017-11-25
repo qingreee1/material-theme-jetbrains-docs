@@ -4,6 +4,7 @@ title: Panel Settings
 description: Tune up your IDE's look and feel.
 group: configuration
 toc: true
+comments: true
 
 previous:
   url: '/docs/configuration/tab-settings'

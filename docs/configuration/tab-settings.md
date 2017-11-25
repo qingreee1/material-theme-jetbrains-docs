@@ -4,6 +4,7 @@ title: Tab Settings
 description: Control the appearance of the Editor Tabs
 group: configuration
 toc: true
+comments: true
 
 previous:
   url: '/docs/configuration/color-schemes'

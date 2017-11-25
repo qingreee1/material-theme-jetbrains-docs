@@ -3,6 +3,7 @@ layout: docs
 title: Component Settings
 description: Enable or disable Material Theme features
 group: configuration
+comments: true
 toc: true
 
 previous:

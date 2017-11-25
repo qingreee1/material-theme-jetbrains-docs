@@ -3,6 +3,7 @@ layout: docs
 title: Color Schemes
 description: Installation and Configuration
 group: configuration
+comments: true
 toc: true
 
 previous:

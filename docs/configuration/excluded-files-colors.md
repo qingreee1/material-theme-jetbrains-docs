@@ -4,6 +4,7 @@ title: Excluded Files Colors
 description: Learn about File Colors, Scopes and Excluded files
 group: configuration
 toc: true
+comments: true
 colors:
   - name: default
     color: '#2E3C43'
