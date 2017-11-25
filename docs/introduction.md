@@ -10,13 +10,13 @@ next:
   title: Settings
 ---
 
-#### Material Theme
-
 **Material Theme** is a *plugin* for Jetbrains IDEs providing a
 [Material Design](https://material.io/guidelines/)
 experience for Jetbrains products.
+{:class='title'}
 
 It is based on the [Material Theme for Sublime](https://github.com/equinusocio/material-theme) plugin while trying to bring its own lot of features.
+{:class='title'}
 
 <div class="featimg theme-img" style="padding: 2rem"></div>
 
