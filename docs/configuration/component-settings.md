@@ -93,6 +93,9 @@ This is because currently these components are not as themeable as the other one
 
 **Note**: Because this option completely replaces the components UI, a complete restart of the application is needed in order to see them in action.
 
+**Note 2**: Some of the features depend on this setting to work, therefore disabling this will result to disabling those features as well. These are:
+- _Padded Statusbar_: The statusbar will revert to its default, compact design.
+
 ----
 ### Material Icons
 
@@ -108,3 +111,67 @@ Basically this replaces all icons provided by the plugin, including breakpoint i
 {% include figure.html content="/screens/iconsDisabled.png" caption="Material Icons Disabled" %}
 
 **Note**: Because this option replaces IDE icons, a complete restart of the application is needed.
+
+**Note 2**: Some of the features depend on this setting to work, therefore disabling this will result to disabling those features as well. These are:
+- _Hide File Icons_: You won't be able to hide file icons anymore.
+
+----
+### Material Theme
+
+This option simply disabled the Material Theme Styling, e.g. leave components and icons intact but revert to the original Darcula/IntelliJ Look And Feel.
+
+{% include figure.html content="/screens/themeDisabled.png" caption="Material Theme Disabled" %}
+
+**Note**: The IDE will revert back to the most appropriated Look And Feel, e.g. if you were on Material Oceanic or Darker, you will revert back to **Darcula**. If you were on Material Lighter, you will be reverted to **IntelliJ**.
+
+**Note 2**: Some of the features depend on this setting to work, therefore disabling this will result to disabling those features as well. These are:
+- _Themes and Custom Themes_: You won't be able to switch themes (obviously)
+- _Contrast Mode_: There is no contrast mode for native themes
+- _Custom Sidebar Height_: You will be reverted to Darcula/IntelliJ native sidebar height
+- _Custom Tree Indent_: You will be reverted to Darcula/IntelliJ native indent
+- _Bold Directories_: There is no way to bold directories in native themes
+- Other components will also revert back to their default values, such as checkboxes signs, tabbed pane insets, etc.
+
+----
+
+## Other Component features
+
+These features are additional extras to the plugin, not related to the themes nor Material Design but simply nice addons for the IDE.
+{:class = 'title'}
+
+### Project View Decorators
+
+This feature is adding decorations to the Project View to mimic the original Material Sublime Theme decorations.
+
+###### Open and closed directories
+
+When this option is on, files that are _opened_ in the editor and that are _edited_ will have their containing directories have a __hollow directory icon__ (or outline directory) instead of the original icon.
+
+{% include figure.html content="/screens/folderDecorators.png" caption="Opened folder decorators" %}
+
+**Note**: This feature requires *Material Icons* feature to work.
+
+###### Accent colored opened directories
+
+Same as the hollow directory icon, files that are _opened_ and _edited_ will have their containing directories be colored with the selected _accent color_.
+
+-----
+
+### Theme in Status Bar
+
+This setting add a "widget" to the status bar to indicate which theme you are currently on.
+
+{% include figure.html content="/screens/widgetStatusbar.png" caption="Status Bar Widget" %}
+
+-----
+### Transparent Scrollbars and Accent Scrollbars
+
+These options control the appearance of the scrollbars. Note: This feature works completely on Windows and Linux, but on Mac it is only working for non-native scrollbars (e.g. scrollbars that appear only while scrolling).
+
+*Transparent scrollbars* will add transparency to the scrollbars and set it as the same color as the current theme's background color. This is adding _50% opacity_ and there is no way to change it.
+
+*Accent scrollbars* will replace the scrollbar color with the _current accent color_.
+
+**Note**: These options are mutually exclusive, and _Accent Scrollbars_ take precedence over _Transparent Scrollbars_.
+
+**Note 2**: Accent colors are set at the start of the application. If you change the accent color, you will need a full restart to see it reflected on the scrollbars. Same for the _Transparent Scrollbars_, if you switch themes you will need a full restart to see it taking the new theme's color.
