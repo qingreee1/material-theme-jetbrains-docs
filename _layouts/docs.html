@@ -24,7 +24,7 @@
         <script>
           
           var disqus_config = function () {
-            this.page.url = '{{ page.url | prepend:site.baseurl }}';
+            this.page.url = '{{ page.url | prepend:site.baseurl | absolute_url }}';
             this.page.identifier = '{{ page.title | slugify }}';
             console.log(this.page);
           };
