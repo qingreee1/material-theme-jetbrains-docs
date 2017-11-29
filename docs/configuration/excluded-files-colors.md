@@ -78,20 +78,20 @@ To remedy this, the Material Theme is also coming prebundled with File Colors, s
 
 However, because the _File Colors_ are user settings, and because the user could very possibly have modified the default Excluded Files' file colors, the plugin could not override this setting with a better suited color. Therefore, the plugin is bundled with **additional** excluded files colors, one for each theme.
 
-{% include figure.html content="/screens/materialfilecolors.png" caption="Material Non Project Files" %}
+These are not installed automatically, as people not necessarily want this setting. Therefore, to install them just select the `Install Material File Colors` action from the _Panel Options_ section of the _Material Theme Configuration_ popup. New file colors for Non-project files scope will then be added to the list. Just select your preferred color on the top of the others to apply it to the project.
 
-As a consequence, switching the theme will **NOT** set its own _Excluded Files Color_ to the top, which may lead to a UI hard to read. Simply put the color related to your selected theme at the top and everything will be alright.
+{% include figure.html content="/screens/materialfilecolors.png" caption="Material Non Project Files" %}
 
 -----
 ## FAQ
 
 **Q**: I've switched to Darker Theme and now my Project Tree is very hard to read!
 
-**A**: As I said, simply put the Darker Excluded Files Color at the top using the arrows, then save.
+**A**: As I said, simply put the `Darker Excluded Files Color` at the top using the arrows, then save.
 
 **Q**: What happens if I remove/modify the bundled colors?
 
-**A**: If you remove the colors, they will be added back at next restart. Also if you modify them, the plugin will add back the default color besides your copy, so please bear that in mind.
+**A**: If you want to add them back, just run the action again. Not however that existing colors will not be overriden, thus if you find yourself with too many colors just remove the ones you don't need.
 
 **Q**: Is there a way to change the text color?
 

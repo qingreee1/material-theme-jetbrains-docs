@@ -15,45 +15,6 @@ previous:
 Here you can turn on and off specific features of the Material Theme for even further customization.
 {:class='title'}
 
-## Custom Wallpaper
-
-### IDE Background Image
-
-This feature is **not** a feature offered by the plugin but rather makes use of a rather unknown feature of the IDE which allows you to set a ++background image++ to the IDE frame.
-
-To invoke it, open the command panel (`Cmd-Shift-A`/`Ctrl-Shift-A`) and type *Set Background image*. Pretty much hard to find isn't it?
-
-This option makes it more accessible from inside the Material Theme Settings and sets up a default background image related to Material Design.
-
-{% include figure.html content="screens/customWallpaper.png" caption="Custom Wallpaper" %}
-
-### Custom Wallpaper Settings
-
-With this setting you can set up a custom background image from your computer or from an online location. To select a local image from your computer, click on the `...` button and select a file. Online location requires an internet connection to display your selected image.
-
-You can also control the opacity, layout and position of the background image by adding comma separated values at the end of the path. The format should be like this: `<image_path>,<opacity>,<layout>,<position>`, each value being optional.
-
-- Opacity values vary from `0` (transparent) to `100` (opaque).
-- Layout is one of the values: `plain`, `scale` or `tile`
-- Position is one of the values: `center`, `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`
-
-If you wish to restore the default image preselected by the plugin, simply click on the `Restore` button.
-
-**Note**: Because the original background image feature cannot use bundled resources, the default image is loaded from the github repository and not from the plugin itself, which means that an active connection is required and that if you have a firewall that prevents you from doing external requests, the image won't be loaded.
-{:class='card-panel'}
-
-
-### Custom Wallpaper Known issues
-
-While this feature is very neat, the fact that it uses and changes the original IDE background image feature creates some problems when using the two features together. Therefore:
-- If you plan on using the IDE feature, turn off the option in the Material Theme settings. This will prevent issues such as the background being changed at start.
-- If you don't want any background at all, delete the value in the setting while leaving the checkbox checked and click Apply.
-- If you disable or uninstall the plugin, it will not revert back to no wallpaper since the wallpaper is set at the start when the plugin is activated. You will have to undo it manually by using the IDE feature.
-
-Apart from these, the option should simplify setting and changing the IDE's wallpaper easier than the original setting. If in the future they improve this function and provide an easier way to do it than currently, there's a probability that this option will be removed altogether.
-
------
-
 ## Enabling and Disabling features
 
 The following options allow you to enable and disable features provided by the Material Theme. This gives you the ability to specifically select features such as theme colors or icons while disabling the rest if you don't like it. For instance, if you like the icons but don't like the themes and components, just leave the icons on and disable the rest. If on the other hand you like everything but prefer to use the default icons, just disable the icons.
