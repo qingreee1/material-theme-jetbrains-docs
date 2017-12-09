@@ -7,11 +7,11 @@ toc: true
 comments: true
 
 previous:
-  url: '/docs/configuration/tab-settings'
-  title: Tab Settings
+  url: '/docs/configuration/excluded-files-colors'
+  title: Excluded Files Colors
 next:
-  url: '/docs/configuration/component-settings'
-  title: Component Settings
+  url: '/docs/configuration/accents'
+  title: Accents
 ---
 
 These settings allow you to customize the file status colors on a per color scheme basis.
