@@ -18,6 +18,13 @@ colors:
   - name: palenight
     color: '#2F2E43'
     light: false
+
+previous:
+  url: '/docs/configuration/component-settings'
+  title: Component Settings
+next:
+  url: '/docs/configuration/file-status-colors'
+  title: File Status Colors
 ---
 
 ## Introduction
