@@ -1,21 +1,20 @@
 <!-- Gallery with lightbox -->
-<div class="masonry">
-    {% for gallery in page.gallery %}
+<div class="masonry" markdown="0">
+  {% for gallery in page.gallery %}
     {% for image in gallery.images %}
-    <a href="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/{{ image.filename }}"
-       data-imagelightbox="f" class="noline">
-        {% if image.filename contains '.png' %}
-        {% assign thumb = image.filename | replace: '.png', '' %}
-        <img
-                src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/crops/450x450/{{ thumb | append: '-450x450.png' }}"
-                alt="{{ image.alttext }}">
-        {% elsif image.filename contains '.jpg' %}
-        {% assign thumb = image.filename | replace: '.jpg', '' %}
-        <img
-                src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/crops/450x450/{{ thumb | append: '-450x450.jpg' }}"
-                alt="{{ image.alttext }}">
-        {% endif %}
-    </a>
+      <figure class="card figure">
+        <a href="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/{{ image.filename }}"
+           target="_blank"
+           data-imagelightbox="f" class="card-image">
+          <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/{{ image.filename }}"
+               alt="{{ image.alttext }}">
+        </a>
+        <div class="card-content">
+          <figcaption class="card-title">
+            {{ image.alttext }}
+          </figcaption>
+        </div>
+      </figure>
     {% endfor %}
-    {% endfor %}
+  {% endfor %}
 </div>
