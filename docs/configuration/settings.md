@@ -62,7 +62,7 @@ Besides the Material Themes, there are also other prebundled themes made by the 
 Finally there is a **Custom Theme** option, which is the placeholder for the Custom Theme Settings, allowing you set
 your own theme colors.
 
-See [Custom Themes](custom-themes.md) for more information.
+See [Custom Themes]({{site.baseurl}}/docs/configuration/custom-themes) for more information.
 
 ----------
 ## Material Theme Settings
@@ -134,7 +134,7 @@ Once you set these colors, simply select the `Custom Theme` in the _Material The
 Note: Due to how themes are implemented in the SDK, this feature does not work completely well. Therefore, in order to
 see your custom theme take effect, you will probably need to restart the IDE to see the changes.
 
-See [Custom Theme](custom-themes.md) for more details.
+See [Custom Theme]({{site.baseurl}}/docs/configuration/custom-themes) for more details.
 
 -----
 ## Advanced Configuration

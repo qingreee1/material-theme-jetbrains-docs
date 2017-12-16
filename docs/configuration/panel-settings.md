@@ -123,7 +123,7 @@ This setting allows you to set directories in the _Project View_ in **bold**. Th
 ----
 ### Custom Accent Color
 
-This setting controls the [current accent color](custom-accents.md) used throughout the app.
+This setting controls the [current accent color]({{site.baseurl}}/docs/configuration/accents) used throughout the app.
 
 Accent color is used in many places such as:
 - Quick documentation
@@ -134,7 +134,7 @@ Accent color is used in many places such as:
 - Checkboxes and Radio Buttons fill color
 - etc...
 
-While a set of predefined accent colors are available in the [Accent Color Chooser](actions.md), this setting allows you to set your own custom color.
+While a set of predefined accent colors are available in the [Accent Color Chooser]({{site.baseurl}}/docs/configuration/accents), this setting allows you to set your own custom color.
 
 {% include figure.html content="/screens/accentChooser.png" caption="Accent Color Chooser" %}
 

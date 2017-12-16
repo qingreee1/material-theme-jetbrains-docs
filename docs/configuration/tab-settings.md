@@ -25,7 +25,7 @@ This setting controls the appearance of the little indicator under the current h
 
 {% include figure.html content="/screens/tabs.png" caption="Active Tab Indicator" %}
 
-- When the setting is **OFF**, the indicator color will be the [current accent color](custom-accents.md).
+- When the setting is **OFF**, the indicator color will be the [current accent color]({{site.baseurl}}/docs/configuration/accents).
 - When the setting is **ON**, you can select your own custom color.
 
 
@@ -76,7 +76,7 @@ The allowed values are between `18` to `60` pixels, where the default recommende
 
 {% include figure.html content="/screens/leftSideHeight.png" caption="Left Side Tab Height" %}
 
-There is no reset button, but there is an action in the [Material Toolbar](actions.md) that resets the value to its default value, `50`.
+There is no reset button, but there is an action in the `Material Toolbar` that resets the value to its default value, `50`.
 
 ----
 ## Other Tweaks
