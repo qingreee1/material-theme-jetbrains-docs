@@ -1,0 +1,14 @@
+.masonry.file-icons {
+  @include flexbox(row, wrap, center, center);
+
+  .item {
+    @include flexbox(row, wrap, flex-start, center);
+    width: calc((100% / 3) - 20px);
+    padding: 0;
+    margin: 6px;
+
+    > .item-text {
+      padding-left: 1em;
+    }
+  }
+}
