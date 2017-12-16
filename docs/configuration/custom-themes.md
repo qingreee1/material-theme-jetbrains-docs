@@ -165,3 +165,15 @@ Specific color used for selected items in trees.
 **Q**: Where is stored my custom theme colors?
 
 **A**: You can find your custom colors inside the config directory, just like the Material settings.
+
+**Q**: Why do I get a popup asking me for "resetting the theme colors" at start?
+
+**A**: This popup is used to reset the custom theme colors to their default ones and is popping up when switching from a dark theme to a light theme and vice-versa. However sometimes, like for instance when you install the plugin or reset your settings, because it doesn't know which theme you came from, it will ask even though you didn't ask for it. Simply press ok and it will not bother you anymore.
+
+**Q**: I changed the colors but it doesn't look as good as the default themes.
+
+**A**: Creating a theme is not an easy task, and the Material ones are the result of a long thought process about which colors are best suited for an UI. However you can check out other famous Sublime/Atom/Visual Studio themes as an inspiration and start from it.
+
+**Q**: OK I have an idea of a theme, but there is not enough options in the settings for me to make it.
+
+**A**: It's true that those settings are for color palettes of a few colors only, and regroup components of the same purpose under the same color group. If though you'd like to have a different color for checkboxes and radio buttons, or between lists and tables, or set the tree color different as the main background color, etc. - for this the best option would be to fork the project and create a brand new theme.
