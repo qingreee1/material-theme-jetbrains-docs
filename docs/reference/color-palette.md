@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: Color Palette
-description: Color Reference of major colors used throughout the plugin
 group: reference
 toc: true
 comments: true
@@ -13,3 +12,12 @@ next:
   url: '/docs/reference/file-icons'
   title: File Icons
 ---
+
+You can find here a reference of all colors used in the themes.
+{:class='title'}
+
+<ul class="theme-cards">
+{% for theme in site.data.themes.material %}
+{% include theme.html theme=theme %}
+{% endfor %}
+</ul>

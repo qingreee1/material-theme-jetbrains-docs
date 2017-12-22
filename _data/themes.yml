@@ -3,21 +3,81 @@ material:
   name: Default
   className: oceanic
   desc: An oceanic blue flat theme
+  background: '#263238'
+  foreground: '#B0BEC5'
+  text: '#607D8B'
+  selectBg: '#546E7A'
+  selectFg: '#FFFFFF'
+  inactive: '#2E3C43'
+  caret: '#FFCC00'
+  second: '#32424A'
+  disabled: '#415967'
+  contrast: '#1E272C'
+  table: '#314549'
+  misc1: '#2A373E'
+  misc2: '#425B67'
+  button: '#304146'
+  tree: '#546E7A'
 
 - darker:
   name: Darker
   className: darker
   desc: A pitch-black flat theme
+  background: '#212121'
+  foreground: '#B0BEC5'
+  text: '#616161'
+  selectBg: '#424242'
+  selectFg: '#FFFFFF'
+  inactive: '#424242'
+  caret: '#FFCC00'
+  second: '#323232'
+  disabled: '#474747'
+  contrast: '#1A1A1A'
+  table: '#2A2A2A'
+  misc1: '#2C2C2C'
+  misc2: '#3F3F3F'
+  button: '#2E2E2E'
+  tree: '#424242'
 
 - lighter:
   name: Lighter
   className: lighter
   desc: A bright light flat theme
+  background: '#FAFAFA'
+  foreground: '#546E7A'
+  text: '#7E939E'
+  selectBg: '#D2D4D5'
+  selectFg: '#FFFFFF'
+  inactive: '#FAFAFA'
+  caret: '#FFCC00'
+  second: '#eae8e8'
+  disabled: '#D2D4D5'
+  contrast: '#F4F4F4'
+  table: '#BDE3DF'
+  misc1: '#d3e1e8'
+  misc2: '#425B67'
+  button: '#F2F1F1'
+  tree: '#546E7A'
 
 - palenight:
   name: Palenight
   className: palenight
   desc: A purplish flat theme
+  background: '#292D3E'
+  foreground: '#A6ACCD'
+  text: '#676E95'
+  selectBg: '#303348'
+  selectFg: '#FFFFFF'
+  inactive: '#4E5579'
+  caret: '#FFCC00'
+  second: '#34324a'
+  disabled: '#2f2e43'
+  contrast: '#202331'
+  table: '#2D3043'
+  misc1: '#2b2a3e'
+  misc2: '#444267'
+  button: '#304146'
+  tree: '#676E95'
 
 other:
 - monokai:

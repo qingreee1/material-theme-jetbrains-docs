@@ -61,7 +61,10 @@
     }
     .theme-cards .card {
       @include grid-cards(4);
-      @include inject-themes
+      @include inject-themes;
+      &.single {
+        @include grid-cards(1);
+      }
     }
 
     .figure {

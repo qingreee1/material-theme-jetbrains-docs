@@ -21,6 +21,7 @@ body {
 .btn {
   @include button($accent-color, btn);
   font-weight: 400;
+  color: white !important;
 
   &.-large {
     padding: 1rem 2rem;
