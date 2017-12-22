@@ -102,7 +102,7 @@ These are not installed automatically, as people not necessarily want this setti
 
 **Q**: Is there a way to change the text color?
 
-**A**: The color of the text is controlled by another setting. See [File Status Colors](file-status-colors.md) for more info.
+**A**: The color of the text is controlled by another setting. See [File Status Colors]({{site.baseurl}}/docs/configuration/file-status-colors) for more info.
 
 -----
 ## Color Reference

@@ -139,6 +139,18 @@ While a set of predefined accent colors are available in the [Accent Color Choos
 {% include figure.html content="/screens/accentChooser.png" caption="Accent Color Chooser" %}
 
 ----
+### Arrows Style
+
+This setting allows you to change the style of the arrows in trees such as the Project Tree or Settings Tree.
+
+There are three available styles:
+- Material <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/arrows/material.png">
+- Darcula <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/arrows/darcula.png">
+- Plus-Minus <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/arrows/plusminus.png">
+
+You can also switch styles in the `Actions Panel`.
+
+----
 ### Notes
 
 - Contrast color is also used inside "striped tables", independently of the setting.

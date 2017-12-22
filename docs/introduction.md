@@ -4,6 +4,7 @@ title: Introduction
 description: What is this plugin?
 group: introduction
 toc: true
+comments: true
 
 next:
   url: '/docs/configuration/settings'

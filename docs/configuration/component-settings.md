@@ -77,6 +77,25 @@ Basically this replaces all icons provided by the plugin, including breakpoint i
 - _Hide File Icons_: You won't be able to hide file icons anymore.
 
 ----
+### Material Fonts
+
+This setting switches the default font used in the editor with the usual font used in Material Design, [Roboto](https://fonts.google.com/specimen/Roboto).
+
+This setting changes the font you see in *Settings -> Appearance and Behavior -> Appearance*. When unchecked, it will restore the original default font, e.g. `Tahoma` in Windows, `SF_Text` in Mac and `Lucida Sans` in Linux. When checked, it will replace it with `Roboto` (only if the font is already installed in the machine though).
+
+This setting is also making the font in the Project View to be ++slightly bigger (2px more)++.
+
+**Note**: This setting is requiring that **default fonts are not overriden**, e.g. that the setting at `Appearance and Behavior -> Appearance -> Override default font` is unchecked, in which case it will use the font set there.
+{:class='card-panel'}
+
+
+**Note 2**: This setting will replace the font with Roboto only if that font is already installed in the machine. If not, you can download it here: https://material.io/guidelines/resources/roboto-noto-fonts.html
+{:class='card-panel'}
+
+**Note 3**: If you want to use Roboto and want to cancel the "bigger fonts" option, just disable the setting and select Roboto in the `Override default font` option in Appearance settings.
+{:class='card-panel'}
+
+----
 ### Material Theme
 
 This option simply disabled the Material Theme Styling, e.g. leave components and icons intact but revert to the original Darcula/IntelliJ Look And Feel.
@@ -136,3 +155,25 @@ These options control the appearance of the scrollbars. Note: This feature works
 **Note**: These options are mutually exclusive, and _Accent Scrollbars_ take precedence over _Transparent Scrollbars_.
 
 **Note 2**: Accent colors are set at the start of the application. If you change the accent color, you will need a full restart to see it reflected on the scrollbars. Same for the _Transparent Scrollbars_, if you switch themes you will need a full restart to see it taking the new theme's color.
+
+----
+### Dark Title Bar
+
+Dark Title bar is an experimental feature to set a dark title bar to the application for dark themes (such as Material Oceanic, Palenight, Darker). It is experimental because it depends on a feature that could disappear in the future as it is an experimental feature even in the IDE.
+
+{% include figure.html content="/screens/customTheme.png" caption="Dark title bar" %}
+
+Note that this works only for Mac and only from 2017.3+ versions. It doesn't work on Android Studio yet.
+
+-----
+## FAQ/Troubleshopting
+
+**Q**: I've set "Material Fonts" but now my texts are all scrambled!
+
+**A**: This is a rare bug that occurs and honestly I don't know why it happens. It could be because the JDK caches fonts or because there are conflicts between Roboto fonts, or that you have a bad version of Roboto. Try to reinstall the Roboto font and restart the computer. If it still doesn't work, just disable the option or select another font in the settings.
+
+**Q**: **I've disabled the plugin but I still get the bigger fonts/dark title bar!**
+
+**A**: This happens because this is not a feature implemented by the plugin, but instead makes use of a feature implemented by the IDE. Theoretically it should disable these settings on project unloading, therefore when uninstalling the plugin. But if for some reason it doesn't happen, here is how you can disable them manually:
+- Open Command Panel (Cmd+Shift-A/Ctrl-Shift-A) and type `Registry`
+- Look for keys `bigger.fonts.in.project.view` or `ide.mac.allowDarkDecorations` and set them to false.

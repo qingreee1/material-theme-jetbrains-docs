@@ -59,8 +59,10 @@ Besides the Material Themes, there are also other prebundled themes made by the 
 
 #### Custom Theme
 
-Finally there is a **Custom Theme** option, which is the placeholder for the Custom Theme Settings, allowing you set
+Finally there are **Custom Themes** option, which is the placeholder for the Custom Theme Settings, allowing you set
 your own theme colors.
+
+There are two options available, *Custom Theme* for themes based off the *Darcula* LaF, and *Light Custom Theme* based off the *IntelliJ* LaF.
 
 See [Custom Themes]({{site.baseurl}}/docs/configuration/custom-themes) for more information.
 
@@ -87,21 +89,24 @@ You can configure many parts of the plugin features from the **plugin settings**
 - *Bold directories*: Set bold font weight for directories in the Project View
 - *Compact Status Bar*: Reduce the height of the status bar (this is the default height)
 - *Custom Accent Color*: Set a custom color for accent color
+- *Arrows Style*: Change the style of the arrows in trees
 
 **Component Settings**:
 * *Custom Wallpaper*: Set a custom wallpaper for the IDE frame
 - *Material Design components*: Enable/Disable Material Design components (Buttons, Progress Bars...)
 - *Material Icons*: Enable/Disable the Material Theme icons to the original ones
+- *Material Fonts*: Enable/Disable Material fonts (Roboto) and bigger font in sidebar.
 - *Material Theme*: Enable/Disable the material theme styles
 - *Project View Decorators*: Enable/Disable the Project View Decorators. See the above section about separators.
 * *Theme in Statusbar*: Add an indicator for the currently selected theme in the statusbar.
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
 - *Accent Scrollbars*: Set the color of the scrollbars to the accent color
+- *Dark Title Bar*: Set dark title bar for dark themes (only for Mac)
 
 #### Settings shortcuts
 
-You can also quickly toggle some settings by using the `Search Everywhere` or the functionality of the IDE. Simply press
-`Shift-Shift` and type `Material Theme` to get the list of avialable toggles.
+You can also quickly toggle some settings by using the `Search Everywhere` or the functionality of the IDE.
+Simply press `Shift-Shift` and type `Material Theme` to get the list of avialable toggles.
 
 Same goes for the `Command Panel` (<kbd>Ctrl-Shift-A/Cmd-Shift-A</kbd>).
 
@@ -111,36 +116,28 @@ You can also use the `Keymap Editor` to assign your own custom shortcuts to thes
 
 #### Settings File
 
-Your current configuration is stored inside the IDE settings' directory under the filename `material_theme.xml`. If for some
-reason there are issues with the plugin or you don't manage to reset to a stable state, just delete this file and
-restart the IDE.
+Your current configuration is stored inside the IDE settings' directory under the filename `material_theme.xml`. If for some reason there are issues with the plugin or you don't manage to reset to a stable state, just delete this file and restart the IDE.
 
-See
-[IDE Settings](https://intellij-support.jetbrains.com/hc/en-us/articles/206544519-Directories-used-by-the-IDE-to-store-settings-caches-plugins-and-logs)
-for more information.
+See [IDE Settings](https://intellij-support.jetbrains.com/hc/en-us/articles/206544519-Directories-used-by-the-IDE-to-store-settings-caches-plugins-and-logs) for more information.
 
 
 ----------
 ## Material Custom Theme
 
-Aside from the bundled themes, you also have the ability to set up your own Material Theme. You can do so by selecting
-`Custom Theme` in the theme list, then customize the theme colors in the settings page at `Settings -> Appearance ->
-Material Custom Theme Settings`.
+Aside from the bundled themes, you also have the ability to set up your own Material Theme. You can do so by selecting `Custom Theme` in the theme list, then customize the theme colors in the settings page at `Settings -> Appearance -> Material Custom Theme Settings`.
 
 {% include figure.html content="/screens/customsettings.png" caption="Material Custom Theme Settings" %}
 
 Once you set these colors, simply select the `Custom Theme` in the _Material Theme Chooser_ and see your colors take effect.
 
-Note: Due to how themes are implemented in the SDK, this feature does not work completely well. Therefore, in order to
-see your custom theme take effect, you will probably need to restart the IDE to see the changes.
+Note: Due to how themes are implemented in the SDK, this feature does not work completely well. Therefore, in order to see your custom theme take effect, you will probably need to restart the IDE to see the changes.
 
 See [Custom Theme]({{site.baseurl}}/docs/configuration/custom-themes) for more details.
 
 -----
 ## Advanced Configuration
 
-Here's a list of the keys used in the configuration file (`material_theme.xml`) with their default values. If a key isn't in
-your file, it means that it uses the default value.
+Here's a list of the keys used in the configuration file (`material_theme.xml`) with their default values. If a key isn't in your file, it means that it uses the default value.
 
 ```xml
 <component>
@@ -178,12 +175,15 @@ your file, it means that it uses the default value.
   <!-- Accent color -->
   <option name="accentColor" value="80cbc4" />
 
-  <!-- Custom background -->
-  <option name="defaultBackground" value="https://raw.githubusercontent.com/mallowigi/material-theme-jetbrains-eap/master/src/main/resources/themes/wall.jpg,60" /> 
+  <!-- Arrows style -->
+  <option name="arrowsStyle" value="Material" />
+
   <!-- Material components enabled -->
   <option name="isMaterialDesign" value="true" />
   <!-- Material and File icons enabled -->
   <option name="useMaterialIcons" value="true" />
+  <!-- Material fonts enabled -->
+  <option name="useMaterialFonts" value="true" />
   <!-- Project view decorators enabled-->
   <option name="useProjectViewDecorators" value="true" />
   <!-- Material Theme styles enabled -->
@@ -195,6 +195,10 @@ your file, it means that it uses the default value.
     <option name="themedScrollbars" value="false" />
     <!-- Accent scrollbars -->
     <option name="accentScrollbars" value="true" />
+    
+    <!-- Dark Title Bar -->
+    <option name="darkTitleBar" value="true" />
+        
 </component>
 
 ```

@@ -6,6 +6,12 @@ group: reference
 toc: true
 comments: true
 
+previous:
+  url: '/docs/reference/color-palette'
+  title: Color Palette
+next:
+  url: '/docs/reference/material-components'
+  title: Components
 ---
 
 ## Introduction
