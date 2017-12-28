@@ -41,5 +41,82 @@ Regular Editor tabs have been modified to look like Material design tabs:
 - The font have been increased to 13px, and got bold
 - An animation is played when hovering them as they change color
 
-### Inputs
+### Inputs, Numbers and Passwords
 
+{% include figure.html content="/components/input.png" caption="Input Fields" %}
+
+{% include figure.html content="/components/number.png" caption="Number Fields" %}
+
+{% include figure.html content="/components/password.png" caption="Password Fields" %}
+
+- They lost their border, instead only display a bottom border that get highlighted on focus
+- They have a different background color in contrast mode
+- Password fields have a new button to allow previewing the inputted characters
+
+### Checkboxes
+
+{% include figure.html content="/components/checkbox.png" caption="Checkboxes" %}
+
+- Checkboxes are now filled with the accent color while the sign is transparent
+- They get some sort of ripple effect when checked/unchecked
+
+### Radio buttons
+
+{% include figure.html content="/components/radio.png" caption="Radio Buttons" %}
+
+- Radio buttons got similar to the Material Design Radio buttons
+- They get some sort of ripple effect when pressed
+
+### Dropdowns/Combobox
+
+{% include figure.html content="/components/dropdown.png" caption="Dropdown/Comboboxes" %}
+
+The dropdowns/comboboxes got redesigned by having the same border as the inputs, which highlights on active/hover.
+
+### Action Buttons
+
+{% include figure.html content="/components/actionButton.png" caption="Action Button" %}
+
+Action Buttons (or Toolbar buttons) got redesigned to display some sort of ripple when hovered/pressed.
+
+### Sliders
+
+{% include figure.html content="/components/slider.png" caption="Sliders" %}
+
+- The thumb got round and larger
+- The track got thicked and received the accent color
+- The steppers have been removed
+
+### Tables
+
+{% include figure.html content="/components/table.png" caption="Tables" %}
+
+{% include figure.html content="/components/table2.png" caption="Table Cells" %}
+
+- Table Headers and cells have been padded on top and bottom
+- Table Headers got bold
+- Table Cells got a beveled border when selected (this might change in the future)
+- Striped table rows get the regular and contrast color of the current theme
+
+### Trees
+
+{% include figure.html content="/components/treeArrows.png" caption="Tree Arrows" %}
+
+- Tree Items height got bigger (can be customized in the settings)
+- Selected item is highlighted with an indicator (can be customized in the settings)
+- Arrows have been replaced with Material Arrows ("chevrons") (but can be modified in the settings as well)
+
+### Progress Indicators
+
+{% include figure.html content="/components/progress.png" caption="Progress Bar" %}
+
+{% include figure.html content="/components/spinner.png" caption="Progress Loader" %}
+
+- Progress Bars have lost their "striped" look to look more like a regular filling bar
+- Progress Loaders have been replaced with the usual Material Design circular loader
+
+### Dialogs
+
+{% include figure.html content="/components/dialog.png" caption="Dialogs" %}
+
+- Dialogs title bar's text is now left aligned, bigger and bold
