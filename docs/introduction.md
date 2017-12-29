@@ -19,7 +19,7 @@ experience for Jetbrains products.
 It is based on the [Material Theme for Sublime](https://github.com/equinusocio/material-theme) plugin while trying to bring its own lot of features.
 {:class='title'}
 
-<div class="featimg theme-img" style="padding: 2rem"></div>
+<div class="screenshot" style="padding: 2rem"></div>
 
 #### Features
 
