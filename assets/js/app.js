@@ -40,9 +40,22 @@ $.when($.ready).then(function () {
       // custom scroll spy (is that necessary?)
       this.scrollSpyOn('.doc', { nav: '.toc a' });
 
+      this.initMenu();
       this.initThemeChooser();
-
+      this.initSidebar();
       this.initSearch();
+    },
+
+
+    /**
+     * Init Menu events
+     */
+    initMenu: function initMenu() {
+      var _this = this;
+
+      $('.js-menu-toggle').on('click', function (event) {
+        _this.showMenu();
+      });
     },
 
 
@@ -50,14 +63,26 @@ $.when($.ready).then(function () {
      * Init Theme Chooser events
      */
     initThemeChooser: function initThemeChooser() {
-      var _this = this;
+      var _this2 = this;
 
       $('.js-theme').on('click', function (event) {
         var $el = $(event.target);
         var themeClass = $el.data('themeClass');
 
-        _this.setBodyClass(themeClass);
+        _this2.setBodyClass(themeClass);
         localStorage.setItem(THEME_KEY, themeClass);
+      });
+    },
+
+
+    /**
+     * Init Sidebar events
+     */
+    initSidebar: function initSidebar() {
+      var _this3 = this;
+
+      $('.js-sidebar-toggle').on('click', function (event) {
+        _this3.toggleSidebar();
       });
     },
     initSearch: function initSearch() {
