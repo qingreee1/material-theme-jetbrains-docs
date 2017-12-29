@@ -15,7 +15,7 @@ $twotoone: 530px;
     justify-content: center;
   }
 
-  article {
+  .contents {
     @include rowMachine(3, 1%, 25px);
 
     @media screen and (max-width: $fourtothree) {

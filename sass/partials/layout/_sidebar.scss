@@ -1,5 +1,5 @@
 // material sidebar styles
-.material-sidebar {
+.sidebar {
   width: $sidebar-width;
   height: 100%;
   position: fixed;
@@ -73,10 +73,11 @@
   }
 }
 
-.has-material-sidebar-left,
-.has-material-sidebar-right {
-  &,
-  .main-menu {
+/**
+  When a parent has this class
+ */
+.-sidebar-left {
+  &, .main-menu {
     width: calc(100% - #{$sidebar-width});
     @media screen and (max-width: $sidebarcollapse) {
       width: calc(100% - #{$margin-width});
@@ -84,34 +85,18 @@
   }
 }
 
-.has-material-sidebar-left {
+.-sidebar-left {
   margin-left: $sidebar-width;
   .main-menu {
     margin-left: $sidebar-width;
   }
-  .material-sidebar {
+  .sidebar {
     left: 0;
   }
   @media screen and (max-width: $sidebarcollapse) {
     margin-left: $margin-width;
     .main-menu {
       margin-left: $margin-width;
-    }
-  }
-}
-
-.has-material-sidebar-right {
-  margin-right: $sidebar-width;
-  .main-menu {
-    margin-right: $sidebar-width;
-  }
-  .material-sidebar {
-    right: 0;
-  }
-  @media screen and (max-width: $sidebarcollapse) {
-    margin-right: $margin-width;
-    .main-menu {
-      margin-right: $margin-width;
     }
   }
 }

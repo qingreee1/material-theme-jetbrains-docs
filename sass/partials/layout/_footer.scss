@@ -1,4 +1,7 @@
-footer {
+/**
+  Footer global styles
+ */
+.footer {
   width: 100%;
   box-sizing: border-box;
   background: $dark-primary-color;
@@ -14,7 +17,6 @@ footer {
 
   a {
     color: $primary-text-icon-color;
-    padding: 0 5px;
     &:hover {
       color: $primary-text-icon-color;
       background: darken($dark-primary-color, 10%);

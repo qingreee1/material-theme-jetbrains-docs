@@ -1,11 +1,6 @@
 // Logo SVG styling you most probably will replace all of the below.
 
-.icon {
-  transition: .3s all ease;
-  color: $dark-primary-color;
-}
-
-.caption {
+.logo-caption {
   font-size: 3em;
   font-weight: 100;
   line-height: 125%;
@@ -19,7 +14,7 @@
   }
 }
 
-.slogan {
+.logo-slogan {
   font-size: 2em;
   font-weight: 300;
   line-height: 125%;
@@ -32,6 +27,4 @@
   }
 }
 
-.call-to-action {
-  margin: 4rem 0;
-}
+

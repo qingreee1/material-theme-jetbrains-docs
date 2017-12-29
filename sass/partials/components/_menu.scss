@@ -3,7 +3,7 @@
   z-index: 105;
   background: $primary-color;
   color: $primary-text-icon-color;
-  .toggle-link {
+  .menu-toggle-link {
     display: none;
   }
   .navbar {
@@ -57,7 +57,7 @@
       transform: translate(-320px, 0);
       transition: .3s all ease;
     }
-    .toggle-link {
+    .menu-toggle-link {
       display: block;
       position: relative;
       text-align: right;
@@ -117,48 +117,8 @@
 }
 
 // Toggle
-.toggle-link {
+.menu-toggle-link {
   @media screen and (min-width: $mainnav-collapse) {
     display: none;
-  }
-}
-
-.dropdown-content {
-  @include shadow(1);
-  background-color: #FFFFFF;
-  margin: 0;
-  display: none;
-  min-width: 100px;
-  max-height: 650px;
-  overflow-y: auto;
-  opacity: 0;
-  position: absolute;
-  white-space: nowrap; // Force one line
-  z-index: 110;
-  will-change: width, height;
-  padding: 0;
-
-  li {
-    display: block !important;
-    clear: both;
-    color: $accent-color;
-    cursor: pointer;
-    line-height: 1.5rem;
-    width: 100%;
-    text-align: left;
-    text-transform: none;
-    padding: 0 !important;
-
-    &:hover, &.active {
-      background-color: #eee;
-    }
-    & > a,
-    & > span {
-      box-sizing: border-box;
-      font-size: 1.2rem;
-      color: $accent-color !important;
-      display: block;
-      padding: 1rem 1rem;
-    }
   }
 }
