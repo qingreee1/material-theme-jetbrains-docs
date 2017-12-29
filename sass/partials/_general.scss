@@ -1,3 +1,6 @@
+/**
+  Global Styles and classes
+ */
 body {
   transition: .3s all ease-in-out;
   @include flexbox(column, wrap, center, flex-start);
@@ -68,6 +71,7 @@ code {
   @include paddinghack(100%, 16, 9, "iframe");
 }
 
+// The main container
 .main {
   padding-top: 50px;
   width: 100%;
@@ -88,173 +92,10 @@ code {
   box-sizing: border-box;
 }
 
-.featimg {
+// Screenshots of the plugin
+.screenshot {
   width: 100%;
-}
-
-.theme-img {
   padding-top: 60%;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.section-title {
-  font-size: 2em;
-  font-weight: 100;
-  text-align: center;
-  line-height: 125%;
-  color: $primary-text;
-  font-family: $main-font;
-  text-transform: uppercase;
-  transition: .3s all ease;
-}
-
-// tables and modals are both taken pretty much entirely from http://materializecss.com
-// Tables
-
-table,
-th,
-td {
-  border: none;
-}
-
-table {
-  width: 100%;
-  display: table;
-  tbody tr:nth-child(odd) {
-    background-color: $table-striped-color;
-  }
-  tbody tr {
-    transition: background-color .25s ease;
-  }
-}
-
-thead {
-  font-weight: bold;
-  border-bottom: 1px solid $table-border-color;
-}
-
-td,
-th {
-  padding: 15px 5px;
-  display: table-cell;
-  text-align: left;
-  vertical-align: middle;
-  border-radius: 2px;
-}
-
-// Responsive Table
-@media screen and (max-width: $table-collapse) {
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    display: block;
-    position: relative;
-    th, td {
-      margin: 0;
-      vertical-align: top;
-    }
-    th {
-      text-align: left;
-    }
-    thead {
-      display: block;
-      float: left;
-      tr {
-        display: block;
-        padding: 0 10px 0 0;
-        th::before {
-          content: "\00a0";
-        }
-      }
-    }
-    tbody {
-      display: block;
-      width: auto;
-      position: relative;
-      overflow-x: auto;
-      white-space: nowrap;
-      tr {
-        display: inline-block;
-        vertical-align: top;
-      }
-    }
-    th {
-      display: block;
-      text-align: right;
-    }
-    td {
-      display: block;
-      min-height: 1.25em;
-      text-align: left;
-    }
-    tr {
-      padding: 0 10px;
-    }
-    /* sort out borders */
-
-    thead {
-      border: 0;
-      border-right: 1px solid $table-border-color;
-    }
-    th {
-      border-bottom: 0;
-      border-left: 0;
-    }
-    td {
-      border-left: 0;
-      border-right: 0;
-      border-bottom: 0;
-    }
-    tr {
-      border: 0;
-    }
-    tbody tr {
-      border-right: 1px solid $table-border-color;
-    }
-  }
-}
-
-// modals
-.modal {
-  @include shadow(4);
-  display: none;
-  position: fixed;
-  left: 0;
-  right: 0;
-  background-color: $white;
-  padding: 0;
-  max-height: 70%;
-  width: 55%;
-  margin: auto;
-  overflow-y: auto;
-  z-index: 1000;
-  border-radius: 2px;
-  transform: translate(0);
-  will-change: top, opacity;
-
-  @media screen and (max-width: $modal-width-change) {
-    width: 80%;
-  }
-
-  h1, h2, h3, h4 {
-    margin-top: 0;
-  }
-
-  .modal-content {
-    padding: 24px;
-  }
-
-  .modal-footer {
-    border-radius: 0 0 2px 2px;
-    padding: 4px 6px;
-    height: 56px;
-    width: 100%;
-
-    .btn, .btn-flat {
-      float: right;
-      margin: 6px 0;
-    }
-  }
 }
