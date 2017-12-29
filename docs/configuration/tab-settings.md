@@ -84,14 +84,14 @@ There is no reset button, but there is an action in the `Material Toolbar` that 
 #### Edited files icon
 
 Files that are edited but not yet saved will display a little pencil icon with the current accent color on the tab, in place of the regular * asterisk *.
-![editIcon]({{ site.media_folder }}/icons/editIcon.png)
+![editIcon](/img/icons/editIcon.png)
 
 You need to activate this option under `Editor -> General -> Editor Tabs -> Mark modified tabs with asterisk`
 
 #### Pinned files icon
 
 Same as the edited file icon, pinned tabs will display a little pin on the icon, colored with the current accent color.
-![pinnedIcon]({{ site.media_folder }}/icons/pin.png)
+![pinnedIcon](/img/icons/pin.png)
 
 #### Accent close icon
 

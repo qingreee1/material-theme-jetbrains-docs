@@ -45,14 +45,14 @@ gallery:
       alttext: Sliders
 ---
 
-This section describes the `Accent Color` feature and how is it used by the plugin.
+This section describes the **Accent Colors** feature and how is it used by the plugin.
 {:class='title'}
 
 ## Definition
 
-`Accent Color` refers to a color used in accent key parts of the UI, such as the active tab, focused input texts, checked boxes and so on. The Material Theme plugin enables this feature in the IDE and gives the ability to customize it to your heart's content.
+_Accent Color_ refers to a color used in accent key parts of the UI, such as the active tab, focused input texts, checked boxes and so on. The Material Theme plugin enables this feature in the IDE and gives the ability to customize it to your heart's content.
 
-For more info about `Accent Color` in the Material Design guidelines, follow this link: https://material.io/guidelines/style/color.html#color-color-system
+For more info about _Accent Colors_ in the Material Design guidelines, follow this link: https://material.io/guidelines/style/color.html#color-color-system
 
 ### Usage
 
@@ -77,6 +77,7 @@ Here is a list of components where accent color is used:
 - Circular progress indicator
 - Opened files' containing directories (according to `Project View Decorators` setting)
 - Scrollbars (according to `Accent Scrollbars` setting)
+- VCS Log branches icon
 
 ### IMPORTANT NOTE
 

@@ -152,6 +152,8 @@ These options control the appearance of the scrollbars. Note: This feature works
 
 *Accent scrollbars* will replace the scrollbar color with the _current accent color_.
 
+{% include figure.html content="/screens/scrollbars.png" caption="Accent Scrollbars" %}
+
 **Note**: These options are mutually exclusive, and _Accent Scrollbars_ take precedence over _Transparent Scrollbars_.
 
 **Note 2**: Accent colors are set at the start of the application. If you change the accent color, you will need a full restart to see it reflected on the scrollbars. Same for the _Transparent Scrollbars_, if you switch themes you will need a full restart to see it taking the new theme's color.
@@ -166,7 +168,7 @@ Dark Title bar is an experimental feature to set a dark title bar to the applica
 Note that this works only for Mac and only from 2017.3+ versions. It doesn't work on Android Studio yet.
 
 -----
-## FAQ/Troubleshopting
+## FAQ/Troubleshooting
 
 **Q**: I've set "Material Fonts" but now my texts are all scrambled!
 

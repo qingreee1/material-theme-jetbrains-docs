@@ -39,6 +39,7 @@ provided by the plugin are:
 - Material Palenight
 - Material One Dark
 - Atom One Dark ![new-box](/img/icons/new-box.png)
+- Material Monokai Pro ![new-box](/img/icons/new-box.png)
 
 ## Customization
 

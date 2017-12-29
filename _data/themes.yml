@@ -3,6 +3,7 @@ material:
   name: Default
   className: oceanic
   desc: An oceanic blue flat theme
+  light: false
   background: '#263238'
   foreground: '#B0BEC5'
   text: '#607D8B'
@@ -23,6 +24,7 @@ material:
   name: Darker
   className: darker
   desc: A pitch-black flat theme
+  light: false
   background: '#212121'
   foreground: '#B0BEC5'
   text: '#616161'
@@ -43,6 +45,7 @@ material:
   name: Lighter
   className: lighter
   desc: A bright light flat theme
+  light: true
   background: '#FAFAFA'
   foreground: '#546E7A'
   text: '#7E939E'
@@ -63,6 +66,7 @@ material:
   name: Palenight
   className: palenight
   desc: A purplish flat theme
+  light: false
   background: '#292D3E'
   foreground: '#A6ACCD'
   text: '#676E95'
@@ -81,16 +85,29 @@ material:
 
 other:
 - monokai:
-  name: Monokai
+  name: Monokai Pro
   className: monokai
-  desc: Theme based on the Sublime Theme of the same name
+  desc: Theme based on the Monokai Pro Theme
+  light: false
+  background: '#2D2A2E'
+  foreground: '#C1C0C0'
+  contrast: '#221F22'
+
 
 - arcdark:
   name: Arc Dark
   className: arcdark
-  desc: A Dark Slate gray theme
+  desc: Theme based on the Arc Dark GTK Theme
+  light: false
+  background: '#383C4A'
+  foreground: '#D3DAE3'
+  contrast: '#2f343f'
 
 - onedark:
   name: One Dark
   className: onedark
   desc: Theme based on the Atom One Dark theme
+  light: false
+  background: '#282C34'
+  foreground: '#979FAD'
+  contrast: '#21252B'

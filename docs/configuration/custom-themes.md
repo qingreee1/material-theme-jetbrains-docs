@@ -9,9 +9,12 @@ comments: true
 previous:
   url: '/docs/configuration/accents'
   title: Accents
+next:
+  url: '/docs/reference/color-palette'
+  title: Color Palette
 ---
 
-This section explains how you can create your own custom themes.
+This section explains how you can customize the themes colors using Custom Themes.
 {:class='title'}
 
 ## Introduction

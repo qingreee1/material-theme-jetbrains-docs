@@ -72,6 +72,8 @@ Here's an explanation of the file statuses:
 | Unknown                  | #d5756c (red)             | Unversioned file                                          |
 | Up to date               | none (default tree color) | File unchanged                                            |
 
+&nbsp;
+
 Other statuses may come from 3rd-party plugins and will have the default color provided by the plugin.
 
 **Note**: Because this feature overrides the one from the IDE, changing colors via the regular screen (VCS -> File Status Colors) doesn't make sense and will be overriden the next time you change the color scheme. So please use the `Material File Colors` from now on, even if you are on Darcula or a custom color scheme.
@@ -105,3 +107,12 @@ If you're a color scheme designer and want to make use of this feature for your 
   </colors>
   ```
 
+## Caveats
+
+Because this feature modifies the original `VCS File Colors` feature, please bear in mind the following issues:
+- When switching to other scheme that do not define file status colors, some defaults will be applied which are not the defaults provided by Darcula/IntelliJ, and therefore look bad.
+- Uninstalling/Disabling the plugin will not revert back these settings, so you will still keep the last file colors even after restarting.
+
+Thankfully there is an easy fix for that: in the `VCS File Colors` there is a button _Reset Default_ that will revert the value back to the Darcula/IntelliJ default. **Note however that as soon as you change a color scheme the values will change back again.**
+
+{% include figure.html content="/screens/restoreDefault.png" caption="Restore Default" %}
