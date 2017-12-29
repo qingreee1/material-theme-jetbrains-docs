@@ -2,7 +2,7 @@
 layout: index
 ---
 <div class="content-container">
-  <article>
+  <div class="contents">
     <!-- Theme -->
     <section class="section theme-section">
       <!-- Theme Chooser -->
@@ -21,7 +21,7 @@ layout: index
       <!-- Screen -->
       {% for theme in site.data.themes.material %}
         <a href="/img/{{ theme.className }}.png" target="_blank"
-           class="featimg theme-img {{ theme.className }}"></a>
+           class="screenshot {{ theme.className }}"></a>
       {% endfor %}
     
     </section>
@@ -41,5 +41,5 @@ layout: index
       </a>
     </section>
   
-  </article>
+  </div>
 </div>
