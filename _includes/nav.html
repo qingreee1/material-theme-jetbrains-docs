@@ -4,7 +4,7 @@
       <div style="width: 3em; height: 3em;" class="logo-img"></div>
     </a>
     <nav class="menu">
-      <a class="toggle-link noline" onclick="jekyllApp.showMenu()">
+      <a class="menu-toggle-link noline" onclick="jekyllApp.showMenu()">
         <i class="fa fa-close fa-lg"></i>
       </a>
       <ul class="navbar">
@@ -15,7 +15,7 @@
           <a href="{{ site.baseurl }}/docs/configuration/settings">Configuration</a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/docs/reference/file-icons">Reference</a>
+          <a href="{{ site.baseurl }}/docs/reference/color-palette">Reference</a>
         </li>
         <!--<li>
           <a href="/showcase">Showcase</a>
@@ -28,19 +28,12 @@
     <span class="h-spacer"></span>
     <nav class="iconnav">
       <ul>
-        <!--
-        <li class="sicon">
-          <a href='#search' onclick="jekyllApp.showSearch()">
-            <i class='fa fa-search'></i>
-          </a>
-        </li>
-        -->
         <li>
           <a href="{{ site.github }}">
             <button class="btn"><i class="fa fa-github" style="font-size: larger;"></i> GitHub</button>
           </a>
         </li>
-        <a href='#menu' class="toggle-link noline" onclick="jekyllApp.showMenu()">
+        <a href='#menu' class="menu-toggle-link noline" onclick="jekyllApp.showMenu()">
           <i class="fa fa-navicon"></i>
         </a>
       </ul>

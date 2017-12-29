@@ -38,43 +38,43 @@ $.when($.ready).then(() => {
       // custom scroll spy (is that necessary?)
       this.scrollSpyOn('.doc', {nav: '.toc a'});
 
-      // this.initSearch();
+      this.initSearch();
     },
 
-    // initSearch() {
-    //   const search = instantsearch({
-    //     // Replace with your own values
-    //     appId: '77GG697EBY',
-    //     apiKey: 'b102643f245ea01e97b9a54047386402', // search only API key, no ADMIN key
-    //     indexName: 'localhost',
-    //     urlSync: true,
-    //   });
-    //
-    //   search.addWidget(
-    //     instantsearch.widgets.searchBox({
-    //       container: '#searchInput',
-    //     }),
-    //   );
-    //
-    //   search.addWidget(
-    //     instantsearch.widgets.hits({
-    //       container: '#hits',
-    //       hitsPerPage: 10,
-    //       templates: {
-    //         item: '{{{_highlightResult.title.value}}}',
-    //         empty: 'We didn\'t find any results for the search <em>"{{query}}"</em>',
-    //       },
-    //     }),
-    //   );
-    //
-    //   search.addWidget(
-    //     instantsearch.widgets.pagination({
-    //       container: '#pagination',
-    //     }),
-    //   );
-    //
-    //   search.start();
-    // },
+    initSearch() {
+      const search = instantsearch({
+        // Replace with your own values
+        appId: '77GG697EBY',
+        apiKey: 'b102643f245ea01e97b9a54047386402', // search only API key, no ADMIN key
+        indexName: 'localhost',
+        urlSync: true,
+      });
+
+      search.addWidget(
+        instantsearch.widgets.searchBox({
+          container: '#searchInput',
+        }),
+      );
+
+      search.addWidget(
+        instantsearch.widgets.hits({
+          container: '#hits',
+          hitsPerPage: 10,
+          templates: {
+            item: '{{{_highlightResult.title.value}}}',
+            empty: 'We didn\'t find any results for the search <em>"{{query}}"</em>',
+          },
+        }),
+      );
+
+      search.addWidget(
+        instantsearch.widgets.pagination({
+          container: '#pagination',
+        }),
+      );
+
+      search.start();
+    },
 
     showSearch() {
       $('#search').addClass('open');
