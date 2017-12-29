@@ -11,9 +11,10 @@ layout: index
         <div class="theme-chooser-options">
           {% for theme in site.data.themes.material %}
             <a href="void:javascript(0)"
-               class="theme {{ theme.className }}"
+               style="background: {{ theme.background }}"
+               class="theme {{ theme.className }} js-theme"
                title="{{ theme.name }}"
-               onclick="jekyllApp.setBodyClass('{{ theme.className }}')"></a>
+               data-theme-class="{{ theme.className }}"></a>
           {% endfor %}
         </div>
       </div>

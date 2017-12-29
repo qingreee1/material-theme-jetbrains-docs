@@ -1,4 +1,5 @@
 $.when($.ready).then(() => {
+  const THEME_KEY = 'material-theme';
   const jekyllApp = {
 
     setBodyClass(css) {
@@ -22,23 +23,39 @@ $.when($.ready).then(() => {
 
     init() {
       // todo load from local storage
-      this.setBodyClass('oceanic');
+      let theme = localStorage.getItem(THEME_KEY) || 'oceanic';
+      this.setBodyClass(theme);
 
       const $target = $('.doc');
       const $toc = $('.toc');
 
-      if (!$toc.length) { return; }
-
-      $toc.pushpin({
-        top: 284,
-        bottom: $target.offset().top + $target.outerHeight() - $toc.height(),
-        offset: 64,
-      });
+      if ($toc.length) {
+        $toc.pushpin({
+          top: 284,
+          bottom: $target.offset().top + $target.outerHeight() - $toc.height(),
+          offset: 64,
+        });
+      }
 
       // custom scroll spy (is that necessary?)
       this.scrollSpyOn('.doc', {nav: '.toc a'});
 
+      this.initThemeChooser();
+
       this.initSearch();
+    },
+
+    /**
+     * Init Theme Chooser events
+     */
+    initThemeChooser() {
+      $('.js-theme').on('click', (event) => {
+        const $el = $(event.target);
+        const themeClass = $el.data('themeClass');
+
+        this.setBodyClass(themeClass);
+        localStorage.setItem(THEME_KEY, themeClass);
+      });
     },
 
     initSearch() {

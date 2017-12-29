@@ -1,6 +1,7 @@
 'use strict';
 
 $.when($.ready).then(function () {
+  var THEME_KEY = 'material-theme';
   var jekyllApp = {
     setBodyClass: function setBodyClass(css) {
       var classList = document.getElementsByTagName('body')[0].classList;
@@ -22,25 +23,42 @@ $.when($.ready).then(function () {
     },
     init: function init() {
       // todo load from local storage
-      this.setBodyClass('oceanic');
+      var theme = localStorage.getItem(THEME_KEY) || 'oceanic';
+      this.setBodyClass(theme);
 
       var $target = $('.doc');
       var $toc = $('.toc');
 
-      if (!$toc.length) {
-        return;
+      if ($toc.length) {
+        $toc.pushpin({
+          top: 284,
+          bottom: $target.offset().top + $target.outerHeight() - $toc.height(),
+          offset: 64
+        });
       }
-
-      $toc.pushpin({
-        top: 284,
-        bottom: $target.offset().top + $target.outerHeight() - $toc.height(),
-        offset: 64
-      });
 
       // custom scroll spy (is that necessary?)
       this.scrollSpyOn('.doc', { nav: '.toc a' });
 
+      this.initThemeChooser();
+
       this.initSearch();
+    },
+
+
+    /**
+     * Init Theme Chooser events
+     */
+    initThemeChooser: function initThemeChooser() {
+      var _this = this;
+
+      $('.js-theme').on('click', function (event) {
+        var $el = $(event.target);
+        var themeClass = $el.data('themeClass');
+
+        _this.setBodyClass(themeClass);
+        localStorage.setItem(THEME_KEY, themeClass);
+      });
     },
     initSearch: function initSearch() {
       var search = instantsearch({
