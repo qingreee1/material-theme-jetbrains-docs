@@ -88,41 +88,39 @@ $.when($.ready).then(() => {
 
       search.addWidget(
         instantsearch.widgets.searchBox({
-          container: '#searchInput',
+          container: '#search',
+          magnifier: false,
+          reset: false,
         }),
       );
 
       search.addWidget(
         instantsearch.widgets.hits({
           container: '#hits',
-          hitsPerPage: 10,
+          hitsPerPage: 5,
+          cssClasses: {
+            root: 'search-results-hits',
+            empty: 'search-results-empty',
+            item: 'search-results-item',
+          },
           templates: {
-            item: '{{{_highlightResult.title.value}}}',
+            item: `
+              <p><b>{{{group}}}</b></p>
+              <p>{{{_highlightResult.title.value}}}</p>
+              <p>{{{description}}}</p>
+              `,
             empty: 'We didn\'t find any results for the search <em>"{{query}}"</em>',
           },
         }),
       );
 
-      search.addWidget(
-        instantsearch.widgets.pagination({
-          container: '#pagination',
-        }),
-      );
+      // search.addWidget(
+      //   instantsearch.widgets.pagination({
+      //     container: '#pagination',
+      //   }),
+      // );
 
       search.start();
-    },
-
-    showSearch() {
-      $('#search').addClass('open');
-      $('#search input').focus();
-      $('body').addClass('overflow');
-    },
-
-    closeSearch(event, elt) {
-      if (event.target === elt || event.target.className === 'close' || event.keyCode === 27) {
-        $('#search').removeClass('open');
-        $('body').removeClass('overflow');
-      }
     },
 
   };

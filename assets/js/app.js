@@ -95,34 +95,32 @@ $.when($.ready).then(function () {
       });
 
       search.addWidget(instantsearch.widgets.searchBox({
-        container: '#searchInput'
+        container: '#search',
+        magnifier: false,
+        reset: false
       }));
 
       search.addWidget(instantsearch.widgets.hits({
         container: '#hits',
-        hitsPerPage: 10,
+        hitsPerPage: 5,
+        cssClasses: {
+          root: 'search-results-hits',
+          empty: 'search-results-empty',
+          item: 'search-results-item'
+        },
         templates: {
-          item: '{{{_highlightResult.title.value}}}',
+          item: '\n              <p><b>{{{group}}}</b></p>\n              <p>{{{_highlightResult.title.value}}}</p>\n              <p>{{{description}}}</p>\n              ',
           empty: 'We didn\'t find any results for the search <em>"{{query}}"</em>'
         }
       }));
 
-      search.addWidget(instantsearch.widgets.pagination({
-        container: '#pagination'
-      }));
+      // search.addWidget(
+      //   instantsearch.widgets.pagination({
+      //     container: '#pagination',
+      //   }),
+      // );
 
       search.start();
-    },
-    showSearch: function showSearch() {
-      $('#search').addClass('open');
-      $('#search input').focus();
-      $('body').addClass('overflow');
-    },
-    closeSearch: function closeSearch(event, elt) {
-      if (event.target === elt || event.target.className === 'close' || event.keyCode === 27) {
-        $('#search').removeClass('open');
-        $('body').removeClass('overflow');
-      }
     }
   };
 

@@ -12,7 +12,8 @@
 {% endif %}
 
 <script src="{{ site.baseurl }}/assets/js/vendor/scrollspy.js"></script>
-<script src="{{ site.baseurl }}/assets/js/vendor/instantsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<!--<script src="{{ site.baseurl }}/assets/js/vendor/instantsearch.min.js"></script>
 
 <!-- scripts -->
 {% if jekyll.environment == "production" %}
@@ -24,7 +25,9 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108120618-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  
+  function gtag() {dataLayer.push(arguments);}
+  
   gtag('js', new Date());
   
   gtag('config', 'UA-108120618-1');

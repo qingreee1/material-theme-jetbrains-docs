@@ -6,7 +6,7 @@
   top: 0;
   background: white;
   z-index: 111;
-  overflow-y: auto;
+  overflow: visible;
   @include shadow(1);
   transition: .3s all ease;
 

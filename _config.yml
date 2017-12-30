@@ -13,11 +13,10 @@ plugins:
 - jekyll-paginate
 - jekyll-sitemap
 - jekyll-toc
-- algoliasearch-jekyll
 infinite_scroll: false
 
 twitter: mallowigi
-twutter2: crmag
+twitter2: crmag
 tag_dir: /tag
 category_dir: /category
 author_dir: /author
@@ -59,29 +58,33 @@ kramdown:
 relative_permalinks: false
 exclude:
   - .git
-  - .gitignore
-  - sass
+  - .gradle
+  - .idea
+  - config
+  - build
   - js
-  - vue
-  - .sass-cache
-  - package.json
-  - gruntfile.js
-  - browser-sync.js
-  - .postcssrc.js
   - node_modules
-  - webpack.config.js
-  - yarn.lock
+  - sass
+  - static
+  - vue
+  - .babelrc
+  - .editorconfig
+  - .eslintignore
+  - .eslintrc.js
+  - .gitignore
+  - .jekyll-metadata
+  - .postcssrc.js
+  - .travis.yml
+  - _algolia_api_key
+  - browser-sync.js
   - Gemfile
   - Gemfile.lock
-  - .eslintrc.js
-  - .eslintignore
-  - .editorconfig
-  - .babelrc
+  - gruntfile.js
   - LICENCE
-  - README.md
-  - jekyllbuild
-  - build
-  - src
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - yarn.lock
 sass:
   style: compressed
 collections:
@@ -103,3 +106,4 @@ cdn:
 algolia:
   application_id: 77GG697EBY
   index_name: localhost
+  extensions_to_index: ['md']
