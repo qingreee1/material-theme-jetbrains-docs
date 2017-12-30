@@ -9,6 +9,13 @@
     {% include logo-sidebar.html %}
   </div>
   
+  <div class="search">
+    <div class="search-wrapper card">
+      <input class="search-input"><i class="fa fa-search search-button"></i>
+      <div class="search-results"></div>
+    </div>
+  </div>
+  
   <nav class="sidebar-links">
     {% assign page_slug = page.url | split: '/' | last %}
     {% for group in site.data.nav %}
@@ -68,12 +75,5 @@
       </ul>
     {% endfor %}
   </nav>
-  
-  <!--<div class="search">
-    <div class="search-wrapper card">
-      <input id="search"><i class="fa fa-search">search</i>
-      <div class="search-results"></div>
-    </div>
-  </div>-->
 
 </aside>

@@ -1,0 +1,32 @@
+.search {
+  margin: 1em 0;
+  .search-wrapper {
+    margin: 0 1em;
+    transition: margin .25s ease;
+  }
+
+  .search-input {
+    display: block;
+    font-size: 1em;
+    font-weight: 300;
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: none;
+
+    &:active, &:focus {
+      border-bottom: 2px solid $accent-color;
+    }
+  }
+
+  .search-button {
+    position: absolute;
+    cursor: pointer;
+    color: $primary-text;
+    top: 0;
+    right: 0;
+    padding: 15px 13px;
+  }
+}
