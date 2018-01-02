@@ -105,20 +105,12 @@ $.when($.ready).then(() => {
           },
           templates: {
             item: `
-              <p><b>{{{group}}}</b></p>
               <p>{{{_highlightResult.title.value}}}</p>
-              <p>{{{description}}}</p>
               `,
             empty: 'We didn\'t find any results for the search <em>"{{query}}"</em>',
           },
         }),
       );
-
-      // search.addWidget(
-      //   instantsearch.widgets.pagination({
-      //     container: '#pagination',
-      //   }),
-      // );
 
       search.start();
     },

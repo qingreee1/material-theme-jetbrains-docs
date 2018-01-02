@@ -109,16 +109,10 @@ $.when($.ready).then(function () {
           item: 'search-results-item'
         },
         templates: {
-          item: '\n              <p><b>{{{group}}}</b></p>\n              <p>{{{_highlightResult.title.value}}}</p>\n              <p>{{{description}}}</p>\n              ',
+          item: '\n              <p>{{{_highlightResult.title.value}}}</p>\n              ',
           empty: 'We didn\'t find any results for the search <em>"{{query}}"</em>'
         }
       }));
-
-      // search.addWidget(
-      //   instantsearch.widgets.pagination({
-      //     container: '#pagination',
-      //   }),
-      // );
 
       search.start();
     }

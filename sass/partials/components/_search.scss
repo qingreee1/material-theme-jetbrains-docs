@@ -39,6 +39,7 @@
   .search-results {
     position: absolute;
     background: white;
+    color: $primary-text;
     z-index: 100;
     width: max-content;
     border-top: $line;
