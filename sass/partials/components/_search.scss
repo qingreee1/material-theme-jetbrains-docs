@@ -1,8 +1,14 @@
+$input-radius: 3Cpx;
 .search {
   margin: 1em 0;
   .search-wrapper {
     margin: 0 1em;
     transition: margin .25s ease;
+    border-radius: $input-radius;
+  }
+
+  .algolia-autocomplete {
+    width: 100%;
   }
 
   .search-input {
@@ -15,6 +21,7 @@
     box-sizing: border-box;
     border: 2px solid white;
     outline: none;
+    border-radius: $input-radius;
 
     &:active, &:focus {
       border-bottom: 2px solid $accent-color;

@@ -43,7 +43,7 @@ $.when($.ready).then(function () {
       this.initMenu();
       this.initThemeChooser();
       this.initSidebar();
-      this.initSearch();
+      // this.initSearch();
     },
 
 
