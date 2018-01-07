@@ -10,6 +10,8 @@ next:
   title: Configuration
 ---
 
+## Installation
+
 ### Plugin Manager
 
 The easiest way to install the Material Theme plugin is through IntelliJ's **plugin manager**. The plugin manager
@@ -52,7 +54,51 @@ Steps:
 The packed zip file is **not** generated automatically. We usually release it in every release alongside the repository plugin, but it is not always in sync
 with the plugin repository version. Therefore it's preferable to use the Plugin Manager.
 
-### Support
+----
+
+## Usage
+
+Once the plugin is installed, you will immediately notice that the color of your IDE changed to a nice oceanic blue color! But the Material Plugin is much more than that.
+
+### Setting the color scheme
+
+The first thing to set is to change the color scheme to fit your current _UI Theme_.
+
+To do so, open the `Quick Switch Panel` by typing `Ctrl + ``/Cmd + ~` and select `Color Scheme`. Besides the color schemes provided by the IDE and your own custom color schemes, you will find seven more color schemes provided by the plugin:
+- Material Oceanic
+- Material Darker
+- Material Lighter
+- Material Palenight
+- Material Monokai Pro
+- Material One Dark
+- Atom One Dark
+
+These schemes are adapted to the UI Theme of the same name, plus, for Atom One Dark, a complete port of the original [Atom One Dark](https://github.com/atom/one-dark-syntax) color scheme.
+
+You can see more in the [Color Schemes]({{site.baseurl}}/docs/configuration/color-schemes) section.
+
+### Configuring the plugin
+
+The plugin also comes with a bunch of configurable settings to suit all flavors. There you can disable certain features, change the colors, sizes and appearance of the elements and so on.
+
+These settings are found inside `Settings -> Appearance and Behavior -> Material Theme Settings`.
+
+{% include figure.html content="/screens/settings.png" caption="Material Theme Settings" %}
+
+Check [Settings]({{site.baseurl}}/docs/configuration/settings) for more info.
+
+### Material Theme Quick Panel
+
+Last but not least, the plugin is also providing 4 action groups to quickly customize the theme. These action groups are found in:
+- The IDE menu, under `Tools -> Material Theme`
+- The main toolbar, at the end of the toolbar
+- By invoking the `Quick Switch Panel`
+
+{% include figure.html content="/screens/toolbar.png" caption="Material Theme Toolbar" %}
+
+Check [Actions]({{site.baseurl}}/docs/reference/actions}}) for more info
+
+## Support
 
 The plugin is supported on all IDEs, but because of changes of the SDK specific versions are available only on latest builds:
 

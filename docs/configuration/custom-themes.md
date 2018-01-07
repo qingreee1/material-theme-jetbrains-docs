@@ -153,6 +153,10 @@ Color used in focused/primary buttons.
 
 Specific color used for selected items in trees.
 
+##### Notifications color
+
+Color used in the notification popups.
+
 -----
 
 ## Frequently Asked Questions
