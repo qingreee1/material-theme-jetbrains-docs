@@ -1,6 +1,6 @@
 material:
 - oceanic:
-  name: Default
+  name: Oceanic
   className: oceanic
   desc: An oceanic blue flat theme
   light: false

@@ -27,7 +27,11 @@
     @include flexbox(row, wrap, space-between, flex-start);
 
     &.contact > .col {
-      @include rowMachine(3, 1%, 25px)
+      @include rowMachine(3, 1%, 25px);
+
+      @media all and (max-width: $mobile-size) {
+        @include rowMachine(1, 1%, 25px)
+      }
     }
   }
 
@@ -39,7 +43,27 @@
   }
 
   .copyright {
+    display: block;
     line-height: 54px;
+    .copyright-authors {
+      display: inline-block;
+      @media all and (max-width: $mobile-size) {
+        display: none;
+      }
+    }
+    .copyright-all {
+      display: none;
+
+      @media all and (max-width: $mobile-size) {
+        display: inline-block;
+      }
+    }
+    .copyright-license {
+      float: right;
+      @media all and (max-width: $mobile-size) {
+        float: left;
+      }
+    }
   }
 
   .backtotop {

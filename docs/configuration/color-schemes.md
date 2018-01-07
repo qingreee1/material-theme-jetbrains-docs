@@ -33,7 +33,7 @@ There are multiple ways to change the color scheme:
 
 In this list you'll find all your installed color schemes alongside those provided by Jetbrains. The color schemes
 provided by the plugin are:
-- Material Default
+- Material Oceanic
 - Material Darker
 - Material Lighter
 - Material Palenight

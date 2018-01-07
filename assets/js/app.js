@@ -53,7 +53,7 @@ $.when($.ready).then(function () {
     initMenu: function initMenu() {
       var _this = this;
 
-      $('.js-menu-toggle').on('click', function (event) {
+      $('.js-menu-toggle').on('click touch', function (event) {
         _this.showMenu();
       });
     },
@@ -65,7 +65,7 @@ $.when($.ready).then(function () {
     initThemeChooser: function initThemeChooser() {
       var _this2 = this;
 
-      $('.js-theme').on('click', function (event) {
+      $('.js-theme').on('click touch', function (event) {
         var $el = $(event.target);
         var themeClass = $el.data('themeClass');
 
@@ -81,7 +81,7 @@ $.when($.ready).then(function () {
     initSidebar: function initSidebar() {
       var _this3 = this;
 
-      $('.js-sidebar-toggle').on('click', function (event) {
+      $('.js-sidebar-toggle').on('click touch', function (event) {
         _this3.toggleSidebar();
       });
     },

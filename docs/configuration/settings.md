@@ -92,7 +92,6 @@ You can configure many parts of the plugin features from the **plugin settings**
 - *Arrows Style*: Change the style of the arrows in trees
 
 **Component Settings**:
-* *Custom Wallpaper*: Set a custom wallpaper for the IDE frame
 - *Material Design components*: Enable/Disable Material Design components (Buttons, Progress Bars...)
 - *Material Icons*: Enable/Disable the Material Theme icons to the original ones
 - *Material Fonts*: Enable/Disable Material fonts (Roboto) and bigger font in sidebar.
@@ -229,4 +228,4 @@ persists, please report it in the Issues Section.
 **A**: This is an issue hard to resolve, because the *Custom Wallpaper* function is using the `Set Background image`
 function from the IDE behind the curtains. Therefore, removing the plugin might not remove the set image completely. If
 that occurs, you can remove the image by opening the Command Panel (Cmd-Shift-A/Ctrl-Shift-A) and type `Set Background
-image` and then manually remove the image.
+image` and then manually remove the image, or go into `Settings -> Appearance -> Background Image`.

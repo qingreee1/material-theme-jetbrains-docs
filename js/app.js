@@ -50,7 +50,7 @@ $.when($.ready).then(() => {
      * Init Menu events
      */
     initMenu() {
-      $('.js-menu-toggle').on('click', (event) => {
+      $('.js-menu-toggle').on('click touch', (event) => {
         this.showMenu();
       });
     },
@@ -59,7 +59,7 @@ $.when($.ready).then(() => {
      * Init Theme Chooser events
      */
     initThemeChooser() {
-      $('.js-theme').on('click', (event) => {
+      $('.js-theme').on('click touch', (event) => {
         const $el = $(event.target);
         const themeClass = $el.data('themeClass');
 
@@ -72,7 +72,7 @@ $.when($.ready).then(() => {
      * Init Sidebar events
      */
     initSidebar() {
-      $('.js-sidebar-toggle').on('click', (event) => {
+      $('.js-sidebar-toggle').on('click touch', (event) => {
         this.toggleSidebar();
       });
     },

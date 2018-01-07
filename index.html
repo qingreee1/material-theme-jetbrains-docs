@@ -10,11 +10,15 @@ layout: index
         <h3 class="theme-chooser-title section-title">Select a theme</h3>
         <div class="theme-chooser-options">
           {% for theme in site.data.themes.material %}
-            <a href="void:javascript(0)"
-               style="background: {{ theme.background }}"
-               class="theme {{ theme.className }} js-theme"
-               title="{{ theme.name }}"
-               data-theme-class="{{ theme.className }}"></a>
+            <div>
+              <a href="void:javascript(0)"
+                 style="background: {{ theme.background }}"
+                 class="theme {{ theme.className }} js-theme"
+                 title="{{ theme.name }}"
+                 data-theme-class="{{ theme.className }}">
+              </a>
+              <p class="theme-name">{{ theme.name }}</p>
+            </div>
           {% endfor %}
         </div>
       </div>

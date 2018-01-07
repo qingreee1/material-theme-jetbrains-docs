@@ -70,7 +70,10 @@ $themes: (
     }
 
     .screenshot {
-      background-image: url(../../img/#{$name}.png);
+      background: url(../../img/#{$name}.png), url(../../img/laptop.png);
+      background-repeat: no-repeat, no-repeat;
+      background-size: 75%, contain;
+      background-position: 50% 30%, top left;
       display: none;
 
       &.#{$name} {

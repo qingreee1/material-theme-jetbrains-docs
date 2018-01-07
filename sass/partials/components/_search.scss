@@ -61,4 +61,11 @@ $input-radius: 3px;
       }
     }
   }
+
+  .ds-dropdown-menu {
+    @media all and (max-width: $mobile-size) {
+      min-width: 300px;
+      max-width: $mobile-size;
+    }
+  }
 }
