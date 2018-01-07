@@ -96,7 +96,7 @@ Last but not least, the plugin is also providing 4 action groups to quickly cust
 
 {% include figure.html content="/screens/toolbar.png" caption="Material Theme Toolbar" %}
 
-Check [Actions]({{site.baseurl}}/docs/reference/actions}}) for more info
+Check [Actions]({{site.baseurl}}/docs/configuration/quick-actions-panel}}) for more info
 
 ## Support
 

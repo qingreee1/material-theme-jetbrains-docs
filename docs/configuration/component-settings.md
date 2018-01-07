@@ -10,8 +10,8 @@ previous:
   url: '/docs/configuration/panel-settings'
   title: Panel Settings
 next:
-  url: '/docs/configuration/excluded-files-colors'
-  title: Excluded File Colors
+  url: '/docs/configuration/quick-actions-panel'
+  title: Quick Actions Panel
 ---
 
 Here you can turn on and off specific features of the Material Theme for even further customization.
