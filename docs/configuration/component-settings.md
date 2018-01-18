@@ -161,11 +161,18 @@ These options control the appearance of the scrollbars. Note: This feature works
 ----
 ### Dark Title Bar
 
+##### Mac OSX
 Dark Title bar is an experimental feature to set a dark title bar to the application for dark themes (such as Material Oceanic, Palenight, Darker). It is experimental because it depends on a feature that could disappear in the future as it is an experimental feature even in the IDE.
 
 {% include figure.html content="/screens/customTheme.png" caption="Dark title bar" %}
 
-Note that this works only for Mac and only from 2017.3+ versions. It doesn't work on Android Studio yet.
+Note that this works only for 2017.3+ versions. It doesn't work on Android Studio yet.
+
+##### Windows 10
+
+This setting also allows the theming of the application title bar in Windows 10. To do so, it is actually setting the [Windows Accent Color](https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/) set by Windows.
+
+**Note**: Since this modifies the color OS-wide, the color set by the plugin will stick even if you close the IDE/uninstall the plugin. Just follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/ to set it to another color of your choice.
 
 -----
 ## FAQ/Troubleshooting
@@ -179,3 +186,4 @@ Note that this works only for Mac and only from 2017.3+ versions. It doesn't wor
 **A**: This happens because this is not a feature implemented by the plugin, but instead makes use of a feature implemented by the IDE. Theoretically it should disable these settings on project unloading, therefore when uninstalling the plugin. But if for some reason it doesn't happen, here is how you can disable them manually:
 - Open Command Panel (Cmd+Shift-A/Ctrl-Shift-A) and type `Registry`
 - Look for keys `bigger.fonts.in.project.view` or `ide.mac.allowDarkDecorations` and set them to false.
+- Change the color of the title bar in Windows by following the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/
