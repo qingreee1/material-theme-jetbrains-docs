@@ -30,11 +30,6 @@ Steps:
 
 <img src="{{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/listplugin.png">
 
-**Note**:
-You can also install the [`Material Theme UI EAP`](https://github.com/mallowigi/material-theme-jetbrains-eap) instead.
-This is a version of the plugin that contains features in active development, but might contain bugs.
-If you're open to help beta-testing the plugin, download it and report any bugs you find.
-
 ### Manual Installation
 
 If for some reason you don't want to use the plugin repository, or if you want to run your fork of the plugin, you can decide to install it manually.

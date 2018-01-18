@@ -1,7 +1,7 @@
 - name: red
   dark: '#ff5370'
   light: '#e53935'
-  tags: [field, property, invalid]
+  tags: [invalid]
 
 - name: pink
   dark: '#f07178'

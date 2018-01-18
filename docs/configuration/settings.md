@@ -88,6 +88,7 @@ You can configure many parts of the plugin features from the **plugin settings**
 - *Custom Tree Indent*: Increase or reduce indentation in the sidebar (min: 2, max: 8)
 - *Bold directories*: Set bold font weight for directories in the Project View
 - *Compact Status Bar*: Reduce the height of the status bar (this is the default height)
+- *Compact Table Cells*: Reduce the height of table headers and table cells
 - *Custom Accent Color*: Set a custom color for accent color
 - *Arrows Style*: Change the style of the arrows in trees
 
@@ -100,7 +101,7 @@ You can configure many parts of the plugin features from the **plugin settings**
 * *Theme in Statusbar*: Add an indicator for the currently selected theme in the statusbar.
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
 - *Accent Scrollbars*: Set the color of the scrollbars to the accent color
-- *Dark Title Bar*: Set dark title bar for dark themes (only for Mac)
+- *Dark Title Bar*: Theme the application title bar (only for Mac and Windows)
 
 #### Settings shortcuts
 
@@ -170,6 +171,8 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <option name="isBoldTabs" value="true" />
   <!-- Compact status bar enabled -->
   <option name="isCompactStatusBar" value="false" />
+  <!-- Compact table cells enabled -->
+    <option name="isCompactTableCells" value="false" />
 
   <!-- Accent color -->
   <option name="accentColor" value="80cbc4" />
@@ -229,3 +232,11 @@ persists, please report it in the Issues Section.
 function from the IDE behind the curtains. Therefore, removing the plugin might not remove the set image completely. If
 that occurs, you can remove the image by opening the Command Panel (Cmd-Shift-A/Ctrl-Shift-A) and type `Set Background
 image` and then manually remove the image, or go into `Settings -> Appearance -> Background Image`.
+
+**Q**: The title bar is sweet! But now all my applications, not only Jetbrains IDE, have the colored title bar! Plus, when I close the IDE/disable/uninstall the plugin, the title bar stays the same! Help! (Note: I'm on Windows)
+
+**A**: The Dark Title Bar option is indeed changing the title bar accent color OS-wide, therefore it sticks even when the IDE is closed/uninstalled. If you want to change it back, follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/
+
+**Q**: The dark title bar on Mac sticks as well!
+
+**A**: As for the Mac Title bar, it is triggered using the IDE Registry. Just open the Command Palette (Cmd-Shift-A) and type `Registry`. Then you will see at the top the edited values. Simply press Revert to those you don't want.
