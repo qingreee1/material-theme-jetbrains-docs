@@ -24,10 +24,6 @@ The Material Theme plugin comes with a set of beautiful prebundled themes, suite
 As of version 0.10.0, the plugin is giving the ability to do so by offering two "_boilerplate themes_", `Custom Theme` and `Light Custom Theme`, respectively based on `Material Oceanic` and `Material Lighter`, with the ability to customize most of the colors used by the themes!
 
 
-Disclaimer: While this feature works relatively well, it breaks the _Theme switching_ feature, meaning that once you select a custom theme, if you switch to a bundled theme you will need to restart the IDE/close project to apply all colors.
-{:class='card-panel warn'}
-
-
 ## Configuration
 
 ### Settings
@@ -46,9 +42,6 @@ According to your current selected Look And Feel (`Darcula` or `IntelliJ`) you w
 
 
 Once you're done customizing your colors, you'll need to select **Custom Theme** or **Light Custom Theme** from the _Theme Switcher_ to see your colors in action. Enjoy!
-
-**Note**: Just like switching themes, changing custom theme colors after selecting a custom theme will **not** be applied to **all** components until the next restart or project close. Keep that in mind when designing themes!
-{:class='card-panel warn'}
 
 ----
 ### Colors Explanation
@@ -164,10 +157,6 @@ Color used in the notification popups.
 **Q**: Can I use more than one custom theme?
 
 **A**: No you can't. If you're confident with your theme, you can fork the project and submit a pull request with your theme as a predefined theme, or submit your theme in the form (not available yet).
-
-**Q**: Why should I restart the IDE for every change?
-
-**A**: There is currently a bug where changing the main components color prevents it from future changes, unless the whole UI is unloaded, which occurs when closing the project or restarting the IDE.
 
 **Q**: Where is stored my custom theme colors?
 

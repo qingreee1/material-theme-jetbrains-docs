@@ -87,10 +87,3 @@ In addition, other one-time actions are available in this panel, which are:
 Please note that this is a setting that affects the whole IDE settings, so actions such as removing/disabling the plugin will not get rid of the background image. You can do so in `Settings -> Appearance -> Background Image`.
 {:class='card-panel warn'}
 
-- _Patch Tool Window Header_: This will patch the Tool Window Header to change its background color to the one of the current UI Theme.
-
-Note: Because this is a patch and not a real fix, this feature is up to users to activate it feature or not. This patch works ok on MacOS but is giving pretty ugly results on other OSes (see [#565](https://github.com/ChrisRM/material-theme-jetbrains/issues/565)) so it's up to you until a real fix is available.
-{:class='card-panel warn'}
-
-
-
