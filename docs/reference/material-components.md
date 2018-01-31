@@ -8,6 +8,10 @@ comments: true
 previous:
   url: '/docs/reference/file-icons'
   title: File Icons
+
+next:
+  url: '/docs/development/installation'
+  title: Installation
 ---
 
 This is a reference of all the components customized by the plugin
