@@ -121,20 +121,6 @@ $.when($.ready).then(() => {
   jekyllApp.init();
 
   window.jekyllApp = jekyllApp;
-  //
-  //   // Back to top link
-  //   $('.backtotop').click(function () {
-  //     $('body,html').animate({
-  //       scrollTop: 0,
-  //     }, 500);
-  //     return false;
-  //   });
-  //
-  //   // Responsive Menu
-  //   $('.toggle-link').click(function () {
-  //     $('.menu').toggleClass('active');
-  //   });
-  //
 
   //
   //
