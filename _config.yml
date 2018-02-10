@@ -24,8 +24,8 @@ author_title_prefix: 'Posted by '
 media_folder: /img
 img_folder: /img
 author_default_avatar: /profile-pic.jpeg
-github: https://github.com/mallowigi/material-theme-jetbrains-eap
-version: 1.8.0
+github: https://github.com/chrisrm/material-theme-jetbrains
+version: 1.6.0
 year: 2015-2018
 social_image_path:  /assets/media/compressed/brand/material-logo.png
 social_logo_path:   /assets/media/compressed/brand/material-social-logo.png

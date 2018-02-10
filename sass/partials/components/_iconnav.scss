@@ -1,18 +1,8 @@
-// social media and search icon container within main menu
 .iconnav {
-
-  // hide some of the icons once there is not enough space
-  @media screen and (max-width: 368px) {
-    .tumblr,
-    .instagram,
-    .twitter,
-    .youtube {
-      display: none;
-    }
-  }
-
+  display: flex;
   ul {
     list-style: none;
+    padding: 0;
 
     li {
       list-style: none;
@@ -21,6 +11,12 @@
       a {
         padding: 0 3px;
       }
+    }
+  }
+
+  @media all and (max-width: $mobile-size) {
+    .github-nav {
+      display: none;
     }
   }
 }

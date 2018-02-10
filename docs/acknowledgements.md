@@ -96,6 +96,10 @@ Thanks also to [@yonnyz](https://twitter.com/yonnyz) for the logo and theme icon
 
 I also want to thank the guys at [Gridster Digitalmind](http://gridster.digitalmind.ch/) with their ++Material Jekyll template++ which was a solid base for the documentation design.
 
+Thanks also for the guys at [Materialize CSS](http://materializecss.com) for the CSS and Javascript used in this documentation, as well as their beautiful website design.
+
+Thanks for [Algolia](https://community.algolia.com/docsearch/) for the implementation of the search component and its easy installation.
+
 And of course thanks to Jetbrains for their IDEs, Google for their Material Design, Disqus for the comments plugin, Travis CI, JFormDesigner for the UI Designer plugin, [Vladsch](http://vladsch.com/product/markdown-navigator) for his Markdown navigator plugin, and of course all the other plugin creators for the plugins I use for development.
 
 #### Pledgers
