@@ -1,10 +1,10 @@
 // 🎌 BROWSER-SYNC FOR AUTO RELOAD JAZZ-PLUS A BETTER IMPLEMENTATION OF EXTENSIONLESS URLS 🎌
 module.exports = {
   server: {
-    baseDir:'jekyllbuild',
+    baseDir: 'jekyllbuild',
     routes: {
-      '/material-theme-jetbrains-eap': 'jekyllbuild'
-    }
+      '/': 'jekyllbuild',
+    },
   },
   port: '8080',
   open: false,
@@ -14,5 +14,5 @@ module.exports = {
   ],
   serveStaticOptions: {
     extensions: ['html'],
-  }
+  },
 };
