@@ -10,7 +10,7 @@ previous:
   url: '/docs/reference/color-palette'
   title: Color Palette
 next:
-  url: '/docs/reference/material-components'
+  url: '/docs/reference/components'
   title: Components
 ---
 

@@ -7,7 +7,7 @@ toc: true
 comments: true
 
 previous:
-  url: '/docs/reference/material-components'
+  url: '/docs/reference/components'
   title: Material Components
 
 next:
