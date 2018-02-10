@@ -100,6 +100,58 @@ Thanks also for the guys at [Materialize CSS](http://materializecss.com) for the
 
 Thanks for [Algolia](https://community.algolia.com/docsearch/) for the implementation of the search component and its easy installation.
 
+Thanks also to all the [contributors](https://github.com/ChrisRM/material-theme-jetbrains/graphs/contributors) that helped in the development!
+
 And of course thanks to Jetbrains for their IDEs, Google for their Material Design, Disqus for the comments plugin, Travis CI, JFormDesigner for the UI Designer plugin, [Vladsch](http://vladsch.com/product/markdown-navigator) for his Markdown navigator plugin, and of course all the other plugin creators for the plugins I use for development.
 
 #### Pledgers
+
+Last but not least, a big thanks to all the backers! Thanks to their contribution I've been able to purchase a license for the IDEs and plugins to help me work better and spread the word.
+
+Young-rok Ko
+Andrew Rudge
+SaltWorthMedia
+Boaz Rymland
+Ross van Zyl
+Matteo Antoci
+Oleg Shalygin
+Katagiri Eito
+David Shepherd
+Kenechi Egbuna
+Shang Wang
+Frank Wolf
+Michail Athanasakis
+王 玉成
+blandland
+Scott Bickell
+Resist Apps LLC
+Seong Jun Ghong
+Tomas Norre Mikkelsen
+Kiwoon Kwon
+Joseph Burling
+Pascal Jordin
+Adrian Rios Francia
+Robert Ekendahl
+Jorge Martinez Ayala
+Steven Evans
+Edward Kniazycki
+Drankin Alexander
+Luis Landero Palacios
+TheMasteringStudio.com
+Nick Cernis
+Marius Ileana
+Dragan Bajcic
+Alex Yelskiy
+Brian Salomon
+Adrian de la Rosa Bretin
+Multiaki
+trekmode
+Lucas Gray
+Makcim Cherniy
+Donald Sipe
+Jacob Falk Christensen
+Andre Monteiro
+Huyanh Hoang
+David Xie
+Marcus Brito
+Jinseoung Lee
