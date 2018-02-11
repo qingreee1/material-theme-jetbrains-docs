@@ -27,3 +27,5 @@ assets/js/app.js
 assets/js/app.js.map
 vue/bundle.js
 assets/media
+/_algolia_api_key
+/package-lock.json
