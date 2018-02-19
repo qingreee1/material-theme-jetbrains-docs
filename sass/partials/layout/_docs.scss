@@ -14,6 +14,12 @@
     @media all and (max-width: $mobile-size) {
       padding: 1rem 4px;
     }
+
+    .docs-subtitle {
+      font-size: 2.28rem;
+      margin: 1.14rem 0 .912rem 0;
+      line-height: 2.508rem;
+    }
   }
 
   .doc {
