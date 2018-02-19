@@ -3,7 +3,8 @@ incremental: true
 source: "."
 destination: "./jekyllbuild"
 name: Material Theme
-description: Material Theme for Jetbrains
+description: "Material Theme plugin for Jetbrains IDEs: A Material Design experience for your IDE."
+author: "Elior Boukhobza (Mallowigi) and Chris Magnussen (ChrisRM)"
 url: http://www.material-theme.com
 baseurl: ""
 permalink: /:title/
