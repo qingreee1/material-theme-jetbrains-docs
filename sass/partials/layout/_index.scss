@@ -28,7 +28,7 @@
   }
 
   .post-article,
-  .feature_description {
+  .post-content {
     text-align: center;
   }
 
@@ -37,11 +37,11 @@
     padding: 10px 0;
   }
 
-  .feature_caption {
+  .post-caption {
     color: $title-color;
   }
 
-  .feature_img--svg {
+  .post-featimg-svg {
     padding: 0 30%;
   }
 

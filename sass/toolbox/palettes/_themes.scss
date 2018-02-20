@@ -59,7 +59,7 @@ $themes: (
     .logo-caption,
     .section-title,
     .post-title,
-    .feature_caption {
+    .post-caption {
       color: map-get($theme, "fg");
       fill: map-get($theme, "fg");
     }
