@@ -36,10 +36,10 @@ The parts that are affected by the contrast change are:
 #### Color Palette
 
 {% for theme in site.data.themes.material  %}
-{% include color.html color=theme %}
+{% include color.html color=theme field='contrast' %}
 {% endfor %}
 {% for theme in site.data.themes.other  %}
-{% include color.html color=theme %}
+{% include color.html color=theme field='contrast' %}
 {% endfor %}
 
 ----

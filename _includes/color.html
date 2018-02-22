@@ -12,8 +12,8 @@
     </div>
   {% else if theme %}
     <div class="collection-item color"
-         title="{{ theme.contrast }}"
-         style="background: {{ theme.contrast }};{% unless theme.light %}color: white;{% endunless %}">
+         title="{{ theme[include.field] }}"
+         style="background: {{ theme[include.field] }};{% unless theme.light %}color: white;{% endunless %}">
       <span class="color-name">{{ theme.name | capitalize }}</span>
     </div>
   {% endif %}

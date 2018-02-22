@@ -16,7 +16,7 @@ next:
 ---
 
 This section will explain how to set up your development environment.
-{:class = 'title'}
+{:class='title'}
 
 ## Getting Started
 

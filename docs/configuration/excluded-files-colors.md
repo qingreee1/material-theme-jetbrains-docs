@@ -79,9 +79,12 @@ See more at [File Colors](https://www.jetbrains.com/help/idea/2017.3/file-colors
 -----
 ## Material File Colors
 
+**Update (02/22/18)**: Since version 1.8.2, the plugin is currently overriding the default *Non-Project Files* Color with the current theme's disabled color when the application starts, so there is no need to install the File Colors manually. Of course if you already changed the color it will not be applied.
+{:class='card-panel'}
+
 This is pretty neat, but the actual prebundled File Colors are adapted for the _Darcula/IntelliJ_ look and feels, not for the Material Themes.
 
-To remedy this, the Material Theme is also coming prebundled with File Colors, specifically for ++Excluded files++.
+To remedy this, the Material Theme is also coming prebundled with File Colors, specifically for **Excluded files**.
 
 However, because the _File Colors_ are user settings, and because the user could very possibly have modified the default Excluded Files' file colors, the plugin could not override this setting with a better suited color. Therefore, the plugin is bundled with **additional** excluded files colors, one for each theme.
 
@@ -107,6 +110,6 @@ These are not installed automatically, as people not necessarily want this setti
 -----
 ## Color Reference
 
-{% for color in page.colors %}
-{% include color.html color=color %}
+{% for theme in site.data.themes.material %}
+{% include color.html color=theme field="inactive" %}
 {% endfor %}
