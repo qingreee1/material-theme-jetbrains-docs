@@ -108,50 +108,8 @@ And of course thanks to Jetbrains for their IDEs, Google for their Material Desi
 
 Last but not least, a big thanks to all the backers! Thanks to their contribution I've been able to purchase a license for the IDEs and plugins to help me work better and spread the word.
 
-Young-rok Ko
-Andrew Rudge
-SaltWorthMedia
-Boaz Rymland
-Ross van Zyl
-Matteo Antoci
-Oleg Shalygin
-Katagiri Eito
-David Shepherd
-Kenechi Egbuna
-Shang Wang
-Frank Wolf
-Michail Athanasakis
-王 玉成
-blandland
-Scott Bickell
-Resist Apps LLC
-Seong Jun Ghong
-Tomas Norre Mikkelsen
-Kiwoon Kwon
-Joseph Burling
-Pascal Jordin
-Adrian Rios Francia
-Robert Ekendahl
-Jorge Martinez Ayala
-Steven Evans
-Edward Kniazycki
-Drankin Alexander
-Luis Landero Palacios
-TheMasteringStudio.com
-Nick Cernis
-Marius Ileana
-Dragan Bajcic
-Alex Yelskiy
-Brian Salomon
-Adrian de la Rosa Bretin
-Multiaki
-trekmode
-Lucas Gray
-Makcim Cherniy
-Donald Sipe
-Jacob Falk Christensen
-Andre Monteiro
-Huyanh Hoang
-David Xie
-Marcus Brito
-Jinseoung Lee
+<div markdown="0" class="multi-column-3">
+{% for contributor in site.data.contributors %}
+<li>{{ contributor.name }}</li>
+{% endfor %}
+</div>
