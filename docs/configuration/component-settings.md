@@ -58,6 +58,17 @@ This is because currently these components are not as themeable as the other one
 - _Padded Statusbar_: The statusbar will revert to its default, compact design.
 
 ----
+
+### Uppercase buttons
+
+This setting sets the text of the buttons to be uppercase, just like the Material Design buttons. This is optimal for a full-fledged Material Design Experience.
+
+{% include figure.html content="/screens/uppercaseButtons.png" caption="Uppercase Buttons" %}
+
+**Note**: Because the UI was originally intended to be used with regular cased buttons, some buttons with longer text will have their text overflowing outside of the button. Since it's not possible to control the size of such buttons, there is no possibility to fix this. However, such cases are quite rare, but if it's absolutely bothers you, you can still disable this feature via this option.
+{:class='card-panel warn'}
+
+----
 ### Material Icons
 
 This setting toggles the replacement of the icons provided by the plugin. Specifically this disables:
@@ -83,7 +94,7 @@ This setting switches the default font used in the editor with the usual font us
 
 This setting changes the font you see in *Settings -> Appearance and Behavior -> Appearance*. When unchecked, it will restore the original default font, e.g. `Tahoma` in Windows, `SF_Text` in Mac and `Lucida Sans` in Linux. When checked, it will replace it with `Roboto` (only if the font is already installed in the machine though).
 
-This setting is also making the font in the Project View to be ++slightly bigger (2px more)++.
+This setting is also making the font in the Project View to be __slightly bigger (2px more)__.
 
 **Note**: This setting is requiring that **default fonts are not overriden**, e.g. that the setting at `Appearance and Behavior -> Appearance -> Override default font` is unchecked, in which case it will use the font set there.
 {:class='card-panel'}
@@ -159,7 +170,7 @@ These options control the appearance of the scrollbars. Note: This feature works
 **Note 2**: Accent colors are set at the start of the application. If you change the accent color, you will need a full restart to see it reflected on the scrollbars. Same for the _Transparent Scrollbars_, if you switch themes you will need a full restart to see it taking the new theme's color.
 
 ----
-### Dark Title Bar
+### Dark/Themed Title Bar
 
 ##### Mac OSX
 Dark Title bar is an experimental feature to set a dark title bar to the application for dark themes (such as Material Oceanic, Palenight, Darker). It is experimental because it depends on a feature that could disappear in the future as it is an experimental feature even in the IDE.
