@@ -138,21 +138,6 @@ module.exports = function (grunt) {
       },
     },
 
-    buildcontrol: {
-      options: {
-        dir: 'jekyllbuild',
-        commit: true,
-        push: true,
-        message: 'Built jekyllbuild from commit %sourceCommit% on branch %sourceBranch%',
-      },
-      pages: {
-        options: {
-          remote: 'git@github.com:mallowigi/material-theme-jetbrains-eap.git',
-          branch: 'master',
-        },
-      },
-    },
-
     exec: {
       jekyllServe: {
         command: 'jekyll serve  --no-watch',
