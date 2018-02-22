@@ -116,6 +116,15 @@ Just like the status bar, table cells, table headers and list views were also gi
 This setting allows you to revert to the old, "_compact_" style. This can be useful if you have lots of items and don't want to scroll endlessly.
 
 ----
+### Compact Dropdown Lists
+
+This setting allows you to reduce the size of the dropdowns used in the UI to be more compact.
+
+{% include figure.html content="/screens/notCompactDropdowns.png" caption="Regular Dropdowns" %}
+
+{% include figure.html content="/screens/compactDropdowns.png" caption="Compact Dropdowns" %}
+
+----
 ### Bold Directories
 
 This setting allows you to set directories in the _Project View_ in **bold**. This could be useful to immediately differentiate between files and directories (default off).
