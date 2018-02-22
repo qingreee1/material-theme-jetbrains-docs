@@ -13,19 +13,6 @@ next:
   url: '/docs/configuration/component-settings'
   title: Component Settings
 
-colors:
-  - name: default
-    color: '#1E272C'
-    light: false
-  - name: darker
-    color: '#1A1A1A'
-    light: false
-  - name: lighter
-    color: '#F4F4F4'
-    light: true
-  - name: palenight
-    color: '#202331'
-    light: false
 ---
 
 These settings control the customization of various parts of the IDE, such as the tool windows, status bar, icons or  the components' colors.
@@ -48,11 +35,26 @@ The parts that are affected by the contrast change are:
 
 #### Color Palette
 
-{% for color in page.colors %}
-{% include color.html color=color %}
+{% for theme in site.data.themes.material  %}
+{% include color.html color=theme %}
+{% endfor %}
+{% for theme in site.data.themes.other  %}
+{% include color.html color=theme %}
 {% endfor %}
 
+----
+### Monochrome Icons
 
+This option allows you to apply a monochrome filter to the whole IDE, just like the color blindness filter. This is ideal for people who don't like the avalanche of colors provided by the different icons.
+
+{% include figure.html content="/screens/monochrome.png" caption="Monochrome Icons" %}
+
+By applying this filter, all icons will be filtered with a shade of the primary color (e.g. the color of the items in the Project View for instance) of the current theme.
+
+Note: This setting not only filters out the toolbar and file icons, but even tool window icons, debugger icons, etc...
+{:class='card-panel warn'}
+
+----
 ### Hide File Icons
 
 This option allows you to _completely hide_ the file icons from the IDE. This means from the _Project Tree_, Tabs, Dialogs and everything. This does not remove folders, though.
