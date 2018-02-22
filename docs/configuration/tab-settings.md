@@ -78,6 +78,18 @@ The allowed values are between `18` to `60` pixels, where the default recommende
 
 There is no reset button, but there is an action in the `Material Toolbar` that resets the value to its default value, `50`.
 
+### Tab Opacity
+
+This quite obscure setting is made for people using the [File Colors](https://www.jetbrains.com/help/idea/file-colors.html) feature in tabs but want to have the theme colors in their tab as well without disabling the option completely.
+
+This allows them to adjust the **opacity** of the applied file colors.
+
+{% include figure.html content="/screens/opaqueColor.png" caption="Opaque Color" %}
+
+{% include figure.html content="/screens/semitransparent.png" caption="Semi Transparent Color" %}
+
+{% include figure.html content="/screens/transparenter.png" caption="Transparenter Color" %}
+
 ----
 ## Other Tweaks
 
