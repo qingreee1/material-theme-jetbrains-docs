@@ -80,19 +80,23 @@ You can configure many parts of the plugin features from the **plugin settings**
 - *Active Tab Highlight*: Customize active tab indicator color and thickness (works also for the Project View selected row)
 - *Tabs Height*: Set a custom height for tabs (between 25 and 60 pixels)
 - *Uppercase Bold Tabs*: Set the Editor Tabs in Bold Upper Case
+- *Tab Color Opacity*: Adjust the opacity of the custom colors in tabs (for File Colors)
 
 **Panel Settings**:
 * *Contrast Mode*: Add contrast to some of the IDE's components
+* *Monochrome Icons*: Set the whole IDE to a single shade of the current theme's primary color
 - *Hide Icons*: Hide file icons (you must have Material Icons options on)
 - *Custom Sidebar Height*: Set a custom line height in Project View (min: 18, max: 30)
 - *Custom Tree Indent*: Increase or reduce indentation in the sidebar (min: 2, max: 8)
 - *Bold directories*: Set bold font weight for directories in the Project View
 - *Compact Status Bar*: Reduce the height of the status bar (this is the default height)
 - *Compact Table Cells*: Reduce the height of table headers and table cells
+- *Compact Dropdown Lists*: Reduce the size of the dropdowns
 - *Custom Accent Color*: Set a custom color for accent color
 - *Arrows Style*: Change the style of the arrows in trees
 
 **Component Settings**:
+- *Uppercase buttons*: Set the buttons' texts to uppercase
 - *Material Design components*: Enable/Disable Material Design components (Buttons, Progress Bars...)
 - *Material Icons*: Enable/Disable the Material Theme icons to the original ones
 - *Material Fonts*: Enable/Disable Material fonts (Roboto) and bigger font in sidebar.
@@ -101,7 +105,8 @@ You can configure many parts of the plugin features from the **plugin settings**
 * *Theme in Statusbar*: Add an indicator for the currently selected theme in the statusbar.
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
 - *Accent Scrollbars*: Set the color of the scrollbars to the accent color
-- *Dark Title Bar*: Theme the application title bar (only for Mac and Windows)
+- *Dark Title Bar*: (OSX only): set a dark title bar
+- *Themed Title Bar*: Colorize the title bar of the whole OS with the current theme's background color
 
 #### Settings shortcuts
 
@@ -152,10 +157,14 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <option name="tabsHeight" value="50" />
   <!-- Bold and uppercase tabs enabled -->
   <option name="upperCaseTabs" value="true" />
+  <!-- Tab Opacity -->
+  <option name="tabOpacity" value="50" />
 
   <!-- Contrast mode enabled -->
   <option name="isContrastMode" value="false" />
-  <!-- File icons hidden -->
+  <!-- Monochrome icons -->
+  <option name="monochromeIcons" value="false" />
+ <!-- File icons hidden -->
   <option name="hideFileIcons" value="false" />
   <!-- Custom tree indent enabled -->
   <option name="isCustomTreeIndentEnabled" value="false" />
@@ -172,7 +181,9 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <!-- Compact status bar enabled -->
   <option name="isCompactStatusBar" value="false" />
   <!-- Compact table cells enabled -->
-    <option name="isCompactTableCells" value="false" />
+  <option name="isCompactTableCells" value="false" />
+  <!-- Compact dropdowns enabled -->
+  <option name="isCompactDropdowns" value="false" />
 
   <!-- Accent color -->
   <option name="accentColor" value="80cbc4" />
@@ -180,6 +191,8 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <!-- Arrows style -->
   <option name="arrowsStyle" value="Material" />
 
+  <!-- Uppercase buttons -->
+  <option name="uppercaseButtons" value="true" />
   <!-- Material components enabled -->
   <option name="isMaterialDesign" value="true" />
   <!-- Material and File icons enabled -->
@@ -199,7 +212,7 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
     <option name="accentScrollbars" value="true" />
     
     <!-- Dark Title Bar -->
-    <option name="darkTitleBar" value="true" />
+    <option name="darkTitleBar" value="false" />
         
 </component>
 
@@ -240,3 +253,7 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 **Q**: The dark title bar on Mac sticks as well!
 
 **A**: As for the Mac Title bar, it is triggered using the IDE Registry. Just open the Command Palette (Cmd-Shift-A) and type `Registry`. Then you will see at the top the edited values. Simply press Revert to those you don't want.
+
+**Q**: The uppercase buttons are nice, but sometimes the text overflows the button
+
+**A**: This is because the buttons were designed primarily to be regular cased, therefore changing the case might extend the length of the text and therefore overflows outside of the button. This is quite uncommon though so if it bothers you that much, simply disable the feature.

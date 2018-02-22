@@ -34,20 +34,16 @@ Steps:
 
 If for some reason you don't want to use the plugin repository, or if you want to run your fork of the plugin, you can decide to install it manually.
 
-<a href="https://github.com/ChrisRM/material-theme-jetbrains/archive/master.zip">
+<a href="https://plugins.jetbrains.com/plugin/8006-material-theme-ui">
   <button class="btn">Download <icon class="fa fa-download"></icon></button>
 </a>
 
 Steps:
-1. Download the zip archive of the plugin.
-2. Open Plugins settings (`Preferences -> Plugins`)
-3. Instead of selecting `Browse repositories`, select **Install plugin from disk** and select the zip file.
-4. Click OK and restart the IDE.
-
-**Note**:
-
-The packed zip file is **not** generated automatically. We usually release it in every release alongside the repository plugin, but it is not always in sync
-with the plugin repository version. Therefore it's preferable to use the Plugin Manager.
+1. Select the version you want to install. Please note the _Compatible Builds_ column to ensure that your IDE is compatible with the selected version.
+2. Download the zip archive of the plugin.
+3. Open Plugins settings (`Preferences -> Plugins`)
+4. Instead of selecting `Browse repositories`, select **Install plugin from disk** and select the zip file.
+5. Click OK and restart the IDE.
 
 ----
 
@@ -60,13 +56,18 @@ Once the plugin is installed, you will immediately notice that the color of your
 The first thing to set is to change the color scheme to fit your current _UI Theme_.
 
 To do so, open the `Quick Switch Panel` by typing `Ctrl + ``/Cmd + ~` and select `Color Scheme`. Besides the color schemes provided by the IDE and your own custom color schemes, you will find seven more color schemes provided by the plugin:
-- Material Oceanic
-- Material Darker
-- Material Lighter
-- Material Palenight
-- Material Monokai Pro
-- Material One Dark
-- Atom One Dark
+
+Material Themes:
+
+{% for theme in site.data.themes.material %}
+- {{theme.name}}
+{% endfor %}
+
+Other Themes:
+
+{% for theme in site.data.themes.other %}
+- {{theme.name}}
+{% endfor %}
 
 These schemes are adapted to the UI Theme of the same name, plus, for Atom One Dark, a complete port of the original [Atom One Dark](https://github.com/atom/one-dark-syntax) color scheme.
 
