@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     transition: .3s all ease-in-out;
-    padding: 100px 10px 0; // adjust to change header height
+    padding: 60px 10px 0; // adjust to change header height
     text-align: center;
     box-sizing: border-box;
     overflow: hidden;
@@ -34,6 +34,17 @@
       font-weight: bold;
       text-transform: uppercase;
       transition: .3s all ease-in-out;
+    }
+
+    @media screen and (max-width: $from-noslogan-to-icon) {
+      padding-top: 30px;
+    }
+  }
+
+  .content {
+    @media screen and (max-width: $from-noslogan-to-icon) {
+      padding-right: 1em;
+      width: 100%;
     }
   }
 }

@@ -12,6 +12,10 @@
     p {
       padding: 0;
     }
+
+    @media screen and (max-width: $from-noslogan-to-icon) {
+      padding: 20px 0;
+    }
   }
 
   .index & h1,

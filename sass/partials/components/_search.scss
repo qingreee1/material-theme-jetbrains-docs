@@ -9,6 +9,11 @@ $input-radius: 3px;
     @media all and (max-width: $mobile-size) {
       margin: 0;
       width: 50vw;
+
+      .sidebar & {
+        width: auto;
+        margin: 0 1em;
+      }
     }
 
     @media all and (max-width: $min-mobile-size) {

@@ -102,7 +102,7 @@ p + * {
 }
 
 // Container
-.#{$container-class-name} {
+.content {
   max-width: $container-max-width;
   width: $container-width;
   background: $container-background-color;

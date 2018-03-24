@@ -75,6 +75,9 @@ code {
 .main {
   padding-top: 50px;
   width: 100%;
+  @media screen and (max-width: $from-noslogan-to-icon) {
+    padding-top: 0;
+  }
 }
 
 // footnotes
@@ -102,6 +105,9 @@ code {
 
 .call-to-action {
   margin: 4rem 0;
+  @media screen and (max-width: $from-noslogan-to-icon) {
+    margin: 1rem 0;
+  }
 }
 
 .multi-column-3 {
