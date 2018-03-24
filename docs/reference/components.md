@@ -124,3 +124,9 @@ Action Buttons (or Toolbar buttons) got redesigned to display some sort of rippl
 {% include figure.html content="/components/dialog.png" caption="Dialogs" %}
 
 - Dialogs title bar's text is now left aligned, bigger and bold
+
+### Switchs
+
+{% include figure.html content="/components/switches.png" caption="Switches" %}
+
+- On/Off buttons that appear inside the Command Panel and Search Everywhere

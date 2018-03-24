@@ -60,9 +60,9 @@ Affects the main foreground color of the IDE's panels, popups, controls...
 
 A secondary color used in some controls:
 - Buttons Text
-- Menu and Menu Items shortcut text
+- Menu and Menu Items shortcut texts
 - Text fields' border
-- Disabled dropdowns
+- Disabled text in dropdowns
 - Tree items
 
 ##### Selection Background Color
@@ -72,6 +72,7 @@ The background color of selections in controls:
 - Selected List Items and Table Cells
 - Selected tabs
 - Autocomplete selected item
+- Selected Tabbed Pane
 - Selected text in documentation panels
 
 ##### Selection Foreground Color
@@ -87,20 +88,18 @@ The foreground color of selections in controls:
 - Dropdown selected item text
 - Selected item in trees
 
-##### Separator and Button Colors
+##### Button Colors
 
-Specific colors used in buttons and separators (amongst others):
-- Menu separators
+Buttons colors and others:
 - Buttons background color
 - Merge commits text
 
-##### Caret color
+##### Secondary background color
 
-Color of the caret in text fields, spinners and password fields.
-
-##### List background color
-
-A color used inside lists to contrast with the background color.
+A secondary color used to contrast with the background color.
+- Lists background color
+- Active Tool Window Header Color
+- Memory Indicator Unused color
 
 ##### Disabled color
 
@@ -116,6 +115,8 @@ The color used when contrast mode is enabled:
 - Contrast mode affected controls (Tree, Text fields, Tabs...)
 - Odd rows in striped tables
 - Documentation panes
+- Tool Window Headers selected tab
+- Selected Tab in Tabbed Panes
 
 ##### Active component color
 
@@ -123,24 +124,24 @@ Another color to use for active component colors:
 - Selected cells in tables
 - Selected text in text fields and documentation panes
 - Selected items in dropdowns
-- Memory indicator's unused memory color
+- Primary Buttons and Hovered buttons
 
-##### Misc color 1
+##### Border Color
 
 Color that affect the following components:
 - Menu bar border
 - Disabled checkboxes box color
+- Button borders for non-material buttons
+- Tabbed Panes border
+- One Pixel Separators separating editors in Split Mode
+- Menu Separators
 
-##### Misc color 2
+##### Highlight color
 
 Color that affect the following components:
 - Text fields and dropdowns border
 - Checkboxes' sign in disabled checkboxes
 - Memory indicator's used memory color
-
-##### Button highlight color
-
-Color used in focused/primary buttons.
 
 ##### Tree Selection color
 

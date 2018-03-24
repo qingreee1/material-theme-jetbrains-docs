@@ -78,6 +78,7 @@ Here is a list of components where accent color is used:
 - Opened files' containing directories (according to `Project View Decorators` setting)
 - Scrollbars (according to `Accent Scrollbars` setting)
 - VCS Log branches icon
+- Caret Color
 
 ### IMPORTANT NOTE
 

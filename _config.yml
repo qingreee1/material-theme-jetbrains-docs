@@ -2,7 +2,7 @@ full_rebuild: true
 incremental: true
 source: "."
 destination: "./jekyllbuild"
-name: Material Theme
+name: Material Theme UI Documentation
 description: "Material Theme plugin for Jetbrains IDEs: A Material Design experience for your IDE."
 author: "Elior Boukhobza (Mallowigi) and Chris Magnussen (ChrisRM)"
 url: http://www.material-theme.com
@@ -26,7 +26,7 @@ media_folder: /img
 img_folder: /img
 author_default_avatar: /profile-pic.jpeg
 github: https://github.com/chrisrm/material-theme-jetbrains
-version: 1.8.2
+version: 2.1.3
 year: 2015-2018
 social_image_path:  /assets/media/compressed/brand/material-logo.png
 social_logo_path:   /assets/media/compressed/brand/material-social-logo.png
