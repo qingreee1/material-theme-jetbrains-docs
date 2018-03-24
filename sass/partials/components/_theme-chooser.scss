@@ -2,6 +2,10 @@
 .theme-chooser {
   margin: 1em 0;
 
+  @media all and (max-width: $mobile-size) {
+    display: none;
+  }
+
   .theme-chooser-title {
     text-align: center;
     font-size: 2em;

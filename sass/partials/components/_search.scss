@@ -5,6 +5,15 @@ $input-radius: 3px;
     margin: 0 1em;
     transition: margin .25s ease;
     border-radius: $input-radius;
+
+    @media all and (max-width: $mobile-size) {
+      margin: 0;
+      width: 50vw;
+    }
+
+    @media all and (max-width: $min-mobile-size) {
+      display: none;
+    }
   }
 
   .algolia-autocomplete {
