@@ -19,6 +19,31 @@ $themes: (
     "fg": $lighter-fg,
     "ct": $lighter-contrast
   ),
+  "monokai": (
+    "bg": $monokai-bg,
+    "fg": $monokai-fg,
+    "ct": $monokai-contrast
+  ),
+  "arcdark": (
+    "bg": $arcdark-bg,
+    "fg": $arcdark-fg,
+    "ct": $arcdark-contrast
+  ),
+  "onedark": (
+    "bg": $onedark-bg,
+    "fg": $onedark-fg,
+    "ct": $onedark-contrast
+  ),
+  "solardark": (
+    "bg": $solardark-bg,
+    "fg": $solardark-fg,
+    "ct": $solardark-contrast
+  ),
+  "solarlight": (
+    "bg": $solarlight-bg,
+    "fg": $solarlight-fg,
+    "ct": $solarlight-contrast
+  ),
 );
 
 @each $name, $theme in $themes {
@@ -71,10 +96,10 @@ $themes: (
     }
 
     .screenshot {
-      background: url(../../img/#{$name}.png), url(../../img/laptop.png);
-      background-repeat: no-repeat, no-repeat;
-      background-size: 75%, contain;
-      background-position: 50% 30%, top left;
+      background: url(../../img/#{$name}.png), url(../../img/oceanic.png), url(../../img/laptop.png);
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-size: 75%, 75%, contain;
+      background-position: 50% 30%, 50% 30%, top left;
       display: none;
 
       &.#{$name} {
@@ -83,7 +108,7 @@ $themes: (
     }
 
     .logo-img {
-      background-image: url(../../img/material-#{$name}.svg);
+      background-image: url(../../img/material-#{$name}.svg), url(../../img/material-oceanic.svg);
       margin: 1em auto;
 
       &.-error {

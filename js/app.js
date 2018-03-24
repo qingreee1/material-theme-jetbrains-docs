@@ -1,10 +1,22 @@
 $.when($.ready).then(() => {
   const THEME_KEY = 'material-theme';
+  const themes = [
+    'oceanic',
+    'darker',
+    'lighter',
+    'palenight',
+    'onedark',
+    'arcdark',
+    'monokai',
+    'solardark',
+    'solarlight',
+  ];
+
   const jekyllApp = {
 
     setBodyClass(css) {
       const {classList} = document.getElementsByTagName('body')[0];
-      classList.remove('oceanic', 'darker', 'lighter', 'palenight');
+      classList.remove(...themes);
       classList.add('index', css);
     },
     setTheme(theme) {
