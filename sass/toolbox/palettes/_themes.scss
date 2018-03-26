@@ -145,7 +145,7 @@ $themes: (
       }
 
       a {
-        color: white;
+        color: adjust-color(map-get($theme, "bg"));
         &:hover {
           color: $second-accent-color;
         }
@@ -154,11 +154,14 @@ $themes: (
 
     .docs-header {
       background: $second-accent-color;
-      color: white;
+      color: adjust-color(map-get($theme, "bg"));
     }
 
     .github-ribbon {
-      position: absolute; top: 0; border: 0; right: 0;
+      position: absolute;
+      top: 0;
+      border: 0;
+      right: 0;
       fill: $accent-color;
       color: #fff;
     }

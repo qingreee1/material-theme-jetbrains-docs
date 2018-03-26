@@ -24,10 +24,10 @@
 
   .doc {
     margin: 3rem 0;
-    width: 70%;
+    width: 100%;
 
-    @media all and (max-width: $from-full-to-noslogan) {
-      width: 100%;
+    @media all and (min-width: $toc-hiding-point) {
+      width: 70%;
     }
 
     .title {

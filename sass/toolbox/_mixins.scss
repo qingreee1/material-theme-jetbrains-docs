@@ -290,7 +290,6 @@
   }
 }
 
-
 @mixin grid-cards($perRow: 3) {
   @include rowMachine($perRow, 1%, 25px);
 

@@ -2,10 +2,11 @@
   position: absolute;
   top: 0;
   right: -5%;
-  max-width: 280px;
+  width: 25vw;
+  display: none;
 
-  @media all and (max-width: $from-full-to-noslogan) {
-    display: none;
+  @media all and (min-width: $toc-hiding-point) {
+    display: block;
   }
 
   &.pinned {
