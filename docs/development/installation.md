@@ -18,6 +18,8 @@ next:
 This section will explain how to set up your development environment.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ## Getting Started
 
 The Material Theme plugin is built using the [IntelliJ Plugin DevKit](https://www.jetbrains.org/intellij/sdk/docs/welcome.html) which allows users to develop plugins for the different platforms.

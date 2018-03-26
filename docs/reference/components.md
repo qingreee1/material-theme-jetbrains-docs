@@ -14,8 +14,10 @@ next:
   title: Installation
 ---
 
-This is a reference of all the components customized by the plugin
+This is a reference of all the components customized by the plugin.
 {:class='title'}
+
+{% include carbonads.html %}
 
 ## Introduction
 
@@ -125,7 +127,7 @@ Action Buttons (or Toolbar buttons) got redesigned to display some sort of rippl
 
 - Dialogs title bar's text is now left aligned, bigger and bold
 
-### Switchs
+### Switches
 
 {% include figure.html content="/components/switches.png" caption="Switches" %}
 

@@ -17,6 +17,8 @@ next:
 This page displays the features and settings that customize the appearance of the Editor Tabs.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ## Active Tab Options
 
 #### Active Tab Highlighter

@@ -18,6 +18,8 @@ The plugin comes prebundled with a bunch of color schemes adapted for the Materi
 borderless and slick experience.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ## Installation
 
 If you've read the previous section, you'd have learned how to switch themes using the _Theme Switcher_. However, as

@@ -18,6 +18,8 @@ next:
 These settings control the customization of various parts of the IDE, such as the tool windows, status bar, icons or  the components' colors.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ### Contrast Mode
 
 The contrast mode allows you to add more contrast between the IDE's panels and components for better visualizing.

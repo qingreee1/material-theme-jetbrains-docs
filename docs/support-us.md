@@ -4,6 +4,8 @@ title: Support the plugin
 group: support-us
 ---
 
+{% include carbonads.html %}
+
 Material Theme for Jetbrains is a open-source plugin free to use. It is made with love by people that love good design and want the world to be a better place. If you like this plugin and appreciate the work done for it to exist, you can support the developers by donating. Any amount is appreciated and would greatly help support and interest on this project.
 {:class='title'}
 

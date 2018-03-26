@@ -14,6 +14,8 @@ next:
 
 Even though the Material Plugin is the fruit of a handful of developers, it is actually the contribution of a lot of people that have made it awesome as it is!
 
+{% include carbonads.html %}
+
 #### Creators
 
 First of all I want to thank the original creators of the theme and its derived products:
@@ -39,6 +41,12 @@ The original creator of the Jetbrains plugin. Thanks to his ingeniosity we final
 <img class="avatar-img" src="https://avatars0.githubusercontent.com/u/9801624?s=460&v=4">
 
 The main creator of the [*a-file-icon*](https://github.com/ihodev/a-file-icon) plugin for Sublime, which replaces the original file icons to their logo counterparts, making them easier to differentiate and greatly improving the visibility in projects. He created a whole lot of icons that the Material Theme Plugins are using, and provided an easy way to create new icons, thus allowing further customization of the Material Theme.
+
+##### Elior Boukhobza ([@mallowigi](https://github.com/mallowigi))
+
+<img class="avatar-img" src="https://avatars1.githubusercontent.com/u/5015756?v=4&s=460">
+
+The current maintainer of the Material Theme UI plugin and for the documentation site as well. He is the guy who took the project as awesome as it is and made it much awesomer, with settings, custom components, custom themes, external themes and many other cool features.
 
 ----
 #### Plugins and references

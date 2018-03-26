@@ -14,6 +14,8 @@ next:
   title: Components
 ---
 
+{% include carbonads.html %}
+
 ## Introduction
 
 Aside from themes and color schemes, the plugin provides also a complete reskin to the projects' file icons, making them prettier and easier to distinguish.

@@ -18,6 +18,8 @@ The Material Theme plugin comes with a bunch of features tailored for an optimal
 configurable to allow each and everyone to customize it to their hearts content.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ## Themes and Color Schemes
 
 ### Theme Switcher

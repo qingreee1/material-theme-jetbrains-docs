@@ -48,6 +48,8 @@ gallery:
 This section describes the **Accent Colors** feature and how is it used by the plugin.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ## Definition
 
 _Accent Color_ refers to a color used in accent key parts of the UI, such as the active tab, focused input texts, checked boxes and so on. The Material Theme plugin enables this feature in the IDE and gives the ability to customize it to your heart's content.

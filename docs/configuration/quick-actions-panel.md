@@ -17,6 +17,8 @@ next:
 Here you can find an explanation of the actions from the `Quick Actions Panel`.
 {:class = 'title'}
 
+{% include carbonads.html %}
+
 ## Quick Actions Panel
 
 The Quick Actions Panel is a set of actions and toggles to quickly customize the plugin. You can find this panel in many places:

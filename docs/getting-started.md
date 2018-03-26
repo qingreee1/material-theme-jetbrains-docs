@@ -10,6 +10,11 @@ next:
   title: Configuration
 ---
 
+This section describes how to download and use the Material Theme UI plugin in your IDE.
+{:class='title'}
+
+{% include carbonads.html %}
+
 ## Installation
 
 ### Plugin Manager

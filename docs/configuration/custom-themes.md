@@ -17,6 +17,8 @@ next:
 This section explains how you can customize the themes colors using Custom Themes.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ## Introduction
 
 The Material Theme plugin comes with a set of beautiful prebundled themes, suited for a good development experience. However, not everyone can be content with the choices made by the theme creator, and while the plugin offers a lot of customization, still, the ability to customize the themes themselves was one of the most requested features.

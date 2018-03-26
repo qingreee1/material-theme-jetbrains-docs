@@ -17,6 +17,8 @@ next:
 Here you can turn on and off specific features of the Material Theme for even further customization.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ## Enabling and Disabling features
 
 The following options allow you to enable and disable features provided by the Material Theme. This gives you the ability to specifically select features such as theme colors or icons while disabling the rest if you don't like it. For instance, if you like the icons but don't like the themes and components, just leave the icons on and disable the rest. If on the other hand you like everything but prefer to use the default icons, just disable the icons.

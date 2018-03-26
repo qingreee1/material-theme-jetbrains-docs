@@ -17,6 +17,8 @@ next:
 These settings allow you to customize the file status colors on a per color scheme basis.
 {:class='title'}
 
+{% include carbonads.html %}
+
 ## Introduction
 
 __File Status Colors__ is a feature of the IDE to colorize certain parts of the UI displaying a file according to its status. Some of the most obvious examples are:
