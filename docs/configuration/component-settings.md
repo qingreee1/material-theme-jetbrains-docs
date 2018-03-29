@@ -40,6 +40,8 @@ Specifically this option disables:
 - Borderless status bar
 - Material Design progress circular loader/spinner
 - Material Design Checkboxes, Radio Buttons and Sliders
+- Search Everywhere's Switches
+- Material Design Navigation Bar
 
 But while these components are disabled, other features such as _Accent Colors_ and _Contrast Mode_ are still in action, meaning that you can have Darcula checkboxes and buttons with your accent color, or the contents of inputs being in contrasted color, for instance.
 
@@ -147,6 +149,16 @@ When this option is on, files that are _opened_ in the editor and that are _edit
 ###### Accent colored opened directories
 
 Same as the hollow directory icon, files that are _opened_ and _edited_ will have their containing directories be colored with the selected _accent color_.
+
+##### Decorated Folders
+
+Assign specific folder icons to folders with commonly used names to add yet more visual grepping than with file icons. For instance, `tmp`, `logs`, `src`, `lib` or `test` are folders found within most projects.
+
+{% include figure.html content="/screens/decoFolders.png" caption="Decorated Folders" %}
+
+Note that excluded/resource root/test root/package folders will not be decorated.
+
+**Note**: This feature depends on the *Project View Decorators* feature.
 
 -----
 

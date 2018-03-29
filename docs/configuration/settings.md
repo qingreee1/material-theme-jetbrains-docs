@@ -104,6 +104,7 @@ You can configure many parts of the plugin features from the **plugin settings**
 - *Material Fonts*: Enable/Disable Material fonts (Roboto) and bigger font in sidebar.
 - *Material Theme*: Enable/Disable the material theme styles
 - *Project View Decorators*: Enable/Disable the Project View Decorators. See the above section about separators.
+- *Decorated Folders*: Enable/Disable special folders.
 * *Theme in Statusbar*: Add an indicator for the currently selected theme in the statusbar.
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
 - *Accent Scrollbars*: Set the color of the scrollbars to the accent color
@@ -203,6 +204,9 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <option name="useMaterialFonts" value="true" />
   <!-- Project view decorators enabled-->
   <option name="useProjectViewDecorators" value="true" />
+  <!-- Decorated folders enabled-->
+  <option name="decoratedFolders" value="true" />
+
   <!-- Material Theme styles enabled -->
   <option name="isMaterialTheme" value="true" />
 
