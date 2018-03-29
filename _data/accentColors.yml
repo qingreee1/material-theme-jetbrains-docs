@@ -4,6 +4,7 @@
   color: '#F44336'
 - name: Daisy
   color: '#FFEB3B'
+  light: true
 - name: Lime
   color: '#7CB342'
 - name: Amethyst
@@ -14,6 +15,7 @@
   color: '#e57373'
 - name: Acid Lime
   color: '#c6ff00'
+  light: true
 - name: Pomegrenate
   color: '#f44336'
 - name: DodgerBlue
@@ -26,16 +28,19 @@
   color: '#3F51B5'
 - name: Sky
   color: '#84ffff'
+  light: true
 - name: Fuschia
   color: '#E91E63'
 - name: Aquamarine
   color: '#64ffda'
+  light: true
 - name: Cyan
   color: '#00bcd4'
 - name: Breaking Bad
   color: '#388e3c'
 - name: Gold
   color: '#FFD700'
+  light: true
 - name: Graphite
   color: '#616161'
 - name: Coffee

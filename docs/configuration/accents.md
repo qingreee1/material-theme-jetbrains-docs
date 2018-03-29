@@ -43,6 +43,16 @@ gallery:
       alttext: Radio Buttons
     - filename: accents/slider.png
       alttext: Sliders
+    - filename: accents/navbar.png
+      alttext: Navigation Bar
+    - filename: accents/switch.png
+      alttext: On/Off Switches
+    - filename: accents/caret.png
+      alttext: Caret color
+    - filename: accents/modifiedSettings.png
+      alttext: Modified settings color
+    - filename: accents/scrollbar.png
+      alttext: Scroll Bar
 ---
 
 This section describes the **Accent Colors** feature and how is it used by the plugin.
@@ -52,7 +62,7 @@ This section describes the **Accent Colors** feature and how is it used by the p
 
 ## Definition
 
-_Accent Color_ refers to a color used in accent key parts of the UI, such as the active tab, focused input texts, checked boxes and so on. The Material Theme plugin enables this feature in the IDE and gives the ability to customize it to your heart's content.
+_Accent Color_ refers to a color used to accentuate key parts of the UI, such as the active tab, focused input texts, checked boxes and so on. The Material Theme plugin enables this feature in the IDE and gives the ability to customize it to your heart's content.
 
 For more info about _Accent Colors_ in the Material Design guidelines, follow this link: https://material.io/guidelines/style/color.html#color-color-system
 
@@ -81,6 +91,9 @@ Here is a list of components where accent color is used:
 - Scrollbars (according to `Accent Scrollbars` setting)
 - VCS Log branches icon
 - Caret Color
+- Modified Setting Pages
+- On/Off Switches in Search Everywhere/Execute Action
+- Navigation Bar Focused Item
 
 ### IMPORTANT NOTE
 
