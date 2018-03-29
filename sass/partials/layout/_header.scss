@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     transition: .3s all ease-in-out;
-    padding: 60px 10px 0; // adjust to change header height
+    padding: $logo-pad 10px 0; // adjust to change header height
     text-align: center;
     box-sizing: border-box;
     overflow: hidden;

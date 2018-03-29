@@ -9,6 +9,10 @@
   text-align: left;
   min-height: 126px;
 
+  .call-to-action & {
+    margin: 0 auto 2rem;
+  }
+
   a, a:hover {
     color: inherit;
   }
