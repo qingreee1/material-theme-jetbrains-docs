@@ -10,6 +10,12 @@
     <p class="color-tags">Tags: {{ color.tags | join: ', ' }}
     </p>
   </div>
+  {% else if color.name %}
+  <div class="collection-item color"
+       title="{{ color.color }}"
+       style="background: {{ color.color }};{% unless color.light %}color: white;{% endunless %}">
+    <span class="color-name">{{ color.name | capitalize }}</span>
+  </div>
   {% else if theme %}
   <div class="collection-item color"
        title="{{ theme[include.field] }}"

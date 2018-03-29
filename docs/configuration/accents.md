@@ -116,7 +116,7 @@ A list of predefined accent colors is available in the `Material Config Toolbar`
 Here is the list of predefined colors:
 
 {% for color in site.data.accentColors %}
-{% include color.html color=color %}
+{% include color2.html color=color %}
 {% endfor %}
 
 ### Custom Accent Color
