@@ -132,3 +132,9 @@ Action Buttons (or Toolbar buttons) got redesigned to display some sort of rippl
 {% include figure.html content="/components/switches.png" caption="Switches" %}
 
 - On/Off buttons that appear inside the Command Panel and Search Everywhere
+
+### Navigation Bar
+
+{% include figure.html content="/components/navbar.png" caption="Navigation Bar" %}
+
+- The Navigation Bar at the top of the view
