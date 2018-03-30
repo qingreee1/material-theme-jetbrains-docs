@@ -25,3 +25,11 @@ If you want to contribute to the documentation, you can fork this repository and
 ```
 {% include tree %}
 ```
+
+- New pages should be added in the `docs` directory
+- New images should be added in the `img` directory and in their relevant subfolder
+- New partials should be added in the `_includes` directory
+- New pages can be added in the navigation sidebar from the `_data/nav.yml` configuration file.
+- Screenshots should not be more than 400KB in size
+
+
