@@ -96,10 +96,10 @@ $themes: (
     }
 
     .screenshot {
-      background: url(../../img/#{$name}.png), url(../../img/oceanic.png), url(../../img/laptop.png);
-      background-repeat: no-repeat, no-repeat, no-repeat;
-      background-size: 75%, 75%, contain;
-      background-position: 50% 30%, 50% 30%, top left;
+      background: url(../../img/#{$name}.png), url(../../img/laptop.png);
+      background-repeat: no-repeat, no-repeat;
+      background-size: 75%, contain;
+      background-position: 50% 30%, top left;
       display: none;
 
       &.#{$name} {
