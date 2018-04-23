@@ -89,6 +89,12 @@ A rather simple plugin that shows the current project in the status bar which wa
 
 A rather simple plugin that highlights all occurences of the word under caret. Its implementation of a settings page inside the Color Schemes settings was the inspiration for the [Material File Status Colors]({{site.baseurl}}/docs/configuration/file-status-colors) feature.
 
+##### Material Icon Theme for Visual Studio Code
+
+[Material Icon Theme for VSCode](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
+The Material Theme Icons, but for Visual Studio Code. It's actually the _Decorated Folders_ feature that gave me the idea to implement it in the Jetbrains' plugin. Besides, the folder icons were taken from there, with some small changes in the colors.
+
 ----
 #### Contributors
 
@@ -100,7 +106,7 @@ First of all I want to thank all icon designers who designed all the icons used 
 * [Material Design Icons](https://materialdesignicons.com/)
 * [Many FlatIcons authors](https://www.flaticon.com/)
 
-Thanks also to [@yonnyz](https://twitter.com/yonnyz) for the logo and theme icons, and [@gidivigo](https://twitter.com/gidivigo) for helping me with the documentation design.
+Thanks also to [@yonnyz](https://twitter.com/yonnyz) for the logo and theme icons, and [@gidivigo](https://twitter.com/gidivigo) for helping me with the documentation design. And thanks to [@azdanov](https://github.com/azdanov) for some of the folder icons.
 
 I also want to thank the guys at [Gridster Digitalmind](http://gridster.digitalmind.ch/) with their ++Material Jekyll template++ which was a solid base for the documentation design.
 
