@@ -55,7 +55,13 @@ To see the full associations list, see [icon_associations.xml](https://github.co
 
 ## Reference
 
+### File Icons
+
 {% include file-icons.html %}
+
+### Folder Icons
+
+{% include folder-icons.html %}
 
 ## Customization
 
