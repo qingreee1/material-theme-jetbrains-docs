@@ -9,7 +9,7 @@ description: |
   This is the plugin's documentation page which presents and explains the different features provided by the plugin.
 
 author: "Elior Boukhobza (Mallowigi) and Chris Magnussen (ChrisRM)"
-url: http://www.material-theme.com
+url: https://www.material-theme.com
 baseurl: ""
 permalink: /:title/
 paginate: 6
@@ -30,7 +30,7 @@ media_folder: /img
 img_folder: /img
 author_default_avatar: /profile-pic.jpeg
 github: https://github.com/chrisrm/material-theme-jetbrains
-version: 2.1.7
+version: 2.2.1
 year: 2015-2018
 social_image_path:  /assets/media/compressed/brand/material-logo.png
 social_logo_path:   /assets/media/compressed/brand/material-social-logo.png
