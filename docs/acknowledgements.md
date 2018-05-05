@@ -7,9 +7,6 @@ toc: true
 previous:
   url: '/docs/other/roadmap'
   title: Roadmap
-next:
-  url: '/docs/configuration/custom-themes'
-  title: Custom Themes
 ---
 
 Even though the Material Plugin is the fruit of a handful of developers, it is actually the contribution of a lot of people that have made it awesome as it is!
