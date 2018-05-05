@@ -5,8 +5,8 @@ comments: true
 toc: true
 
 previous:
-  url: '/docs/other/roadmap'
-  title: Roadmap
+  url: '/docs/other/changelog'
+  title: Changelog
 ---
 
 Even though the Material Plugin is the fruit of a handful of developers, it is actually the contribution of a lot of people that have made it awesome as it is!
