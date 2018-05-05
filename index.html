@@ -11,7 +11,7 @@ layout: index
         <div class="theme-chooser-options">
           {% for theme in site.data.themes.material %}
             <div>
-              <a href="void:javascript(0)"
+              <a href="javascript:void(0)"
                  style="background: {{ theme.background }}"
                  class="theme {{ theme.className }} js-theme"
                  title="{{ theme.name }}"
@@ -22,25 +22,25 @@ layout: index
           {% endfor %}
         </div>
       </div>
-      
+
       <!-- Screen -->
       {% for theme in site.data.themes.material %}
         <a href="/img/{{ theme.className }}.png" target="_blank"
            class="screenshot {{ theme.className }}"></a>
       {% endfor %}
-      
+
       {% for theme in site.data.themes.other %}
         <a href="/img/oceanic.png" target="_blank"
            class="screenshot {{ theme.className }}"></a>
       {% endfor %}
-      
+
       <div class="theme-chooser">
         <h3 class="theme-chooser-title section-title">Check out those other themes:</h3>
-        
+
         <div class="theme-chooser-options">
           {% for theme in site.data.themes.other %}
             <div>
-              <a href="void:javascript(0)"
+              <a href="javascript:void(0)"
                  style="background: {{ theme.background }}"
                  class="theme {{ theme.className }} js-theme"
                  title="{{ theme.name }}"
@@ -52,7 +52,7 @@ layout: index
         </div>
       </div>
     </section>
-    
+
     <!-- Features -->
     <section class="section features-section">
       <h2 class="features-title section-title">Features</h2>
@@ -67,6 +67,6 @@ layout: index
         </button>
       </a>
     </section>
-  
+
   </div>
 </div>
