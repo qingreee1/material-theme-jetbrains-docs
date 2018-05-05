@@ -42,6 +42,10 @@ provided by the plugin are:
 - Material One Dark
 - Atom One Dark ![new-box](/img/icons/new-box.png)
 - Material Monokai Pro ![new-box](/img/icons/new-box.png)
+- Solarized Dark ![new-box](/img/icons/new-box.png)
+- Solarized Light ![new-box](/img/icons/new-box.png)
+
+(Credits for https://github.com/altercation/solarized for the Solarized Themes)
 
 ## Customization
 

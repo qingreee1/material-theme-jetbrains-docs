@@ -39,12 +39,6 @@ This allows you to set the _thickness_ of the tab highlighter. This setting also
 
 In order to avoid crazy values that could ruin the UI, the values are limited between `1` to `5` pixels.
 
-#### Reset Defaults
-
-Click this button to reset those settings to their default values:
-- Active Tab Highlight is unchecked
-- The color is set back to #80CBC4
-- The thickness is set to 2
 
 #### About Tabs Placement
 
