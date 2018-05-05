@@ -31,6 +31,10 @@ $.when($.ready).then(function () {
       var $target = $('.doc');
       var $toc = $('.toc');
 
+      $(document).ready(function () {
+        $('select').material_select();
+      });
+
       if ($toc.length) {
         $toc.pushpin({
           top: 284,
