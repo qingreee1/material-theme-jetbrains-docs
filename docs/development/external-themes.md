@@ -125,7 +125,7 @@ If everything went well, you should see your theme in the list.
 
 Then select it, and TA-DA!
 
-{% include figure.html content="/tutorial/vibrantink.png" caption="Vibrant Ink" %}
+{% include figure.html content="/tutorial/vibrantInk.png" caption="Vibrant Ink" %}
 
 The next step would then be to publish your plugin to the Jetbrains repository. Just head to https://plugins.jetbrains.com/ and follow the instructions there.
 
