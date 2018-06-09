@@ -15,6 +15,10 @@ The simplest way to donate is through PayPal with a one-time donation.
 
 <a class="btn -large" href="https://paypal.me/mallowigi">Donate with PayPal</a>
 
+## OpenCollective
+
+The project is also available on [OpenCollective](https://opencollective.com/material-theme-jetbrains), a non-profit website to allow contributors and other people to know what's going on and closely participate on the plugin's roadmap and actions.
+
 ## Contributors
 
 This project exists thanks to all the people who contribute.
@@ -26,6 +30,14 @@ This project exists thanks to all the people who contribute.
 Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/material-theme-jetbrains#backer)]
 
 <a href="https://opencollective.com/material-theme-jetbrains#backers" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/backers.svg?width=890"></a>
+
+And for those who donated via PayPal:
+
+<div markdown="0" class="multi-column-3">
+{% for contributor in site.data.contributors %}
+<li>{{ contributor.name }}</li>
+{% endfor %}
+</div>
 
 
 ## Sponsors

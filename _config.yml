@@ -30,7 +30,7 @@ media_folder: /img
 img_folder: /img
 author_default_avatar: /profile-pic.jpeg
 github: https://github.com/chrisrm/material-theme-jetbrains
-version: 2.2.1
+version: 2.4.0
 year: 2015-2018
 social_image_path:  /assets/media/compressed/brand/material-logo.png
 social_logo_path:   /assets/media/compressed/brand/material-social-logo.png

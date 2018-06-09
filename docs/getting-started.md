@@ -106,9 +106,12 @@ The plugin is supported on all IDEs, but because of changes of the SDK specific 
 - IDEs versions 2016.X and lower > up until version `0.2.3`
 - IDEs versions 2017.1-2 > up until version `0.10.6`
 - IDEs versions 2017.3+ > up until version `1.6.0.4`
-- IDEs versions 2018.1+ > from version `1.7.0` and above
+- IDEs versions 2018.1 > from version `1.7.0` and above
+- IDEs versions 2018.2+ > from version `2.4.0-2018.2` and above
 
 Because Android Studio is made by another team, it has it own plugin, `Material Theme UI for Android Studio`. However, it only features versions from `2.1.7.2` and above. For older versions please download the `Material UI` plugin.
 - Android Studio 2.2.3 > up until version `0.2.3`
 - Android Studio 3.0.0 - 3.1 > up until version `2.7.1.2.android`
 - Android Studio 3.2+ > from version `2.7.1.2.android`
+
+**UPDATE: Currently down at the moment, will be right back asap.**
