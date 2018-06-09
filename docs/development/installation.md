@@ -11,7 +11,7 @@ previous:
   title: Material Components
 
 next:
-  url: '/docs/development/externalThemes'
+  url: '/docs/development/external-themes'
   title: External Themes
 ---
 

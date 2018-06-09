@@ -6,7 +6,7 @@ group: development
 comments: true
 
 previous:
-  url: '/docs/reference/externalThemes'
+  url: '/docs/reference/external-themes'
   title: External Themes
 
 next:
