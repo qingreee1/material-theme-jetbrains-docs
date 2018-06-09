@@ -5,8 +5,8 @@ group: changelog
 comments: true
 
 previous:
-  url: '/docs/development/externalThemes'
-  title: External Themes
+  url: '/docs/development/analytics'
+  title: Analytics
 
 next:
   url: '/docs/support-us'
