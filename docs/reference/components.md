@@ -77,13 +77,16 @@ Regular Editor tabs have been modified to look like Material design tabs:
 
 {% include figure.html content="/components/dropdown.png" caption="Dropdown/Comboboxes" %}
 
-The dropdowns/comboboxes got redesigned by having the same border as the inputs, which highlights on active/hover.
+{% include figure.html content="/screens/dropdownEnhanced.png" caption="Opened Dropdowns" %}
+
+- The dropdowns/comboboxes got redesigned by having the same border as the inputs, which highlights on active/hover.
+- Besides, they have been added more padding between items, as well as hovering over the selector, just like Material Design dropdowns. This behavior can be switched off via the `Compact Dropdowns` setting.
 
 ### Action Buttons
 
 {% include figure.html content="/components/actionButton.png" caption="Action Button" %}
 
-Action Buttons (or Toolbar buttons) got redesigned to display some sort of ripple when hovered/pressed.
+- Action Buttons (or Toolbar buttons) got redesigned to display some sort of ripple when hovered/pressed.
 
 ### Sliders
 
@@ -137,4 +140,4 @@ Action Buttons (or Toolbar buttons) got redesigned to display some sort of rippl
 
 {% include figure.html content="/components/navbar.png" caption="Navigation Bar" %}
 
-- The Navigation Bar at the top of the view
+- The Navigation Bar at the top of the view looks more like Material Design breadcrumbs.

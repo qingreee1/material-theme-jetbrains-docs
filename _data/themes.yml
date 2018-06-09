@@ -57,7 +57,7 @@ material:
   misc1: '#d3e1e8'
   misc2: '#D2D4D5'
   tree: '#546E7A'
-  notif: '#80cbc4'
+  notif: '#b0bec5'
 
 - palenight:
   name: Palenight

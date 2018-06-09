@@ -3,6 +3,14 @@ layout: docs
 title: Changelog
 group: changelog
 comments: true
+
+previous:
+  url: '/docs/development/externalThemes'
+  title: External Themes
+
+next:
+  url: '/docs/support-us'
+  title: Support Us
 ---
 
 # Changelog

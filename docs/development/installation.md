@@ -11,8 +11,8 @@ previous:
   title: Material Components
 
 next:
-  url: '/docs/development/installation'
-  title: Installation
+  url: '/docs/development/externalThemes'
+  title: External Themes
 ---
 
 This section will explain how to set up your development environment.

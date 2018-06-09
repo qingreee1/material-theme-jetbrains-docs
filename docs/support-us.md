@@ -2,6 +2,14 @@
 layout: docs
 title: Support the plugin
 group: support-us
+
+previous:
+  url: '/docs/changelog'
+  title: Changelog
+
+next:
+  url: '/docs/acknowledgements'
+  title: Acknowledgements
 ---
 
 {% include carbonads.html %}
