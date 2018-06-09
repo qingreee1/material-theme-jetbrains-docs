@@ -20,43 +20,121 @@ In this section you will learn how to create your own external themes and distri
 
 {% include carbonads.html %}
 
-## Plugin Development
+## External Themes
 
-First of all to create and distribute your own plugin, you will need the Plugin DevKit. Please refer to the [Getting Started section]({{site.baseurl}}/docs/development/installation#getting-started) to download necessary dependencies.
+From version 2.3.0 the plugin has the ability to load custom themes from external plugins, just like Color Schemes, Keymaps or Live Templates. To do so, it exports a specific [extension point](https://www.jetbrains.org/intellij/sdk/docs/basics/plugin_structure/plugin_extensions_and_extension_points.html) to be used from other plugins wanting to extend the theme list.
 
+Once your theme is done, you should see it inside the [theme switcher]({{site.baseurl}}/docs/configuration/settings#theme-switcher) under the _External Themes_ section.
 
+{% include figure.html content="/screens/external.png" caption="External Themes" %}
 
+You can see an example of it from the [Dracula Theme plugin](https://plugins.jetbrains.com/plugin/10762-dracula-theme), a porting of the successful [Dracula Theme](https://draculatheme.com/).
 
-----
-## Environment files
+## Tutorial
 
-Here are the important files necessary for plugin development.
+### Getting Started
 
-### plugin.xml
+The best way to illustrate it is by doing a tutorial.
 
-The `plugin.xml` file is the core of the plugin. This is a _Manifest_ that describes the plugin and its components, and is the most important file of any plugin.
+First of all, you will need the Plugin DevKit. Please refer to the [Getting Started section]({{site.baseurl}}/docs/development/installation#getting-started) to download the necessary dependencies.
 
-It is located inside `src/resources/META-INF` and should not be moved in any circumstances.
+Next, go to _File > New Project_ and select _IntelliJ Plugin_
 
-You can read more about plugin.xml [here](https://www.jetbrains.org/intellij/sdk/docs/basics/plugin_structure/plugin_configuration_file.html).
+{% include figure.html content="/tutorial/newPlugin.png" caption="New Plugin" %}
 
-### build.gradle
+Click Next and enter a name for your theme.
 
-The `build.gradle` file is the Gradle configuration used for making the plugin. It contains the dependencies required by the project, the different tasks that can be run (such as Tests or CheckStyle) and configuration for the Gradle Jetbrains plugin.
+{% include figure.html content="/tutorial/pluginExample.png" caption="Plugin Example" %}
 
-### gradle.properties
+### Configuring your plugin
 
-Last but not least, the `gradle.properties` file is a list of variables that can be used inside the `build.gradle` file. It can be useful to set different values without modifying the build.gradle file, or to use it on different development environments.
+The next step will be to configure your plugin to be used by the Plugin Manager. All the plugin information is contained inside the `plugin.xml` file.
 
-This file should not be commited to the Version Control.
+First enter your plugin's information: pluginId, author name, email, description.
 
-----
-## Documentation
+Next, uncomment the line `<depends>com.intellij.modules.lang</depends>` to allow your plugin in all platforms.
 
-To find resources about Plugin Development, first you can check at the [official documentation](https://www.jetbrains.org/intellij/sdk/docs/welcome.html). This will answer all questions regarding how to run the plugin locally.
+Finally, add the **Material Theme Dependency** to make use of Material Theme's theme system for importing your theme. That means that your plugin is dependant of the Material Theme being installed, of course.
 
-But this documentation is pretty scarce, it's just the tip of the iceberg. The best way to learn is to actually look at the source code directly.
+- Add `<depends>com.chrisrm.idea.MaterialThemeUI</depends>` to the dependencies.
+- Add the extension point:
 
-You can do that either by looking at the sources from GitHub or UpSource, or you can simply download the sources locally using Gradle. Simply open the tool window at the right and click on the `Refresh Project` to import the SDK and the sources.
+```html
+<extensions defaultExtensionNs="com.chrisrm.idea.MaterialThemeUI">
+   <bundledTheme name="VibrantInk" path="/themes/vibrantink"/>
+</extensions>
+```
 
-You can also check out other plugins made by other developers to find inspiration.
+- If you want to also include a Color Scheme, you can add a color scheme extension:
+
+```html
+<extensions defaultExtensionNs="com.intellij">
+    <bundledColorScheme path="colors/VibrantInk" id="VibrantInk"/>
+</extensions>
+```
+
+You can try to launch your plugin. Just comment the Material Theme extension and dependencies and run the plugin from the run configuration. Once the sandbox is launched, open the settings and go to the Plugin page. You should see your plugin there.
+
+{% include figure.html content="/tutorial/plugins.png" caption="Plugins" %}
+
+At the end your plugin.xml should look like this:
+
+{% include figure.html content="/tutorial/pluginxml.png" caption="Plugin.xml" %}
+
+(don't bother about the red lines)
+
+### Theme colors
+
+Finally, the most important part: the theme information file. Just like color schemes, themes are written in XML. First create the xml file in the directory specified in the `bundledTheme` extension.
+
+Then fill the theme info and colors. For more information about the theme colors, please refer to the [Custom Theme section]({{site.baseurl}}/docs/configuration/custom-themes)
+
+Example:
+
+```xml
+<mtTheme>
+    <name>VibrantInk</name>
+    <themeId>vibrantInk</themeId>
+    <dark>true</dark>
+    <editorColorsScheme>VibrantInk</editorColorsScheme>
+    <colors>
+        <color id="background" value="252526"></color>
+        <color id="foreground" value="FFFFFF"></color>
+        <color id="text" value="b0bec5"></color>
+        <color id="selectionBackground" value="2e3f34"></color>
+        <color id="selectionForeground" value="FFFFFF"></color>
+        <color id="button" value="333333"></color>
+        <color id="secondaryBackground" value="3F3F46"></color>
+        <color id="disabled" value="666666"></color>
+        <color id="contrast" value="000000"></color>
+        <color id="tableSelected" value="2e3f34"></color>
+        <color id="secondBorder" value="404040"></color>
+        <color id="highlight" value="6272A4"></color>
+        <color id="treeSelection" value="2e3f3490"></color>
+        <color id="notifications" value="252526"></color>
+        <color id="accent" value="ff6600"></color>
+    </colors>
+</mtTheme>
+```
+
+Once you're done, launch the sandbox again. But this time you will need to manually download the Material Theme plugin in order to use your plugin. For that, once the sandbox is up, download the Material Theme UI from the Plugins page. Then click Restart IDE and launch the sandbox again.
+
+If everything went well, you should see your theme in the list.
+
+{% include figure.html content="/tutorial/externalList.png" caption="External List" %}
+
+Then select it, and TA-DA!
+
+{% include figure.html content="/tutorial/vibrantink.png" caption="Vibrant Ink" %}
+
+The next step would then be to publish your plugin to the Jetbrains repository. Just head to https://plugins.jetbrains.com/ and follow the instructions there.
+
+And of course post a link here if you want to share it with other users!
+
+### Next steps
+
+Next steps for external themes are:
+- Custom Accent Color
+- Custom Icon
+- Custom Disabled File Colors
+- Custom Font
