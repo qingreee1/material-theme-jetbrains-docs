@@ -8,6 +8,52 @@ comments: true
 # Changelog
 ----
 
+# 2.4.0
+- Reworked the settings page to group options into tabs and allow changing theme from there
+- Setting for changing the font size of the Project View (needs restart)
+- Setting for disabling Material File Status Colors
+- Improve contrast of Lighter Theme
+- Improved a bit the Comboboxes to look like Material Design ones
+- Fix Tabbed Pane colors in Lighter Themes
+- Add analytics
+- Add TSX icon
+
+# 2.3.3
+- This is a quick fix for 182.2757. This fixes critical issues introduced by the latest EAP.
+There could be other bugs though.
+
+# 2.3.2
+- Fix error from plugin.svg icon not found
+- Fix preview icon similar to details icon
+
+# 2.3.1 (alpha)
+- **NOTE: THIS IS NOT A STABLE RELEASE!**
+- This is a quick fix for MTComboBoxes to get back wide dropdowns.
+- This is not a final fixes since it doesn't display the paddings for some comboboxes (such as Color Scheme), even though it works after selecting another value. This will be investigated further in a next release.
+- This also brings the popup over the dropdown to imitate material design components. This is disabled by the Compact Dropdown settings though
+
+# 2.3
+- Major overhaul of the icons: most icons have been converted to svg! Please note though:
+  - I couldn't find the originals of some icons, so some icons are now different or with different colors (sorry JSON...)
+  - Since this is a big update, there might be some further changes to those icons
+  - I decided to keep some original icons made by Jetbrains (such as Minimize Tool Window)
+  - Please open issues about icons that you find not suited for their purpose.
+- Set a default matched brace color in order to use _Current Scope highlight_ (https://github.com/ChrisRM/material-theme-jetbrains/issues/774)
+- Fix bugs related to 2018.2 EAP (https://github.com/ChrisRM/material-theme-jetbrains/issues/777)
+
+## 2.2.3
+- Theme Coding Style and Debugger tabs
+- Add angular.json association
+
+## 2.2.2
+- Increase size of Material Arrows to 11x11
+- Fix Active Tab Highlight color to take accent color
+- Increase left padding of tree rows
+- Change color of primary buttons for Monokai theme
+- Set Autocomplete selected item background color when unfocused
+- Change notification colors (success, warn, error)
+
+
 ## 2.2.1
 - Theme border color of popups
 - Fix issue with SVG Viewer
