@@ -11,8 +11,8 @@ previous:
   title: Installation
 
 next:
-  url: '/docs/changelog'
-  title: Changelog
+  url: '/docs/development/analytics'
+  title: Analytics
 ---
 
 In this section you will learn how to create your own external themes and distribute them via a plugin.
