@@ -16,6 +16,26 @@ next:
 # Changelog
 ----
 
+# 2.4.1
+- Add None Option to arrow styles
+- Remove Dark Title Bar setting for Macs (now available for all IDEs)
+- Fix contrast of disabled icons
+- Fix Sky accent action
+- Remove shadows on balloons
+
+# 2.4.0.4
+- Fix fatal error in older IDEs
+- Fix blurry arrow icons
+- Fix theme not being applied for some themes (notably custom)
+- Set Font Size HiDPI aware
+- Add missing options from the Settings search
+- Allow setting Material Theme options from Statusbar widget
+- Add multicaret icons
+
+# 2.4.0.3
+- Add font size to be toggleable
+- Set Menlo as primary font for Lighter Schemes, and Fira Code for Darker schemes
+
 # 2.4.0
 - Reworked the settings page to group options into tabs and allow changing theme from there
 - Setting for changing the font size of the Project View (needs restart)
