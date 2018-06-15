@@ -7,6 +7,10 @@ toc: true
 previous:
   url: '/docs/support-us'
   title: Support Us
+
+next:
+  url: '/docs/faq-troubleshooting'
+  title: FAQ/Troubleshooting
 ---
 
 Even though the Material Plugin is the fruit of a handful of developers, it is actually the contribution of a lot of people that have made it awesome as it is!
