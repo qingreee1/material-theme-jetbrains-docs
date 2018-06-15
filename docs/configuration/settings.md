@@ -37,6 +37,12 @@ There are many ways to invoke the *Theme Switcher*:
 
 {% include figure.html content="/screens/quickswitch.png" caption="Quick Switch" %}
 
+Or, since version 2.4.0, from the Settings at `Settings -> Appearance -> Material Theme`.
+
+{% include figure.html content="/screens/switchSettings.png" caption="Switcher in Settings" %}
+
+**Note that this dropdown won't show the [External Themes]({{site.baseurl}}/docs/development/external-themes).**
+
 The plugin comes prebundled with {{ site.data.themes.material.size | plus: site.data.themes.other.size }} themes:
 
 #### Material Themes
@@ -59,9 +65,19 @@ Besides the Material Themes, there are also other prebundled themes made by the 
 {% endfor %}
 </ul>
 
+#### External Themes
+
+The plugin also defines an endpoint allowing plugin developers to create and bundle their own custom themes, just like Color Schemes, Keymaps, Coding Styles and so on. To learn more about _External Themes_ or how to create your own plugin, head to the [External Themes section]({{site.baseurl}}/docs/development/external-themes).
+
+Once the external theme has been downloaded and installed, it should appear at the bottom of the Switcher
+
+{% include figure.html content="/screens/external.png" caption="External Themes" %}
+
+{% include figure.html content="/tutorial/externalList.png" caption="External Themes List" %}
+
 #### Custom Theme
 
-Finally there are **Custom Themes** option, which is the placeholder for the Custom Theme Settings, allowing you set
+Finally there are the **Custom Themes**, which is the placeholder for the Custom Theme Settings, allowing you set
 your own theme colors.
 
 There are two options available, *Custom Theme* for themes based off the *Darcula* LaF, and *Light Custom Theme* based off the *IntelliJ* LaF.
@@ -71,50 +87,78 @@ See [Custom Themes]({{site.baseurl}}/docs/configuration/custom-themes) for more 
 ----------
 ## Material Theme Settings
 
+### Settings Page
+
 You can configure many parts of the plugin features from the **plugin settings**. They are accessible within `Settings
 -> Appearance -> Material Theme`.
 
-{% include figure.html content="/screens/settings.png" caption="Material Theme Settings" %}
+{% include figure.html content="/screens/settings.png" caption="Material Theme Settings v1" %}
+
+Since version 2.4.0, the settings page has been remade to prevent overwhelming the user from the abundance of customization options.
+
+Now settings are differentiated between basic and advanced settings, they are grouped within _tabs_, and a *Reset Settings* button has been added for easy factory resetting.
+
+{% include figure.html content="/screens/settingsV2.png" caption="Material Theme Settings V2" %}
 
 #### Summary
 
-**Active Tab Settings**:
-- *Active Tab Highlight*: Customize active tab indicator color and thickness (works also for the Project View selected row)
-- *Tabs Height*: Set a custom height for tabs (between 25 and 60 pixels)
+Quick summary of all settings:
+
+**Main Settings**:
+- *Selected Theme*: Select a _Material Theme skin_ (will not display External Themes)
+- *Contrast Mode*: Add contrast to specific panels and components.
+- *Custom Accent Color*: Set a custom accent color.
+- *Configure Custom Theme Colors*: Open the settings page for the _Custom Theme Colors_.
+
+**Tab Settings**:
+- *Active Tab Highlight Color*: Customize the active tab's indicator color
+- *Thickness*: Set the active tab's indicator thickness (works also for the Project View selected row)
 - *Uppercase Bold Tabs*: Set the Editor Tabs in Bold Upper Case
+- *Tabs Height*: Set a custom height for tabs (between 25 and 60 pixels)
 - *Tab Color Opacity*: Adjust the opacity of the custom colors in tabs (for File Colors)
 
 **Panel Settings**:
-* *Contrast Mode*: Add contrast to some of the IDE's components
-* *Monochrome Icons*: Set the whole IDE to a single shade of the current theme's primary color
-- *Hide Icons*: Hide file icons (you must have Material Icons options on)
-- *Custom Sidebar Height*: Set a custom line height in Project View (min: 18, max: 30)
-- *Custom Tree Indent*: Increase or reduce indentation in the sidebar (min: 2, max: 8)
-- *Bold directories*: Set bold font weight for directories in the Project View
 - *Compact Status Bar*: Reduce the height of the status bar (this is the default height)
 - *Compact Table Cells*: Reduce the height of table headers and table cells
 - *Compact Dropdown Lists*: Reduce the size of the dropdowns
-- *Custom Accent Color*: Set a custom color for accent color
-- *Arrows Style*: Change the style of the arrows in trees
+
+**Icons Settings**:
+- *Material Icons*: Enable/Disable the Material Theme icons (both UI and File Icons)
+- *Hide Icons*: Hide file icons (depends on the Material Icons option)
+- *Monochrome Icons*: Filter the IDE icons with a shade of the current theme's primary color
+- *Folder decorators*: Decorate special folders with custom icons.
+
+**Project View Settings**:
+- *Custom Sidebar Height*: Set a custom line height in Project View (min: 18, max: 30)
+- *Custom Tree Indent*: Fine tune indent of Project View items (both left and right indent)
+- *Bold directories*: Set bold font weight for directories in the Project View
+- *Arrows Style*: Change the style of the arrows in trees. Choices:
+  - *Material*: Chevron arrows
+  - *Darcula*: Triangle arrows
+  - *Plus-Minus*: Plus and Minus symbols
+  - *None*: Hide the arrows
+- *Font Size*: Fine tune the font size of the project trees (require restart)
 
 **Component Settings**:
 - *Uppercase buttons*: Set the buttons' texts to uppercase
-- *Material Design components*: Enable/Disable Material Design components (Buttons, Progress Bars...)
-- *Material Icons*: Enable/Disable the Material Theme icons to the original ones
-- *Material Fonts*: Enable/Disable Material fonts (Roboto) and bigger font in sidebar.
-- *Material Theme*: Enable/Disable the material theme styles
-- *Project View Decorators*: Enable/Disable the Project View Decorators. See the above section about separators.
-- *Decorated Folders*: Enable/Disable special folders.
-* *Theme in Statusbar*: Add an indicator for the currently selected theme in the statusbar.
-- *Transparent Scrollbars*: Enable/Disable transparency in scrollbars
-- *Accent Scrollbars*: Set the color of the scrollbars to the accent color
-- *Dark Title Bar*: (OSX only): set a dark title bar
-- *Themed Title Bar*: Colorize the title bar of the whole OS with the current theme's background color
+- *Transparent Scrollbars*: Enable/Disable transparency in scrollbars (require restart)
+- *Accent Scrollbars*: Set the color of the scrollbars to the accent color (require restart)
+
+**Features Settings**:
+- *Material Fonts*: Enable/Disable Material fonts (Roboto) (require restart)
+- *Material Theme*: Enable/Disable the Material Theme Colors.
+- *Material Design components*: Enable/Disable [Material Design components]({{site.baseurl}}/docs/reference/components) (require restart)
+- *Material File Status Colors*: Enable/Disable the [Material File Status Colors]({{site.baseurl}}/docs/configuration/file-status-colors)
+
+**Other Tweaks**:
+- *Project View Decorators*: Enable/Disable the Project View Decorators.
+* *Theme in Statusbar*: Show the currently selected theme in the statusbar.
+- <strike>*Dark Title Bar*: (OSX only): set a dark title bar (Moved to Appearance Settings since EAP 182.3208)</strike>
+- *Themed Title Bar*: Colorize the title bar of the whole OS with the current theme's background color (Windows 10 only)
 
 #### Settings shortcuts
 
-You can also quickly toggle some settings by using the `Search Everywhere` or the functionality of the IDE.
-Simply press `Shift-Shift` and type `Material Theme` to get the list of avialable toggles.
+You can also quickly toggle some settings by using the _Search Everywhere_ or the _Command Panel_ functionality of the IDE. Simply press `Shift-Shift` and type `Material Theme` to get the list of avialable toggles.
 
 Same goes for the `Command Panel` (<kbd>Ctrl-Shift-A/Cmd-Shift-A</kbd>).
 
@@ -137,8 +181,6 @@ Aside from the bundled themes, you also have the ability to set up your own Mate
 {% include figure.html content="/screens/customsettings.png" caption="Material Custom Theme Settings" %}
 
 Once you set these colors, simply select the `Custom Theme` in the _Material Theme Chooser_ and see your colors take effect.
-
-Note: Due to how themes are implemented in the SDK, this feature does not work completely well. Therefore, in order to see your custom theme take effect, you will probably need to restart the IDE to see the changes.
 
 See [Custom Theme]({{site.baseurl}}/docs/configuration/custom-themes) for more details.
 
@@ -171,8 +213,10 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <option name="hideFileIcons" value="false" />
   <!-- Custom tree indent enabled -->
   <option name="isCustomTreeIndentEnabled" value="false" />
-  <!-- Custom tree indent value -->
-  <option name="customTreeIndent" value="4" />
+  <!-- Right tree indent  -->
+  <option name="rightTreeIndent" value="6" />
+  <!-- Left tree indent  -->  
+  <option name="leftTreeIndent" value="6" />
 
   <!-- Custom sidebar line height enabled -->
   <option name="compactSidebar" value="false" />
@@ -187,6 +231,8 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <option name="isCompactTableCells" value="false" />
   <!-- Compact dropdowns enabled -->
   <option name="isCompactDropdowns" value="false" />
+  <!-- Project View Font Size -->
+  <option name="treeFontSize" value="12" />
 
   <!-- Accent color -->
   <option name="accentColor" value="80cbc4" />
@@ -206,19 +252,32 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <option name="useProjectViewDecorators" value="true" />
   <!-- Decorated folders enabled-->
   <option name="decoratedFolders" value="true" />
+  <!-- File Status Colors enabled-->
+  <option name="fileStatusColorsEnabled" value="false" />
 
   <!-- Material Theme styles enabled -->
   <option name="isMaterialTheme" value="true" />
 
   <!-- Status bar indicator -->
-   <option name="statusBarTheme" value="true" />
-   <!-- Transparent scrollbars -->
-    <option name="themedScrollbars" value="false" />
-    <!-- Accent scrollbars -->
-    <option name="accentScrollbars" value="true" />
+  <option name="statusBarTheme" value="true" />
+  
+  <!-- Transparent scrollbars -->
+  <option name="themedScrollbars" value="false" />
+  <!-- Accent scrollbars -->
+  <option name="accentScrollbars" value="true" />
     
-    <!-- Dark Title Bar -->
-    <option name="darkTitleBar" value="false" />
+  <!-- Themed Title Bar -->
+  <option name="darkTitleBar" value="false" />
+  
+  <!-- Internal settings (do not modify) -->
+  <!-- Current plugin version -->
+  <option name="version" value="2.4.0" />
+  <!-- Internal ID for Analytics -->
+  <option name="userId" value="" />
+  <!-- Whether or not to send data analytics -->
+  <option name="allowDataCollection" value="false" />
+  <!-- Last selected tab in the settings -->
+  <option name="settingsSelectedTab" value="0" />
         
 </component>
 
@@ -254,7 +313,7 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 
 **Q**: The title bar is sweet! But now all my applications, not only Jetbrains IDE, have the colored title bar! Plus, when I close the IDE/disable/uninstall the plugin, the title bar stays the same! Help! (Note: I'm on Windows)
 
-**A**: The Dark Title Bar option is indeed changing the title bar accent color OS-wide, therefore it sticks even when the IDE is closed/uninstalled. If you want to change it back, follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/
+**A**: The Themed Title Bar option is indeed changing the title bar accent color OS-wide, therefore it sticks even when the IDE is closed/uninstalled. If you want to change it back, follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/
 
 **Q**: The dark title bar on Mac sticks as well!
 
@@ -263,3 +322,7 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 **Q**: The uppercase buttons are nice, but sometimes the text overflows the button
 
 **A**: This is because the buttons were designed primarily to be regular cased, therefore changing the case might extend the length of the text and therefore overflows outside of the button. This is quite uncommon though so if it bothers you that much, simply disable the feature.
+
+**Q**: What is that analytics option? What data are collected?
+
+**A**: This is an option to allow sending data to Material Theme servers about users' configuration, usage and trends. These analytics will allow us to see which features are most used or least used, in order to prioritize development of features, or maybe notify users about specific features, to provide a better satisfaction. These data are completely anonymous, and are not shared/sold to any third parties. If you want to stop sending data, simply turn off the option in the material_theme.xml.
