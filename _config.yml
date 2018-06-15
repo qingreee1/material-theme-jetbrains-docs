@@ -30,29 +30,27 @@ media_folder: /img
 img_folder: /img
 author_default_avatar: /profile-pic.jpeg
 github: https://github.com/chrisrm/material-theme-jetbrains
-version: 2.4.0
+version: 2.4.1
 year: 2015-2018
 social_image_path:  /assets/media/compressed/brand/material-logo.png
 social_logo_path:   /assets/media/compressed/brand/material-social-logo.png
 
 encoding: utf-8
 defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "material-sidebar-left"
-      type: "standard"
-      homedisplay: "featimg"
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: "material-sidebar-left"
+    type: "standard"
+    homedisplay: "featimg"
 
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "material-sidebar-left"
-      author: "mallowigi"
+- scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: "material-sidebar-left"
+    author: "mallowigi"
 
 markdown: kramdown
 kramdown:
@@ -62,34 +60,34 @@ kramdown:
 
 relative_permalinks: false
 exclude:
-  - .git
-  - .gradle
-  - .idea
-  - config
-  - build
-  - js
-  - node_modules
-  - sass
-  - static
-  - vue
-  - .babelrc
-  - .editorconfig
-  - .eslintignore
-  - .eslintrc.js
-  - .gitignore
-  - .jekyll-metadata
-  - .postcssrc.js
-  - .travis.yml
-  - _algolia_api_key
-  - browser-sync.js
-  - Gemfile
-  - Gemfile.lock
-  - gruntfile.js
-  - LICENCE
-  - package.json
-  - package-lock.json
-  - webpack.config.js
-  - yarn.lock
+- .git
+- .gradle
+- .idea
+- config
+- build
+- js
+- node_modules
+- sass
+- static
+- vue
+- .babelrc
+- .editorconfig
+- .eslintignore
+- .eslintrc.js
+- .gitignore
+- .jekyll-metadata
+- .postcssrc.js
+- .travis.yml
+- _algolia_api_key
+- browser-sync.js
+- Gemfile
+- Gemfile.lock
+- gruntfile.js
+- LICENCE
+- package.json
+- package-lock.json
+- webpack.config.js
+- yarn.lock
 sass:
   style: compressed
 collections:
