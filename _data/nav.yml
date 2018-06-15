@@ -5,9 +5,14 @@
   pages:
     - title: Settings
     - title: Color Schemes
+    - title: Main Settings
     - title: Tab Settings
     - title: Panel Settings
+    - title: Icons Settings
+    - title: Project View Settings
     - title: Component Settings
+    - title: Features Settings
+    - title: Other Tweaks Settings
     - title: Quick Actions Panel
     - title: Excluded Files Colors
     - title: File Status Colors
