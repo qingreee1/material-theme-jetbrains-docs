@@ -1,0 +1,78 @@
+---
+layout: docs
+title: Main Settings
+description: Main Settings for the Material Theme
+group: configuration
+toc: true
+comments: true
+
+previous:
+  url: '/docs/configuration/settings'
+  title: Settings
+next:
+  url: '/docs/configuration/tab-settings'
+  title: Tab Settings
+
+---
+
+Configure the main settings of the plugin: Theme, Contrast mode and Accent Color.
+{:class='title'}
+
+{% include carbonads.html %}
+
+### Selected Theme
+
+This dropdown will allow you to change the currently selected theme just like the Quick Switcher.
+
+{% include figure.html content="/screens/switchSettings.png" caption="Switch Theme in Settings" %}
+
+Note that External Themes won't show up in this list.
+
+### Contrast Mode
+
+The contrast mode allows you to add more contrast between the IDE's panels and components for better visualizing.
+
+{% include figure.html content="/screens/noContrast.png" caption="Without Contrast enabled" %}
+{% include figure.html content="/screens/withContrast.png" caption="With Contrast enabled" %}
+
+The parts that are affected by the contrast change are:
+- The project tree
+- The settings tree
+- Inactive tabs
+- Input, Search and number controls
+- Dropdowns
+- Lists and Tables
+
+#### Color Palette
+
+{% for theme in site.data.themes.material  %}
+{% include color.html color=theme field='contrast' %}
+{% endfor %}
+{% for theme in site.data.themes.other  %}
+{% include color.html color=theme field='contrast' %}
+{% endfor %}
+
+----
+### Custom Accent Color
+
+This setting controls the [current accent color]({{site.baseurl}}/docs/configuration/accents) used throughout the app.
+
+Accent color is used in many places such as:
+- Quick documentation
+- Parameter Info
+- Links and bold texts in documentation panels
+- Text, number and password boxes border
+- Dropdowns border
+- Checkboxes and Radio Buttons fill color
+- etc...
+
+While a set of predefined accent colors are available in the [Accent Color Chooser]({{site.baseurl}}/docs/configuration/accents), this setting allows you to set your own custom color.
+
+{% include figure.html content="/screens/accentChooser.png" caption="Accent Color Chooser" %}
+
+----
+### Notes
+
+- Contrast color is also used inside "striped tables", independently of the setting.
+- Some resources, such as the scrollbar, will not get the new custom accent color until next restart.
+

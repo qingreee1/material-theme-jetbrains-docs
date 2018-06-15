@@ -7,8 +7,8 @@ toc: true
 comments: true
 
 previous:
-  url: '/docs/configuration/color-schemes'
-  title: Color Schemes
+  url: '/docs/configuration/main-settings'
+  title: Main Settings
 next:
   url: '/docs/configuration/panel-settings'
   title: Panel Settings
