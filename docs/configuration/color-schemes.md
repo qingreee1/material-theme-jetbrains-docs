@@ -39,8 +39,8 @@ provided by the plugin are:
 - Material Darker
 - Material Lighter
 - Material Palenight
-- Material One Dark
 - Atom One Dark ![new-box](/img/icons/new-box.png)
+- Arc Dark ![new-box](/img/icons/new-box.png)
 - Material Monokai Pro ![new-box](/img/icons/new-box.png)
 - Solarized Dark ![new-box](/img/icons/new-box.png)
 - Solarized Light ![new-box](/img/icons/new-box.png)
