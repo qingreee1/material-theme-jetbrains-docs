@@ -10,8 +10,7 @@
 
 <div class="main">
   <div class="docs-header">
-    {% if page.title %}<h1 class="docs-title">{{ page.title }}</h1>{% endif %}
-    {% if page.description %}<h2 class="docs-subtitle">{{ page.description }}</h2> {% endif %}
+    <h1 class="docs-title">Material Theme UI Blog</h1>
 
     <div class="github-corner-wrapper">
       <div class="code version-section">
@@ -40,13 +39,36 @@
 
   <div class="content">
     <div class="doc">
-      {% if page.blog %}
-      {% for post in site.posts %}
-      {% include article_index.html %}
-      {% endfor %}
-      {% endif %}
-
+      <h1 class="post-title">
+        {{ page.title }}
+      </h1>
+      <div class="meta">
+        <span class="date">Published on {{ page.date | date: '%B %d, %Y' }}</span>
+      </div>
       {{ content }}
+
+      {% if page.category or page.tags %}
+      <div class="catsandtags">
+        {% if page.category %}
+        <span class="category">
+          <span class="name">categories:</span>{{ page.categories | category_links }}
+        </span>
+        {% endif %}
+
+        {% if page.category and page.tags %}
+        &bull;
+        {% endif %}
+
+        {% if page.tags %}
+        <span class="tags">
+          <span class="name">tags:</span>
+          {% for tag in page.tags %}
+            <a href="{{ site.tag_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </div>
+      {% endif %}
 
       {% if page.comments %}
       <hr>

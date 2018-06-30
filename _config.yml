@@ -11,7 +11,7 @@ description: |
 author: "Elior Boukhobza (Mallowigi) and Chris Magnussen (ChrisRM)"
 url: https://www.material-theme.com
 baseurl: ""
-permalink: /:title/
+permalink: /blog/:title/
 paginate: 6
 paginate_path: /page/:num
 plugins:
