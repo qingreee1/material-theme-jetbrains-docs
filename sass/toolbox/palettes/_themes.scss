@@ -84,8 +84,8 @@ $themes: (
     .logo-caption,
     .logo-description,
     .section-title,
-    .post-title,
-    .post-caption {
+    .feat-title,
+    .feat-caption {
       color: map-get($theme, "fg");
       fill: map-get($theme, "fg");
     }

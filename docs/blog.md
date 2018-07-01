@@ -1,8 +1,6 @@
 ---
-layout: docs
+layout: blog
 title: Blog
 group: blog
-blog: true
-
 ---
 
