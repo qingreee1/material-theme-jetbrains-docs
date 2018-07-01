@@ -23,6 +23,10 @@
     }
   }
 
+  .btn {
+    margin-top: 1em;
+  }
+
   .content {
     @include flexbox(row, wrap, space-between, flex-start);
 

@@ -10,6 +10,11 @@
   position: relative;
   list-style: none;
 
+  hr {
+    opacity: 0.2;
+    margin: 0;
+  }
+
   li a {
     box-sizing: border-box;
     padding: 15px 0 15px 22px;
