@@ -18,6 +18,7 @@ plugins:
 - jekyll-paginate
 - jekyll-sitemap
 - jekyll-toc
+- jemoji
 infinite_scroll: false
 
 twitter: mallowigi

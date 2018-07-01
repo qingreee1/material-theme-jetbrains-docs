@@ -70,10 +70,10 @@
 
   {% endif %}
 
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
-    <h1>{{ post.title }}</h1>
+  <a class="post-url" href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
+    <h1 class="post-title">{{ post.title }}</h1>
   </a>
-  <span class="date">Posted on {{ post.date | date: '%B %d, %Y' }}</span>
+  <span class="post-date">Posted on {{ post.date | date: '%B %d, %Y' }}</span>
 
   <p class="post-content">{{ post.content | strip_html | truncatewords: 15 }}</p>
   <p class="actions">
