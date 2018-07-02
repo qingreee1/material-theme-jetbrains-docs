@@ -13,6 +13,10 @@
   <div class="content">
     <div class="doc">
       <article class="article-post card-panel">
+        <p class="actions">
+          <a href="{{ site.baseUrl }}/docs/blog">Go back to index ←</a>
+        </p>
+
         <h4 class="post-title">
           {{ page.title }}
         </h4>
@@ -49,6 +53,20 @@
         {% endif %}
       </article>
 
+      <div class="post-nav">
+        {% if page.previous.url %}
+        <a class="btn prev" href="{{ page.previous.url | prepend: site.baseurl }}">
+          <i class="fa fa-angle-left">&nbsp;</i>{{ page.previous.title | truncateWords: 4 }}
+        </a>
+        {% endif %}
+        {% if page.next.url %}
+        <a class="btn next" href="{{ page.next.url | prepend: site.baseurl }}">
+          {{ page.next.title | truncateWords: 4 }}&nbsp;<i class="fa fa-angle-right"></i>
+
+        </a>
+        {% endif %}
+      </div>
+
       {% if page.comments %}
       <hr>
       <div id="disqus_thread"></div>
@@ -69,20 +87,7 @@
         Disqus.</a></noscript>
       {% endif %}
 
-      <div class="post-nav">
-        {% if page.previous.url %}
-        <a class="btn prev" href="{{ page.previous.url | prepend: site.baseurl }}">
-          <i class="fa fa-angle-left"></i><span class="short"> prev</span><span
-          class="long">ious: {{ page.previous.title }}</span>
-        </a>
-        {% endif %}
-        {% if page.next.url %}
-        <a class="btn next" href="{{ page.next.url | prepend: site.baseurl }}">
-          <span class="short">next </span><span class="long">: {{ page.next.title }} </span><i
-          class="fa fa-angle-right"></i>
-        </a>
-        {% endif %}
-      </div>
+
     </div>
 
     {% if page.toc %}
