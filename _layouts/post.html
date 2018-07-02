@@ -26,23 +26,24 @@
         {% if page.category or page.tags %}
         <div class="catsandtags">
           {% if page.category %}
-          <span class="category">
-            <span class="name">Categories: </span>{{ page.categories | category_links }}
+          <span class="cats">
+            <span class="name">Categories: </span>
+            <span class="new badge">{{ page.categories | category_links }}</span>
           </span>
           {% endif %}
 
-          {% if page.category and page.tags %}
-          &bull;
-          {% endif %}
+          {% if page.category and page.tags %}&bull;{% endif %}
 
           {% if page.tags %}
           <span class="tags">
             <span class="name">Tags:</span>
-          {% for tag in page.tags %}
+            {% for tag in page.tags %}
             <a class="tag"
-               href="{{ site.tag_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ tag }}"><span class="badge">{{ tag }}</span></a>
-          {% endfor %}
-        </span>
+               href="{{ site.tag_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ tag }}">
+              <span class="new badge">{{ tag }}</span>
+            </a>
+            {% endfor %}
+          </span>
           {% endif %}
         </div>
         {% endif %}

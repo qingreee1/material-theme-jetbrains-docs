@@ -1,13 +1,12 @@
 span.badge {
   min-width: 3rem;
-  padding: 0 6px;
-  margin-left: 14px;
+  padding: 2px 6px;
+  margin-left: 4px;
   text-align: center;
   font-size: 1rem;
   line-height: $badge-height;
   height: $badge-height;
   color: $primary-text;
-  float: right;
   box-sizing: border-box;
 
   &.new {
@@ -17,8 +16,9 @@ span.badge {
     background-color: $badge-bg-color;
     border-radius: 2px;
   }
-  &.new:after {
-    content: " new";
+
+  &.-float {
+    float: right;
   }
 
   &[data-badge-caption]::after {

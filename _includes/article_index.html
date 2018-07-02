@@ -75,8 +75,9 @@
   </a>
   <span class="post-date">Posted on {{ post.date | date: '%B %d, %Y' }}</span>
 
-  <p class="post-content">{{ post.content | strip_html | truncatewords: 15 }}</p>
+  <p class="post-content">{{ post.content | truncatewords: 60 }}</p>
+
   <p class="actions">
-    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">Read More</a>
+    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">Continue reading →</a>
   </p>
 </article>
