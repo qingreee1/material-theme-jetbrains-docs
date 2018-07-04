@@ -46,9 +46,10 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 
 **A**: The Themed Title Bar option is indeed changing the title bar accent color OS-wide, therefore it sticks even when the IDE is closed/uninstalled. If you want to change it back, follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/
 
-**Q**: The dark title bar on Mac sticks as well!
+**Q**: The dark title bar on Mac sticks as well! **Update: since version 2.5.0, it doesn't!**
 
 **A**: As for the Mac Title bar, it is triggered using the IDE Registry. Just open the Command Palette (Cmd-Shift-A) and type `Registry`. Then you will see at the top the edited values. Simply press Revert to those you don't want.
+**Update 2.5.0:** The Dark Title Bar option is now moved inside the Appearance panel of the IDE, named _Dark Window Headers_ (and currently contains the same problems as above). However, a new option `Themed Title Bar` have taken its place in the Material Theme Settings and allows to completely theme the title bar. However it also overrides the _Dark Window Headers_ setting.
 
 **Q**: The uppercase buttons are nice, but sometimes the text overflows the button
 
@@ -76,10 +77,6 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 
 **A**: Me as well. Unfortunately currently the setting that sets the tab height is shared between all tabs in the SDK, and there is no way to distinguish between them currently. Maybe in the future if Jetbrains agrees to allow more customization natively.
 
-**Q**: Does the active tab highlighter works with the Lighter theme?
-
-**A**: Again, no, because of how the active tab highlight is implemented in the IDEA SDK, it is only working on Darcula based themes, and therefore only on Dark Themes. But maybe I'll try to figure out a fix for this.
-
 **Q**: Why limiting the thickness or the tab height? I want to have 10 in thickness and 100 in tabs!!!
 
 **A**: Because allowing values past these limits would make the UI ugly or worse, crash it. If you have a good reason to want it anyway, you can open an issue on Github with why you would want that. At most, you can still fork the plugin and tweak it to whatever you want.
@@ -91,7 +88,6 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 ----
 ## Panel Settings
 
-- Compact Statusbar only works if there are only one open instance of the IDE
 - Because the IDE is developed with compact table cells in mind, using "padded table cells" may result of display artifacts in some components. One example is the *Python DataView* (https://github.com/ChrisRM/material-theme-jetbrains/issues/485). If you are using such features a lot, just enable the "Compact Table Cells" option to solve that problem.
 
 ----

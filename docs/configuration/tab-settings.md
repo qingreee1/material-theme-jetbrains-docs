@@ -33,7 +33,7 @@ This setting controls the appearance of the little indicator under the current h
 
 #### Thickness
 
-This allows you to set the _thickness_ of the tab highlighter. This setting also controls the thickness of the selected item in the _Project View_.
+This allows you to set the _thickness_ of the tab highlighter.
 
 {% include figure.html content="/screens/thickness.png" caption="Tab Highlighter Thickness" %}
 
@@ -115,10 +115,6 @@ The close icon didn't change, but it will be colored to the accent color on hove
 **Q**: The Tab Height feature is cool in the editor, but I'd rather leave other tabs untouched.
 
 **A**: Me as well. Unfortunately currently the setting that sets the tab height is shared between all tabs in the SDK, and there is no way to distinguish between them currently. Maybe in the future if Jetbrains agrees to allow more customization natively.
-
-**Q**: Does the active tab highlighter works with the Lighter theme?
-
-**A**: Again, no, because of how the active tab highlight is implemented in the IDEA SDK, it is only working on Darcula based themes, and therefore only on Dark Themes. But maybe I'll try to figure out a fix for this.
 
 **Q**: Why limiting the thickness or the tab height? I want to have 10 in thickness and 100 in tabs!!!
 

@@ -94,6 +94,8 @@ however, as that means that __all the changes you've made will be lost__. Theref
 ----------
 ## Color Palette
 
+These are only for Material Themes:
+
 <span style="float:none">Dark variant</span>
 <span style="float:right">Light variant</span>
 

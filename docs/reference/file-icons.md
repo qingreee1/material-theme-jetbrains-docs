@@ -72,6 +72,7 @@ If you want to add an icon, or add/remove/modify an association pattern to/from 
   - The color must be one of those mentioned in [Color Schemes]({{site.baseurl}}/docs/configuration/color-schemes#color-palette)
 - You must submit two icons: one of size `16x16` and one of size `32x32` with the `@2x.png` extension.
 - The icon must be in `PNG` format.
+- OR you can send a `SVG` but its width and height must be `16x16`.
 - The icon must not weigh too much (it rarely exceeds 5KB)
 - Add the icon in the `src/resources/icons/files` folder.
 

@@ -132,6 +132,11 @@ Quick summary of all settings:
 - *Custom Sidebar Height*: Set a custom line height in Project View (min: 18, max: 30)
 - *Custom Tree Indent*: Fine tune indent of Project View items (both left and right indent)
 - *Bold directories*: Set bold font weight for directories in the Project View
+- *Selected Indicator Style*: Change the style of the indicator of the selected item in trees
+  - *Border*: Add a small border to the left
+  - *Dot*: Add a dot on the selected item
+  - *None*: Remove the indicator
+- *Thickness*: Control the thickness of the indicator
 - *Arrows Style*: Change the style of the arrows in trees. Choices:
   - *Material*: Chevron arrows
   - *Darcula*: Triangle arrows
@@ -143,6 +148,7 @@ Quick summary of all settings:
 - *Uppercase buttons*: Set the buttons' texts to uppercase
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars (require restart)
 - *Accent Scrollbars*: Set the color of the scrollbars to the accent color (require restart)
+- *High Contrast*: Set a darker color of the backgrounds and lighter color of texts for more contrast
 
 **Features Settings**:
 - *Material Fonts*: Enable/Disable Material fonts (Roboto) (require restart)
@@ -153,8 +159,7 @@ Quick summary of all settings:
 **Other Tweaks**:
 - *Project View Decorators*: Enable/Disable the Project View Decorators.
 * *Theme in Statusbar*: Show the currently selected theme in the statusbar.
-- <strike>*Dark Title Bar*: (OSX only): set a dark title bar (Moved to Appearance Settings since EAP 182.3208)</strike>
-- *Themed Title Bar*: Colorize the title bar of the whole OS with the current theme's background color (Windows 10 only)
+- *Themed Title Bar*: Colorize the title bar of the whole OS with the current theme's background color (Mac-Windows only)
 
 #### Settings shortcuts
 
@@ -237,11 +242,18 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <!-- Accent color -->
   <option name="accentColor" value="80cbc4" />
 
+  <!-- Indicator Style -->
+  <option name="indicatorStyle" value="Line" />
+  <!-- Indicator Thickness -->
+  <option name="indicatorThickness" value="2" />
+
   <!-- Arrows style -->
   <option name="arrowsStyle" value="Material" />
 
   <!-- Uppercase buttons -->
   <option name="uppercaseButtons" value="true" />
+   <!-- High Contrast -->
+  <option name="highContrast" value="true" />
   <!-- Material components enabled -->
   <option name="isMaterialDesign" value="true" />
   <!-- Material and File icons enabled -->
@@ -315,9 +327,10 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 
 **A**: The Themed Title Bar option is indeed changing the title bar accent color OS-wide, therefore it sticks even when the IDE is closed/uninstalled. If you want to change it back, follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/
 
-**Q**: The dark title bar on Mac sticks as well!
+**Q**: The dark title bar on Mac sticks as well! **Update: since version 2.5.0, it doesn't!**
 
 **A**: As for the Mac Title bar, it is triggered using the IDE Registry. Just open the Command Palette (Cmd-Shift-A) and type `Registry`. Then you will see at the top the edited values. Simply press Revert to those you don't want.
+**Update 2.5.0:** The Dark Title Bar option is now moved inside the Appearance panel of the IDE, named _Dark Window Headers_ (and currently contains the same problems as above). However, a new option `Themed Title Bar` have taken its place in the Material Theme Settings and allows to completely theme the title bar. However it also overrides the _Dark Window Headers_ setting.
 
 **Q**: The uppercase buttons are nice, but sometimes the text overflows the button
 

@@ -51,6 +51,14 @@ This setting also allows the theming of the application title bar in Windows 10.
 
 **Note**: Since this modifies the color OS-wide, the color set by the plugin will stick even if you close the IDE/uninstall the plugin. Just follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/ to set it to another color of your choice.
 
+##### Mac OS
+
+From version 2.5.0 the option came back with support for Mac OS. And unlike in Windows, this does not change the Registry but actually applies the background color to the IDE title bar only!
+
+However it comes with a small price: by activating this option you are consenting to nullify the _Dark Window Headers_ feature from the `Appearance` panel introduced since 2018.2.
+
+{% include figure.html content="/screens/titlebarThemed.png" caption="Themed Title Bar Mac" %}
+
 -----
 ## FAQ/Troubleshooting
 

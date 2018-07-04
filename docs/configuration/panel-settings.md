@@ -30,15 +30,16 @@ The IDE's Status Bar went through a redesign as well, removing all borders and g
 
 {% include figure.html content="/screens/compactStatusbar.png" caption="Compact Status Bar" %}
 
-**Note**: Because of how the status bar was implemented, the padding can only be given at the start of the application, meaning that when opening multiple projects the status bar automatically reverts to its default, compact state regardless of the settings.
-{:class='card-panel'}
-
 ----
 ### Compact Table Cells
 
 Just like the status bar, table cells, table headers and list views were also given more padding to resemble more like Material Design's equivalents.
 
 This setting allows you to revert to the old, "_compact_" style. This can be useful if you have lots of items and don't want to scroll endlessly.
+
+{% include figure.html content="/screens/regularTableHeaders.png" caption="Regular Table Cells" %}
+
+{% include figure.html content="/screens/compactTableHeaders.png" caption="Compact Table Cells" %}
 
 ----
 ### Compact Dropdown Lists
@@ -52,6 +53,5 @@ This setting allows you to reduce the size of the dropdowns used in the UI to be
 ----
 ### Notes
 
-- Compact Statusbar only works if there are only one open instance of the IDE
 - Because the IDE is developed with compact table cells in mind, using "padded table cells" may result of display artifacts in some components. One example is the *Python DataView* (https://github.com/ChrisRM/material-theme-jetbrains/issues/485). If you are using such features a lot, just enable the "Compact Table Cells" option to solve that problem.
 

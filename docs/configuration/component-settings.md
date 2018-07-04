@@ -43,6 +43,23 @@ These options control the appearance of the scrollbars. Note: This feature works
 
 **Note 2**: Accent colors are set at the start of the application. If you change the accent color, you will need a full restart to see it reflected on the scrollbars. Same for the _Transparent Scrollbars_, if you switch themes you will need a full restart to see it taking the new theme's color.
 
+----
+### High Contrast
+
+This option increases the contrast between the editor and the IDE , just like other editors such as Visual Studio Code or Atom.
+
+{% include figure.html content="/screens/highContrast.png" caption="High Contrast" %}
+
+There is already a *Contrast Mode* which is providing contrast between different panes of the editor, such as the Trees or the inputs, but this feature actually increases the contrast between the _IDE itself_ and the editor. You can even set High Contrast **when in Contrast Mode**!
+
+{% include figure.html content="/screens/noHighContrast.png" caption="Regular" %}
+
+{% include figure.html content="/screens/veryHighContrast.png" caption="Very High Contrast" %}
+
+The High Contrast mode is setting the main background color and contrast color darker, while setting the "Text Color" brighter, such as the color of the tree items. Other colors, such as the main foreground colors or button colors are left unchanged.
+
+The option has been activated by default, since this is a very requested feature from the premices of the plugin! But you can turn it on or off from the _Material Theme Toolbar_.
+
 -----
 ### FAQ/Troubleshooting
 

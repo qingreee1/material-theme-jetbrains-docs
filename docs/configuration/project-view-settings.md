@@ -73,6 +73,20 @@ There are three available styles:
 You can also switch styles in the `Actions Panel`.
 
 ----
+### Indicator Style and Thickness
+
+This setting allows you to customize the _Selected Tree Item Indicator_ (the left accentued border) for more flavors.
+
+Now you can have the choice of three styles:
+- **Border** <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/selectedTreeIndicator.png">
+- **Dot** <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/screens/dotTreeIndicator.png">
+- **None**, e.g. no indicator
+
+You can also customize the thickness of the said indicator with a value between `1` and `5`.
+
+You can also switch styles in the `Actions Panel`.
+
+----
 ### Font Size
 
 Here you can fine tune the font size of the Project View Panes without changing the Font Size of the whole IDE.

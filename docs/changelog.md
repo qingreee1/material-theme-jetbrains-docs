@@ -16,6 +16,29 @@ next:
 # Changelog
 ----
 
+# 2.5
+- Return the **"Theme Title Bar"** option for macs... this time with fully theme support!
+- Add a new **Selected Item Indicator Style** for Project View
+- Add a new **High Contrast mode**
+- Theme the new **Plugins page**! (note: this is still in beta)
+- Rewrote StatusBar component to correct all issues with the Status Bar (borders, compactness...)
+- Refactor MTThemeManager and MTLaf
+- Added new VCS Icons
+- Added more tests
+
+# 2.4.2
+- Add **Arc Theme** color scheme
+- Fix folder color when Material Theme is disabled
+- Fix scrollbars when accent scrollbars is disabled
+- Fix Ugly tomcat icon
+
+# 2.4.1.2
+- Fix Atom One Dark console background color
+- Fix Font Size setting not applying
+- Fix error with prefs files
+- Fix monochrome filter not staying after saving options
+- Add new search everywhere resources
+
 # 2.4.1
 - Add None Option to arrow styles
 - Remove Dark Title Bar setting for Macs (now available for all IDEs)

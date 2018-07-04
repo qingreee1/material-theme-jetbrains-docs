@@ -50,11 +50,13 @@ The first subpanel is a switcher to rapidly switch between the themes. There you
 
 This panel allows you to quickly toggle some of the most used Panel Settings:
 - _Toggle Contrast Mode_
+- _Toggle High Contrast_
 - _Toggle Compact Sidebar_
 - _Toggle Hide File Icons_
 - _Toggle Compact Status Bar_
 - _Toggle Uppercase Tabs_
 - _Arrow styles_
+- _Indicator Styles_
 
 Besides those are one-time actions that will change the plugin or the IDE configuration:
 - _Set Recommended Tab Height_: Change the tab height to _42_
@@ -80,6 +82,7 @@ This panel as well allows you to rapidly toggle the most used Component Settings
 - _Toggle Material Icons_
 - _Toggle Project View Decorators_
 - _Toggle Status Bar Indicator_
+- _Toggle Themed Title Bar_
 
 In addition, other one-time actions are available in this panel, which are:
 - _Install Material Wallpaper_: Set the [IDE Background Image](https://www.jetbrains.com/help/idea/setting-background-image.html) to the one from the repository.
