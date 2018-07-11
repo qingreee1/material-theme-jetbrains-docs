@@ -2,7 +2,7 @@
 
 $.when($.ready).then(function () {
   var THEME_KEY = 'material-theme';
-  var themes = ['oceanic', 'darker', 'lighter', 'palenight', 'onedark', 'arcdark', 'monokai', 'solardark', 'solarlight'];
+  var themes = ['oceanic', 'darker', 'lighter', 'palenight', 'deepocean', 'onedark', 'onelight', 'arcdark', 'monokai', 'solardark', 'solarlight'];
 
   var jekyllApp = {
     setBodyClass: function setBodyClass(css) {

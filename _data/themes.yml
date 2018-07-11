@@ -161,9 +161,9 @@ other:
   tree: '#3A3F4B'
   notif: '#282C34'
 
-- onedark:
+- onelight:
   name: One Light
-  className: onedark
+  className: onelight
   desc: Theme based on the Atom One Light theme
   light: true
   background: '#FAFAFA'
