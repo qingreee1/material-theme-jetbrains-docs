@@ -70,6 +70,12 @@ While a set of predefined accent colors are available in the [Accent Color Choos
 
 {% include figure.html content="/screens/accentChooser.png" caption="Accent Color Chooser" %}
 
+### Override Accent Color
+
+Since version 2.6.0 there is the possibility to override the custom accent color with the default one bundled with the theme. For instance, for _Oceanic_ the accent color will be `teal` while for _Darker_ it will be `orange` etc.
+
+This is especially useful for external themes, so that Themes designers can provide their own accent color.
+
 ----
 ### Notes
 

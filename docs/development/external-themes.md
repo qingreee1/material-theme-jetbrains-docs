@@ -112,7 +112,8 @@ Example:
         <color id="highlight" value="6272A4"></color>
         <color id="treeSelection" value="2e3f3490"></color>
         <color id="notifications" value="252526"></color>
-        <color id="accent" value="ff6600"></color>
+        <color id="accentColor" value="ff6600"></color>
+        <color id="excludedColor" value="333333"></color>
     </colors>
 </mtTheme>
 ```
@@ -134,7 +135,5 @@ And of course post a link here if you want to share it with other users!
 ### Next steps
 
 Next steps for external themes are:
-- Custom Accent Color
 - Custom Icon
-- Custom Disabled File Colors
 - Custom Font

@@ -132,6 +132,12 @@ You can of course customize the accent color from the settings. Even when you ch
 - Hovered icons
 - ...
 
+### Override Accent Color
+
+Since version 2.6.0 there is the possibility to override the custom accent color with the default one bundled with the theme. For instance, for _Oceanic_ the accent color will be `teal` while for _Darker_ it will be `orange` etc.
+
+This is especially useful for external themes, so that Themes designers can provide their own accent color.
+
 
 ## Gallery
 

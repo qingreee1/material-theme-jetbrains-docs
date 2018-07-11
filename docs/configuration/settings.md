@@ -108,6 +108,7 @@ Quick summary of all settings:
 - *Selected Theme*: Select a _Material Theme skin_ (will not display External Themes)
 - *Contrast Mode*: Add contrast to specific panels and components.
 - *Custom Accent Color*: Set a custom accent color.
+- *Override Accent Color*: Change the accent color accordingly to the selected theme
 - *Configure Custom Theme Colors*: Open the settings page for the _Custom Theme Colors_.
 
 **Tab Settings**:
@@ -280,6 +281,9 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
     
   <!-- Themed Title Bar -->
   <option name="darkTitleBar" value="false" />
+  
+  <!-- Override accent color enabled -->
+  <option name="overrideAccent" value="false" />
   
   <!-- Internal settings (do not modify) -->
   <!-- Current plugin version -->

@@ -39,11 +39,13 @@ provided by the plugin are:
 - Material Darker
 - Material Lighter
 - Material Palenight
-- Atom One Dark ![new-box](/img/icons/new-box.png)
+- Material Deep Ocean ![new-box](/img/icons/new-box.png)
+- Atom One Dark
+- Atom One Light ![new-box](/img/icons/new-box.png)
 - Arc Dark ![new-box](/img/icons/new-box.png)
-- Material Monokai Pro ![new-box](/img/icons/new-box.png)
-- Solarized Dark ![new-box](/img/icons/new-box.png)
-- Solarized Light ![new-box](/img/icons/new-box.png)
+- Material Monokai Pro
+- Solarized Dark
+- Solarized Light
 
 (Credits for https://github.com/altercation/solarized for the Solarized Themes)
 

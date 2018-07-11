@@ -9,7 +9,7 @@ material:
   text: '#607D8B'
   selectBg: '#546E7A'
   selectFg: '#FFFFFF'
-  inactive: '#2E3C43'
+  button: '#2E3C43'
   second: '#32424A'
   disabled: '#415967'
   contrast: '#1E272C'
@@ -29,7 +29,7 @@ material:
   text: '#616161'
   selectBg: '#323232'
   selectFg: '#FFFFFF'
-  inactive: '#2A2A2A'
+  button: '#2A2A2A'
   second: '#292929'
   disabled: '#474747'
   contrast: '#1A1A1A'
@@ -49,7 +49,7 @@ material:
   text: '#94A7B0'
   selectBg: '#546E7A'
   selectFg: '#FFFFFF'
-  inactive: '#F3F4F5'
+  button: '#F3F4F5'
   second: '#eae8e8'
   disabled: '#D2D4D5'
   contrast: '#F4F4F4'
@@ -69,7 +69,7 @@ material:
   text: '#676E95'
   selectBg: '#3C435E'
   selectFg: '#FFFFFF'
-  inactive: '#303348'
+  button: '#303348'
   second: '#34324a'
   disabled: '#515772'
   contrast: '#202331'
@@ -78,6 +78,26 @@ material:
   misc2: '#444267'
   tree: '#676E95'
   notif: '#202331'
+
+- deepocean:
+  name: Deep Ocean
+  className: deepocean
+  desc: A deep sea black flat theme
+  light: false
+  background: '#0F111A'
+  foreground: '#8F93A2'
+  text: '#4B526D'
+  selectBg: '#717CB4'
+  selectFg: '#FFFFFF'
+  button: '#3B3F51'
+  second: '#292D3E'
+  disabled: '#464B5D'
+  contrast: '#090B10'
+  table: '#3B3F51'
+  misc1: '#3B3F51'
+  misc2: '#4B526D'
+  tree: '#717CB4'
+  notif: '#090B10'
 
 other:
 - monokai:
@@ -90,7 +110,7 @@ other:
   text: '#727072'
   selectBg: '#5B595C'
   selectFg: '#FFFFFF'
-  inactive: '#403E41'
+  button: '#403E41'
   second: '#403E41'
   disabled: '#727072'
   contrast: '#221F22'
@@ -111,7 +131,7 @@ other:
   text: '#8b9eb5'
   selectBg: '#5294e2'
   selectFg: '#FFFFFF'
-  inactive: '#3c4150'
+  button: '#3c4150'
   second: '#404552'
   disabled: '#D3DAE3'
   contrast: '#2f343f'
@@ -131,7 +151,7 @@ other:
   text: '#979FAD'
   selectBg: '#3A3F4B'
   selectFg: '#FFFFFF'
-  inactive: '#3A3F4B'
+  button: '#3A3F4B'
   second: '#2F333D'
   disabled: '#6B727D'
   contrast: '#21252B'
@@ -140,6 +160,26 @@ other:
   misc2: '#383D48'
   tree: '#3A3F4B'
   notif: '#282C34'
+
+- onedark:
+  name: One Light
+  className: onedark
+  desc: Theme based on the Atom One Light theme
+  light: true
+  background: '#FAFAFA'
+  foreground: '#232324'
+  text: '#9D9D9F'
+  selectBg: '#526FFF'
+  selectFg: '#FFFFFF'
+  button: '#DBDBDC'
+  second: '#EAEAEB'
+  disabled: '#424243'
+  contrast: '#D3D4D5'
+  table: '#DBDBDC'
+  misc1: '#DBDBDC'
+  misc2: '#EAEAEB'
+  tree: '#526FFF'
+  notif: '#F2F2F2'
 
 - solardark:
   name: Solarized Dark
@@ -151,7 +191,7 @@ other:
   text: '#586e75'
   selectBg: '#2E4C52'
   selectFg: '#FFFFFF'
-  inactive: '#003745'
+  button: '#003745'
   second: '#002731'
   disabled: '#54737A'
   contrast: '#00252E'
@@ -171,7 +211,7 @@ other:
   text: '#93a1a1'
   selectBg: '#93a1a1'
   selectFg: '#002b36'
-  inactive: '#FEFBF1'
+  button: '#FEFBF1'
   second: '#F6F0DE'
   disabled: '#C9CCC3'
   contrast: '#FCF4DC'
