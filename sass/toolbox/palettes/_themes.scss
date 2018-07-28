@@ -1,155 +1,123 @@
-$themes: (
-  "oceanic": (
-  ),
-  "darker": (
-  ),
-  "palenight": (
-  ),
-  "lighter": (
-  ),
-  "deepocean": (
-  ),
-  "monokai": (
-  ),
-  "arcdark": (
-  ),
-  "onedark": (
-  ),
-  "onelight": (
-  ),
-  "solardark": (
-  ),
-  "solarlight": (
-  ),
-);
+body {
+  .front-page {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
 
-@each $name, $theme in $themes {
-  body.#{$name} {
-    .front-page {
-      background-color: var(--background);
+  .header,
+  .footer {
+    background-color: var(--background);
+  }
+  .main-menu,
+  .menu,
+  .footer {
+    background-color: var(--contrast);
+    color: var(--foreground);
+
+    a {
       color: var(--foreground);
-    }
-
-    .header,
-    .footer {
-      background-color: var(--background);
-    }
-    .main-menu,
-    .menu,
-    .footer {
-      background-color: var(--contrast);
-      color: var(--foreground);
-
-      a {
-        color: var(--foreground);
-        &:hover {
-          color: $accent-color;
-        }
-      }
-
-      .navbar > li {
-        &:hover {
-          background: var(--background);
-        }
-      }
-    }
-
-    .muted {
-      color: rgba(var(--foreground), $opacity);
-    }
-
-    .logo-caption,
-    .logo-description,
-    .section-title,
-    .feat-title,
-    .feat-caption {
-      color: var(--foreground);
-      fill: var(--foreground);
-    }
-
-    .contents {
-      background-color: var(--background);
-      color: var(--foreground);
-    }
-
-    .screenshot {
-      //background: url(../../img/#{$name}.png), url(../../img/laptop.png);
-      background: var(--laptop), url(../../img/laptop.png);
-      background-repeat: no-repeat, no-repeat;
-      background-size: 75%, contain;
-      background-position: 50% 30%, top left;
-      display: none;
-
-      &.#{$name} {
-        display: block;
-      }
-    }
-
-    .logo-img {
-      background-image: var(--logo), url(../../img/material-oceanic.svg);
-      margin: 1em auto;
-
-      &.-error {
-        transform: rotate(25deg) translateY(-10px);
-        filter: grayscale(100%);
-      }
-    }
-
-    .sidebar-toggle {
-      background: var(--background);
-      transition: background 0.25s;
-
       &:hover {
-        background: /* Make a bit darker */
-          linear-gradient(
-              to top,
-              rgba(0, 0, 0, 0.25),
-              rgba(0, 0, 0, 0.25)
-          ),
-          var(--background)
-      }
-      i {
-        color: var(--foreground);
+        color: $accent-color;
       }
     }
 
-    .sidebar {
-      background: var(--contrast);
+    .navbar > li {
+      &:hover {
+        background: var(--background);
+      }
+    }
+  }
+
+  .muted {
+    color: rgba(var(--foreground), $opacity);
+  }
+
+  .logo-caption,
+  .logo-description,
+  .section-title,
+  .feat-title,
+  .feat-caption {
+    color: var(--foreground);
+    fill: var(--foreground);
+  }
+
+  .contents {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  .screenshot {
+    background: var(--laptop), url(../../img/laptop.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 75%, contain;
+    background-position: 50% 30%, top left;
+    display: none;
+  }
+
+  .logo-img {
+    background-image: var(--logo), url(../../img/material-oceanic.svg);
+    margin: 1em auto;
+
+    &.-error {
+      transform: rotate(25deg) translateY(-10px);
+      filter: grayscale(100%);
+    }
+  }
+
+  .sidebar-toggle {
+    background: var(--background);
+    transition: background 0.25s;
+
+    &:hover {
+      background: /* Make a bit darker */
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        var(--background)
+    }
+    i {
       color: var(--foreground);
+    }
+  }
 
-      .sidebar-link-group a:hover {
-        background-color: var(--background);
-      }
+  .sidebar {
+    background: var(--contrast);
+    color: var(--foreground);
 
-      .sidebar-link-group.active > li > a,
-      .link-section.active > a {
-        background-color: var(--background);
-      }
+    .sidebar-link-group a:hover {
+      background-color: var(--background);
+    }
 
-      .link-section.active > a {
+    .sidebar-link-group.active > li > a,
+    .link-section.active > a {
+      background-color: var(--background);
+    }
+
+    .link-section.active > a {
+      color: $second-accent-color;
+    }
+
+    a {
+      color: #fff;
+      &:hover {
         color: $second-accent-color;
       }
-
-      a {
-        color: #fff;
-        &:hover {
-          color: $second-accent-color;
-        }
-      }
     }
+  }
 
-    .docs-header {
-      background: $second-accent-color;
-      color: #fff;
-    }
+  .docs-header {
+    background: $second-accent-color;
+    color: #fff;
+  }
 
-    .github-ribbon {
-      position: absolute;
-      top: 0;
-      border: 0;
-      right: 0;
-      fill: $accent-color;
-      color: #fff;
-    }
+  .github-ribbon {
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+    fill: $accent-color;
+    color: #fff;
   }
 }

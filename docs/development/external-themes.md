@@ -30,6 +30,10 @@ Once your theme is done, you should see it inside the [theme switcher]({{site.ba
 
 You can see an example of it from the [Dracula Theme plugin](https://plugins.jetbrains.com/plugin/10762-dracula-theme), a porting of the successful [Dracula Theme](https://draculatheme.com/).
 
+Another example of it is the [Night Owl Theme](https://github.com/xdrop/night-owl-jetbrains), a porting of the already famous [Night Owl Theme](https://css-tricks.com/creating-a-vs-code-theme/).
+
+If we get enough submissions we might even host a gallery!
+
 ## Tutorial
 
 ### Getting Started

@@ -26,12 +26,12 @@ layout: index
       <!-- Screen -->
       {% for theme in site.data.themes.material %}
       <a href="/img/{{ theme.className }}.png" target="_blank"
-         class="screenshot {{ theme.className }}"></a>
+         class="screenshot -{{ theme.className }}"></a>
       {% endfor %}
 
       {% for theme in site.data.themes.other %}
       <a href="/img/oceanic.png" target="_blank"
-         class="screenshot {{ theme.className }}"></a>
+         class="screenshot -{{ theme.className }}"></a>
       {% endfor %}
 
       <div class="theme-chooser">

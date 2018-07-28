@@ -1,25 +1,14 @@
 $.when($.ready).then(() => {
   const THEME_KEY = 'material-theme';
-  const themes = [
-    'oceanic',
-    'darker',
-    'lighter',
-    'palenight',
-    'deepocean',
-    'onedark',
-    'onelight',
-    'arcdark',
-    'monokai',
-    'solardark',
-    'solarlight',
-  ];
-
+  const themes = [];
   const jekyllApp = {
 
     setBodyClass(css) {
-      const {classList} = document.getElementsByTagName('body')[0];
-      classList.remove(...themes);
-      classList.add('index', css);
+      $('body').removeClass((i, c) => (c.match(/\btheme-\S+/) || []).join(' '));
+      $('body').addClass(`index theme-${css}`);
+      $(`.screenshot`).hide();
+      $(`.screenshot.-${css}`).show();
+
     },
     setTheme(theme) {
       this.setBodyClass(theme.className);

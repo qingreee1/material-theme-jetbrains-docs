@@ -2,14 +2,15 @@
 
 $.when($.ready).then(function () {
   var THEME_KEY = 'material-theme';
-  var themes = ['oceanic', 'darker', 'lighter', 'palenight', 'deepocean', 'onedark', 'onelight', 'arcdark', 'monokai', 'solardark', 'solarlight'];
-
+  var themes = [];
   var jekyllApp = {
     setBodyClass: function setBodyClass(css) {
-      var classList = document.getElementsByTagName('body')[0].classList;
-
-      classList.remove.apply(classList, themes);
-      classList.add('index', css);
+      $('body').removeClass(function (i, c) {
+        return (c.match(/\btheme-\S+/) || []).join(' ');
+      });
+      $('body').addClass('index theme-' + css);
+      $('.screenshot').hide();
+      $('.screenshot.-' + css).show();
     },
     setTheme: function setTheme(theme) {
       this.setBodyClass(theme.className);
