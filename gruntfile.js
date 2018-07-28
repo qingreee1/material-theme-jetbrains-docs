@@ -78,6 +78,7 @@ module.exports = function (grunt) {
         files: {
           'assets/css/main.css': 'sass/main.scss',
           'assets/css/grid.css': 'sass/grid.scss',
+          'assets/css/themes.css': 'sass/themes.scss',
         },
       },
     },

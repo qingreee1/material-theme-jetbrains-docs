@@ -1,9 +1,9 @@
 <meta charset="UTF-8">
 <title>{{ site.name }}{% if page.title %} - {{ page.title }} {% endif %}</title>
 {% if page.description %}
-  <meta name="description" content="{{ page.description }}">
+<meta name="description" content="{{ page.description }}">
 {% else %}
-  <meta name="description" content="{{ site.description }}">
+<meta name="description" content="{{ site.description }}">
 {% endif %}
 <meta name="author" content="{{ site.author }}">
 <link rel="icon" type="image/png" href="{{ site.baseurl }}/img/favicon-16x16.png" sizes="16x16">
@@ -14,11 +14,12 @@
 
 
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-<link rel="stylesheet" id="switch-style" href="{{ site.baseurl }}/assets/css/grid.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/grid.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/themes.css" type="text/css">
 
 {% if jekyll.environment == 'production' %}
-  <script type="text/javascript" src="//cdn.dynamicyield.com/api/8768851/api_dynamic.js"></script>
-  <script type="text/javascript" src="//cdn.dynamicyield.com/api/8768851/api_static.js"></script>
+<script type="text/javascript" src="//cdn.dynamicyield.com/api/8768851/api_dynamic.js"></script>
+<script type="text/javascript" src="//cdn.dynamicyield.com/api/8768851/api_static.js"></script>
 {% endif %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>

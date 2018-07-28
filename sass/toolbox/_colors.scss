@@ -43,57 +43,8 @@ $lightbrown: #D7CCC8;
 
 $purple: #E040FB;
 
-// Default (Oceanic)
-$oceanic-bg: #263238;
-$oceanic-fg: #B0BEC5;
-$oceanic-contrast: #1E272C;
-
-// Darker
-$darker-bg: #212121;
-$darker-fg: #B0BEC5;
-$darker-contrast: #1A1A1A;
-
-// Palenight
-$palenight-bg: #292D3E;
-$palenight-fg: #B0BEC5;
-$palenight-contrast: #202331;
-
-// Lighter
-$lighter-bg: #fafafa;
-$lighter-fg: #A7ADB0;
-$lighter-contrast: #F4F4F4;
-
-// Deep Ocean
-$deepocean-bg: #0F111A;
-$deepocean-fg: #8F93A2;
-$deepocean-contrast: #090B10;
-
-// Monokai
-$monokai-bg: #2D2A2E;
-$monokai-fg: #C1C0C0;
-$monokai-contrast: #221F22;
-
-// Arc dark
-$arcdark-bg: #383C4A;
-$arcdark-fg: #D3DAE3;
-$arcdark-contrast: #2f343f;
-
-// One Dark
-$onedark-bg: #282C34;
-$onedark-fg: #979FAD;
-$onedark-contrast: #21252B;
-
-// One Light
-$onelight-bg: #FAFAFA;
-$onelight-fg: #232324;
-$onelight-contrast: #D3D4D5;
-
-// Solarized Dark
-$solardark-bg: #002B36;
-$solardark-fg: #839496;
-$solardark-contrast: #00252E;
-
-// Solarized Light
-$solarlight-bg: #FDF4DF;
-$solarlight-fg: #586e75;
-$solarlight-contrast: #FCF4DC;
+:root {
+  --background: #666666;
+  --foreground: #ffffff;
+  --contrast: #333333;
+}

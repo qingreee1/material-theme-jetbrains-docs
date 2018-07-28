@@ -1,80 +1,47 @@
 $themes: (
   "oceanic": (
-    "bg": $oceanic-bg,
-    "fg": $oceanic-fg,
-    "ct": $oceanic-contrast
   ),
   "darker": (
-    "bg": $darker-bg,
-    "fg": $darker-fg,
-    "ct": $darker-contrast
   ),
   "palenight": (
-    "bg": $palenight-bg,
-    "fg": $palenight-fg,
-    "ct": $palenight-contrast
   ),
   "lighter": (
-    "bg": $lighter-bg,
-    "fg": $lighter-fg,
-    "ct": $lighter-contrast
   ),
   "deepocean": (
-    "bg": $deepocean-bg,
-    "fg": $deepocean-fg,
-    "ct": $deepocean-contrast
   ),
   "monokai": (
-    "bg": $monokai-bg,
-    "fg": $monokai-fg,
-    "ct": $monokai-contrast
   ),
   "arcdark": (
-    "bg": $arcdark-bg,
-    "fg": $arcdark-fg,
-    "ct": $arcdark-contrast
   ),
   "onedark": (
-    "bg": $onedark-bg,
-    "fg": $onedark-fg,
-    "ct": $onedark-contrast
   ),
   "onelight": (
-    "bg": $onelight-bg,
-    "fg": $onelight-fg,
-    "ct": $onelight-contrast
   ),
   "solardark": (
-    "bg": $solardark-bg,
-    "fg": $solardark-fg,
-    "ct": $solardark-contrast
   ),
   "solarlight": (
-    "bg": $solarlight-bg,
-    "fg": $solarlight-fg,
-    "ct": $solarlight-contrast
   ),
 );
 
 @each $name, $theme in $themes {
   body.#{$name} {
     .front-page {
-      background-color: map-get($theme, "bg");
-      color: map-get($theme, "fg");
+      background-color: var(--background);
+      color: var(--foreground);
     }
 
     .header,
     .footer {
-      background-color: map-get($theme, "bg");
+      background-color: var(--background);
     }
     .main-menu,
     .menu,
     .footer {
-      background-color: map-get($theme, "ct");
-      color: map-get($theme, "fg");
+      background-color: var(--contrast);
+      color: var(--foreground);
 
       a {
-        color: map-get($theme, "fg");
+        color: var(--foreground);
         &:hover {
           color: $accent-color;
         }
@@ -82,13 +49,13 @@ $themes: (
 
       .navbar > li {
         &:hover {
-          background: map-get($theme, "bg");
+          background: var(--background);
         }
       }
     }
 
     .muted {
-      color: transparentize(map-get($theme, "fg"), $opacity);
+      color: rgba(var(--foreground), $opacity);
     }
 
     .logo-caption,
@@ -96,17 +63,18 @@ $themes: (
     .section-title,
     .feat-title,
     .feat-caption {
-      color: map-get($theme, "fg");
-      fill: map-get($theme, "fg");
+      color: var(--foreground);
+      fill: var(--foreground);
     }
 
     .contents {
-      background-color: map-get($theme, "bg");
-      color: map-get($theme, "fg");
+      background-color: var(--background);
+      color: var(--foreground);
     }
 
     .screenshot {
-      background: url(../../img/#{$name}.png), url(../../img/laptop.png);
+      //background: url(../../img/#{$name}.png), url(../../img/laptop.png);
+      background: var(--laptop), url(../../img/laptop.png);
       background-repeat: no-repeat, no-repeat;
       background-size: 75%, contain;
       background-position: 50% 30%, top left;
@@ -118,7 +86,7 @@ $themes: (
     }
 
     .logo-img {
-      background-image: url(../../img/material-#{$name}.svg), url(../../img/material-oceanic.svg);
+      background-image: var(--logo), url(../../img/material-oceanic.svg);
       margin: 1em auto;
 
       &.-error {
@@ -128,26 +96,34 @@ $themes: (
     }
 
     .sidebar-toggle {
-      background: map-get($theme, "bg");
+      background: var(--background);
+      transition: background 0.25s;
+
       &:hover {
-        background: darken(map-get($theme, "bg"), 7%);
+        background: /* Make a bit darker */
+          linear-gradient(
+              to top,
+              rgba(0, 0, 0, 0.25),
+              rgba(0, 0, 0, 0.25)
+          ),
+          var(--background)
       }
       i {
-        color: map-get($theme, "fg");
+        color: var(--foreground);
       }
     }
 
     .sidebar {
-      background: map-get($theme, "ct");
-      color: map-get($theme, "fg");
+      background: var(--contrast);
+      color: var(--foreground);
 
       .sidebar-link-group a:hover {
-        background-color: map-get($theme, "bg");
+        background-color: var(--background);
       }
 
       .sidebar-link-group.active > li > a,
       .link-section.active > a {
-        background-color: map-get($theme, "bg");
+        background-color: var(--background);
       }
 
       .link-section.active > a {
@@ -155,7 +131,7 @@ $themes: (
       }
 
       a {
-        color: adjust-color(map-get($theme, "bg"));
+        color: #fff;
         &:hover {
           color: $second-accent-color;
         }
@@ -164,7 +140,7 @@ $themes: (
 
     .docs-header {
       background: $second-accent-color;
-      color: adjust-color(map-get($theme, "bg"));
+      color: #fff;
     }
 
     .github-ribbon {
