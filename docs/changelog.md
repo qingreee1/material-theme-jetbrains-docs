@@ -16,6 +16,29 @@ next:
 # Changelog
 ----
 
+# 2.7.2
+- Set font for search field from the Default Font
+- Replace Segment by MixPanel for analytics
+- Fix second title bar on Windows
+- Set Wizard shown state in MTConfig instead of Properties
+- Refactor Color Schemes
+- 
+
+# 2.7.1
+- Add a shadow to the Tabs
+- Fix default font in Mac when Material Fonts is disabled
+- Fix Themed Title bar option: setting the option in dark themes turns the Dark Window Headers too.
+- Refactor color schemes
+
+# 2.7.0
+- New: **Material Wizard** to help users configure the plugin!
+- Fix Freeze issue (https://github.com/ChrisRM/material-theme-jetbrains/issues/855)
+- Fix Atom One Light notification color
+
+# 2.6.1
+- Fix Atom One Light and Deep Ocean color schemes (Diff, Javascript and Comments)
+- Change Border color and Button color of Deep Ocean theme
+
 # 2.6
 - New Themes: **Atom One Light** and **Material Deep Ocean**
 - Add support for accent color and excluded files color in themes (and external themes)

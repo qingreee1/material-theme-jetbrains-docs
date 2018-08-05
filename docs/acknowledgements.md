@@ -114,6 +114,18 @@ A rather simple plugin that highlights all occurences of the word under caret. I
 
 The Material Theme Icons, but for Visual Studio Code. It's actually the _Decorated Folders_ feature that gave me the idea to implement it in the Jetbrains' plugin. Besides, the folder icons were taken from there, with some small changes in the colors.
 
+##### Monokai Pro
+
+[Monokai Pro](https://www.monokai.pro/) by Monokai
+
+This is the pro version of the famous Monokai theme, which, just like the Material Theme, completely remodels the IDEs with a set of themes, color schemes, icons, fonts and other features. Unfortunately it is a paid theme and is not available to Jetbrains products, so a porting has been made inside the plugin :)
+
+##### Night Owl
+
+[Night Owl Theme](https://css-tricks.com/creating-a-vs-code-theme/) by Sarah Drasner
+
+Not a reference but a very nice theme good for the eyes, a mix between Palenight and Deep Ocean themes :)
+
 ----
 #### Contributors
 
