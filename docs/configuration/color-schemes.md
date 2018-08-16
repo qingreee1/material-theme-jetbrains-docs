@@ -44,6 +44,7 @@ provided by the plugin are:
 - Atom One Light ![new-box](/img/icons/new-box.png)
 - Arc Dark ![new-box](/img/icons/new-box.png)
 - Material Monokai Pro
+- Monokai Pro ![new-box](/img/icons/new-box.png)
 - Solarized Dark
 - Solarized Light
 
