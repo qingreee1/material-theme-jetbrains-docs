@@ -10,8 +10,8 @@ previous:
   title: File Icons
 
 next:
-  url: '/docs/development/installation'
-  title: Installation
+  url: '/docs/reference/wizard'
+  title: Material Wizard
 ---
 
 This is a reference of all the components customized by the plugin.
