@@ -16,6 +16,17 @@ next:
 # Changelog
 ----
 
+# 2.8.1
+- Fix Monokai Pro color scheme
+- Fix Status bar not expanding on Windows
+- Added new UI icons (run anything, java ee, json, todo, collapse/expand)
+
+# 2.8.0
+- Fix temporarily the OptionPane error until Jetbrains fixes it
+- Add new syntax theme: **Monokai Pro** based on the original Monokai Pro
+- Improve the Arc Dark Theme a bit
+- Fix Compact Statusbar in Windows
+
 # 2.7.2
 - Set font for search field from the Default Font
 - Replace Segment by MixPanel for analytics
@@ -67,6 +78,7 @@ next:
 - Fix error with prefs files
 - Fix monochrome filter not staying after saving options
 - Add new search everywhere resources
+
 
 # 2.4.1
 - Add None Option to arrow styles
@@ -132,7 +144,6 @@ There could be other bugs though.
 - Change color of primary buttons for Monokai theme
 - Set Autocomplete selected item background color when unfocused
 - Change notification colors (success, warn, error)
-
 
 ## 2.2.1
 - Theme border color of popups
@@ -865,8 +876,4 @@ Thanks to @mallowigi for taking the project to the next level. This is all him:
 ### Fixed
 - Fix issues with the color schemes.
 
-## 0.1
-- Color Scheme: Material Default
-- Theme Support
-- Icon Support
-- PHP Plugin Support
+[Unreleased]: https://github.com/ChrisRM/material-theme-jetbrains/compare/v0.2.2...HEAD

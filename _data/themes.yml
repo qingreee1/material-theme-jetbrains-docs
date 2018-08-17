@@ -18,6 +18,8 @@ material:
   misc2: '#425B67'
   tree: '#546E7A'
   notif: '#1E272C'
+  accent: '#009688'
+  excluded: '#2E3C43'
 
 - darker:
   name: Darker
@@ -38,6 +40,8 @@ material:
   misc2: '#3F3F3F'
   tree: '#323232'
   notif: '#1A1A1A'
+  accent: '#FF9800'
+  excluded: '#323232'
 
 - lighter:
   name: Lighter
@@ -58,6 +62,8 @@ material:
   misc2: '#D2D4D5'
   tree: '#546E7A'
   notif: '#b0bec5'
+  accent: '#80CBC4'
+  excluded: '#eae8e8'
 
 - palenight:
   name: Palenight
@@ -78,6 +84,8 @@ material:
   misc2: '#444267'
   tree: '#676E95'
   notif: '#202331'
+  accent: '#ab47bc'
+  excluded: '#2f2e43'
 
 - deepocean:
   name: Deep Ocean
@@ -98,6 +106,8 @@ material:
   misc2: '#4B526D'
   tree: '#717CB4'
   notif: '#090B10'
+  accent: '#84ffff'
+  excluded: '#292D3E'
 
 other:
 - monokai:
@@ -119,6 +129,8 @@ other:
   misc2: '#59575A'
   tree: '#5B595C'
   notif: '#363437'
+  accent: '#E91E63'
+  excluded: '#3a3a3c'
 
 
 - arcdark:
@@ -140,6 +152,8 @@ other:
   misc2: '#22242d'
   tree: '#5294e2'
   notif: '#313541'
+  accent: '#009688'
+  excluded: '#3c4150'
 
 - onedark:
   name: One Dark
@@ -160,6 +174,8 @@ other:
   misc2: '#383D48'
   tree: '#3A3F4B'
   notif: '#282C34'
+  accent: '#2979ff'
+  excluded: '#3c4150'
 
 - onelight:
   name: One Light
@@ -180,6 +196,8 @@ other:
   misc2: '#EAEAEB'
   tree: '#526FFF'
   notif: '#F2F2F2'
+  accent: '#2979ff'
+  excluded: '#DBDBDC'
 
 - solardark:
   name: Solarized Dark
@@ -200,6 +218,8 @@ other:
   misc2: '#11353F'
   tree: '#2E4C52'
   notif: '#2E4C52'
+  accent: '#d33682'
+  excluded: '#083F4D'
 
 - solarlight:
   name: Solarized Light
@@ -220,3 +240,5 @@ other:
   misc2: '#F6F0DE'
   tree: '#93a1a1'
   notif: '#93a1a1'
+  accent: '#d33682'
+  excluded: '#E3DCC9'
