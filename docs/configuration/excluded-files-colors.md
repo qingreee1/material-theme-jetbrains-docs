@@ -5,19 +5,6 @@ description: Learn about File Colors, Scopes and Excluded files
 group: configuration
 toc: true
 comments: true
-colors:
-  - name: default
-    color: '#2E3C43'
-    light: false
-  - name: darker
-    color: '#323232'
-    light: false
-  - name: lighter
-    color: '#EAE8E8'
-    light: true
-  - name: palenight
-    color: '#2F2E43'
-    light: false
 
 previous:
   url: '/docs/configuration/component-settings'
@@ -114,5 +101,10 @@ These are not installed automatically, as people not necessarily want this setti
 ## Color Reference
 
 {% for theme in site.data.themes.material %}
-{% include color.html color=theme field="inactive" %}
+{% include color.html color=theme field="excluded" %}
+{% endfor %}
+
+
+{% for theme in site.data.themes.other %}
+{% include color.html color=theme field="excluded" %}
 {% endfor %}

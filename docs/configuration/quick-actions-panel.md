@@ -10,7 +10,7 @@ previous:
   url: '/docs/configuration/component-settings'
   title: Component Settings
 next:
-  url: '/docs/configuration/excluded-file-colors'
+  url: '/docs/configuration/excluded-files-colors'
   title: Excluded File Colors
 ---
 

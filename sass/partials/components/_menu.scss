@@ -85,13 +85,20 @@
       &:hover {
         transition: .3s all linear;
         @include list-indicator;
+        &::before {
+          left: -8px;
+        }
       }
     }
   }
 
-  @media screen and (max-width: $mobile-size) {
+  @media screen and (max-width: $mainnav-collapse) {
     li {
-      flex: 0
+      flex: 0;
+      position: relative;
+      &:hover {
+        border-bottom: 0;
+      }
     }
   }
 }

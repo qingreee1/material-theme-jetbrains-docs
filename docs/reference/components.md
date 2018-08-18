@@ -38,6 +38,7 @@ Regular Editor tabs have been modified to look like Material design tabs:
 - An indicator is displayed under the active tab
 - They can be bold uppercase
 - The close button has been reworked
+- A shadow is shown under the tab strip (from version 2.8.0)
 
 ### Buttons
 

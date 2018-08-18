@@ -42,7 +42,6 @@
       transform: translateX(0);
       .sidebar-toggle {
         height: $margin-width;
-        background: rgba($material-sidebar-responsive-border-bg, 0);
         i {
           transform: translate(50%, -50%) rotate(45deg);
         }
@@ -57,10 +56,8 @@
       left: $sidebar-width - $margin-width;
       width: $margin-width;
       height: 100%;
-      background: $material-sidebar-responsive-border-bg;
       &:hover {
         cursor: pointer;
-        background: darken($material-sidebar-responsive-border-bg, 7%);
       }
       i {
         transition: 1s all ease;

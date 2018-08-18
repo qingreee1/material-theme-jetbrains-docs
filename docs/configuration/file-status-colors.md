@@ -50,29 +50,29 @@ There you can override the File Status Colors from the _IntelliJ/Darcula_ color 
 
 Here's an explanation of the file statuses:
 
-| Title                    | Material Color            | Explanation                                               |
-|:-------------------------|:--------------------------|:----------------------------------------------------------|
-| Added                    | #C3E88D (green)           | New file added to the repository in active changelist     |
-| Added outside            | #C3E88D (green)           | New file added to the repository in non-active changelist |
-| Changelist conflict      | #d5756c (red)             | File modified in two changelists                          |
-| Copied                   | #C3E88D (green)           | File copied (Mercurial only)                              |
-| Deleted                  | #808080 (gray)            | File removed from the repository                          |
-| Deleted from FS          | #808080 (gray)            | File deleted from the file system                         |
-| Have changed descendants | #80cbc4 (cyan)            | Directory has recursively changed files (not used)        |
-| Have immediate changed   | #80cbc4 (cyan)            | Directory has immediate changed descendants (not used)    |
-| Hijacked                 | #ffcb6b (yellow)          | File is modified without editing (Perforce only)          |
-| Ignored                  | #ab7967 (brown)           | File is ignored                                           |
-| Ignored (ignore plugin)  | #ab7967 (brown)           | File is ignored by the .ignore plugin                     |
-| Merged                   | #C792EA (violet)          | File is modified by a merge                               |
-| Merged with conflicts    | #d5756c (red)             | File has conflicts                                        |
-| Modified                 | #80cbcf (cyan)            | File modified in active changelist                        |
-| Modified outside         | #82AAFF (blue)            | File modified in non-active changelist                    |
-| Obsolete                 | #ffcb6b (yellow)          | File is obsolete (SVN only)                               |
-| Renamed                  | #80CBC4 (cyan)            | File renamed (Mercurial only)                             |
-| Switched                 | #C792EA (violet)          | File from another branch (SVN only)                       |
-| Suppressed               | #546E7A (comments color)  | File from a Virtual File System (like Scratches)          |
-| Unknown                  | #d5756c (red)             | Unversioned file                                          |
-| Up to date               | none (default tree color) | File unchanged                                            |
+| Title                    | Material Color                                                              | Explanation                                               |
+|:-------------------------|:----------------------------------------------------------------------------|:----------------------------------------------------------|
+| Added                    | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)   | New file added to the repository in active changelist     |
+| Added outside            | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)   | New file added to the repository in non-active changelist |
+| Changelist conflict      | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#d5756c">#d5756c</span> (red)     | File modified in two changelists                          |
+| Copied                   | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)   | File copied (Mercurial only)                              |
+| Deleted                  | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#808080">#808080</span> (gray)    | File removed from the repository                          |
+| Deleted from FS          | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#808080">#808080</span> (gray)     | File deleted from the file system                         |
+| Have changed descendants | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#80cbc4">#80cbc4</span> (cyan)           | Directory has recursively changed files (not used)        |
+| Have immediate changed   | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#80cbc4">#80cbc4</span> (cyan)           | Directory has immediate changed descendants (not used)    |
+| Hijacked                 | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#ffcb6b">#ffcb6b</span> (yellow)         | File is modified without editing (Perforce only)          |
+| Ignored                  | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#ab7967">#ab7967</span> (brown)          | File is ignored                                           |
+| Ignored (ignore plugin)  | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#ab7967">#ab7967</span> (brown)          | File is ignored by the .ignore plugin                     |
+| Merged                   | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C792EA">#C792EA</span> (violet)         | File is modified by a merge                               |
+| Merged with conflicts    | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#d5756c">#d5756c</span> (red)            | File has conflicts                                        |
+| Modified                 | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#80cbcf">#80cbcf</span> (cyan)           | File modified in active changelist                        |
+| Modified outside         | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#82AAFF">#82AAFF</span> (blue)           | File modified in non-active changelist                    |
+| Obsolete                 | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#ffcb6b">#ffcb6b</span> (yellow)         | File is obsolete (SVN only)                               |
+| Renamed                  | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#80CBC4">#80CBC4</span> (cyan)           | File renamed (Mercurial only)                             |
+| Switched                 | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C792EA">#C792EA</span> (violet)         | File from another branch (SVN only)                       |
+| Suppressed               | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#546E7A">#546E7A</span> (comments color) | File from a Virtual File System (like Scratches)          |
+| Unknown                  | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#d5756c">#d5756c</span> (red)            | Unversioned file                                          |
+| Up to date               | none (default tree color)                                                   | File unchanged                                            |
 
 &nbsp;
 

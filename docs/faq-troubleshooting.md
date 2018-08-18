@@ -59,6 +59,10 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 
 **A**: This is an option to allow sending data to Material Theme servers about users' configuration, usage and trends. These analytics will allow us to see which features are most used or least used, in order to prioritize development of features, or maybe notify users about specific features, to provide a better satisfaction. These data are completely anonymous, and are not shared/sold to any third parties. If you want to stop sending data, simply turn off the option in the material_theme.xml.
 
+**Q**: The wizard idea was great! But I've made an error and the wizard won't show up anymore!
+
+**A**: The wizard will show only once and only when you don't have the `isWizardShown` option set to true in the config file. But you can reopen it by simply clicking on the action from the Material Theme Toolbar, in the Features menu.
+
 
 ----
 ## Main Settings
