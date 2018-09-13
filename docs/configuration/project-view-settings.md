@@ -53,11 +53,18 @@ The allowed values vary between **0** and **40**, with the default being **6**.
 </div>
 
 ----
-### Bold Directories
+### Styled Directories
 
-This setting allows you to set directories in the _Project View_ in **bold**. This could be useful to immediately differentiate between files and directories (default off).
+This setting allows you to set a custom style for directories in the _Project View_. This could be useful to immediately differentiate between files and directories (default off).
 
-{% include figure.html content="/screens/boldDirectories.png" caption="Bold directories" %}
+The options for configuring the style of directories can be found inside the [Material File Colors Settings]({{site.baseurl}}/docs/configuration/file-status-colors#directories)
+
+{% include figure.html content="/screens/boldDirectories.png" caption="Styled directories" %}
+
+Please note that since it's a _Color Scheme_ feature, the style must be configured per color scheme rather than application-wide. This is great though for applying different styles according to the color scheme.
+{:class='card-panel warn'}
+
+This feature is available from versions **2.9** and above.
 
 ----
 ### Arrows Style

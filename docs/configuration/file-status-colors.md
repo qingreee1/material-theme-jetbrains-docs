@@ -50,14 +50,15 @@ There you can override the File Status Colors from the _IntelliJ/Darcula_ color 
 
 Here's an explanation of the file statuses:
 
-| Title                    | Material Color                                                              | Explanation                                               |
-|:-------------------------|:----------------------------------------------------------------------------|:----------------------------------------------------------|
-| Added                    | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)   | New file added to the repository in active changelist     |
-| Added outside            | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)   | New file added to the repository in non-active changelist |
-| Changelist conflict      | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#d5756c">#d5756c</span> (red)     | File modified in two changelists                          |
-| Copied                   | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)   | File copied (Mercurial only)                              |
-| Deleted                  | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#808080">#808080</span> (gray)    | File removed from the repository                          |
-| Deleted from FS          | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#808080">#808080</span> (gray)     | File deleted from the file system                         |
+| Title                    | Material Color                                                                                                                | Explanation                                               |
+|:-------------------------|:------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------|
+| Added                    | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)          | New file added to the repository in active changelist     |
+| Added outside            | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)          | New file added to the repository in non-active changelist |
+| Changelist conflict      | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#d5756c">#d5756c</span> (red)            | File modified in two changelists                          |
+| Copied                   | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C3E88D">#C3E88D</span> (green)          | File copied (Mercurial only)                              |
+| Deleted                  | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#808080">#808080</span> (gray)           | File removed from the repository                          |
+| Deleted from FS          | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#808080">#808080</span> (gray)           | File deleted from the file system                         |
+| Directories              | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#FCFCFA">#FCFCFA</span> (default text)    | Directory (depends on the *Styled Directories* setting).  |
 | Have changed descendants | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#80cbc4">#80cbc4</span> (cyan)           | Directory has recursively changed files (not used)        |
 | Have immediate changed   | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#80cbc4">#80cbc4</span> (cyan)           | Directory has immediate changed descendants (not used)    |
 | Hijacked                 | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#ffcb6b">#ffcb6b</span> (yellow)         | File is modified without editing (Perforce only)          |
@@ -72,7 +73,7 @@ Here's an explanation of the file statuses:
 | Switched                 | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#C792EA">#C792EA</span> (violet)         | File from another branch (SVN only)                       |
 | Suppressed               | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#546E7A">#546E7A</span> (comments color) | File from a Virtual File System (like Scratches)          |
 | Unknown                  | <span style="background-color:#000; font-weight: bold; font-family: monospace; color:#d5756c">#d5756c</span> (red)            | Unversioned file                                          |
-| Up to date               | none (default tree color)                                                   | File unchanged                                            |
+| Up to date               | none (default tree color)                                                                                                     | File unchanged                                            |
 
 &nbsp;
 
@@ -80,6 +81,19 @@ Other statuses may come from 3rd-party plugins and will have the default color p
 
 **Note**: Because this feature overrides the one from the IDE, changing colors via the regular screen (VCS -> File Status Colors) doesn't make sense and will be overriden the next time you change the color scheme. So please use the `Material File Colors` from now on, even if you are on Darcula or a custom color scheme.
 {:class='card-panel'}
+
+## Directories
+
+From version 2.9.0 a new entry named _Directories_ has been added to the page, allowing to set a custom color to directories only, thus differentiating from regular files.
+
+This setting depends on the [Project View Settings's Styled Directories]({{site.baseurl}}/docs/configuration/project-view-settings#styled-directories) and is disabled by default.
+
+{% include figure.html content="/screens/styledDirectories.png" caption="Styled Directories" %}
+
+Note: Even though all customization options are available, only a portion of them is actually working. These are `Bold`, `Italic`, `Foreground`, `Error Stripe Mark`, `Underscored` and `Underwaved`. The rest won't work.
+{:class='card-panel warn'}
+
+----
 
 ## Advanced customization
 

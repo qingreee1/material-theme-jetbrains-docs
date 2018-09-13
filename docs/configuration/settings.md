@@ -124,15 +124,15 @@ Quick summary of all settings:
 - *Compact Dropdown Lists*: Reduce the size of the dropdowns
 
 **Icons Settings**:
-- *Material Icons*: Enable/Disable the Material Theme icons (both UI and File Icons)
+- *Material UI Icons*: Enable/Disable the Material UI icons
 - *Hide Icons*: Hide file icons (depends on the Material Icons option)
 - *Monochrome Icons*: Filter the IDE icons with a shade of the current theme's primary color
+- *File Icons*: Enable/Disable the Custom File Icons
 - *Folder decorators*: Decorate special folders with custom icons.
 
 **Project View Settings**:
 - *Custom Sidebar Height*: Set a custom line height in Project View (min: 18, max: 30)
 - *Custom Tree Indent*: Fine tune indent of Project View items (both left and right indent)
-- *Bold directories*: Set bold font weight for directories in the Project View
 - *Selected Indicator Style*: Change the style of the indicator of the selected item in trees
   - *Border*: Add a small border to the left
   - *Dot*: Add a dot on the selected item
@@ -143,6 +143,7 @@ Quick summary of all settings:
   - *Darcula*: Triangle arrows
   - *Plus-Minus*: Plus and Minus symbols
   - *None*: Hide the arrows
+- *Custom Directories Style*: Assign a specific style to directories. Can be configured from the *Material File Colors* settings page.
 - *Font Size*: Fine tune the font size of the project trees (require restart)
 
 **Component Settings**:
@@ -229,8 +230,8 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <!-- Sidebar line height if enabled -->
   <option name="customSidebarHeight" value="28" />
 
-  <!-- Bold folders (not tabs) enabled -->
-  <option name="isBoldTabs" value="true" />
+  <!-- Styled folders enabled -->
+  <option name="isStyledDirectories" value="true" />
   <!-- Compact status bar enabled -->
   <option name="isCompactStatusBar" value="false" />
   <!-- Compact table cells enabled -->
@@ -257,12 +258,14 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <option name="highContrast" value="true" />
   <!-- Material components enabled -->
   <option name="isMaterialDesign" value="true" />
-  <!-- Material and File icons enabled -->
+  <!-- Material UI icons enabled -->
   <option name="useMaterialIcons" value="true" />
   <!-- Material fonts enabled -->
   <option name="useMaterialFonts" value="true" />
   <!-- Project view decorators enabled-->
   <option name="useProjectViewDecorators" value="true" />
+   <!-- File Icons enabled-->
+  <option name="fileIcons" value="true" />
   <!-- Decorated folders enabled-->
   <option name="decoratedFolders" value="true" />
   <!-- File Status Colors enabled-->

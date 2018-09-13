@@ -16,6 +16,33 @@ next:
 # Changelog
 ----
 
+# 2.9.0
+
+- Completely refactor the Icon Replacements framework, allowing the plugin to be able to replace even icons from external plugins such as AppCode, Gradle or even custom plugins such as Markdown Navigator and the sort.
+- **Replaced all the icons to their SVG equivalent!** (that was hard)
+- Also remade a lot of icons to better reflect Material Design
+- Added new **file icons**: Arduino, Assembly, Authors, Ballerina, Crystal, CSSMap, Dotjs, DTS, Favicon, Firebase, Flash, Gatsby, Gemfile, Po, JSMap, MJML, Nimble, Raml, Razor, Redux Actions/Stores/Reducers, Smarty, Solidity, Sonar, Stencil, Storybook, Wallaby
+- Added new **folder icons**: benchmarks, coverage, controllers, debug, excluded, expo, jinja, less, maven, messages, models, plugin, python, react, redux, routes, scripts, sublime, sync, tasks
+- Separate the _Material Icons_ setting to _Material UI Icons_ and _Material File Icons_.
+- Fixed Project View border color
+- Fixed **Monokai Pro** colors to better reflect the original theme
+- Removed _Material Monokai Pro_
+- Added IDs to `plugin.xml` components and extensions
+
+# 2.8.3
+- Improve Deep Ocean colors
+- Bold directories has been renamed to "styled directories" and an entry has been added to the Material File Colors
+- Swagger file association regex
+- Fix Statistics not being persisted when clicking "decline"
+- Fix #902
+
+# 2.8.2
+- Fix https://github.com/ChrisRM/material-theme-jetbrains/issues/902
+- Replace _Bold Directories_ option with _Styled directories_:
+    - This option also create a _Directories_ entry inside `Material File Colors` section of the color scheme
+    - This will allow you to style directories in the Project View however you want (currently only supports foreground, bold, italic and underscored effects)
+- Improve Deep Ocean colors to look more like the VSC equivalent
+
 # 2.8.1
 - Fix Monokai Pro color scheme
 - Fix Status bar not expanding on Windows
