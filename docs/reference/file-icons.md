@@ -49,7 +49,7 @@ Icons are matched based on a specific pattern in the filename:
 
 Finally, if the icon does not fall in any of the categories, it will either:
 - Get a generic category (Audio, Video, Archive, JSON)
-- Fallback to the original icon provided by Jetbrains
+- Fallback to the original icon provided by JetBrains
 
 To see the full associations list, see [icon_associations.xml](https://github.com/ChrisRM/material-theme-jetbrains/blob/master/src/main/resources/icon_associations.xml)
 

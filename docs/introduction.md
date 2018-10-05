@@ -11,9 +11,9 @@ next:
   title: Settings
 ---
 
-**Material Theme** is a *plugin* for Jetbrains IDEs providing a
+**Material Theme** is a *plugin* for JetBrains IDEs providing a
 [Material Design](https://material.io/guidelines/)
-experience for Jetbrains products.
+experience for JetBrains products.
 {:class='title'}
 
 It is based on the [Material Theme for Sublime](https://github.com/equinusocio/material-theme) plugin while trying to bring its own lot of features.
@@ -30,7 +30,7 @@ It is based on the [Material Theme for Sublime](https://github.com/equinusocio/m
 <img class="promo-img" src="{{ site.img_folder | prepend: site.baseurl | replace: '//', '/' }}/lookandfeel.svg">
 
 This plugins installs fresh, modern and beautiful Look and Feels for the Intellij platform.
-Up to this day, the Jetbrains engineers did not provide an API for creating custom Look and Feels, leaving us
+Up to this day, the JetBrains engineers did not provide an API for creating custom Look and Feels, leaving us
 stuck with the prebundled *Darcula* and *IntelliJ*. Nonetheless, this plugin is exploiting the Java Swing theming capabilities
 to override those setup by Darcula in order to provide a new Look And Feel based on the [Sublime Material Theme](https://github.com/equinusocio/material-theme) by Mattia Astorino.
 
@@ -94,8 +94,8 @@ version of the theme.
 
 <img class="avatar-img" src="https://avatars3.githubusercontent.com/u/309292?v=4&s=460">
 
-Web developer and designer based in Norway, he is the original creator of the Jetbrains plugin. Having discovered the way to customize the look and feel of
-the Jetbrains IDEs, he experimented on porting the already successful Material Theme on it, gaining immediately fame even across Jetbrains employees, who
+Web developer and designer based in Norway, he is the original creator of the JetBrains plugin. Having discovered the way to customize the look and feel of
+the JetBrains IDEs, he experimented on porting the already successful Material Theme on it, gaining immediately fame even across JetBrains employees, who
 contributed to the project in its beginning. The project got famous very quickly, being referenced on Laracasts, blogs and tutorial videos.
 
 ##### Elior Boukhobza ([@mallowigi](https://github.com/mallowigi))

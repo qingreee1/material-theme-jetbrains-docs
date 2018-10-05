@@ -26,7 +26,7 @@ Note that this process does not collect user information at all, therefore **com
 
 ## Opt-in and Opt-out
 
-These metrics are opt-in by default. This means that unless you specifically consent to upload analytics data, these will not be collected. The consent is shown via a Notification just like Jetbrains's own consent.
+These metrics are opt-in by default. This means that unless you specifically consent to upload analytics data, these will not be collected. The consent is shown via a Notification just like JetBrains's own consent.
 
 Whether you choose yes or no, this consent will not appear unless you cleanup your settings.
 

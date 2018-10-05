@@ -42,7 +42,7 @@ In order to avoid crazy values that could ruin the UI, the values are limited be
 
 #### About Tabs Placement
 
-While most of people set their tabs to be on the top, Jetbrains IDE also give the possibility to place your tabs to the bottom, left or right side.
+While most of people set their tabs to be on the top, JetBrains IDE also give the possibility to place your tabs to the bottom, left or right side.
 
 In that case, the active tab indicator will be placed accordingly to the tab position:
 - At the top for _bottom placement_
@@ -114,7 +114,7 @@ The close icon didn't change, but it will be colored to the accent color on hove
 
 **Q**: The Tab Height feature is cool in the editor, but I'd rather leave other tabs untouched.
 
-**A**: Me as well. Unfortunately currently the setting that sets the tab height is shared between all tabs in the SDK, and there is no way to distinguish between them currently. Maybe in the future if Jetbrains agrees to allow more customization natively.
+**A**: Me as well. Unfortunately currently the setting that sets the tab height is shared between all tabs in the SDK, and there is no way to distinguish between them currently. Maybe in the future if JetBrains agrees to allow more customization natively.
 
 **Q**: Why limiting the thickness or the tab height? I want to have 10 in thickness and 100 in tabs!!!
 

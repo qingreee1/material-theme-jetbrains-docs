@@ -17,9 +17,9 @@ In this post I will try to explain the reasoning behind this refactor and the or
 
 ### Background
 
-To better explain the framework, we need to return back at the premises of the plugin, e.g. up to the end of 2015. At that time, John Lindquist, who was working at Jetbrains (or for Jetbrains, I don't know the details), owner of https://www.egghead.io and Angular enthusiast, found out that it was possible to override Darcula's defaults to create custom themes, a feature unfortunately absent in Jetbrains IDEs. He then opened a feature request to allow plugin developers to create their own custom themes, presenting his own plugin, "_Darkerula_" as a proof of concept.
+To better explain the framework, we need to return back at the premises of the plugin, e.g. up to the end of 2015. At that time, John Lindquist, who was working at JetBrains (or for JetBrains, I don't know the details), owner of https://www.egghead.io and Angular enthusiast, found out that it was possible to override Darcula's defaults to create custom themes, a feature unfortunately absent in JetBrains IDEs. He then opened a feature request to allow plugin developers to create their own custom themes, presenting his own plugin, "_Darkerula_" as a proof of concept.
 
-However Jetbrains had other plans in mind, such as improving the performance of their IDEs, supporting a lot of languages and frameworks, etc... and UI customization wasn't one of them. But this served as a stepping stone for other plugins to build on that, such as Seti UI, Afterglow or, as you guessed, Material Theme.
+However JetBrains had other plans in mind, such as improving the performance of their IDEs, supporting a lot of languages and frameworks, etc... and UI customization wasn't one of them. But this served as a stepping stone for other plugins to build on that, such as Seti UI, Afterglow or, as you guessed, Material Theme.
 
 Chris Magnussen, the original Material Theme plugin owner, quickly implemented the colors of the original _Material Theme for Sublime Text_, and the result was pretty nice. But then he noticed that the Oceanic blue colors were not blending very well with the bland IntelliJ icons, as opposed as the Sublime Text plugin, so he sought out a solution to replace the icons as well.
 
@@ -50,11 +50,11 @@ So the plugin has been using this feature by overriding the static fields contai
 
 But if this solution worked for most icons of the IDE, there is an area where it is not working: when the static fields are contained in classes loaded by <u>external plugins</u>. By external plugins, we mean plugins such as Gradle, Maven, but also complete IDEs such as Android Studio, DataGrip or RubyMine!
 
-To circumvent these limitations, a prior solution was to conditionally load sub-instances of IconReplacer, when a plugin is present. So we had an IconReplacer for RubyMine, for DataGrip, for PHPStorm, for PyCharm etc... But that means that for every plugin out there, we had to implement an IconReplacer, which is starting to becoming very inconvenient. And also, sometimes it didn't even work.
+To circumvent these limitations, a prior solution was to conditionally load sub-instances of IconReplacer, when a plugin is present. So we had an IconReplacer for RubyMine, for DataGrip, for PhpStorm, for PyCharm etc... But that means that for every plugin out there, we had to implement an IconReplacer, which is starting to becoming very inconvenient. And also, sometimes it didn't even work.
 
 And there was another problem, it's about the extensions. Some icons were png, some were svg, some were gifs, some were accented icons, some were animated icons etc... It was far from perfect.
 
-Then there was the big uproar about Jetbrains replacing the icons with black and white equivalents, and the rising of solutions bringing back the old icons. That's where I learnt that there was another way to fix the icons issue which would not use reflection at all: **IconPathPatcher**.
+Then there was the big uproar about JetBrains replacing the icons with black and white equivalents, and the rising of solutions bringing back the old icons. That's where I learnt that there was another way to fix the icons issue which would not use reflection at all: **IconPathPatcher**.
 
 ----
 To be continued...

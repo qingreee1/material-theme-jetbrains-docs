@@ -23,7 +23,7 @@ This is a reference of all the components customized by the plugin.
 
 The original idea of the _Material Theme plugin_ was to be able to customize the UI and Editor colors to look like the original Sublime theme. Since there wasn't a way to create a new separate Look And Feel, the plugin is instead borrowing the native Look and feels, Darcula and IntelliJ, and overrides their colors as long as it is able to.
 
-However, the original Sublime theme didn't stop there. Aside from changing the colors of the editor, the theme also got to customize the different parts of the editor with a Material Design look and feel, which brought him a lot of stars. There should be a way to do it for Jetbrains IDE as well, right?
+However, the original Sublime theme didn't stop there. Aside from changing the colors of the editor, the theme also got to customize the different parts of the editor with a Material Design look and feel, which brought him a lot of stars. There should be a way to do it for JetBrains IDE as well, right?
 
 Guess there is, and now the plugin features Material Design components reworked from the ground up, making it look very similar to the original plugin, and even bringing new features to light!
 

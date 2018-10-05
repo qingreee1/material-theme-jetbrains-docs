@@ -2,7 +2,7 @@
 layout: index
 title: README
 ---
-# Documentation for Material Theme UI for Jetbrains
+# Documentation for Material Theme UI for JetBrains
 
 This is the repository for the documentation website for the [Material Theme UI plugin](https://github.com/ChrisRM/material-theme-jetbrains).
 

@@ -24,7 +24,7 @@ This section will explain how to set up your development environment.
 
 The Material Theme plugin is built using the [IntelliJ Plugin DevKit](https://www.jetbrains.org/intellij/sdk/docs/welcome.html) which allows users to develop plugins for the different platforms.
 
-Plugins can be written either in Java, Groovy or Kotlin. You can use any editor to write plugins: Atom, Sublime, Visual Studio Code... though for obvious reasons, it's preferable to use a Jetbrains IDE so you can debug easier. You can use either IntelliJ IDEA or the free [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/).
+Plugins can be written either in Java, Groovy or Kotlin. You can use any editor to write plugins: Atom, Sublime, Visual Studio Code... though for obvious reasons, it's preferable to use a JetBrains IDE so you can debug easier. You can use either IntelliJ IDEA or the free [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/).
 
 Two plugins are necessary to work on a plugin, especially on the Material Theme:
 - *Plugin DevKit*
@@ -69,7 +69,7 @@ You can read more about plugin.xml [here](https://www.jetbrains.org/intellij/sdk
 
 ### build.gradle
 
-The `build.gradle` file is the Gradle configuration used for making the plugin. It contains the dependencies required by the project, the different tasks that can be run (such as Tests or CheckStyle) and configuration for the Gradle Jetbrains plugin.
+The `build.gradle` file is the Gradle configuration used for making the plugin. It contains the dependencies required by the project, the different tasks that can be run (such as Tests or CheckStyle) and configuration for the Gradle JetBrains plugin.
 
 ### gradle.properties
 

@@ -132,7 +132,7 @@ Then select it, and TA-DA!
 
 {% include figure.html content="/tutorial/vibrantInk.png" caption="Vibrant Ink" %}
 
-The next step would then be to publish your plugin to the Jetbrains repository. Just head to https://plugins.jetbrains.com/ and follow the instructions there.
+The next step would then be to publish your plugin to the JetBrains repository. Just head to https://plugins.jetbrains.com/ and follow the instructions there.
 
 And of course post a link here if you want to share it with other users!
 

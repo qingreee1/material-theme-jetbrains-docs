@@ -49,7 +49,7 @@ next:
 - Added new UI icons (run anything, java ee, json, todo, collapse/expand)
 
 # 2.8.0
-- Fix temporarily the OptionPane error until Jetbrains fixes it
+- Fix temporarily the OptionPane error until JetBrains fixes it
 - Add new syntax theme: **Monokai Pro** based on the original Monokai Pro
 - Improve the Arc Dark Theme a bit
 - Fix Compact Statusbar in Windows
@@ -155,7 +155,7 @@ There could be other bugs though.
 - Major overhaul of the icons: most icons have been converted to svg! Please note though:
   - I couldn't find the originals of some icons, so some icons are now different or with different colors (sorry JSON...)
   - Since this is a big update, there might be some further changes to those icons
-  - I decided to keep some original icons made by Jetbrains (such as Minimize Tool Window)
+  - I decided to keep some original icons made by JetBrains (such as Minimize Tool Window)
   - Please open issues about icons that you find not suited for their purpose.
 - Set a default matched brace color in order to use _Current Scope highlight_ (https://github.com/ChrisRM/material-theme-jetbrains/issues/774)
 - Fix bugs related to 2018.2 EAP (https://github.com/ChrisRM/material-theme-jetbrains/issues/777)
@@ -202,7 +202,7 @@ There could be other bugs though.
 - PHP Icons
 - Python Icons
 - Fix undefined notification colors
-- Remove InternalDecorator hack until Jetbrains fix this
+- Remove InternalDecorator hack until JetBrains fix this
 
 ## 2.1.5
 - New Component: Material NavBar
@@ -426,7 +426,7 @@ FIXES:
 
 ## 1.4.0
 - Fix issue with Android Studio loading
-- Typescript and Javascript decorators addition (for latest Webstorm only)
+- Typescript and Javascript decorators addition (for latest WebStorm only)
 - Add some more icons
 
 ## 1.3.9
@@ -737,7 +737,7 @@ This version is more focused on the UI:
 - Fix issue with Background getting overriden
 - Fix issue with settings not being saved
 - Fix #92
-- Fix: Do not try to replace all icons, if an icon is not provided use Jetbrains one.
+- Fix: Do not try to replace all icons, if an icon is not provided use JetBrains one.
 - Refactor project: put the selected theme in the MTConfig + better folder structure
 - Add more icons: Access, Word, Powerpoint, Excel, Audio, Video, Elm, Go, Hack, Julia, Pug, Kotlin, Maya, Markup, Premiere, Powershell, Rake, Riot, Stata, Sublime, Vim
 - Fix PHP + JS Code Schemes

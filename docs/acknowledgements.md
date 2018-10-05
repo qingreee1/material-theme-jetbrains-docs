@@ -34,7 +34,7 @@ He is also my inspiration for the UI design and the many settings that he introd
 
 <img class="avatar-img" src="https://avatars3.githubusercontent.com/u/309292?v=4&s=460">
 
-The original creator of the Jetbrains plugin. Thanks to his ingeniosity we finally had an alternative to the bland native themes that are Darcula and IntelliJ. He was curious enough to dig into the code in order to find the settings that let plugin developers control the theme colors and replace icons. I learnt a lot from him.
+The original creator of the JetBrains plugin. Thanks to his ingeniosity we finally had an alternative to the bland native themes that are Darcula and IntelliJ. He was curious enough to dig into the code in order to find the settings that let plugin developers control the theme colors and replace icons. I learnt a lot from him.
 
 
 ##### Ihor Oleksandrov ([@ihodev](https://github.com/ihodev))
@@ -76,7 +76,7 @@ The second people I want to thank are a specific bunch of plugin developers, whi
 
 [Afterglow Theme](https://plugins.jetbrains.com/plugin/8066-afterglow-theme)
 
-This is another theme for Jetbrains which has its lot of uniques features too. Sadly it has not been updated for a while and would probably not work with current versions.
+This is another theme for JetBrains which has its lot of uniques features too. Sadly it has not been updated for a while and would probably not work with current versions.
 
 ##### Nyan Progress Bar
 
@@ -112,13 +112,13 @@ A rather simple plugin that highlights all occurences of the word under caret. I
 
 [Material Icon Theme for VSCode](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
-The Material Theme Icons, but for Visual Studio Code. It's actually the _Decorated Folders_ feature that gave me the idea to implement it in the Jetbrains' plugin. Besides, the folder icons were taken from there, with some small changes in the colors.
+The Material Theme Icons, but for Visual Studio Code. It's actually the _Decorated Folders_ feature that gave me the idea to implement it in the JetBrains' plugin. Besides, the folder icons were taken from there, with some small changes in the colors.
 
 ##### Monokai Pro
 
 [Monokai Pro](https://www.monokai.pro/) by Monokai
 
-This is the pro version of the famous Monokai theme, which, just like the Material Theme, completely remodels the IDEs with a set of themes, color schemes, icons, fonts and other features. Unfortunately it is a paid theme and is not available to Jetbrains products, so a porting has been made inside the plugin :)
+This is the pro version of the famous Monokai theme, which, just like the Material Theme, completely remodels the IDEs with a set of themes, color schemes, icons, fonts and other features. Unfortunately it is a paid theme and is not available to JetBrains products, so a porting has been made inside the plugin :)
 
 ##### Night Owl
 
@@ -147,7 +147,7 @@ Thanks for [Algolia](https://community.algolia.com/docsearch/) for the implement
 
 Thanks also to all the [contributors](https://github.com/ChrisRM/material-theme-jetbrains/graphs/contributors) that helped in the development!
 
-And of course thanks to Jetbrains for their IDEs, Google for their Material Design, Disqus for the comments plugin, Travis CI, JFormDesigner for the UI Designer plugin, [Vladsch](http://vladsch.com/product/markdown-navigator) for his Markdown navigator plugin, and of course all the other plugin creators for the plugins I use for development.
+And of course thanks to JetBrains for their IDEs, Google for their Material Design, Disqus for the comments plugin, Travis CI, JFormDesigner for the UI Designer plugin, [Vladsch](http://vladsch.com/product/markdown-navigator) for his Markdown navigator plugin, and of course all the other plugin creators for the plugins I use for development.
 
 ##### Contributors
 

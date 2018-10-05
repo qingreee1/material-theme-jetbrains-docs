@@ -4,7 +4,7 @@ source: "."
 destination: "./jekyllbuild"
 name: Material Theme UI Documentation
 description: |
-  The Material Theme plugin is a plugin for Jetbrains IDEs (IntelliJ, PHPStorm, WebStorm, Android Studio, etc...) which completely redesigns
+  The Material Theme plugin is a plugin for JetBrains IDEs (IntelliJ, PhpStorm, WebStorm, Android Studio, etc...) which completely redesigns
   the UI with a beautiful and configurable Material Design UI.
   This is the plugin's documentation page which presents and explains the different features provided by the plugin.
 
@@ -15,10 +15,10 @@ permalink: /blog/:title/
 paginate: 6
 paginate_path: /page/:num
 plugins:
-- jekyll-paginate
-- jekyll-sitemap
-- jekyll-toc
-- jemoji
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-toc
+  - jemoji
 infinite_scroll: false
 
 twitter: mallowigi
@@ -39,20 +39,20 @@ social_logo_path:   /img/brand/logo.png
 
 encoding: utf-8
 defaults:
-- scope:
-    path: ""
-    type: "posts"
-  values:
-    layout: "material-sidebar-left"
-    type: "standard"
-    homedisplay: "featimg"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "material-sidebar-left"
+      type: "standard"
+      homedisplay: "featimg"
 
-- scope:
-    path: ""
-    type: "pages"
-  values:
-    layout: "material-sidebar-left"
-    author: "mallowigi"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "material-sidebar-left"
+      author: "mallowigi"
 
 markdown: kramdown
 kramdown:
@@ -62,34 +62,34 @@ kramdown:
 
 relative_permalinks: false
 exclude:
-- .git
-- .gradle
-- .idea
-- config
-- build
-- js
-- node_modules
-- sass
-- static
-- vue
-- .babelrc
-- .editorconfig
-- .eslintignore
-- .eslintrc.js
-- .gitignore
-- .jekyll-metadata
-- .postcssrc.js
-- .travis.yml
-- _algolia_api_key
-- browser-sync.js
-- Gemfile
-- Gemfile.lock
-- gruntfile.js
-- LICENCE
-- package.json
-- package-lock.json
-- webpack.config.js
-- yarn.lock
+  - .git
+  - .gradle
+  - .idea
+  - config
+  - build
+  - js
+  - node_modules
+  - sass
+  - static
+  - vue
+  - .babelrc
+  - .editorconfig
+  - .eslintignore
+  - .eslintrc.js
+  - .gitignore
+  - .jekyll-metadata
+  - .postcssrc.js
+  - .travis.yml
+  - _algolia_api_key
+  - browser-sync.js
+  - Gemfile
+  - Gemfile.lock
+  - gruntfile.js
+  - LICENCE
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - yarn.lock
 sass:
   style: compressed
 collections:

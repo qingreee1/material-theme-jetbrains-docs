@@ -33,7 +33,7 @@ There are multiple ways to change the color scheme:
 
 {% include figure.html content="/screens/quickswitch.png" caption="Quick Switch" %}
 
-In this list you'll find all your installed color schemes alongside those provided by Jetbrains. The color schemes
+In this list you'll find all your installed color schemes alongside those provided by JetBrains. The color schemes
 provided by the plugin are:
 - Material Oceanic
 - Material Darker

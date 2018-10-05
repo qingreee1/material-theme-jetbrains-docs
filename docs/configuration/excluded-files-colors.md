@@ -18,9 +18,9 @@ next:
 
 ## Introduction
 
-Jetbrains editors are really great for all kind of projects, whatever big they are. However, once you've started working on big projects, you're beginning to notice that it's getting harder finding your way through open files, the project tree, the search results and so on.
+JetBrains editors are really great for all kind of projects, whatever big they are. However, once you've started working on big projects, you're beginning to notice that it's getting harder finding your way through open files, the project tree, the search results and so on.
 
-Therefore Jetbrains introduced a nifty feature called **File Colors**. It allows developers to add custom colors to specific groups of files according to a pattern.
+Therefore JetBrains introduced a nifty feature called **File Colors**. It allows developers to add custom colors to specific groups of files according to a pattern.
 For example, it could be:
 - Excluded Files
 - Tests
@@ -43,7 +43,7 @@ This will considerably reduce the time looking for a file and navigating thanks 
 
 ## Configuration
 
-The Jetbrains editors come prebundled with at least two File Colors:
+The JetBrains editors come prebundled with at least two File Colors:
 - **Excluded files**, e.g. files that are _Marked as Excluded_, and therefore excluded for indexing, searching and navigation, resulting in huge performance boosts. Such examples are `node_modules`, `logs`, `vendors`, `gradle` etc... You can mark a directory for exclusion by clicking right on the directory and select `Mark Directory as...`
 - **Tests**, which is the test directory in gradle/rails/symfony...
 

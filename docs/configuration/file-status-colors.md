@@ -30,11 +30,11 @@ __File Status Colors__ is a feature of the IDE to colorize certain parts of the 
 
 By status means relatively to version control systems, such as modified files, newly added files, deleted files, ignored files or conflicted files, for instance.
 
-Originally these color settings were found inside the `Color Schemes` section of the settings, allowing color schemes designers to set their own file status colors, but at some point Jetbrains decided to remove this ability, having judged that it doesn't make sense to have colors affecting the UI found inside settings affecting the editor.
+Originally these color settings were found inside the `Color Schemes` section of the settings, allowing color schemes designers to set their own file status colors, but at some point JetBrains decided to remove this ability, having judged that it doesn't make sense to have colors affecting the UI found inside settings affecting the editor.
 
-While it does make sense, it was still a good thing to let people change these colors according to their themes. Agreed, Jetbrains doesn't have custom UI Themes support, but why wouldn't the ++Monokai theme++ creator change the `Modified Files` color to his shade of cyan? Or the `Conflicted files` to his shade of magenta? A lot of scheme designers supplied those colors so why remove this feature?
+While it does make sense, it was still a good thing to let people change these colors according to their themes. Agreed, JetBrains doesn't have custom UI Themes support, but why wouldn't the ++Monokai theme++ creator change the `Modified Files` color to his shade of cyan? Or the `Conflicted files` to his shade of magenta? A lot of scheme designers supplied those colors so why remove this feature?
 
-So after reconsideration, Jetbrains decided to let people customize file colors anyway, but instead of a per-color scheme basis, it is now **per-application basis**, and not provided by color scheme designers.
+So after reconsideration, JetBrains decided to let people customize file colors anyway, but instead of a per-color scheme basis, it is now **per-application basis**, and not provided by color scheme designers.
 
 Therefore this ability has now moved under **Version Control** -> **File Status Colors**. But because these colors are related to the UI (e.g. IntelliJ or Darcula Look And Feel), these are not independant standalone settings but instead coupled to the relevant ++look and feel++. That means that those colors are found inside **IntelliJ or Darcula Color Scheme** rather than inside application settings.
 

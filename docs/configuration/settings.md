@@ -332,7 +332,7 @@ function from the IDE behind the curtains. Therefore, removing the plugin might 
 that occurs, you can remove the image by opening the Command Panel (Cmd-Shift-A/Ctrl-Shift-A) and type `Set Background
 image` and then manually remove the image, or go into `Settings -> Appearance -> Background Image`.
 
-**Q**: The title bar is sweet! But now all my applications, not only Jetbrains IDE, have the colored title bar! Plus, when I close the IDE/disable/uninstall the plugin, the title bar stays the same! Help! (Note: I'm on Windows)
+**Q**: The title bar is sweet! But now all my applications, not only JetBrains IDE, have the colored title bar! Plus, when I close the IDE/disable/uninstall the plugin, the title bar stays the same! Help! (Note: I'm on Windows)
 
 **A**: The Themed Title Bar option is indeed changing the title bar accent color OS-wide, therefore it sticks even when the IDE is closed/uninstalled. If you want to change it back, follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/
 

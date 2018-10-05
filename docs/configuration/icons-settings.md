@@ -88,6 +88,6 @@ Note that excluded/resource root/test root/package folders will not be decorated
 ----
 ### Notes
 
-- While the Material Icons replace most icons, some icons, such as icons coming from plugins (including Jetbrains' plugins like Git) would not be replaced.
+- While the Material Icons replace most icons, some icons, such as icons coming from plugins (including JetBrains' plugins like Git) would not be replaced.
 - Monochrome icons actually messes up some parts of the IDE, such as the SVG Image Viewer. If you need to use it, please disable the option temporarily.
 

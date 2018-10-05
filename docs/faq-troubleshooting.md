@@ -42,7 +42,7 @@ function from the IDE behind the curtains. Therefore, removing the plugin might 
 that occurs, you can remove the image by opening the Command Panel (Cmd-Shift-A/Ctrl-Shift-A) and type `Set Background
 image` and then manually remove the image, or go into `Settings -> Appearance -> Background Image`.
 
-**Q**: The title bar is sweet! But now all my applications, not only Jetbrains IDE, have the colored title bar! Plus, when I close the IDE/disable/uninstall the plugin, the title bar stays the same! Help! (Note: I'm on Windows)
+**Q**: The title bar is sweet! But now all my applications, not only JetBrains IDE, have the colored title bar! Plus, when I close the IDE/disable/uninstall the plugin, the title bar stays the same! Help! (Note: I'm on Windows)
 
 **A**: The Themed Title Bar option is indeed changing the title bar accent color OS-wide, therefore it sticks even when the IDE is closed/uninstalled. If you want to change it back, follow the instructions at https://www.howtogeek.com/225893/how-to-personalize-windows-10s-appearance/
 
@@ -79,7 +79,7 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 
 **Q**: The Tab Height feature is cool in the editor, but I'd rather leave other tabs untouched.
 
-**A**: Me as well. Unfortunately currently the setting that sets the tab height is shared between all tabs in the SDK, and there is no way to distinguish between them currently. Maybe in the future if Jetbrains agrees to allow more customization natively.
+**A**: Me as well. Unfortunately currently the setting that sets the tab height is shared between all tabs in the SDK, and there is no way to distinguish between them currently. Maybe in the future if JetBrains agrees to allow more customization natively.
 
 **Q**: Why limiting the thickness or the tab height? I want to have 10 in thickness and 100 in tabs!!!
 
@@ -104,7 +104,7 @@ image` and then manually remove the image, or go into `Settings -> Appearance ->
 ----
 ## Icons Settings
 
-- While the Material Icons replace most icons, some icons, such as icons coming from plugins (including Jetbrains' plugins like Git) would not be replaced.
+- While the Material Icons replace most icons, some icons, such as icons coming from plugins (including JetBrains' plugins like Git) would not be replaced.
 - Monochrome icons actually messes up some parts of the IDE, such as the SVG Image Viewer. If you need to use it, please disable the option temporarily.
 
 ----
