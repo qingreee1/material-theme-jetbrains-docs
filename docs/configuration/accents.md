@@ -53,6 +53,8 @@ gallery:
       alttext: Modified settings color
     - filename: accents/scrollbar.png
       alttext: Scroll Bar
+    - filename: accents/newSEHighlight.png
+      alttext: New Search Everywhere Highlight
 ---
 
 This section describes the **Accent Colors** feature and how is it used by the plugin.

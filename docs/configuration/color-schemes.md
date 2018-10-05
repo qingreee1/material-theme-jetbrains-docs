@@ -39,12 +39,11 @@ provided by the plugin are:
 - Material Darker
 - Material Lighter
 - Material Palenight
-- Material Deep Ocean ![new-box](/img/icons/new-box.png)
+- Material Deep Ocean
 - Atom One Dark
-- Atom One Light ![new-box](/img/icons/new-box.png)
-- Arc Dark ![new-box](/img/icons/new-box.png)
-- Material Monokai Pro
-- Monokai Pro ![new-box](/img/icons/new-box.png)
+- Atom One Light
+- Arc Dark
+- Monokai Pro
 - Solarized Dark
 - Solarized Light
 

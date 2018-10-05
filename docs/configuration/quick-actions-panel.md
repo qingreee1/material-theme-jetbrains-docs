@@ -80,11 +80,13 @@ This panel as well allows you to rapidly toggle the most used Component Settings
 - _Toggle Material Theme_
 - _Toggle Material Components_
 - _Toggle Material Icons_
+- _Toggle Material Fonts_
 - _Toggle Project View Decorators_
 - _Toggle Status Bar Indicator_
 - _Toggle Themed Title Bar_
 
 In addition, other one-time actions are available in this panel, which are:
+- _Material Theme Wizard_: Relaunch the Material Theme Wizard
 - _Install Material Wallpaper_: Set the [IDE Background Image](https://www.jetbrains.com/help/idea/setting-background-image.html) to the one from the repository.
 
 {% include figure.html content="/screens/customWallpaper.png" caption="Material Wallpaper" %}
