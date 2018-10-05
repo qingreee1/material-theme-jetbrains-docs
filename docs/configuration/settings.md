@@ -107,6 +107,7 @@ Quick summary of all settings:
 **Main Settings**:
 - *Selected Theme*: Select a _Material Theme skin_ (will not display External Themes)
 - *Contrast Mode*: Add contrast to specific panels and components.
+- *High Contrast*: Set a darker color of the backgrounds and lighter color of texts for more contrast
 - *Custom Accent Color*: Set a custom accent color.
 - *Override Accent Color*: Change the accent color accordingly to the selected theme
 - *Configure Custom Theme Colors*: Open the settings page for the _Custom Theme Colors_.
@@ -150,7 +151,7 @@ Quick summary of all settings:
 - *Uppercase buttons*: Set the buttons' texts to uppercase
 - *Transparent Scrollbars*: Enable/Disable transparency in scrollbars (require restart)
 - *Accent Scrollbars*: Set the color of the scrollbars to the accent color (require restart)
-- *High Contrast*: Set a darker color of the backgrounds and lighter color of texts for more contrast
+- *Tabs Shadow*: Enable/Disable the shadow under the tabs
 
 **Features Settings**:
 - *Material Fonts*: Enable/Disable Material fonts (Roboto) (require restart)
@@ -287,6 +288,8 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   
   <!-- Override accent color enabled -->
   <option name="overrideAccent" value="false" />
+  <!-- Show Tabs Shadow -->
+  <option name="isTabsShadow" value="false" />
   
   <!-- Internal settings (do not modify) -->
   <!-- Current plugin version -->
