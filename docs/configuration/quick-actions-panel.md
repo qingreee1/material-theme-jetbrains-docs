@@ -52,6 +52,8 @@ This panel allows you to quickly toggle some of the most used Panel Settings:
 - _Toggle Contrast Mode_
 - _Toggle High Contrast_
 - _Toggle Compact Sidebar_
+- _Toggle Compact Dropdowns_
+- _Toggle Compact Menus_
 - _Toggle Hide File Icons_
 - _Toggle Compact Status Bar_
 - _Toggle Uppercase Tabs_
@@ -88,6 +90,7 @@ This panel as well allows you to rapidly toggle the most used Component Settings
 In addition, other one-time actions are available in this panel, which are:
 - _Material Theme Wizard_: Relaunch the Material Theme Wizard
 - _Install Material Wallpaper_: Set the [IDE Background Image](https://www.jetbrains.com/help/idea/setting-background-image.html) to the one from the repository.
+- _Remove Material Wallpaper_: Remove the [IDE Background Image](https://www.jetbrains.com/help/idea/setting-background-image.html).
 
 {% include figure.html content="/screens/customWallpaper.png" caption="Material Wallpaper" %}
 
