@@ -16,6 +16,34 @@ next:
 # Changelog
 ----
 
+# 2.10.2
+- New Setting: **Tabs Shadow**
+- New Setting: **Compact Menus**
+- Fix Folder icon to Open Folder Icon when Project View Decorators is enabled
+- Add missing icons and change some icons to better reflect their functionality
+- Add border and padding to Menus
+- 2018.3 new theme properties, allowing to better theme up to now hard coded values:
+  - Menu Border
+  - Separator Border
+  - Progress Bar
+  - Code Style Tabs
+  - Search Everywhere Highlight
+  - New Welcome Screen
+  - Active and inactive headers
+  - Validation Tooltips
+  - Help tooltips
+  - Drag and drop projects in Welcome Screen
+  - Search Everywhere active tab
+  - Project View and Sidepanel borders
+- New Action to remove Wallpaper
+
+# 2.10.0
+
+- Support 2018.3 EAP
+
+# 2.9.1
+- Fix missing icons and change some icons to better reflect their functionality
+
 # 2.9.0
 
 - Completely refactor the Icon Replacements framework, allowing the plugin to be able to replace even icons from external plugins such as AppCode, Gradle or even custom plugins such as Markdown Navigator and the sort.

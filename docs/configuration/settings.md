@@ -119,10 +119,11 @@ Quick summary of all settings:
 - *Tabs Height*: Set a custom height for tabs (between 25 and 60 pixels)
 - *Tab Color Opacity*: Adjust the opacity of the custom colors in tabs (for File Colors)
 
-**Panel Settings**:
+**Compact Settings**:
 - *Compact Status Bar*: Reduce the height of the status bar (this is the default height)
 - *Compact Table Cells*: Reduce the height of table headers and table cells
 - *Compact Dropdown Lists*: Reduce the size of the dropdowns
+- *Compact Menus*: Reduce the size of the menus
 
 **Icons Settings**:
 - *Material UI Icons*: Enable/Disable the Material UI icons
@@ -166,7 +167,7 @@ Quick summary of all settings:
 
 #### Settings shortcuts
 
-You can also quickly toggle some settings by using the _Search Everywhere_ or the _Command Panel_ functionality of the IDE. Simply press `Shift-Shift` and type `Material Theme` to get the list of avialable toggles.
+You can also quickly toggle some settings by using the _Search Everywhere_ or the _Command Panel_ functionality of the IDE. Simply press `Shift-Shift` and type `Material Theme` to get the list of available toggles.
 
 Same goes for the `Command Panel` (<kbd>Ctrl-Shift-A/Cmd-Shift-A</kbd>).
 
@@ -239,6 +240,8 @@ Here's a list of the keys used in the configuration file (`material_theme.xml`) 
   <option name="isCompactTableCells" value="false" />
   <!-- Compact dropdowns enabled -->
   <option name="isCompactDropdowns" value="false" />
+  <!-- Compact menus -->
+  <option name="isCompactMenus" value="false" />
   <!-- Project View Font Size -->
   <option name="treeFontSize" value="12" />
 

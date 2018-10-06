@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Panel Settings
+title: Compact Settings
 description: Fine tune some components' display.
 group: configuration
 toc: true
@@ -15,7 +15,7 @@ next:
 
 ---
 
-These settings control some components' display, mainly about their compactiness.
+These settings control some components' display, mainly about their compactness.
 {:class='title'}
 
 {% include carbonads.html %}
@@ -49,6 +49,15 @@ This setting allows you to reduce the size of the dropdowns used in the UI to be
 {% include figure.html content="/screens/notCompactDropdowns.png" caption="Regular Dropdowns" %}
 
 {% include figure.html content="/screens/compactDropdowns.png" caption="Compact Dropdowns" %}
+
+----
+### Compact Menus
+
+From version 2.10.2 Menus had also gained more padding just like dropdowns and tables.
+
+{% include figure.html content="/screens/paddedMenus.png" caption="Regular Menus" %}
+
+As a result, a setting have been added to revert back to the default menus size.
 
 ----
 ### Notes

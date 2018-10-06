@@ -8,7 +8,7 @@ comments: true
 
 previous:
   url: '/docs/configuration/panel-settings'
-  title: Panel Settings
+  title: Compact Settings
 next:
   url: '/docs/configuration/project-view-settings'
   title: Project View Settings

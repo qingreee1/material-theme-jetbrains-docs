@@ -11,7 +11,7 @@ previous:
   title: Main Settings
 next:
   url: '/docs/configuration/panel-settings'
-  title: Panel Settings
+  title: Compact Settings
 ---
 
 This page displays the features and settings that customize the appearance of the Editor Tabs.
