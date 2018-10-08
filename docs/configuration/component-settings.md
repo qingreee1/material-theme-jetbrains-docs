@@ -48,7 +48,7 @@ These options control the appearance of the scrollbars. Note: This feature works
 
 This option enables/disables the shadow under the tabs.
 
-{% include figure.html content="/screens/tabsShadow.png" caption="Tabs Shadow" %}
+{% include figure.html content="/screens/tabShadow.png" caption="Tabs Shadow" %}
 
 -----
 ### FAQ/Troubleshooting
