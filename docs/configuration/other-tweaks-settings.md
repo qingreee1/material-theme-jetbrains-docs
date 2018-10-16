@@ -42,6 +42,10 @@ This setting adds a "widget" to the status bar to indicate which theme you are c
 
 {% include figure.html content="/screens/widgetStatusbar.png" caption="Status Bar Widget" %}
 
+Since version 2.9.4/2.10.4 you can also see your current accent color.
+
+{% include figure.html content="/screens/statusAccentWidget.png" caption="Accent Widget" %}
+
 ----
 ### Themed Title Bar
 

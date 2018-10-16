@@ -16,6 +16,60 @@ next:
 # Changelog
 ----
 
+# 2.10.4
+- Merge 2.9.4
+
+# 2.10.3
+- Merge 2.9.3
+- Add Caret Line Number color in color schemes
+- Increase menus padding
+- Deprecate obsolete patchers
+
+# 2.10.2
+- New Setting: **Tabs Shadow**
+- New Setting: **Compact Menus**
+- Fix Folder icon to Open Folder Icon when Project View Decorators is enabled
+- Add missing icons and change some icons to better reflect their functionality
+- Add border and padding to Menus
+- 2018.3 new theme properties, allowing to better theme up to now hard coded values:
+  - Menu Border
+  - Separator Border
+  - Progress Bar
+  - Code Style Tabs
+  - Search Everywhere Highlight
+  - New Welcome Screen
+  - Active and inactive headers
+  - Validation Tooltips
+  - Help tooltips
+  - Drag and drop projects in Welcome Screen
+  - Search Everywhere active tab
+  - Project View and Sidepanel borders
+- New Action to remove Wallpaper
+
+# 2.10.0
+- Support 2018.3 EAP
+
+# 2.9.4
+- Add Accent Color Widget in Status bar
+- Add Http Client Icons
+- Update Solarized schemes
+- Fix Modified tab icon's accent
+- Fix Status Bar Color in Contrast Mode
+- Fix Suppressed Color for Monokai Pro
+- Fix error with missing icon
+- Add Jenkinsfile association
+
+# 2.9.3.2
+- Fix wrong icon associations
+
+# 2.9.3
+- Add col icons for Database tools
+- Add RubyMine icons (RSpec, Rake and Zeus)
+- Change Monokai Pro Suppressed Color
+- Change color of warn notifications to brown
+- Fix Contrast status bar color
+- Fix loading fatal error in PHPStorm
+
 # 2.10.2
 - New Setting: **Tabs Shadow**
 - New Setting: **Compact Menus**
