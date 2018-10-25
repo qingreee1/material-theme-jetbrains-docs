@@ -62,7 +62,7 @@ This panel allows you to quickly toggle some of the most used Panel Settings:
 
 Besides those are one-time actions that will change the plugin or the IDE configuration:
 - _Set Recommended Tab Height_: Change the tab height to _42_
-- _Install Material File Colors_: Add 4 [File Colors for Excluded Files]({{site.baseurl}}/docs/configuration/excluded-file-colors)
+- _Install Material File Colors_: Add [File Colors for Excluded Files]({{site.baseurl}}/docs/configuration/excluded-file-colors)
 
 -----
 

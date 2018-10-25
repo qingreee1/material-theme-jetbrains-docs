@@ -31,9 +31,7 @@ When this option is on, files that are _opened_ in the editor and that are _edit
 
 **Note**: This feature requires *Material Icons* feature to work.
 
-###### Accent colored opened directories
-
-Same as the hollow directory icon, files that are _opened_ and _edited_ will have their containing directories be colored with the selected _accent color_.
+**Note 2**: If the **Folder decorators** option is set, the icon will match the decorator, but outlined.
 
 ----
 ### Theme in Status Bar

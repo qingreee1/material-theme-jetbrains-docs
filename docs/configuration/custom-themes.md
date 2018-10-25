@@ -66,6 +66,8 @@ A secondary color used in some controls:
 - Text fields' border
 - Disabled text in dropdowns
 - Tree items
+- Tag names in VCS Log
+- Other help texts
 
 ##### Selection Background Color
 
@@ -74,7 +76,7 @@ The background color of selections in controls:
 - Selected List Items and Table Cells
 - Selected tabs
 - Autocomplete selected item
-- Selected Tabbed Pane
+- Selected Tab in TabbedPanes
 - Selected text in documentation panels
 
 ##### Selection Foreground Color
@@ -95,6 +97,8 @@ The foreground color of selections in controls:
 Buttons colors and others:
 - Buttons background color
 - Merge commits text
+- Section headers
+- More Buttons
 
 ##### Secondary background color
 
@@ -102,6 +106,10 @@ A secondary color used to contrast with the background color.
 - Lists background color
 - Active Tool Window Header Color
 - Memory Indicator Unused color
+- ProgressBar track color
+- Autocomplete popup background
+- Parameter info popup background
+- VCS Log current branch background
 
 ##### Disabled color
 
@@ -110,6 +118,8 @@ A color used principally inside disabled items:
 - Disabled text fields and password fields
 - Disabled buttons
 - Disabled checkboxes
+- Disabled tabs
+- Disabled items in Parameter info
 
 ##### Contrast color
 
@@ -119,6 +129,9 @@ The color used when contrast mode is enabled:
 - Documentation panes
 - Tool Window Headers selected tab
 - Selected Tab in Tabbed Panes
+- Search Everywhere search field
+- Selected ToolWindow
+- Editor background when no opened files
 
 ##### Active component color
 
@@ -127,6 +140,8 @@ Another color to use for active component colors:
 - Selected text in text fields and documentation panes
 - Selected items in dropdowns
 - Primary Buttons and Hovered buttons
+- Hovered Tool Window buttons
+- Active Tab in Tabbed Panes
 
 ##### Border Color
 
@@ -137,6 +152,9 @@ Color that affect the following components:
 - Tabbed Panes border
 - One Pixel Separators separating editors in Split Mode
 - Menu Separators
+- Help Tooltips border
+- Welcome Screen Separator Color
+- List Separators
 
 ##### Highlight color
 
@@ -144,6 +162,10 @@ Color that affect the following components:
 - Text fields and dropdowns border
 - Checkboxes' sign in disabled checkboxes
 - Memory indicator's used memory color
+- Unfocused item in some lists
+- Hovered tab in tabbed panes
+- Selected Tab in Search Everywhere
+- Active debugger tab
 
 ##### Tree Selection color
 
