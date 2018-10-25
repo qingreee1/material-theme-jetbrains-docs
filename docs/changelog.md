@@ -16,6 +16,14 @@ next:
 # Changelog
 ----
 
+
+# 2.10.6
+- Merge 2.9.6
+- Deprecate ParameterInfo hack
+
+# 2.10.5
+- Merge 2.9.5
+
 # 2.10.4
 - Merge 2.9.4
 
@@ -49,6 +57,46 @@ next:
 # 2.10.0
 - Support 2018.3 EAP
 
+# 2.9.6
+- Add new Color Scheme Settings Pages: JS Additions and TS Additions
+  - this/super
+  - var/let/const
+  - debugger
+  - function
+  - null/undefined
+  - import/export/require
+  - public/private/protected
+- Add more folder decorations:
+  - android
+  - deploy/aws
+  - ios (xcproject/xcworkspace/xcassets)
+  - middleware/thunks
+  - react-components
+  - server/jobs/requests/sagas
+  - colors/schemes/skins
+  - helpers/utils/tools
+  - pods
+  - download
+  - upload
+
+# 2.9.5.2
+- Disable Material Fonts feature (instead use the Registry as a workaround)
+
+# 2.9.5.1
+- Fix plugin when Material Theme option is disabled to allow having MT features on Darcula/IntelliJ
+- Merge Project View Decorators with Folder Decorators - with open versions of decorated folders
+
+# 2.9.5
+- <strike>Bundle Roboto fonts (named _Roboto Material_) with the plugin fixing the issue with scrambled fonts once and for all (currently disabled)</strike>
+- Fix "Override fonts" not working
+- Add Folder Decorations to open folders
+- Refactor Material Components toggle to allow other features to work when disabled:
+  - Padded Status Bar
+  - Padded Dropdowns
+  - Padded Table Cells
+  - Arrow Styles
+  - List Style Indicator
+
 # 2.9.4
 - Add Accent Color Widget in Status bar
 - Add Http Client Icons
@@ -69,31 +117,6 @@ next:
 - Change color of warn notifications to brown
 - Fix Contrast status bar color
 - Fix loading fatal error in PHPStorm
-
-# 2.10.2
-- New Setting: **Tabs Shadow**
-- New Setting: **Compact Menus**
-- Fix Folder icon to Open Folder Icon when Project View Decorators is enabled
-- Add missing icons and change some icons to better reflect their functionality
-- Add border and padding to Menus
-- 2018.3 new theme properties, allowing to better theme up to now hard coded values:
-  - Menu Border
-  - Separator Border
-  - Progress Bar
-  - Code Style Tabs
-  - Search Everywhere Highlight
-  - New Welcome Screen
-  - Active and inactive headers
-  - Validation Tooltips
-  - Help tooltips
-  - Drag and drop projects in Welcome Screen
-  - Search Everywhere active tab
-  - Project View and Sidepanel borders
-- New Action to remove Wallpaper
-
-# 2.10.0
-
-- Support 2018.3 EAP
 
 # 2.9.1
 - Fix missing icons and change some icons to better reflect their functionality
