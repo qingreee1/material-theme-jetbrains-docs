@@ -15,7 +15,7 @@ next:
 ---
 
 Here you can find an explanation of the actions from the `Quick Actions Panel`.
-{:class = 'title'}
+{:class='title'}
 
 {% include carbonads.html %}
 

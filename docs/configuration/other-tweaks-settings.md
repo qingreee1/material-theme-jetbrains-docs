@@ -15,7 +15,7 @@ next:
 ---
 
 These features are additional extras to the plugin, not related to the themes nor Material Design but simply nice addons for the IDE.
-{:class = 'title'}
+{:class='title'}
 
 {% include carbonads.html %}
 

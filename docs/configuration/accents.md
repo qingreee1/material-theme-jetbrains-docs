@@ -35,8 +35,6 @@ gallery:
       alttext: Search Everywhere
     - filename: accents/searchInput.png
       alttext: Search Input
-    - filename: accents/selectedItem.png
-      alttext: Selected Item Indicator
     - filename: accents/selectedItemArrow.png
       alttext: Selected Item Arrow
     - filename: accents/radio.png
@@ -54,7 +52,9 @@ gallery:
     - filename: accents/scrollbar.png
       alttext: Scroll Bar
     - filename: accents/newSEHighlight.png
-      alttext: New Search Everywhere Highlight
+      alttext: Search Term in Lists
+    - filename: accents/branchNames.png
+      alttext: Branch names in VCS Log
 ---
 
 This section describes the **Accent Colors** feature and how is it used by the plugin.
@@ -85,17 +85,16 @@ Here is a list of components where accent color is used:
 - Parameter Info
 - Documentation's links and bold texts
 - Panels' links
-- Hovered toolbar icons (not working on Mac)
 - Tree's selected item expand and collapsed icons
 - Progress Bar
 - Circular progress indicator
-- Opened files' containing directories (according to `Project View Decorators` setting)
 - Scrollbars (according to `Accent Scrollbars` setting)
 - VCS Log branches icon
 - Caret Color
 - Modified Setting Pages
 - On/Off Switches in Search Everywhere/Execute Action
 - Navigation Bar Focused Item
+- Search terms in lists
 
 ### IMPORTANT NOTE
 
@@ -111,7 +110,7 @@ There are two ways of customizing the current accent color:
 
 ### Accent Color chooser
 
-A list of predefined accent colors is available in the `Material Config Toolbar`. These are colors frquently used from the Material Design color palette.
+A list of predefined accent colors is available in the `Material Config Toolbar`. These are colors frequently used from the Material Design color palette.
 
 {% include figure.html content="/screens/accentChooser.png" caption="Accent Chooser" %}
 
@@ -131,7 +130,6 @@ You can of course customize the accent color from the settings. Even when you ch
 - Quick documentation panes
 - Accent scrollbars
 - Project View decorators
-- Hovered icons
 - ...
 
 ### Override Accent Color

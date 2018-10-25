@@ -33,15 +33,14 @@ Specifically this option disables:
 - Borderless input, number, password and search boxes
 - Borderless dropdowns
 - Accent progress bars
-- Trees' selected item indicator
-- Trees' opened and closed folders chevrons (>)
-- Padded Table Headers and Table Cells
-- Padded List Items
-- Borderless status bar
-- Material Design progress circular loader/spinner
 - Material Design Checkboxes, Radio Buttons and Sliders
 - Search Everywhere's Switches
 - Material Design Navigation Bar
+- ~~Trees' selected item indicator~~
+- ~~Trees' opened and closed folders chevrons (>)~~
+- ~~Padded Table Headers and Table Cells~~
+- ~~Padded List Items~~
+- ~~Borderless status bar~~
 
 But while these components are disabled, other features such as _Accent Colors_ and _Contrast Mode_ are still in action, meaning that you can have Darcula checkboxes and buttons with your accent color, or the contents of inputs being in contrasted color, for instance.
 
@@ -52,18 +51,25 @@ But while these components are disabled, other features such as _Accent Colors_ 
 What it doesn't disable however, albeit Material Design components, are:
 - Dialog boxes padded titles
 - Toggled buttons indicators
-- Run Configurations dropdown
 
-This is because currently these components are not as themeable as the other ones, and theming occur at the start of the application, without having access to the user settings. If the API changes and they become easier to theme, they will be listed in the first list, but for now there is no way to disable theming of these components othen than removing the plugin.
-
-**Note**: Because this option completely replaces the components UI, a complete restart of the application is needed in order to see them in action.
-
-**Note 2**: Some of the features depend on this setting to work, therefore disabling this will result to disabling those features as well. These are:
-- _Padded Statusbar_: The statusbar will revert to its default, compact design.
+**UPDATE**: Since version 2.10.5 the "Material Components Disabled" mode is much more lax regarding components affected by other settings, such as *Arrow Styles* or *Compact Statusbar*. Therefore, despite components disabled, these settings will continue to work. These are:
+- Tab Height
+- Arrow Styles in trees
+- Selected Item Indicator
+- Compact/Padded Statusbar
+- Compact/Padded Dropdowns
+- Compact/Padded Menus
+- Compact/Padded Table Cells
+- Trees row height
+- Left and Right side indent
+- Font size
 
 ----
 
 ### Material Fonts
+
+**IMPORTANT NOTE**: As a result of the font being jumbled for a lot of users, and since there is no easy workaround, the *Material Fonts* option has been disabled indefinitely. However, we still recommend Roboto for the best experience.
+{:class='card-panel warn'}
 
 This setting switches the default font used in the editor with the usual font used in Material Design, [Roboto](https://fonts.google.com/specimen/Roboto).
 
@@ -73,9 +79,6 @@ This setting changes the font you see in *Settings -> Appearance and Behavior ->
 {:class='card-panel'}
 
 **Note 2**: This setting will replace the font with Roboto only if that font is already installed in the machine. If not, you can download it here: https://material.io/guidelines/resources/roboto-noto-fonts.html
-{:class='card-panel'}
-
-**Note 3**: If you want to use Roboto and want to cancel the "bigger fonts" option, just disable the setting and select Roboto in the `Override default font` option in Appearance settings.
 {:class='card-panel'}
 
 ----
@@ -90,10 +93,7 @@ This option simply disables the Material Theme Styling, e.g. leave components an
 **Note 2**: Some of the features depend on this setting to work, therefore disabling this will result to disabling those features as well. These are:
 - _Themes and Custom Themes_: You won't be able to switch themes (obviously)
 - _Contrast Mode_: There is no contrast mode for native themes
-- _Custom Sidebar Height_: You will be reverted to Darcula/IntelliJ native sidebar height
-- _Custom Tree Indent_: You will be reverted to Darcula/IntelliJ native indent
-- _Bold Directories_: There is no way to bold directories in native themes
-- Other components will also revert back to their default values, such as checkboxes signs, tabbed pane insets, etc.
+Also, the experience will not be exactly the same as without the plugin.
 
 ----
 ### Material File Status Colors
@@ -108,3 +108,7 @@ Check [Material File Status Colors]({{site.baseurl}}/docs/configuration/file-sta
 **Q**: I've set "Material Fonts" but now my texts are all scrambled!
 
 **A**: This is a rare bug that occurs and honestly I don't know why it happens. It could be because the JDK caches fonts or because there are conflicts between Roboto fonts, or that you have a bad version of Roboto. Try to reinstall the Roboto font and restart the computer. If it still doesn't work, just disable the option or select another font in the settings.
+
+**Q**: Why have you removed the Material Fonts?!
+
+**A**: Because of the previous Q&A. Many users were complaining that their IDE become scrambled all of a sudden, generally as a result of their installed Roboto font not in sync with new versions of the JDK. Even though there is an easy workaround, it is not serious for a plugin used by millions of users to have such critical issues, even though it's not the plugin's fault per se. Therefore, it's left at the discretion of the user to replace the fonts of their IDE. However we still recommend Roboto for the best experience!
