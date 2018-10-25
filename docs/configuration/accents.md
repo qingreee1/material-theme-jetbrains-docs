@@ -10,8 +10,8 @@ previous:
   url: '/docs/configuration/file-status-colors'
   title: File Status Colors
 next:
-  url: '/docs/configuration/custom-themes'
-  title: Custom Themes
+  url: '/docs/configuration/color-scheme-additions'
+  title: Color Scheme Additions
 
 gallery:
   - images:

@@ -7,8 +7,8 @@ toc: true
 comments: true
 
 previous:
-  url: '/docs/configuration/accents'
-  title: Accents
+  url: '/docs/configuration/color-scheme-additions'
+  title: Color Scheme Additions
 next:
   url: '/docs/reference/color-palette'
   title: Color Palette
