@@ -68,19 +68,33 @@ See more at [File Colors](https://www.jetbrains.com/help/idea/2017.3/file-colors
 -----
 ## Material File Colors
 
-**Update (02/22/18)**: Since version 1.8.2, the plugin is currently overriding the default *Non-Project Files* Color with the current theme's disabled color when the application starts, so there is no need to install the File Colors manually. Of course if you already changed the color it will not be applied.
-{:class='card-panel'}
+### Excluded Files Theme Color
 
----
 File Colors are pretty neat, but the actual prebundled File Colors are adapted for the _Darcula/IntelliJ_ look and feels, not for the Material Themes.
 
 To remedy this, the Material Theme is also coming prebundled with File Colors, specifically for **Excluded files**.
 
-However, because the _File Colors_ are user settings, and because the user could very possibly have modified the default Excluded Files' file colors, the plugin could not override this setting with a better suited color. Therefore, the plugin is bundled with **additional** excluded files colors, one for each theme.
+However, because the _File Colors_ are user settings, and because the user could very possibly have modified the default Excluded Files' file colors, the plugin could not override this setting with a better suited color. Therefore, it is the responsibility of the user to change the color of the Excluded Files.
 
-These are not installed automatically, as people not necessarily want this setting. Therefore, to install them just select the `Install Material File Colors` action from the _Panel Options_ section of the _Material Theme Configuration_ popup. New file colors for Non-project files scope will then be added to the list. Just select your preferred color on the top of the others to apply it to the project.
+To do so, open the File Colors Settings (`Appearance > File Colors`), select the scope you want to change the color (for instance, "Excluded Files") and click to the _Edit_ button. There you'll see a list of predefined colors, as well as one specific color named `Theme`, which corresponds to the current theme's `Excluded Color`.
 
-{% include figure.html content="/screens/materialfilecolors.png" caption="Material Non Project Files" %}
+{% include figure.html content="/screens/excludedFileColors.png" caption="Excluded Files Color" %}
+
+Moreover, if you select this color and switch to another theme, the selected theme's excluded color will be applied without the need to reopen the settings.
+
+However, just like many of the features of the plugin, this color option is set at the start of the IDE, meaning that if you switch to another theme you'll need a full restart to see the new colors applied.
+
+{% include figure.html content="/screens/excludedFileColors2.png" caption="The excluded files color is set by the theme" %}
+
+### External Themes
+
+External themes developers can also declare the color of the Excluded Files in their themes by setting the `excludedColor` property in their xml:
+
+```
+<color id="excludedColor" value="333333"></color>
+```
+
+{% include figure.html content="/screens/nightOwlExcluded.png" caption="Night Owl's Excluded Color" %}
 
 -----
 ## FAQ
