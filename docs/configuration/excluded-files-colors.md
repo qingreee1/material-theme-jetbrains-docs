@@ -78,13 +78,13 @@ However, because the _File Colors_ are user settings, and because the user could
 
 To do so, open the File Colors Settings (`Appearance > File Colors`), select the scope you want to change the color (for instance, "Excluded Files") and click to the _Edit_ button. There you'll see a list of predefined colors, as well as one specific color named `Theme`, which corresponds to the current theme's `Excluded Color`.
 
-{% include figure.html content="/screens/excludedFileColors.png" caption="Excluded Files Color" %}
+{% include figure.html content="/screens/excludedFilesColors.png" caption="Excluded Files Color" %}
 
 Moreover, if you select this color and switch to another theme, the selected theme's excluded color will be applied without the need to reopen the settings.
 
 However, just like many of the features of the plugin, this color option is set at the start of the IDE, meaning that if you switch to another theme you'll need a full restart to see the new colors applied.
 
-{% include figure.html content="/screens/excludedFileColors2.png" caption="The excluded files color is set by the theme" %}
+{% include figure.html content="/screens/excludedFilesColors2.png" caption="The excluded files color is set by the theme" %}
 
 ### External Themes
 
