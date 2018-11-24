@@ -132,28 +132,50 @@ other:
   accent: '#E91E63'
   excluded: '#3a3a3c'
 
+- dracula:
+  name: Dracula
+  className: dracula
+  desc: Theme based on the Dracula Theme
+  light: false
+  background: '#282A36'
+  foreground: '#F8F8F2'
+  text: '#6272A4'
+  selectBg: '#44475A'
+  selectFg: '#8BE9FD'
+  button: '#393C4B'
+  second: '#282A36'
+  disabled: '#6272A4'
+  contrast: '#191A21'
+  table: '#44475A'
+  misc1: '#21222C'
+  misc2: '#6272A4'
+  tree: '#44475A'
+  notif: '#1D2228'
+  accent: '#FF79C5'
+  excluded: '#34353D'
+
 
 - arcdark:
   name: Arc Dark
   className: arcdark
   desc: Theme based on the Arc Dark GTK Theme
   light: false
-  background: '#383C4A'
+  background: '#2f343f'
   foreground: '#D3DAE3'
   text: '#8b9eb5'
-  selectBg: '#5294e2'
+  selectBg: '#8888FF'
   selectFg: '#FFFFFF'
-  button: '#3c4150'
-  second: '#404552'
+  button: '#383C4A'
+  second: '#393f4c'
   disabled: '#D3DAE3'
-  contrast: '#2f343f'
-  table: '#22242d'
-  misc1: '#2b2e39'
-  misc2: '#22242d'
-  tree: '#5294e2'
-  notif: '#313541'
-  accent: '#009688'
-  excluded: '#3c4150'
+  contrast: '#262b33'
+  table: '#444444'
+  misc1: '#404552'
+  misc2: '#3F3F46'
+  tree: '#08507C'
+  notif: '#262a33'
+  accent: '#42A5F5'
+  excluded: '#474B57'
 
 - onedark:
   name: One Dark

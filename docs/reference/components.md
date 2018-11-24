@@ -142,3 +142,9 @@ Regular Editor tabs have been modified to look like Material design tabs:
 {% include figure.html content="/components/navbar.png" caption="Navigation Bar" %}
 
 - The Navigation Bar at the top of the view looks more like Material Design breadcrumbs.
+
+### Tabbed Panes
+
+{% include figure.html content="/screens/materialTabbedPanes.png" caption="Tabbed Panes" %}
+
+- Tabbed panes respect the Tab Settings, thus allowing custom height, custom indicator and upper case labels

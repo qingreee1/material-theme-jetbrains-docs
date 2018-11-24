@@ -155,7 +155,7 @@ Quick summary of all settings:
 - *Tabs Shadow*: Enable/Disable the shadow under the tabs
 
 **Features Settings**:
-- *Material Fonts*: Enable/Disable Material fonts (Roboto) (disabled)
+- *Material Fonts*: Enable/Disable Material fonts (Roboto)
 - *Material Theme*: Enable/Disable the Material Theme Colors.
 - *Material Design components*: Enable/Disable [Material Design components]({{site.baseurl}}/docs/reference/components) (require restart)
 - *Material File Status Colors*: Enable/Disable the [Material File Status Colors]({{site.baseurl}}/docs/configuration/file-status-colors)

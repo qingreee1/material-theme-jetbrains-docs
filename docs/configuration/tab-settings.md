@@ -14,7 +14,7 @@ next:
   title: Compact Settings
 ---
 
-This page displays the features and settings that customize the appearance of the Editor Tabs.
+This page displays the features and settings that customize the appearance of the Editor Tabs and IDE Tabbed Panes.
 {:class='title'}
 
 {% include carbonads.html %}
@@ -85,6 +85,20 @@ This allows them to adjust the **opacity** of the applied file colors.
 {% include figure.html content="/screens/semitransparent.png" caption="Semi Transparent Color" %}
 
 {% include figure.html content="/screens/transparenter.png" caption="Transparenter Color" %}
+
+----
+## Material Tabbed Panes
+
+Since version 3.0.0 the Tab Settings control not only the appearance of the Editor Tabs but for all tabbed panes as well (except for JBTabbedPanes such as the Tabs inside the Debugger Tool Window or Code Style Settings).
+
+{% include figure.html content="/screens/materialTabbedPanes.png" caption="Material Tabbed Panes" %}
+
+You can therefore customize:
+- The active tab highlighter color and thickness
+- The tab height
+- Whether they appear as upper case bold.
+
+Tab Shadow and Opacity have no effect here.
 
 ----
 ## Other Tweaks

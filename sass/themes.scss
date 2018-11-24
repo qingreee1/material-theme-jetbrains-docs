@@ -47,10 +47,18 @@
     --logo: url(../../img/material-monokai.svg);
   }
 
+  &-dracula {
+    --background: #282A36;
+    --foreground: #F8F8F2;
+    --contrast: #191A21;
+    --laptop: url(../../img/dracula.png);
+    --logo: url(../../img/material-dracula.svg);
+  }
+
   &-arcdark {
-    --background: #383C4A;
+    --background: #2f343f;
     --foreground: #D3DAE3;
-    --contrast: #2f343f;
+    --contrast: #262b33;
     --laptop: url(../../img/arcdark.png);
     --logo: url(../../img/material-arcdark.svg);
   }

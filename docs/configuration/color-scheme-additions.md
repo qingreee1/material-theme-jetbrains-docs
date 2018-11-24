@@ -31,7 +31,10 @@ Originally introduced by the [Night Owl Theme](https://github.com/xdrop/night-ow
 
 ## Additions
 
-Currently the only supported languages are **JavaScript** and **TypeScript**, but more will come with further updates.
+Currently the only supported languages are:
+- **JavaScript**
+- **TypeScript**
+- **Java**
 
 ### JavaScript
 
@@ -47,6 +50,13 @@ The following keywords are customizable:
 
 TypeScript augments JavaScript additions with the following keywords:
 - `private`, `public`, `protected`
+
+### Java
+
+The following keywords are customizable:
+- `private`, `public`, `protected`
+- `static`, `final`
+- `this`, `super`
 
 ---
 

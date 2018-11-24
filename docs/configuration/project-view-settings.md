@@ -75,6 +75,7 @@ There are three available styles:
 - Material <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/arrows/material.png">
 - Darcula <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/arrows/darcula.png">
 - Plus-Minus <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/arrows/plusminus.png">
+- Arrows <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/' }}/arrows/arrows.png">
 - None (no arrows)
 
 You can also switch styles in the `Actions Panel`.
