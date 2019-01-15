@@ -53,12 +53,15 @@ This panel allows you to quickly toggle some of the most used Panel Settings:
 - _Toggle High Contrast_
 - _Toggle Compact Sidebar_
 - _Toggle Compact Dropdowns_
+- _Toggle Compact Table Cells_
 - _Toggle Compact Menus_
 - _Toggle Hide File Icons_
+- _Toggle Monochrome Icons_
 - _Toggle Compact Status Bar_
 - _Toggle Uppercase Tabs_
 - _Arrow styles_
 - _Indicator Styles_
+- _Tab Highlight Position_
 
 Besides those are one-time actions that will change the plugin or the IDE configuration:
 - _Set Recommended Tab Height_: Change the tab height to _42_
@@ -81,6 +84,8 @@ This panel as well allows you to rapidly toggle the most used Component Settings
 - _Toggle Material Theme_
 - _Toggle Material Components_
 - _Toggle Material Icons_
+- _Toggle Material File Icons_
+- _Toggle Material PSI Icons_
 - _Toggle Material Fonts_
 - _Toggle Project View Decorators_
 - _Toggle Status Bar Indicator_

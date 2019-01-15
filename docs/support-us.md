@@ -39,13 +39,13 @@ Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com
 
 <a href="https://opencollective.com/material-theme-jetbrains#backers" target="_blank"><img src="https://opencollective.com/material-theme-jetbrains/backers.svg?width=890"></a>
 
-And for those who donated via PayPal:
+And for those who donated via PayPal!
 
-<div markdown="0" class="multi-column-3">
-{% for contributor in site.data.contributors %}
-<li>{{ contributor.name }}</li>
-{% endfor %}
-</div>
+<!--<div markdown="0" class="multi-column-3">-->
+<!--{% for contributor in site.data.contributors %}-->
+<!--<li>{{ contributor.name }}</li>-->
+<!--{% endfor %}-->
+<!--</div>-->
 
 
 ## Sponsors

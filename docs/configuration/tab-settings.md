@@ -101,6 +101,27 @@ You can therefore customize:
 Tab Shadow and Opacity have no effect here.
 
 ----
+## Tab Highlighter Position
+
+A new setting has been added in 3.4.0 allowing to tweak the position of the tab highlighter:
+
+{% include figure.html content="/screens/positions/top.png" caption="Top" %}
+
+{% include figure.html content="/screens/positions/bottom.png" caption="Bottom" %}
+
+{% include figure.html content="/screens/positions/left.png" caption="Left" %}
+
+{% include figure.html content="/screens/positions/right.png" caption="Right" %}
+
+{% include figure.html content="/screens/positions/topBottom.png" caption="Top and Bottom" %}
+
+{% include figure.html content="/screens/positions/leftRight.png" caption="Left and Right" %}
+
+{% include figure.html content="/screens/positions/full.png" caption="All around" %}
+
+{% include figure.html content="/screens/positions/none.png" caption="None" %}
+
+----
 ## Other Tweaks
 
 #### Edited files icon

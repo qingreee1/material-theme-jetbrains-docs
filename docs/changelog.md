@@ -16,6 +16,44 @@ next:
 # Changelog
 ----
 
+
+# 3.4.0
+- Add new setting: **Material PSI Icons**. Replaces the PSI Icons (class, interface, functions...) with Material Icons, inspired by Visual Studio Code.
+- Add new setting: **Tab highlight position**. Available options: Bottom, Top, Left, Right, Left-Right, Top-Bottom, Full and None
+- Refactor UI components a bit and introduced MTUI
+- Fix issue where "not inherited members" would not differ from regular members in the Structure Panel
+- Fix rare fatal error at start
+- Fix php icons showing the elephant instead of the PSI icon
+
+# 3.3.0
+- Fix fatal error when deselecting Material Components
+- Change selection color to white for Dracula
+- Deprecate some functions
+- Add more directories: guard, providers, animations, grunt, icons, e2e, custom, rules, screens, storybook, stylus, syntax, security, meta-inf, fixtures, channels, concerns, support, features, fabricators, nyc, reviews
+- Add more files: ANTLR, brainfuck, cobol, delphi, eiffel, fortran, idris, io, j, lerna, postscript, prolog, racket, red, supercollider, scheme, terraform, test-react, turing, toml
+
+
+# 3.2.0
+- NEW: **Toggle Material UI Icons without restarting the IDE!**
+- Fix CLion colors in Monokai Pro
+- Remove Codepen icon
+- Remove TextArea borders when not editable
+- Fix FlameChart colors to use the theme's colors
+
+# 3.1.0
+- Fix .ignore syntax highlighting
+- Add more padding to compact status bar
+- Add Dracula to Wizard
+- Add Compact Table Cells Action
+- Fix Atom One Light selection color
+- Fix Deep Ocean selection color
+- Set Search Fields as Material Text Fields
+- Set Search with history icon as an accent icon
+- Fix padding of editable table cells
+- Fix foreground of selected active tab in tool windows
+- Add border to text areas
+- Add property whether the config is in pristine state
+
 # 3.0.0
 - Major refactor of the whole code
 - New theme: **Dracula**!

@@ -86,6 +86,19 @@ Assign specific folder icons to folders with commonly used names to add yet more
 Note that excluded/resource root/test root/package folders will not be decorated.
 
 ----
+#### PSI Icons
+
+From version 3.4.0 you can also replace the PSI icons (e.g. Class, Interface, Enums, functions and so on) with Material icons.
+
+{% include figure.html content="/screens/psiIcons.png" caption="PSI Icons" %}
+
+The Structure Panel icons are also changed:
+
+{% include figure.html content="/screens/psiStructure.png" caption="PSI Icons" %}
+
+This option makes it look like the Visual Studio Code *Outline* Panel, as well as Rider or Resharper structure panels.
+
+----
 ### Notes
 
 - While the Material Icons replace most icons, some icons, such as icons coming from plugins (including JetBrains' plugins like Git) would not be replaced.

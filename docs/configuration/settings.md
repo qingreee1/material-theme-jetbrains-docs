@@ -118,6 +118,7 @@ Quick summary of all settings:
 - *Uppercase Bold Tabs*: Set the Editor Tabs in Bold Upper Case
 - *Tabs Height*: Set a custom height for tabs (between 25 and 60 pixels)
 - *Tab Color Opacity*: Adjust the opacity of the custom colors in tabs (for File Colors)
+- *Tab Position*: Customize the position of the tab highlighter
 
 **Compact Settings**:
 - *Compact Status Bar*: Reduce the height of the status bar (this is the default height)
@@ -131,6 +132,7 @@ Quick summary of all settings:
 - *Monochrome Icons*: Filter the IDE icons with a shade of the current theme's primary color
 - *File Icons*: Enable/Disable the Custom File Icons
 - *Folder decorators*: Decorate special folders with custom icons.
+- *PSI Icons*: Replace PSI Icons (class, interface, etc)
 
 **Project View Settings**:
 - *Custom Sidebar Height*: Set a custom line height in Project View (min: 18, max: 30)
