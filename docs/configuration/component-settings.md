@@ -43,15 +43,12 @@ These options control the appearance of the scrollbars. Note: This feature works
 
 **Note 2**: Accent colors are set at the start of the application. If you change the accent color, you will need a full restart to see it reflected on the scrollbars. Same for the _Transparent Scrollbars_, if you switch themes you will need a full restart to see it taking the new theme's color.
 
+**Note 3**: Since 2019.1 versions, the editor scrollbar color is now set by the **Color Scheme** instead of by the **Theme**. This makes sense as the color scheme is not necessarily following the theme and might be off with the theme.
+There is no option to configure this at the moment but it will soon be available inside the _Color Scheme General Settings_.
+
 ---
 ### Tabs Shadow
 
 This option enables/disables the shadow under the tabs.
 
 {% include figure.html content="/screens/tabShadow.png" caption="Tabs Shadow" %}
-
------
-### FAQ/Troubleshooting
-
-- Scrollbar settings actually mess up the Registry. Therefore, they can persist even when the plugin is off/disabled (though they shouldn't). In that case, you can reset the default settings by opening the Registry (`Cmd-Shift-A > Registry`) then resetting all custom values in there.
-- Scrollbar settings don't work well with HiDPI (yet). For a better experience, please disable these options if you are on such environments until it is fixed.

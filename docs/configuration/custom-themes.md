@@ -133,9 +133,9 @@ The color used when contrast mode is enabled:
 - Selected ToolWindow
 - Editor background when no opened files
 
-##### Active component color
+##### Selected Text color
 
-Another color to use for active component colors:
+Another color to use for selected texts/active component colors:
 - Selected cells in tables
 - Selected text in text fields and documentation panes
 - Selected items in dropdowns

@@ -17,6 +17,20 @@ next:
 ----
 
 
+# 3.5
+- New Tab Highlight position: Bottomless
+- Add AOP and JavaScript/TypeScript icons and PSI icons
+- Refactor Accent scrollbars option
+- Fix old bug with wrong folder icons
+- Remove useless logging
+- Migration to 2019.1
+
+# 3.4.1
+- Fix PSI Icons wrong sizes
+- Remove opacity for "grayForeground" resource
+- Add "Bottomless" tab position
+- Add "VERSION" file type
+
 # 3.4.0
 - Add new setting: **Material PSI Icons**. Replaces the PSI Icons (class, interface, functions...) with Material Icons, inspired by Visual Studio Code.
 - Add new setting: **Tab highlight position**. Available options: Bottom, Top, Left, Right, Left-Right, Top-Bottom, Full and None

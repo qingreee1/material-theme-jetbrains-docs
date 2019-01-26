@@ -119,6 +119,8 @@ A new setting has been added in 3.4.0 allowing to tweak the position of the tab 
 
 {% include figure.html content="/screens/positions/full.png" caption="All around" %}
 
+{% include figure.html content="/screens/positions/bottomless.png" caption="Bottomless" %}
+
 {% include figure.html content="/screens/positions/none.png" caption="None" %}
 
 ----

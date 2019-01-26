@@ -14,7 +14,10 @@ next:
 
 {% include carbonads.html %}
 
-Material Theme for JetBrains is a open-source plugin free to use. It is made with love by people that love good design and want the world to be a better place. If you like this plugin and appreciate the work done for it to exist, you can support the developers by donating. Any amount is appreciated and would greatly help support and interest on this project.
+Material Theme for JetBrains is a open-source plugin free to use. It is made with love by people that love
+good design and want the world to be a better place.
+If you like this plugin and appreciate the work done for it to exist, you can support the developers by donating.
+Any amount is appreciated and would greatly help support and interest on this project.
 {:class='title'}
 
 ## PayPal Donation
@@ -25,7 +28,9 @@ The simplest way to donate is through PayPal with a one-time donation.
 
 ## OpenCollective
 
-The project is also available on [OpenCollective](https://opencollective.com/material-theme-jetbrains), a non-profit website to allow contributors and other people to know what's going on and closely participate on the plugin's roadmap and actions.
+The project is also available on [OpenCollective](https://opencollective.com/material-theme-jetbrains), a
+non-profit website to allow contributors and other people to know what's going on and closely participate
+on the plugin's roadmap and actions.
 
 ## Contributors
 
