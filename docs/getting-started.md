@@ -107,5 +107,6 @@ The plugin is supported on all IDEs, but because of changes of the SDK specific 
 - IDEs versions 2017.1-2 > up until version `0.10.6`
 - IDEs versions 2017.3+ > up until version `1.6.0.4`
 - IDEs versions 2018.1 > from version `1.7.0` up to `2.4.0`
-- IDEs versions 2018.2+ > from version `2.4.0-2018.2` up to `3.4.2`
+- IDEs versions 2018.2 > from version `2.4.0-2018.2` up to `3.1.0`
+- IDEs versions 2018.3 > from version `3.1.0` up to `3.4.2`
 - IDEs versions 2019.1+ > from version `3.5.0` and above

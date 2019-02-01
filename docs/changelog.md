@@ -16,6 +16,19 @@ next:
 # Changelog
 ----
 
+# 3.6.1
+- Fix the _Disabled Material Theme_ and remove the action
+- Fix the xStream warning
+- Add Pipfile and set NPM Package lock to the lock icon
+- Hide accent actions when _override accent_ is enabled
+- Fix missing icons
+
+# 3.6
+- Add new icon sets: *Docker*, *Maven*, *Groovy*, *Sass*, *Markdown*, *Kotlin*, *UML*, *Web*
+- Add **Scrollbars** section in *Color Scheme Settings* to paint the scrollbars according to the current color scheme
+- Add a new setting to disable the **Code Additions**
+- Fix Scrollbars width in Mac
+- Add new File Colors
 
 # 3.5
 - New Tab Highlight position: Bottomless
