@@ -84,7 +84,10 @@ The plugin also comes with a bunch of configurable settings to suit all flavors.
 
 These settings are found inside `Settings -> Appearance and Behavior -> Material Theme Settings`.
 
-{% include figure.html content="/screens/settings.png" caption="Material Theme Settings" %}
+{% include figure.html content="/screens/settings.png" caption="Material Theme Settings V1" %}
+
+{% include figure.html content="/screens/settingsV2.png" caption="Material Theme Settings V2" %}
+
 
 Check [Settings]({{site.baseurl}}/docs/configuration/settings) for more info.
 
