@@ -1,6 +1,6 @@
-@import "toolbox/all";
-@import "base/settings";
-@import "base/typography";
+@import 'toolbox/all';
+@import 'base/settings';
+@import 'base/typography';
 
 $fourtothree: 1460px;
 $threetotwo: 775px;
@@ -16,20 +16,20 @@ $twotoone: 530px;
   }
 
   .contents {
-    @include rowMachine(3, 1%, 25px);
+    @include row-machine(3, 1%, 25px);
 
     @media screen and (max-width: $fourtothree) {
-      @include rowMachine(3, 1%, 25px);
+      @include row-machine(3, 1%, 25px);
     }
 
     @media screen and (max-width: $threetotwo) and (min-width: $twotoone + 1) {
-      @include rowMachine(2, 3%, 25px);
+      @include row-machine(2, 3%, 25px);
     }
 
     @media screen and (max-width: $twotoone) {
-      width: 100%;
-      margin-left: 0;
       margin-bottom: 25px;
+      margin-left: 0;
+      width: 100%;
     }
   }
 }

@@ -9,6 +9,7 @@
   .menu-toggle-link {
     display: none;
   }
+
   .navbar {
     @include flexbox(row, nowrap, start, center);
     margin: 0;
@@ -18,6 +19,7 @@
       @include flexbox(column, nowrap, start, center);
     }
   }
+
   li {
     display: inline-block;
     height: 100%;
@@ -27,12 +29,14 @@
       background-color: rgba(0, 0, 0, .1);
       border-bottom: 2px solid $accent-color;
     }
+
     > a {
       width: 100%;
       display: block;
       font-size: 1em;
     }
   }
+
   // Responsive Version (Off-Canvas)
   @media screen and (max-width: $mainnav-collapse) {
     padding: 0;
@@ -53,6 +57,7 @@
 
     a {
       color: $accent-color;
+
       &:hover {
         color: $accent-color;
       }
@@ -67,6 +72,7 @@
       position: relative;
       text-align: right;
       padding-right: 0;
+
       &:after {
         content: "";
       }
@@ -79,12 +85,15 @@
     li {
       display: block;
       flex: 1;
+
       &:first-of-type {
         border-top: $noborder;
       }
+
       &:hover {
         transition: .3s all linear;
         @include list-indicator;
+
         &::before {
           left: -8px;
         }
@@ -96,6 +105,7 @@
     li {
       flex: 0;
       position: relative;
+
       &:hover {
         border-bottom: 0;
       }
@@ -120,6 +130,7 @@
     font-size: 1rem;
     padding: 0 15px;
     color: $primary-text-icon-color;
+
     &:hover {
       color: $primary-text-icon-color;
     }
@@ -132,9 +143,10 @@
   }
 
   .content {
-    @include flexbox(row, wrap, space-between, center);
+    @include flexbox(row, nowrap, space-between, center);
     height: inherit;
     line-height: inherit;
+
     .h-spacer {
       flex: 1;
     }
@@ -152,6 +164,7 @@
   &:focus {
     outline: 0;
   }
+
   padding: 0;
   @extend .z-depth-1;
   background-color: $dropdown-bg-color;
@@ -168,6 +181,7 @@
 
   li {
     list-style-type: none;
+
     &:hover, &.active {
       background-color: $dropdown-hover-bg-color;
     }

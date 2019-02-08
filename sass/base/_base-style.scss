@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-html {
+%html {
   font: {
     family: $main-font;
     size: $root-font-size;
@@ -10,8 +10,12 @@ html {
   }
 }
 
+html {
+  @extend %html
+}
+
 body {
-  @extend html;
+  @extend %html;
   line-height: $basic-line-height;
 
   @if $background-color-setting == yes {
@@ -20,9 +24,14 @@ body {
 }
 
 // Headings
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1;
-  padding: 10px 0px;
+  padding: 10px 0;
 
   @if $headings-text-transform != none {
     text-transform: $headings-text-transform;
@@ -64,23 +73,23 @@ h6 {
 // Links
 a {
   @if $link-transition == yes {
-    transition: .3s all;
+    transition: 0.3s all;
   }
-
-  text-decoration: none;
   color: $link-color;
 
+  text-decoration: none;
+
   &:hover {
-    cursor: pointer;
     color: $link-hover-color;
+    cursor: pointer;
   }
 }
 
 // Defaults
 
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 iframe {
@@ -88,13 +97,17 @@ iframe {
   // height: auto;
 }
 
-code {
+%code {
   font-family: 'Source Code Pro', 'Courier New', monospace;
+}
+
+code {
+  @extend %code;
 }
 
 kbd,
 pre {
-  @extend code;
+  @extend %code;
 }
 
 p + * {
@@ -103,21 +116,20 @@ p + * {
 
 // Container
 .content {
+  background: $container-background-color;
   max-width: $container-max-width;
   width: $container-width;
-  background: $container-background-color;
   @include center();
 }
 
 // Extended Defaults
 input,
 textarea {
-  position: relative;
-  border: 1px solid white;
-  transition: 0.3 all ease;
-  padding: 9px 13px;
+  border: 1px solid darken(white, 10%);
   box-sizing: border-box;
-  border-color: darken(white, 10%);
+  padding: 9px 13px;
+  position: relative;
+  transition: 0.3s all ease;
 
   &:focus {
     border-color: darken(white, 15%);
@@ -125,8 +137,8 @@ textarea {
 }
 
 cite {
-  font-style: italic;
   font-size: 1em;
+  font-style: italic;
 }
 
 address,
@@ -136,41 +148,41 @@ var {
 
 pre {
   background: rgba(black, 0.02);
-  padding: 10px;
-  margin: 10px 0;
-  width: 100%;
   box-sizing: border-box;
+  margin: 10px 0;
   overflow-x: auto;
+  padding: 10px;
+  width: 100%;
 }
 
 q {
   display: inline;
 
-  &:before {
-    content: "“";
+  &::before {
+    content: '“';
   }
 
-  &:after {
-    content: "”";
+  &::after {
+    content: '”';
   }
 }
 
 // Blockquotes
 blockquote {
-  width: calc(100% - 10px);
-  box-sizing: border-box;
-  padding: 10px 20px;
   border-left: $blockquote-border;
-  margin: 15px 0 0 10px;
+  box-sizing: border-box;
   font-size: 1.1em;
+  margin: 15px 0 0 10px;
+  padding: 10px 20px;
+  width: calc(100% - 10px);
 }
 
 // Tables
 @if $include-table-style == yes {
   table {
-    width: 100%;
     border: $table-border;
     overflow-x: auto;
+    width: 100%;
 
     thead tr {
       background: darken($even-rows-bg, 5%);
@@ -188,9 +200,10 @@ blockquote {
       }
     }
 
-    td, th {
-      padding: 3px 4px;
+    td,
+    th {
       border-right: $table-border;
+      padding: 3px 4px;
 
       &:last-of-type {
         border-right: $noborder;
@@ -198,10 +211,10 @@ blockquote {
     }
 
     th {
-      white-space: nowrap;
-      padding: 5px 7px;
       font-size: 1.05em;
       font-weight: bold;
+      padding: 5px 7px;
+      white-space: nowrap;
     }
   }
 }
@@ -209,19 +222,19 @@ blockquote {
 // Defintion List
 @if $include-definition-list-style == yes {
   dl {
-    width: 100%;
     text-align: left;
+    width: 100%;
     @include flexbox(row, wrap, space-between, stretch);
 
     dt {
-      font-weight: bold;
-      width: 20%;
-      min-width: 130px;
       border-bottom: $definition-list-border;
+      font-weight: bold;
+      min-width: 130px;
       padding: 3px 0;
+      width: 20%;
 
-      &:after {
-        content: ":";
+      &::after {
+        content: ':';
       }
 
       &:last-of-type {
@@ -230,10 +243,10 @@ blockquote {
     }
 
     dd {
+      border-bottom: $definition-list-border;
+      max-width: calc(100% - 130px);
       padding: 3px 0;
       width: 80%;
-      max-width: calc(100% - 130px);
-      border-bottom: $definition-list-border;
 
       &:last-of-type {
         border-bottom: $noborder;

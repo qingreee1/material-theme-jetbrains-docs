@@ -2,10 +2,10 @@
   Global Styles and classes
  */
 body {
-  transition: .3s all ease-in-out;
   @include flexbox(column, wrap, center, flex-start);
   margin-top: $header-size;
   min-height: 100vh;
+  transition: 0.3s all ease-in-out;
 
   @media all and (max-width: $from-noslogan-to-icon) {
     margin-top: $header-size-condensed;
@@ -17,20 +17,20 @@ body {
 }
 
 .center-image img {
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
 }
 
 .btn {
   @include button($accent-color, btn);
-  font-weight: 400;
   color: white !important;
+  font-weight: 400;
 
   &.-large {
-    padding: 1rem 2rem;
-    line-height: 2rem;
-    height: 4rem;
     font-size: large;
+    height: 4rem;
+    line-height: 2rem;
+    padding: 1rem 2rem;
   }
 }
 
@@ -41,11 +41,13 @@ body {
 // headings. Because that's faster than writing each of them separately.
 @for $i from 1 through 6 {
   $fontsize: ($h1-fontsize + 0.64) - ($i * 0.64);
+
   h#{$i} {
-    font-weight: 300;
     font-size: $fontsize;
+    font-weight: 300;
     line-height: 1.1*$fontsize;
     margin: ($fontsize / 2) 0 ($fontsize / 2.5) 0;
+
     a {
       font-weight: inherit;
     }
@@ -53,22 +55,22 @@ body {
 }
 
 code {
-  border: solid 1px $code-border;
   background: $code-bg;
+  border: solid 1px $code-border;
   border-radius: 4px;
   font-size: smaller;
   padding: 2px 4px;
 
   .highlight & {
-    border: none;
     background: none;
+    border: 0;
     border-radius: 0;
   }
 }
 
 // responsive video (Format 16:9)
 .video-container {
-  @include paddinghack(100%, 16, 9, "iframe");
+  @include paddinghack(100%, 16, 9, 'iframe');
 }
 
 // The main container
@@ -83,24 +85,24 @@ code {
 // footnotes
 .footnotes {
   border-top: $line;
-  font-size: .9em;
+  font-size: 0.9em;
   margin-top: 40px;
 }
 
 // 404 error msg
 .error {
-  width: 100%;
+  box-sizing: border-box;
   margin-bottom: 20px;
   padding: 10px;
-  box-sizing: border-box;
+  width: 100%;
 }
 
 // Screenshots of the plugin
 .screenshot {
-  width: 100%;
-  padding-top: 60%;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 60%;
+  width: 100%;
 }
 
 .call-to-action {
