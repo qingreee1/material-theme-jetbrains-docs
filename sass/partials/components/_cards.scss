@@ -11,7 +11,7 @@
   }
 }
 
-.card {
+%card {
   background-color: $card-bg-color;
   border-radius: 2px;
   margin: $element-top-margin 0 $element-bottom-margin 0;
@@ -30,8 +30,8 @@
 
   // Card Sizes
   &.small,
- &.medium,
- &.large {
+  &.medium,
+  &.large {
     position: relative;
 
     .card-image {
@@ -71,8 +71,8 @@
   // Horizontal Cards
   &.horizontal {
     &.small,
- &.medium,
- &.large {
+    &.medium,
+    &.large {
       .card-image {
         height: 100%;
         max-height: none;
@@ -169,6 +169,7 @@
     &:last-child {
       border-radius: 0 0 2px 2px;
     }
+
     background-color: inherit;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 16px $card-padding;
@@ -180,7 +181,9 @@
       text-transform: uppercase;
       transition: color 0.3s ease;
 
-      &:hover { color: $card-link-color-light; }
+      &:hover {
+        color: $card-link-color-light;
+      }
     }
   }
 
@@ -201,4 +204,8 @@
       display: block;
     }
   }
+}
+
+.card {
+  @extend %card;
 }

@@ -6,15 +6,10 @@ pre {
   padding: 6px 10px;
 }
 
-$olivegray: #998;
-$palepink: #e3d2d2;
-$darkred: #a61717;
-$medgray: #999;
-
 .highlight {
   pre,
   .hll {
-    @extend pre;
+    @extend %code-font;
   }
 
   .c,

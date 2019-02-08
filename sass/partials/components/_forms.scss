@@ -26,7 +26,7 @@ textarea.materialize-textarea {
 
   // General Styles
   background-color: transparent;
-  border: none;
+  border: 0;
   border-bottom: $input-border;
   border-radius: 0;
   box-shadow: none;
@@ -109,7 +109,7 @@ textarea.materialize-textarea {
   }
 
   // Form Message Shared Styles
-  & + label::after {
+  + label::after {
     @extend %input-after-style;
   }
 }
@@ -178,12 +178,13 @@ textarea.materialize-textarea {
       width: calc(100% - 3rem - #{$gutter-width});
     }
   }
+
   margin-bottom: 1rem;
   margin-top: 1rem;
 
   position: relative;
 
-  & > label {
+  > label {
     color: $input-border-color;
     cursor: text;
     font-size: 1rem;
@@ -192,7 +193,7 @@ textarea.materialize-textarea {
     text-align: initial;
     top: 0;
     transform: translateY(12px);
-    transform-origin: 0% 100%;
+    transform-origin: 0 100%;
     transition: transform 0.2s ease-out, color 0.2s ease-out;
 
     &:not(.label-icon).active {
@@ -202,9 +203,9 @@ textarea.materialize-textarea {
   }
 
   // Autofill + date + time inputs
-  & > input[type]:-webkit-autofill:not(.browser-default) + label,
-  & > input[type=date]:not(.browser-default) + label,
-  & > input[type=time]:not(.browser-default) + label {
+  > input[type]:-webkit-autofill:not(.browser-default) + label,
+  > input[type=date]:not(.browser-default) + label,
+  > input[type=time]:not(.browser-default) + label {
     transform: translateY(-14px) scale(0.8);
     transform-origin: 0 0;
   }
@@ -216,6 +217,7 @@ textarea.materialize-textarea {
       position: absolute;
       top: 0;
     }
+
     color: rgba(0, 0, 0, 0.54);
     display: block;
     font-size: 12px;
@@ -232,7 +234,9 @@ textarea.materialize-textarea {
     transition: color 0.2s;
     width: $input-height;
 
-    &.active { color: $input-focus-color; }
+    &.active {
+      color: $input-focus-color;
+    }
   }
 
   .prefix ~ input,
@@ -246,7 +250,9 @@ textarea.materialize-textarea {
     width: calc(100% - 3rem);
   }
 
-  .prefix ~ label { margin-left: 3rem; }
+  .prefix ~ label {
+    margin-left: 3rem;
+  }
 
   @media all and (max-width: #{$from-full-to-noslogan}) {
     .prefix ~ input {
@@ -284,20 +290,20 @@ textarea.materialize-textarea {
     box-shadow: none;
     color: #444;
 
-    & + label i,
-    & ~ .mdi-navigation-close,
-    & ~ .material-icons {
+    + label i,
+    ~ .mdi-navigation-close,
+    ~ .material-icons {
       color: #444;
     }
   }
 
-  & + .label-icon {
+  + .label-icon {
     left: 1rem;
     transform: none;
   }
 
-  & ~ .mdi-navigation-close,
-  & ~ .material-icons {
+  ~ .mdi-navigation-close,
+  ~ .material-icons {
     color: transparent;
     cursor: pointer;
     font-size: $input-icon-size;
@@ -343,7 +349,9 @@ textarea {
 /* Autocomplete */
 .autocomplete-content {
   li {
-    .highlight { color: #444; }
+    .highlight {
+      color: #444;
+    }
 
     img {
       height: $dropdown-item-height - 10;

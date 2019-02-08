@@ -29,7 +29,7 @@ span.badge {
 nav ul a span.badge {
   display: inline-block;
   float: none;
-  -webkit-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
   height: $badge-height;
   line-height: $badge-height;
   margin-left: 4px;

@@ -70,7 +70,6 @@ h6 {
   font-size: 1em;
 }
 
-// Links
 a {
   @if $link-transition == yes {
     transition: 0.3s all;
@@ -85,8 +84,6 @@ a {
   }
 }
 
-// Defaults
-
 img {
   height: auto;
   max-width: 100%;
@@ -94,32 +91,25 @@ img {
 
 iframe {
   width: 100%;
-  // height: auto;
 }
 
-%code {
+code,
+kbd,
+pre {
   font-family: 'Source Code Pro', 'Courier New', monospace;
 }
 
-code {
-  @extend %code;
-}
-
-kbd,
-pre {
-  @extend %code;
-}
-
+// Add gap size between paragraphs
 p + * {
   margin-top: $paragraph-gap-size;
 }
 
-// Container
+// Containers
 .content {
+  @include center();
   background: $container-background-color;
   max-width: $container-max-width;
   width: $container-width;
-  @include center();
 }
 
 // Extended Defaults
@@ -167,7 +157,6 @@ q {
   }
 }
 
-// Blockquotes
 blockquote {
   border-left: $blockquote-border;
   box-sizing: border-box;

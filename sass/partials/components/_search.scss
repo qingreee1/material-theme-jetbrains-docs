@@ -40,7 +40,7 @@ $input-radius: 3px;
     width: 100%;
 
     &:active,
- &:focus {
+    &:focus {
       border-bottom: 2px solid $accent-color;
     }
   }

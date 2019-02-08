@@ -1,12 +1,11 @@
 #carbonads {
-  @extend .card;
+  @extend %card;
   font-size: small;
   line-height: 1.4;
   margin-top: 3em;
   max-width: 330px;
   min-height: 126px;
-  padding: 1em;
-  padding-left: 160px;
+  padding: 1em 1em 1em 160px;
   text-align: left;
 
   .call-to-action & {
@@ -14,7 +13,7 @@
   }
 
   a,
- a:hover {
+  a:hover {
     color: inherit;
   }
 
