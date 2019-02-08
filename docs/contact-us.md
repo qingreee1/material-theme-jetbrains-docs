@@ -8,12 +8,12 @@ comments: true
 Wanna contribute to the plugin? Feel free to open issues at the Github repository, or use the form below to submit feature requests.
 
 
-<form action="https://send.pageclip.co/qRYPR9l3tBKru2vEFibJfvBVuUWlzhPa" class="pageclip-form" method="post" markdown="0">
+<form id="contact-us-form" action="https://send.pageclip.co/qRYPR9l3tBKru2vEFibJfvBVuUWlzhPa" method="post" markdown="0">
   <div class="input-field inline">
-    <input type="text" name="name" placeholder="Name"/>
+    <input type="text" name="name" id="name" placeholder="Name"/>
   </div>
   <div class="input-field inline">
-    <input type="email" name="email" placeholder="user@email.com" />
+    <input type="email" name="email" id="email" placeholder="user@email.com" />
   </div>
 
   <div class="input-field">

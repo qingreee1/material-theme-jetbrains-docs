@@ -9,7 +9,7 @@ pre {
 .highlight {
   pre,
   .hll {
-    @extend %code-font;
+    font-family: 'Source Code Pro', 'Courier New', monospace;
   }
 
   .c,

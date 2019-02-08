@@ -50,6 +50,7 @@ $.when($.ready).then(() => {
       this.initMenu();
       this.initThemeChooser();
       this.initSidebar();
+      this.onSubmit();
       // this.initSearch();
     },
 
@@ -122,6 +123,39 @@ $.when($.ready).then(() => {
       search.start();
     },
 
+    /**
+     * Submit form handlers
+     */
+    onSubmit() {
+      $('#contact-us-form').on('submit', function (e) {
+        const frm = this;
+        e.preventDefault();
+
+        // Check if email is empty
+        // TODO Better validation
+        if ($('#email').val() === '') {
+          return;
+        }
+
+        grecaptcha.execute('6LetNpAUAAAAAPamFzSqTvqNaPdWgFyuJvfGRaGc', {action: 'contactForm'}).then(function (token) {
+          $('[name="g-recaptcha-response"]').val(token);
+
+          // Submit form to pageclip
+          Pageclip.form(document.getElementById('contact-us-form'), {
+            onSubmit: function (event) {
+              return true;
+            },
+            onResponse: function (error, response) {
+              return true;
+            },
+            successTemplate: '<span>Thank you!</span>',
+          });
+        }, function (reason) {
+          // todo
+        });
+
+      });
+    },
   };
 
   // init
