@@ -1,20 +1,20 @@
 span.badge {
+  box-sizing: border-box;
+  color: $primary-text;
+  font-size: 1rem;
+  height: $badge-height;
+  line-height: $badge-height;
+  margin-left: 4px;
   min-width: 3rem;
   padding: 2px 6px;
-  margin-left: 4px;
   text-align: center;
-  font-size: 1rem;
-  line-height: $badge-height;
-  height: $badge-height;
-  color: $primary-text;
-  box-sizing: border-box;
 
   &.new {
-    font-weight: 300;
-    font-size: 0.8rem;
-    color: #fff;
     background-color: $badge-bg-color;
     border-radius: 2px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 300;
   }
 
   &.-float {
@@ -22,17 +22,17 @@ span.badge {
   }
 
   &[data-badge-caption]::after {
-    content: " " attr(data-badge-caption);
+    content: ' ' attr(data-badge-caption);
   }
 }
 
 nav ul a span.badge {
   display: inline-block;
   float: none;
-  margin-left: 4px;
-  line-height: $badge-height;
-  height: $badge-height;
   -webkit-font-smoothing: auto;
+  height: $badge-height;
+  line-height: $badge-height;
+  margin-left: 4px;
 }
 
 // Line height centering

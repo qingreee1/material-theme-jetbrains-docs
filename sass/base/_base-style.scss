@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-%html {
+%main-font {
   font: {
     family: $main-font;
     size: $root-font-size;
@@ -11,11 +11,11 @@
 }
 
 html {
-  @extend %html
+  @extend %main-font;
 }
 
 body {
-  @extend %html;
+  @extend %main-font;
   line-height: $basic-line-height;
 
   @if $background-color-setting == yes {

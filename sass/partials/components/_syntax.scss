@@ -1,18 +1,17 @@
 pre {
   background-color: #f8f8f8;
-  padding: 6px 10px;
   border-radius: 2px;
+  font-size: 0.9em;
   overflow-x: auto;
-  font-size: .9em;
+  padding: 6px 10px;
 }
 
-$olivegray: #999988;
+$olivegray: #998;
 $palepink: #e3d2d2;
 $darkred: #a61717;
 $medgray: #999;
 
 .highlight {
-
   pre,
   .hll {
     @extend pre;
@@ -66,14 +65,14 @@ $medgray: #999;
   }
 
   .gd .x {
-    background-color: #ffaaaa;
+    background-color: #faa;
   }
 
   .gi {
-    background-color: #ddffdd;
+    background-color: #dfd;
 
     .x {
-      background-color: #aaffaa;
+      background-color: #afa;
     }
   }
 
@@ -90,16 +89,16 @@ $medgray: #999;
   }
 
   .kt {
-    color: #445588;
+    color: #458;
     font-weight: bold;
   }
 
   .m {
-    color: #009999;
+    color: #099;
   }
 
   .s {
-    color: #dd1144;
+    color: #d14;
   }
 
   .n {
@@ -115,7 +114,7 @@ $medgray: #999;
   }
 
   .nc {
-    color: #445588;
+    color: #458;
     font-weight: bold;
   }
 
@@ -128,15 +127,15 @@ $medgray: #999;
   }
 
   .ne {
-    color: #990000;
+    color: #900;
   }
 
   .nf {
-    color: #990000;
+    color: #900;
   }
 
   .nn {
-    color: #555555;
+    color: #555;
   }
 
   .nt {
@@ -148,55 +147,55 @@ $medgray: #999;
   }
 
   .w {
-    color: #bbbbbb;
+    color: #bbb;
   }
 
   .mf {
-    color: #009999;
+    color: #099;
   }
 
   .mh {
-    color: #009999;
+    color: #099;
   }
 
   .mi {
-    color: #009999;
+    color: #099;
   }
 
   .mo {
-    color: #009999;
+    color: #099;
   }
 
   .sb {
-    color: #dd1144;
+    color: #d14;
   }
 
   .sc {
-    color: #dd1144;
+    color: #d14;
   }
 
   .sd {
-    color: #dd1144;
+    color: #d14;
   }
 
   .s2 {
-    color: #dd1144;
+    color: #d14;
   }
 
   .se {
-    color: #dd1144;
+    color: #d14;
   }
 
   .sh {
-    color: #dd1144;
+    color: #d14;
   }
 
   .si {
-    color: #dd1144;
+    color: #d14;
   }
 
   .sx {
-    color: #dd1144;
+    color: #d14;
   }
 
   .sr {
@@ -204,7 +203,7 @@ $medgray: #999;
   }
 
   .s1 {
-    color: #dd1144;
+    color: #d14;
   }
 
   .ss {
@@ -228,11 +227,11 @@ $medgray: #999;
   }
 
   .il {
-    color: #009999;
+    color: #099;
   }
 
   .gc {
+    background-color: #eaf2f5;
     color: #999;
-    background-color: #EAF2F5;
   }
 }

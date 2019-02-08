@@ -1,9 +1,13 @@
+// Colors, functions and mixins
 @import 'toolbox/all';
+// Base variables and fonts
 @import 'base/settings';
-@import 'base/typography';
+@import 'base/fontfaces';
 @import 'assets/font-awesome';
-// add your palette here
-@import 'toolbox/palettes/themes';
+// color overrides
+@import 'toolbox/themes';
+// Base styles
 @import 'base/reset';
 @import 'base/base-style';
+// Actual styles
 @import 'partials/all';

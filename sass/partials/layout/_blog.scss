@@ -1,10 +1,12 @@
 .documentation-blog {
   margin-top: 32px;
+
   &.-centered {
     background: darken($background-color, 2);
+
     .content {
-      width: 80vw;
       margin: auto;
+      width: 80vw;
     }
   }
 

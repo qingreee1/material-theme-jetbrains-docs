@@ -2,38 +2,38 @@
  Header layout global styles
  */
 .header {
-  position: relative;
-  top: 0px;
-  left: 0px;
   background: $head-bg;
-  z-index: 20;
+  left: 0;
+  position: relative;
+  top: 0;
   width: 100%;
+  z-index: 20;
 
   .row {
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transition: .3s all ease-in-out;
-    padding: $logo-pad 10px 0; // adjust to change header height
-    text-align: center;
     box-sizing: border-box;
+    left: 0;
     overflow: hidden;
+    padding: $logo-pad 10px 0; // adjust to change header height
+    position: relative;
+    text-align: center;
+    top: 0;
+    transition: 0.3s all ease-in-out;
+    width: 100%;
 
     .logo {
-      transition: .3s all ease-in-out;
       display: block;
+      transition: 0.3s all ease-in-out;
     }
 
     .title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      font-size: 0em;
+      font-size: 0;
       font-weight: bold;
+      left: 50%;
+      position: absolute;
       text-transform: uppercase;
-      transition: .3s all ease-in-out;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 0.3s all ease-in-out;
     }
 
     @media screen and (max-width: $from-noslogan-to-icon) {

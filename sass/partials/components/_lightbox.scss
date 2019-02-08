@@ -1,20 +1,20 @@
 // lighbox container in post
 .masonry {
   @include flexbox(row, wrap, flex-start, flex-start);
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
   //background: $lightbox-container-background;
 
   a {
-    width: calc((100% / 3) - 20px);
-    padding: 0;
-    margin: 10px;
-    line-height: 0;
     font-size: 0;
+    line-height: 0;
+    margin: 10px;
+    padding: 0;
+    width: calc((100% / 3) - 20px);
 
     img {
+      opacity: 0.8;
       width: 100%;
-      opacity: .8;
     }
 
     &:hover {
@@ -27,13 +27,13 @@
 
 // actual lightbox styles
 @keyframes clockwise {
-  0% { transform: rotate(0deg) }
-  100% { transform: rotate(360deg) }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes anticlockwise {
-  0% { transform: rotate(360deg) }
-  100% { transform: rotate(0deg) }
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
 }
 
 @keyframes fade-in {
@@ -44,21 +44,21 @@
 #imagelightbox {
   cursor: pointer;
   position: fixed;
-  z-index: 10000;
   touch-action: none;
+  z-index: 10000;
 }
 
 #imagelightbox-loading {
-  border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
   background-color: transparent;
-  position: fixed;
-  z-index: 10003;
-  top: 50%;
+  border-radius: 50%;
+  height: 2.5em;
   left: 50%;
-  padding: 0.625em;
   margin: -1.25em 0 0 -1.25em;
+  padding: 0.625em;
+  position: fixed;
+  top: 50%;
+  width: 2.5em;
+  z-index: 10003;
 
   div {
     animation: clockwise 1.5s linear infinite;
@@ -68,59 +68,59 @@
     width: 2em;
 
     &,
-    &:before,
-    &:after {
-      border: .2em solid transparent;
+    &::before,
+    &::after {
+      border: 0.2em solid transparent;
       border-radius: 50%;
       border-top-color: $almost-white;
       margin: auto;
     }
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
     }
 
-    &:before {
-      animation: anticlockwise .9s linear infinite;
-      top: -.6em;
-      right: -.6em;
-      bottom: -.6em;
-      left: -.6em;
+    &::before {
+      animation: anticlockwise 0.9s linear infinite;
+      bottom: -0.6em;
+      left: -0.6em;
+      right: -0.6em;
+      top: -0.6em;
     }
 
-    &:after {
-      animation: anticlockwise .66s linear infinite;
-      top: .3em;
-      right: .3em;
-      bottom: .3em;
-      left: .3em;
+    &::after {
+      animation: anticlockwise 0.66s linear infinite;
+      bottom: 0.3em;
+      left: 0.3em;
+      right: 0.3em;
+      top: 0.3em;
     }
 
   }
 }
 
 #imagelightbox-overlay {
-  background-color: rgba(0, 0, 0, .8);
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
   bottom: 0;
   left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9998;
 }
 
 #imagelightbox-close {
-  color: $almost-white;
-  position: fixed;
-  z-index: 10002;
-  top: 2em;
-  right: 2em;
-  transition: .3s ease;
-  border: 0px solid transparent;
-  font-size: 2em;
   background: transparent;
+  border: 0 solid transparent;
+  color: $almost-white;
+  font-size: 2em;
+  position: fixed;
+  right: 2em;
+  top: 2em;
+  transition: 0.3s ease;
+  z-index: 10002;
 
   &:hover,
   &:focus {
@@ -130,28 +130,28 @@
 }
 
 #imagelightbox-caption {
-  text-align: center;
-  color: #fff;
   background-color: $almost-black;
-  position: fixed;
-  z-index: 10001;
-  left: 0;
-  right: 0;
   bottom: 0;
+  color: #fff;
+  left: 0;
   padding: 0.3em;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  z-index: 10001;
 }
 
 .imagelightbox-arrow {
-  width: 3.75em;
-  height: 7.5em;
   background-color: transparent;
-  vertical-align: middle;
+  border: 0 solid transparent;
   display: none;
-  position: fixed;
-  z-index: 10001;
-  top: 50%;
+  height: 7.5em;
   margin-top: -3.75em;
-  border: 0px solid transparent;
+  position: fixed;
+  top: 50%;
+  vertical-align: middle;
+  width: 3.75em;
+  z-index: 10001;
 
   &:hover {
     cursor: pointer;
@@ -161,13 +161,13 @@
 .imagelightbox-arrow-left {
   left: 2.5em; /* 40 */
 
-  &:before {
-    border-left: 2px solid $almost-white;
+  &::before {
     border-bottom: 2px solid $almost-white;
+    border-left: 2px solid $almost-white;
   }
 
   &:hover {
-    &:before {
+    &::before {
       border-color: darken($almost-white, 30%);
     }
   }
@@ -176,25 +176,25 @@
 .imagelightbox-arrow-right {
   right: 2.5em; /* 40 */
 
-  &:before {
-    border-top: 2px solid $almost-white;
+  &::before {
     border-right: 2px solid $almost-white;
+    border-top: 2px solid $almost-white;
   }
 
   &:hover {
-    &:before {
+    &::before {
       border-color: darken($almost-white, 30%);
     }
   }
 }
 
-.imagelightbox-arrow:before {
-  width: 3em;
-  height: 3em;
-  transform: rotate(45deg);
+.imagelightbox-arrow::before {
   content: '';
   display: inline-block;
+  height: 3em;
   margin-bottom: -0.125em; /* 2 */
+  transform: rotate(45deg);
+  width: 3em;
 }
 
 #imagelightbox-loading,
@@ -203,17 +203,17 @@
 #imagelightbox-caption,
 #imagelightbox-nav,
 .imagelightbox-arrow {
-  animation: fade-in .25s linear;
+  animation: fade-in 0.25s linear;
 }
 
-@media only screen and (max-width: 41.250em) {
+@media only screen and (max-width: 41.25em) {
   #container {
     width: 100%;
   }
 
   #imagelightbox-close {
-    top: 1.25em; /* 20 */
     right: 1.25em; /* 20 */
+    top: 1.25em; /* 20 */
   }
 
   #imagelightbox-nav {
@@ -221,9 +221,9 @@
   }
 
   .imagelightbox-arrow {
-    width: 2.5em; /* 40 */
     height: 3.75em; /* 60 */
     margin-top: -2.75em; /* 30 */
+    width: 2.5em; /* 40 */
   }
 
   .imagelightbox-arrow-left {
@@ -235,8 +235,7 @@
   }
 }
 
-@media only screen and (max-width: 20em) /* 320 */
-{
+@media only screen and (max-width: 20em) {
   .imagelightbox-arrow-left {
     left: 0;
   }

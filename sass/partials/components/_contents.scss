@@ -1,8 +1,8 @@
 .contents {
+  background: $almost-white;
   //@include shadow(1);
   border-radius: 2px;
   box-sizing: border-box;
-  background: $almost-white;
   margin-bottom: 20px;
   position: relative;
 
@@ -25,12 +25,12 @@
   }
 
   img {
-    transition: .3s all ease;
+    transition: 0.3s all ease;
   }
 
   a:hover {
     img {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 
@@ -40,7 +40,7 @@
     padding: 0 35px;
 
     li {
-      padding-left: 0px;
+      padding-left: 0;
     }
   }
 
@@ -51,9 +51,9 @@
 }
 
 .wrapper {
-  width: 100%;
-  height: auto;
   box-sizing: border-box;
+  height: auto;
+  width: 100%;
 }
 
 .short {
@@ -61,15 +61,15 @@
 
   a {
     display: block;
-    width: 100%;
     padding: 10px;
+    width: 100%;
 
     .shortdate {
-      font-size: .8em;
-      opacity: .8;
-      padding-right: 10px;
-      margin-right: 10px;
       border-right: $line;
+      font-size: 0.8em;
+      margin-right: 10px;
+      opacity: 0.8;
+      padding-right: 10px;
     }
   }
 }

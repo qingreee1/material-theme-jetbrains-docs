@@ -1,14 +1,14 @@
 // material sidebar styles
 .sidebar {
-  width: $sidebar-width;
+  background: white;
   height: 100%;
+  overflow: inherit;
   position: fixed;
   top: 0;
-  background: white;
+  transition: 0.3s all ease;
+  width: $sidebar-width;
   z-index: 111;
-  overflow: inherit;
   @include shadow(1);
-  transition: .3s all ease;
 
   .row {
     padding: 20px;
@@ -19,14 +19,15 @@
       display: none;
     }
   }
+
   .sidebar-toggle {
     display: none;
-    transition: .5s all ease-out;
+    transition: 0.5s all ease-out;
   }
 
   .link-section {
-    list-style-type: none;
     line-height: 1.5;
+    list-style-type: none;
 
     &.active {
       a {
@@ -37,11 +38,14 @@
 
   @media screen and (max-width: $sidebarcollapse) {
     transform: translateX(-($sidebar-width - $margin-width));
+
     &.open {
-      transition-delay: .5s;
       transform: translateX(0);
+      transition-delay: 0.5s;
+
       .sidebar-toggle {
         height: $margin-width;
+
         i {
           transform: translate(50%, -50%) rotate(45deg);
         }
@@ -50,21 +54,23 @@
 
     .sidebar-toggle {
       display: block;
+      height: 100%;
+      left: $sidebar-width - $margin-width;
       position: fixed;
       top: 0;
-      z-index: 99;
-      left: $sidebar-width - $margin-width;
       width: $margin-width;
-      height: 100%;
+      z-index: 99;
+
       &:hover {
         cursor: pointer;
       }
+
       i {
-        transition: 1s all ease;
         position: absolute;
         right: $margin-width/2;
         top: 50%;
         transform: translate(50%, -50%);
+        transition: 1s all ease;
       }
     }
   }
@@ -74,7 +80,8 @@
   When a parent has this class
  */
 .-sidebar-left {
-  &, .main-menu {
+  &,
+ .main-menu {
     width: calc(100% - #{$sidebar-width});
     @media screen and (max-width: $sidebarcollapse) {
       width: calc(100% - #{$margin-width});
@@ -84,14 +91,17 @@
 
 .-sidebar-left {
   margin-left: $sidebar-width;
+
   .main-menu {
     margin-left: $sidebar-width;
   }
+
   .sidebar {
     left: 0;
   }
   @media screen and (max-width: $sidebarcollapse) {
     margin-left: $margin-width;
+
     .main-menu {
       margin-left: $margin-width;
     }

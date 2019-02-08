@@ -2,25 +2,25 @@
   Footer global styles
  */
 .footer {
-  width: 100%;
-  box-sizing: border-box;
-  background: $dark-primary-color;
-  color: $primary-text-icon-color;
-  font-size: .9em;
   align-self: flex-end;
+  background: $dark-primary-color;
+  box-sizing: border-box;
+  color: $primary-text-icon-color;
+  font-size: 0.9em;
   font-weight: 400;
+  width: 100%;
 
   @media all and (max-width: $mobile-size) {
+    font-size: 0.8em;
     height: auto;
-    font-size: .8em;
   }
 
   a {
     color: $primary-text-icon-color;
 
     &:hover {
-      color: $primary-text-icon-color;
       background: darken($dark-primary-color, 10%);
+      color: $primary-text-icon-color;
     }
   }
 
@@ -35,8 +35,7 @@
       @include row-machine(3, 1%, 25px);
 
       @media all and (max-width: $mobile-size) {
-        @include row-machine(1, 1%, 25px)
-      }
+        @include row-machine(1, 1%, 25px); }
     }
   }
 
@@ -80,8 +79,8 @@
     padding: 0 5px;
 
     &:hover {
-      color: $primary-text-icon-color;
       background: darken($dark-primary-color, 10%);
+      color: $primary-text-icon-color;
       cursor: pointer;
     }
   }

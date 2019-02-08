@@ -1,10 +1,23 @@
 // Shortcuts
 //-----------
 $noborder: 0 solid transparent;
-$line: 1px solid rgba(160, 160, 160, .2);
+$line: 1px solid rgba(160, 160, 160, 0.2);
 
 // SETTINGS FOR BASE-STYLE
 //-------------------
+// material palette base
+$primary-text-icon-color: $white;
+$primary-text: $black;
+$secondary-text: $gray;
+$divider-color: rgba(black, 0.87);
+$opacity: 0.5;
+
+// primary, secondary and accent
+$dark-primary-color: $darkindigo;
+$primary-color: $indigo;
+$light-primary-color: $lightindigo;
+$accent-color: $pink;
+$second-accent-color: $turquoise;
 
 // yes/no variables (use yes or no as values)
 //--------------------------------------------
@@ -39,7 +52,7 @@ $headings-font: $main-font;
 // use values from text-transform [none|capitalize|uppercase|lowercase|initial|inherit]
 $headings-text-transform: none;
 
-$code-font: 'Source Code Pro', Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+$code-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 $code-border: #e1e4e5;
 $code-bg: white;
 
@@ -66,7 +79,7 @@ $header-size-condensed: 56px;
 // the variables can be ignored
 
 // depends on: $background-color-setting
-$background-color: #F9F9F9;
+$background-color: #f9f9f9;
 
 // depends on: $paragraph-gap
 $paragraph-gap-size: 1em;
@@ -116,7 +129,7 @@ $head-bg: $almost-white;
 $logo-pad: 20px;
 
 // search overlay
-$so-bg: rgba(white, .8);
+$so-bg: rgba(white, 0.8);
 $so-color: black;
 
 // Menu
@@ -135,11 +148,11 @@ $lightbox-container-background: $almost-black;
 
 // Tables
 $table-border-color: #d0d0d0;
-$table-striped-color: #F2F2F2;
+$table-striped-color: #f2f2f2;
 $table-collapse: 700px;
 
 // shortcuts
-$line: 1px solid rgba(160, 160, 160, .2);
+$line: 1px solid rgba(160, 160, 160, 0.2);
 
 // sidebar
 $sidebar-width: 260px;
@@ -170,18 +183,18 @@ $card-link-color-light: lighten($card-link-color, 20%) !default;
 $badge-height: 22px !default;
 $badge-bg-color: $accent-color !default;
 
-$collection-line-height: .75rem !default;
+$collection-line-height: 0.75rem !default;
 
 // Select
 $select-border: 1px solid #f2f2f2 !default;
-$select-background: rgba(255, 255, 255, 0.90) !default;
+$select-background: rgba(255, 255, 255, 0.9) !default;
 $select-focus: 1px solid lighten($accent-color, 47%) !default;
-$select-option-hover: rgba(0, 0, 0, .08) !default;
-$select-option-focus: rgba(0, 0, 0, .08) !default;
-$select-option-selected: rgba(0, 0, 0, .03) !default;
+$select-option-hover: rgba(0, 0, 0, 0.08) !default;
+$select-option-focus: rgba(0, 0, 0, 0.08) !default;
+$select-option-selected: rgba(0, 0, 0, 0.03) !default;
 $select-padding: 5px !default;
 $select-radius: 2px !default;
-$select-disabled-color: rgba(0, 0, 0, .3) !default;
+$select-disabled-color: rgba(0, 0, 0, 0.3) !default;
 
 // 9. Dropdown
 // ==========================================================================
@@ -203,8 +216,8 @@ $input-font-size: 16px !default;
 $input-margin-bottom: 8px;
 $input-margin: 0 0 $input-margin-bottom 0 !default;
 $input-padding: 0 !default;
-$label-font-size: .8rem !default;
-$input-disabled-color: rgba(0, 0, 0, .42) !default;
+$label-font-size: 0.8rem !default;
+$input-disabled-color: rgba(0, 0, 0, 0.42) !default;
 $input-disabled-solid-color: #949494 !default;
 $input-disabled-border: 1px dotted $input-disabled-color !default;
 $input-invalid-border: 1px solid $input-error-color !default;

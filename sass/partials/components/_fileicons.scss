@@ -3,9 +3,9 @@
 
   .item {
     @include flexbox(row, wrap, flex-start, center);
-    width: calc((100% / 3) - 20px);
-    padding: 0;
     margin: 6px;
+    padding: 0;
+    width: calc((100% / 3) - 20px);
 
     > .item-text {
       padding-left: 1em;
