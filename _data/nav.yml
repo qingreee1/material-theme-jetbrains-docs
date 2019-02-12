@@ -1,0 +1,41 @@
+- title: Introduction
+- title: Getting Started
+
+- title: Configuration
+  pages:
+  - title: Settings
+  - title: Color Schemes
+  - title: Main Settings
+  - title: Tab Settings
+  - title: Panel Settings
+  - title: Icons Settings
+  - title: Project View Settings
+  - title: Component Settings
+  - title: Features Settings
+  - title: Other Tweaks Settings
+  - title: Quick Actions Panel
+  - title: Excluded Files Colors
+  - title: File Status Colors
+  - title: Accents
+  - title: Color Scheme Additions
+  - title: Custom Themes
+
+- title: Reference
+  pages:
+  - title: Color Palette
+  - title: File Icons
+  - title: Components
+  - title: Wizard
+
+- title: Development
+  pages:
+  - title: Installation
+  - title: External Themes
+  - title: Analytics
+
+- title: Blog
+  separator: true
+- title: FAQ/Troubleshooting
+- title: Acknowledgements
+- title: Changelog
+- title: Contact Us

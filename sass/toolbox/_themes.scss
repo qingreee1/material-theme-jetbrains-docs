@@ -1,0 +1,120 @@
+body {
+  .front-page {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  .header,
+  .footer {
+    background-color: var(--background);
+  }
+
+  .main-menu,
+  .menu,
+  .footer {
+    background-color: var(--contrast);
+    color: var(--foreground);
+
+    a {
+      color: var(--foreground);
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+  }
+
+  .navbar > li {
+    &:hover {
+      background: var(--background);
+    }
+  }
+
+  .muted {
+    color: rgba(var(--foreground), $opacity);
+  }
+
+  .logo-caption,
+  .logo-description,
+  .section-title,
+  .feat-title,
+  .feat-caption {
+    color: var(--foreground);
+    fill: var(--foreground);
+  }
+
+  .contents {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  .screenshot {
+    background: var(--laptop) no-repeat 50% 30%, url('../../img/laptop.png') no-repeat top left;
+    background-size: 75%, contain;
+    display: none;
+  }
+
+  .logo-img {
+    background-image: var(--logo), url('../../img/material-oceanic.svg');
+    margin: 1em auto;
+
+    &.-error {
+      filter: grayscale(100%);
+      transform: rotate(25deg) translateY(-10px);
+    }
+  }
+
+  .sidebar-toggle {
+    background: var(--background);
+    transition: background 0.25s;
+
+    &:hover {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), var(--background);
+    }
+
+    i {
+      color: var(--foreground);
+    }
+  }
+
+  .sidebar {
+    background: var(--contrast);
+    color: var(--foreground);
+
+    a {
+      color: #fff;
+
+      &:hover {
+        color: $second-accent-color;
+      }
+    }
+  }
+
+  .sidebar-link-group a:hover {
+    background-color: var(--background);
+  }
+
+  .sidebar-link-group.active > a,
+  .link-section.active > a {
+    background-color: var(--background);
+  }
+
+  .link-section.active > a {
+    color: $second-accent-color;
+  }
+
+  .docs-header {
+    background: $second-accent-color;
+    color: #fff;
+  }
+
+  .github-ribbon {
+    border: 0;
+    color: #fff;
+    fill: $accent-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
